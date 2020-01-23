@@ -12,7 +12,8 @@ import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent
+    ContactComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -21,7 +22,6 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule, // required animations module
     ReactiveFormsModule,
     RouterModule.forRoot(MyRoute),
-  
     ToastrModule.forRoot()
   ],
   providers: [],
