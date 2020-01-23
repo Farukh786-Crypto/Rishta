@@ -1,29 +1,29 @@
 import { RouterModule, Routes } from '@angular/router'
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RegisterFormComponent } from './Register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
+import { ProfileDetailsComponent } from './profile-details.component';
 
-const route1: Routes = [
+const profileroute: Routes = [
 
     // { path:'' , redirectTo:'register' , pathMatch:'full' } ,
-    { path: '', component: RegisterFormComponent }
+    { path: '', component: ProfileDetailsComponent}
 
 ]
 
+
 @NgModule({
 
-    declarations: [RegisterFormComponent],
+    declarations: [ProfileDetailsComponent],
     imports: [CommonModule,
         ShowHidePasswordModule,
-        
-        ReactiveFormsModule, RouterModule.forChild(route1)],
+        ReactiveFormsModule, RouterModule.forChild(profileroute)],
     providers: [],
-    // exports: [RegisterFormComponent]
+    exports: [ProfileDetailsComponent]
 
 })
 
-export class RegisterLazyClass {
+export class RegisterLazyClass{
 
 }

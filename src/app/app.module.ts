@@ -9,12 +9,11 @@ import { RouterModule } from '@angular/router';
 import { MyRoute } from './route.config';
 import { ToastrModule } from 'ngx-toastr';
 import { AstroreligionComponent } from './User Module/AstroandreligionForm/Astroreligion.component';
+import { ProfileDetailsComponent } from './User Module/ProfileDetailsForm/profile-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    
-    
+    AppComponent
     
   ],
   imports: [
