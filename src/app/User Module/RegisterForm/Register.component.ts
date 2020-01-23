@@ -8,7 +8,6 @@ import { ToastrService } from 'ngx-toastr';
     templateUrl: './Register.component.html',
     styleUrls: ['./Register.component.css']
 
-
 })
 
 
@@ -45,16 +44,3 @@ export class RegisterFormComponent {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
