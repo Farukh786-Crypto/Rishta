@@ -1,0 +1,352 @@
+<!-- <h1>{{title}}</h1> -->
+
+<div class="container">
+    <!-- Trigger the modal with a button -->
+    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open</button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                    <h4 class="modal-title">Personal Details Form</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="align-center" [formGroup]="PersonalDetails">
+                        <p> You are about to complete your Personal details.</p>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="text">Blood_Group<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="blood_group" required>
+                                        <option disabled selected value></option>
+                                        <option>A<sup>+</sup></option>
+                                        <option>A<sup>-</sup></option>
+                                        <option>B<sup>+</sup></option>
+                                        <option>B<sup>-</sup></option>
+                                        <option>AB<sup>+</sup></option>
+                                        <option>AB<sup>-</sup></option>
+                                        <option>O<sup>+</sup></option>
+                                        <option>O<sup>-</sup></option>
+                                    </select>
+
+                                    <!-- <div class="alert alert-danger"
+                                        *ngIf="isSubmitted && PersonalDetails.get('Country').hasError('required')|| (PersonalDetails.get('Country').touched">
+                                        Country is required.
+                                    </div> -->
+                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['blood_group'].hasError('required')&&
+    (PersonalDetails.controls.blood_group.touched ||PersonalDetails.controls['blood_group'].dirty|| isSubmitted)">
+                                        blood_group is required.
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="text">height<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Height Ex:5.7 i.e 5 feet 7 inch"
+                                            formControlName="height">
+                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['height'].hasError('required')&&
+    (PersonalDetails.controls.height.touched ||PersonalDetails.controls['height'].dirty|| isSubmitted)">
+                                        height is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">weight<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter Weight"
+                                    formControlName="weight">
+
+                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['weight'].hasError('required')&&
+(PersonalDetails.controls.weight.touched ||PersonalDetails.controls['weight'].dirty|| isSubmitted)">
+                                        weight is required.
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Body Type<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+
+                                    <select class="form-control" formControlName="body_type" required>
+                                        <option disabled selected value></option>
+                                        <option>Slim</option>
+                                        <option>Average</option>
+                                        <option>Athletic</option>
+                                        <option>Heavy</option>
+                                        <option>Doesn't Matter</option>
+
+                                    </select>
+                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['body_type'].hasError('required')&&
+    (PersonalDetails.controls.body_type.touched ||PersonalDetails.controls['body_type'].dirty|| isSubmitted)">
+    Body Type is required.
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+<!-- 
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Personality<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="personality" required>
+                                        <option disabled selected value></option>
+                                        <option> </option>
+                                        <option> </option>
+                                        <option></option>
+                                        <option></option>
+                                        <option></option>
+                                        <option> </option>
+                                        <option> </option>
+                                        <option></option>
+                                    </select>
+                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['personality'].hasError('required')&&
+    (PersonalDetails.controls.personality.touched ||PersonalDetails.controls['personality'].dirty|| isSubmitted)">
+                                        physical_disability In required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> -->
+
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Lens<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="lens" required>
+                                        <option disabled selected value></option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                       
+                                        
+                                    </select>
+                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['lens'].hasError('required')&&
+    (PersonalDetails.controls.lens.touched ||PersonalDetails.controls['lens'].dirty|| isSubmitted)">
+    Lens In required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Spectacles<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="spectacles" required>
+                                        <option disabled selected value></option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                        
+                                    </select>
+                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['spectacles'].hasError('required')&&
+    (PersonalDetails.controls.spectacles.touched ||PersonalDetails.controls['spectacles'].dirty|| isSubmitted)">
+    Spectacles In required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Complexion<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="complexion" required>
+                                        <option disabled selected value></option>
+                                        <option>Very Fair</option>
+                                        <option>Fair</option>
+                                        <option> Wheatish </option>
+                                        <option> Wheatish Brown </option>
+                                        <option> Dark </option>
+                                        
+                                    </select>
+                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['complexion'].hasError('required')&&
+    (PersonalDetails.controls.complexion.touched ||PersonalDetails.controls['complexion'].dirty)">
+    Spectacles In required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>    
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">NRI<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="NRI" required>
+                                        <option disabled selected value></option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                        
+                                    </select>
+                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['NRI'].hasError('required')&&
+    (PersonalDetails.controls.NRI.touched ||PersonalDetails.controls['NRI'].dirty)">
+    Spectacles In required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>    
+
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Smoking<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="smoking" required>
+                                        <option disabled selected value></option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                        <option>Occasionally</option>
+                                    </select>
+                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['smoking'].hasError('required')&&
+    (PersonalDetails.controls.smoking.touched ||PersonalDetails.controls['smoking'].dirty)">
+    Spectacles In required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Drinking<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="drinking" required>
+                                        <option disabled selected value></option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                        <option>Occasionally</option>
+                                    </select>
+                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['drinking'].hasError('required')&&
+    (PersonalDetails.controls.drinking.touched ||PersonalDetails.controls['drinking'].dirty)">
+    Drinking In required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Editing Habits<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="editing_habits" required>
+                                        <option disabled selected value></option>
+                                        <option>Vegetarian</option>
+                                        <option> Non Vegetarian </option>
+                                        <option> Jain </option>
+                                        <option> Eggetarian </option>
+                                                                                
+                                    </select>
+                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['editing_habits'].hasError('required')&&
+    (PersonalDetails.controls.editing_habits.touched ||PersonalDetails.controls['editing_habits'].dirty)">
+    Drinking In required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                        (click)="onSubmit(PersonalDetails.value)">SUBMIT</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

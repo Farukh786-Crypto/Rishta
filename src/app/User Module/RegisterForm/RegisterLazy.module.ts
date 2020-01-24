@@ -12,12 +12,12 @@ const route1: Routes = [
 
 ]
 
-
 @NgModule({
 
     declarations: [RegisterFormComponent],
     imports: [CommonModule,
         ShowHidePasswordModule,
+        
         ReactiveFormsModule, RouterModule.forChild(route1)],
     providers: [],
     // exports: [RegisterFormComponent]
@@ -26,15 +26,4 @@ const route1: Routes = [
 
 export class RegisterLazyClass {
 
-
-
 }
-
-
-
-
-
-
-
-
-

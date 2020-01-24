@@ -1,0 +1,256 @@
+<h1>{{title}}</h1>
+
+{{FamilyDetailsModel.value|json}}
+
+
+<div class="container">
+   
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="margin-right: 130px;">Family Details</h4>
+                </div>
+                <div class="modal-body" style="font-family:cursive">
+                    <!-- <p>Some text in the modal.</p> -->
+
+
+
+                    <div class="container">
+
+                        <form [formGroup]="FamilyDetailsModel" novalidate>
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label for="username1">Family Type:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select class="form-control" formControlName="familytype">
+                                            <option value="">SELECT</option>
+                                            <option>Joint Family</option>
+                                            <option>Nuclear Family</option>
+                                            <option>Others</option>
+                                          </select>
+                                          <span *ngIf="ProfileDetails.get('familytype').hasError('required') &&
+                                            (ProfileDetails.get('familytype').touched || ProfileDetails.get('familytype').dirty|| isSubmitted)"
+                                            class="text-danger" padding>
+                                            Family Type Required.</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label for="username1">Father's Occupations:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select class="form-control" formControlName="fatherocc">
+                                            <option value="">SELECT</option>
+                                            <option>Business</option>
+                                            <option>Service-Govt</option>
+                                            <option>Retired</option>
+                                            <option>Not Employed</option>
+                                            <option>Expired</option>
+                                          </select>
+                                          <span *ngIf="ProfileDetails.get('fatherocc').hasError('required') &&
+                                            (ProfileDetails.get('fatherocc').touched || ProfileDetails.get('fatherocc').dirty|| isSubmitted)"
+                                            class="text-danger" padding>
+                                            Family Occupations Required.</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label for="username1">Mather's Occupations:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select class="form-control" formControlName="motherocc">
+                                            <option value="">SELECT</option>
+                                            <option>HouseWife</option>
+                                            <option>Business</option>
+                                            <option>Service-Govt</option>
+                                            <option>Retired</option>
+                                            <option>Not Employed</option>
+                                            <option>Expired</option>
+                                          </select>
+                                          <span *ngIf="ProfileDetails.get('motherocc').hasError('required') &&
+                                            (ProfileDetails.get('motherocc').touched || ProfileDetails.get('motherocc').dirty|| isSubmitted)"
+                                            class="text-danger" padding>
+                                            Mother Occupations Required.</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label for="username1">Brother:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select class="form-control" formControlName="brother">
+                                            <option value="">SELECT</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5/option>
+                                          </select>
+                                          <span *ngIf="ProfileDetails.get('brother').hasError('required') &&
+                                            (ProfileDetails.get('brother').touched || ProfileDetails.get('brother').dirty|| isSubmitted)"
+                                            class="text-danger" padding>
+                                            Mother Occupations Required.</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label for="username1">Sister:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select class="form-control" formControlName="sister">
+                                            <option value="">SELECT</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5/option>
+                                          </select>
+                                          <span *ngIf="ProfileDetails.get('sister').hasError('required') &&
+                                            (ProfileDetails.get('sister').touched || ProfileDetails.get('sister').dirty|| isSubmitted)"
+                                            class="text-danger" padding>
+                                            Mother Occupations Required.</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label for="username1">Family livin In:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select class="form-control" formControlName="livingstate">
+                                            <option value="">SELECT</option>
+                                            <option>Maharashtra</option>
+                                            <option>Goa</option>
+                                            <option>Karanataka</option>
+                                            <option>Gujrat</option>
+                                            <option>TamilNadu</option>
+                                          </select>
+                                          <span *ngIf="ProfileDetails.get('livingstate').hasError('required') &&
+                                            (ProfileDetails.get('livingstate').touched || ProfileDetails.get('livingstate').dirty|| isSubmitted)"
+                                            class="text-danger" padding>
+                                            Mother Occupations Required.</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label for="username1">City:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select class="form-control" formControlName="livingcity">
+                                            <option value="">SELECT</option>
+                                            <option>Pune</option>
+                                            <option>Banglore</option>
+                                            <option>Mumbai</option>
+                                            <option>Hydrabad</option>
+                                            <option>Nashik</option>
+                                          </select>
+                                          <span *ngIf="ProfileDetails.get('livingcity').hasError('required') &&
+                                            (ProfileDetails.get('livingcity').touched || ProfileDetails.get('livingcity').dirty|| isSubmitted)"
+                                            class="text-danger" padding>
+                                            Mother Occupations Required.</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label for="address">Contact Address :</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="Enter the Address"
+                                            formControlName="address">
+                                        <div class="text-danger"
+                                            *ngIf="isSubmited && RegisterModel.controls['address'].hasError('required')">
+                                            ** Email is required **
+                                        </div>
+                                        <span class="text-danger"
+                                            *ngIf="RegisterModel.controls['address'].hasError('pattern')">
+                                           ** Please enter valid email address **</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                           
+
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label for="mobileno1">About My Family:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text-area" class="form-control" placeholder="Write about your parents and brothers or sisters.where do they live? what are they doing?"
+                                            formControlName="aboutfamily">
+                                        <div class="text-danger"
+                                            *ngIf="isSubmited && RegisterModel.controls['mobileno'].hasError('required')">
+                                            ** About Family is Required **
+
+                                        </div>
+                                        <span class="text-danger"
+                                            *ngIf="isSubmited && RegisterModel.controls['mobileno'].hasError('pattern')">
+                                            ** Please enter 10 digit mobile no **
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary"
+                                        (click)="loginUser(RegisterModel.value)">Add to Details</button>
+                                    <button type="submit" class="btn btn-secondary" style="margin-left: 20px;"
+                                        data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
