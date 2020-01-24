@@ -1,0 +1,19 @@
+.dropdown-menu{
+    z-index: 1px;
+}
+
+.dropdown-menu {
+    min-height: 9vh;
+    max-height: 50vh;
+    width: 13rem;
+    overflow: hidden;
+    overflow-y: auto;
+    right: 0;
+    left: auto !important;
+    // margin-right: -5em;
+}
+nav{
+    position: fixed ;
+    width: 100%;
+    z-index: 999;
+}
