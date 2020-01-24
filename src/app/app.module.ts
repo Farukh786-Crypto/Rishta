@@ -14,9 +14,7 @@ import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/pers
 
 @NgModule({
   declarations: [
-
     AppComponent
-        
   ],
   imports: [
     BrowserModule,
