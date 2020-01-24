@@ -8,15 +8,14 @@ import { ProfileDetailsComponent } from './User Module/ProfileDetailsForm/profil
 import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component'
 //import {}  from './User Module/RegisterForm/RegisterLazy.module#RegisterLazyClass'
 //import {} from './User Module/AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass'
-//import {} from './User Module/ProfileDetailsForm/ProfileDetailsLazy.module#RegisterLazyClass'
-//import {} from './User Module/PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass'
+
 export const MyRoute: Routes = [
 
    { path: '', loadChildren: './User Module/RegisterForm/RegisterLazy.module#RegisterLazyClass' },
     { path:'astroandreligion' , loadChildren:'./User Module/AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass'},
     { path:'profiledetails' , loadChildren:'./User Module/ProfileDetailsForm/ProfileDetailsLazy.module#RegisterLazyClass'},
+    { path:'familydetails' , loadChildren:'./User Module/FamilyDetailsForm/Family-detailsLazy.modules#FamilyLazyClass'},
     { path:'personalDetails' , loadChildren:'./User Module/PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass'}
-
 
 ]
 
