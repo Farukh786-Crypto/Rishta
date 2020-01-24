@@ -1,19 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
 // import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-profile-details',
   templateUrl: './profile-details.component.html',
   styleUrls: ['./profile-details.component.css']
 })
-export class ProfileDetailsComponent{
+export class ProfileDetailsComponent implements OnInit{
+ 
 
   ProfileDetails:FormGroup
   isSubmitted:boolean;
- 
+  
+  
+  constructor(private spinner: NgxSpinnerService) { 
 
-  constructor() { 
-
+    
     this.ProfileDetails = new FormGroup({
       Name: new FormControl('', Validators.required),
       Dob: new FormControl('', Validators.required),
@@ -27,6 +30,15 @@ export class ProfileDetailsComponent{
       Height: new FormControl('',Validators.required),
       chkbx: new FormControl('',Validators.required)
   })
+  }
+  ngOnInit() {
+    /** spinner starts on init */
+    this.spinner.show();
+ 
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 2000);
   }
   onSubmit(data:any) {
     this.isSubmitted = true;
