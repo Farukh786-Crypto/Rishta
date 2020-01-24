@@ -16,17 +16,17 @@
                 </div>
                 <div class="modal-body">
                     <form class="align-center" [formGroup]="AstroreligionDetails">
-                        <p> Congrats! You are about to complete your Astro and Religion details.</p>
+                        <p> You are about to complete your Astro and Religion details.</p>
 
-                        <tr>
-                            <td>
+                        <div class="row">
+                            <div class="col-md-3">
                                 <div class="form-group">
-                                    <label for="text">Martial_Status<i class="fa fa-asterisk text-danger">*</i></label>
+                                    <label for="text">Marital_Status<i class="fa fa-asterisk text-danger">*</i></label>
                                 </div>
-                            </td>
-                            <td>
+                            </div>
+                            <div class="col-md-7">
                                 <div class="form-group">
-                                    <select class="form-control" formControlName="Martial_Status" required>
+                                    <select class="form-control" formControlName="Marital_Status" required>
                                         <option disabled selected value></option>
                                         <option>Married</option>
                                         <option>UnMarried</option>
@@ -39,25 +39,24 @@
                                         Country is required.
                                     </div> -->
                                     <div class="text-danger"
-                                        *ngIf=" AstroreligionDetails.controls['Martial_Status'].hasError('required')&&
-    (AstroreligionDetails.controls.Martial_Status.touched ||AstroreligionDetails.controls['Martial_Status'].dirty|| isSubmitted)">
-                                        Martial_Status is required.
+                                        *ngIf="isSubmitted && AstroreligionDetails.controls['Marital_Status'].hasError('required')&&
+    (AstroreligionDetails.controls.Marital_Status.touched ||AstroreligionDetails.controls['Marital_Status'].dirty|| isSubmitted)">
+                                        Marital_Status is required.
+
                                     </div>
 
-
-
-
                                 </div>
-                            </td>
+                            </div>
 
-                        </tr>
-                        <tr>
-                            <td>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="text">Mother_Tongue<i class="fa fa-asterisk text-danger">*</i></label>
                                 </div>
-                            </td>
-                            <td>
+                            </div>
+                            <div class="col-md-7">
                                 <div class="form-group">
                                     <select class="form-control" formControlName="Mother_Tongue" required>
                                         <option disabled selected value></option>
@@ -82,16 +81,19 @@
                                         Mother_Tongue is required.
                                     </div>
                                 </div>
-                            </td>
+                            </div>
 
-                        </tr>
-                        <tr>
-                            <td>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
                                 <div class="form-group">
                                     <label for="text">Religion<i class="fa fa-asterisk text-danger">*</i></label>
                                 </div>
-                            </td>
-                            <td>
+                            </div>
+                            <div class="col-md-7">
                                 <div class="form-group">
                                     <select class="form-control" formControlName="Religion" required>
                                         <option disabled selected value></option>
@@ -104,16 +106,17 @@
                                         <option>Others/Religion not specified</option>
 
                                     </select>
-                                    <div class="text-danger"
-                                    *ngIf=" AstroreligionDetails.controls['Religion'].hasError('required')&&
+                                    <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Religion'].hasError('required')&&
 (AstroreligionDetails.controls.Religion.touched ||AstroreligionDetails.controls['Religion'].dirty|| isSubmitted)">
-                                    Religion is required.
-                                </div>
+                                        Religion is required.
+                                    </div>
 
                                 </div>
-                            </td>
+                            </div>
 
-                        </tr>
+                        </div>
+
+
                         <!-- <tr>
                             <td>
                                 <div class="form-group">
@@ -131,13 +134,14 @@
                             </td>
 
                         </tr> -->
-                        <tr>
-                            <td>
+                        <div class="row">
+                            <div class="col-md-3">
+
                                 <div class="form-group">
                                     <label for="text">Caste<i class="fa fa-asterisk text-danger">*</i></label>
                                 </div>
-                            </td>
-                            <td>
+                            </div>
+                            <div class="col-md-7">
                                 <div class="form-group">
 
                                     <select class="form-control" formControlName="Caste" required>
@@ -154,16 +158,20 @@
 
                                     </div>
                                 </div>
-                            </td>
+                            </div>
 
-                        </tr>
-                        <tr>
-                            <td>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
                                 <div class="form-group">
                                     <label for="text">Sub_Caste<i class="fa fa-asterisk text-danger">*</i></label>
                                 </div>
-                            </td>
-                            <td>
+                            </div>
+                            <div class="col-md-7">
                                 <div class="form-group">
                                     <select class="form-control" formControlName="SubCaste" required>
                                         <option disabled selected value></option>
@@ -178,43 +186,44 @@
                                     </select>
                                     <div class="text-danger" *ngIf=" AstroreligionDetails.controls['SubCaste'].hasError('required')&&
     (AstroreligionDetails.controls.SubCaste.touched ||AstroreligionDetails.controls['SubCaste'].dirty|| isSubmitted)">
-                                            SubCaste In required.
+                                        SubCaste In required.
                                     </div>
                                 </div>
-                            </td>
+                            </div>
 
-                        </tr>
+                        </div>
 
-                        <tr>
-                            <td>
+
+                        <div class="row">
+                            <div class="col-md-3">
+
                                 <div class="form-group">
                                     <label for="text">Devak<i class="fa fa-asterisk text-danger">*</i></label>
                                 </div>
-                            </td>
-                            <td>
+                            </div>
+                            <div class="col-md-7">
                                 <div class="form-group">
                                     <select class="form-control" formControlName="Devak" required>
                                         <option disabled selected value></option>
                                         <option>Pali</option>
                                         <option>Saundal</option>
                                         <option>Other</option>
-                                       
+
                                     </select>
                                     <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Devak'].hasError('required')&&
     (AstroreligionDetails.controls.Devak.touched ||AstroreligionDetails.controls['Devak'].dirty|| isSubmitted)">
                                         Occupation is required.
                                     </div>
                                 </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="text">Horoscope<i class="fa fa-asterisk text-danger">*</i></label>
                                 </div>
-                            </td>
-                            <td>
+                            </div>
+                            <div class="col-md-7">
                                 <div class="form-group">
                                     <select class="form-control" formControlName="Horoscope" required>
                                         <option disabled selected value></option>
@@ -228,21 +237,23 @@
                                         <option>Scorpio</option>
                                         <option>Other</option>
                                     </select>
-                                    <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Horoscope'].hasError('required')&&
+                                    <div class="text-danger"
+                                        *ngIf=" AstroreligionDetails.controls['Horoscope'].hasError('required')&&
     (AstroreligionDetails.controls.Horoscope.touched ||AstroreligionDetails.controls['Horoscope'].dirty|| isSubmitted)">
                                         Occupation is required.
                                     </div>
                                 </div>
-                            </td>
+                            </div>
 
-                        </tr>
-                        <tr>
-                            <td>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+
                                 <div class="form-group">
                                     <label for="text">Horoscope<i class="fa fa-asterisk text-danger">*</i></label>
                                 </div>
-                            </td>
-                            <td>
+                            </div>
+                            <div class="col-md-7">
                                 <div class="form-group">
                                     <select class="form-control" formControlName="Nakshtra" required>
                                         <option disabled selected value></option>
@@ -261,33 +272,34 @@
                                         Occupation is required.
                                     </div>
                                 </div>
-                            </td>
+                            </div>
 
-                        </tr>
-                        <tr>
-                            <td>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+
                                 <div class="form-group">
                                     <label for="text">Manglik<i class="fa fa-asterisk text-danger">*</i></label>
                                 </div>
-                            </td>
-                            <td>
+                            </div>
+                            <div class="col-md-7">
                                 <div class="form-group">
                                     <select class="form-control" formControlName="Gotra" required>
                                         <option disabled selected value></option>
                                         <option>Yes</option>
                                         <option>No</option>
-                                        
+
                                         <option>Other</option>
-                                       
+
                                     </select>
                                     <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Manglik'].hasError('required')&&
     (AstroreligionDetails.controls.Manglik.touched ||AstroreligionDetails.controls['Manglik'].dirty|| isSubmitted)">
-    Gotra is required.
+                                        Gotra is required.
                                     </div>
                                 </div>
-                            </td>
+                            </div>
 
-                        </tr>
+                        </div>
                         <!-- <tr>
                             <td>
                                 <div class="form-group">
@@ -311,15 +323,7 @@
                             </td>
 
                         </tr> -->
-                        <tr>
-                            <td>
-                            </td>
-                            <td>
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-danger">Save and Continue</button>
-                                </div>
-                            </td>
-                        </tr>
+                        
 
                     </form>
                 </div>
@@ -332,5 +336,4 @@
 
         </div>
     </div>
-
 </div>

@@ -15,7 +15,7 @@ isSubmitted:boolean;
 constructor(private toastr: ToastrService){
 
     this.AstroreligionDetails=new FormGroup({
-        Martial_Status:new FormControl('',Validators.required),
+        Marital_Status:new FormControl('',Validators.required),
         Mother_Tongue:new FormControl('',[Validators.required]),
         Religion:new FormControl('',[Validators.required]),
         Caste:new FormControl('',[Validators.required]),
