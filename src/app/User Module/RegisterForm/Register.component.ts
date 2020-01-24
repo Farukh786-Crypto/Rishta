@@ -8,7 +8,6 @@ import { ToastrService } from 'ngx-toastr';
     templateUrl: './Register.component.html',
     styleUrls: ['./Register.component.css']
 
-
 })
 
 
@@ -24,7 +23,8 @@ export class RegisterFormComponent {
             email: new FormControl('', [Validators.required, Validators.pattern(/^(\d{10}|\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4}))$/)]),
             password: new FormControl('', [Validators.required,  Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]),
             mobileno: new FormControl('', [Validators.required, Validators.pattern(/^(\+\d{0,1,3}[- ]?)?\d{10}$/)]),
-            profile: new FormControl('', [Validators.required])
+            profile: new FormControl('', [Validators.required]),
+            gender: new FormControl('male',[Validators.required])
         })
     }
 
@@ -45,16 +45,3 @@ export class RegisterFormComponent {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

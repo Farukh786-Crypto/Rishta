@@ -2,18 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { ContactComponent } from './RegisterForm/contact.component';
+
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MyRoute } from './route.config';
 import { ToastrModule } from 'ngx-toastr';
+import { AstroreligionComponent } from './User Module/AstroandreligionForm/Astroreligion.component';
+
+import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ContactComponent,
-    
+    AppComponent
   ],
   imports: [
     BrowserModule,

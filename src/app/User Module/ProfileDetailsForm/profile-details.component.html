@@ -1,0 +1,280 @@
+
+{{ProfileDetails.value|json}}
+
+<form [formGroup]="ProfileDetails">
+  <div class="container">
+
+    <div class="col-md-12">
+      <h2>Profile Details</h2>
+
+      <!-- <a href="#" style="cursor:default" class="" data-toggle="modal" data-target="#myModal">Profile Details</a>&nbsp;
+      <a href="#" style="cursor:default" class="">Career Details</a>&nbsp;
+      <a href="#" style="cursor:default" class="">Life Style Details</a>&nbsp;
+      <a href="#" style="cursor:default" class="">Family Detais</a>&nbsp; -->
+      <!-- Trigger the modal with a button -->
+      <button type="button" hidden class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open
+        Modal</button>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Profile Details</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          </div>
+          <div class="modal-body">
+
+            <tr>
+              <td>
+                <div class="form-group">
+
+                    <label class="left mandatory">Bride's Name</label>
+                    <input type="text" class="form-control" formControlName="Name" placeholder="Enter the Name">
+                    <span *ngIf="ProfileDetails.get('Name').hasError('required') &&
+                    (ProfileDetails.get('Name').touched || ProfileDetails.get('Name').dirty|| isSubmitted)"
+                    class="text-danger" padding>
+                    Name is a required field.</span>
+                    <!-- <div class="col-md-5">
+                     
+                      </div> -->
+
+                
+
+
+
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="form-group">
+                  <div class="">
+                    <label class="left mandatory">Date of Birth</label>
+                    <input type="date" class="form-control" formControlName="Dob">
+                    <span *ngIf="ProfileDetails.get('Dob').hasError('required') &&
+                    (ProfileDetails.get('Dob').touched || ProfileDetails.get('Dob').dirty|| isSubmitted)"
+                    class="text-danger" padding>
+                    Date is a required field.</span>
+                  </div>
+
+                </div>
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="form-group">
+
+                  <div class="">
+                    <label class="left mandatory">Mother tongue</label>
+                    <select class="form-control" formControlName="Mothertng">
+                      <option value="">SELECT</option>
+                      <option>Marathi</option>
+                      <option>Hindi</option>
+                      <option>Kannada</option>
+                      <option>English</option>
+                      <option>Sikkim</option>
+                      <option>Assamese</option>
+                      <option>Bengali</option>
+                      <option>Oriya</option>
+                      <option>Tamil</option>
+                      <option>Telugu</option>
+                    </select>
+                    <span *ngIf="ProfileDetails.get('Mothertng').hasError('required') &&
+                      (ProfileDetails.get('Mothertng').touched || ProfileDetails.get('Mothertng').dirty|| isSubmitted)"
+                      class="text-danger" padding>
+                      Mother tongue is a required field.</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="">
+                  <label class="left mandatory">Religion</label>
+                  <select class="form-control" formControlName="religion">
+                    <option value="" disabled>SELECT</option>
+                    <option>Hindu</option>
+                    <option>Muslim</option>
+                    <option>Sikh</option>
+                    <option>Christian</option>
+                    <option>Buddhist</option>
+                    <option>Jain</option>
+                    <option>Parsi</option>
+                    <option>Jewish</option>
+                    <option>Bahai</option>
+
+                  </select>
+                  <span *ngIf="ProfileDetails.get('religion').hasError('required') 
+                    && (ProfileDetails.get('religion').touched || ProfileDetails.get('religion').dirty|| isSubmitted)"
+                    class="text-danger" padding>Religion is a required field.</span>
+                </div>
+
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <div class="form-group">
+
+                  <div class="">
+                    <label class="left mandatory">Caste</label>
+                    <select class="form-control" formControlName="Caste">
+                      <option value="">SELECT</option>
+                      <option>Maratha</option>
+                      <option>Mali</option>
+                      <option>Brahmin</option>
+                      <option>Adi Karnataka</option>
+                      <option>Jungum</option>English
+                      <option>Gauda</option>English
+                      <option>Teli</option>English
+                      <option>Gujjar</option>English
+                      <option>Patil</option>English
+                    </select>
+                  </div>
+                  <span *ngIf="ProfileDetails.get('Caste').hasError('required') &&
+                    (ProfileDetails.get('Caste').touched || ProfileDetails.get('Caste').dirty|| isSubmitted)"
+                    class="text-danger" padding>
+                    Caste is a required field.</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="form-group">
+
+                  <div class="">
+                    <label class="left mandatory">Sub Caste</label>
+                    <select class="form-control" formControlName="SubCaste">
+                      <option value="">SELECT</option>
+                      <option>96 kuli Maratha</option>
+                      <option>Patil</option>
+                      <option>Deshmukh</option>
+                      <option>Lingayat</option>
+                      <option>Vani</option>English
+                      <option>Gauda</option>English
+                      <option>Teli</option>English
+                      <option>Gujjar</option>English
+                      <option>Deshpande</option>English
+                    </select>
+                  </div>
+                  <span *ngIf="ProfileDetails.get('SubCaste').hasError('required') 
+                    && (ProfileDetails.get('SubCaste').touched || ProfileDetails.get('SubCaste').dirty|| isSubmitted)"
+                    class="text-danger" padding>
+                    Caste is a required field.</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="form-group">
+
+                  <div class="">
+                    <label class="left mandatory">Are You Manglik?</label>
+                    <select class="form-control" formControlName="Manglik">
+                      <option value="">SELECT</option>
+                      <option>Manglik</option>
+                      <option>Non-Manglik</option>
+                      <option>Anshik-Manglik</option>
+                    </select>
+
+                    <span *ngIf="ProfileDetails.get('Manglik').hasError('required') &&
+                      (ProfileDetails.get('Manglik').touched || ProfileDetails.get('Manglik').dirty || isSubmitted)"
+                      class="text-danger" padding>
+                      Manglik is a required field.</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+
+                <div class="form-group">
+                  <div class="">
+                    <label class="left mandatory">Horoscope match is necessary?</label>
+                    <select class="form-control" formControlName="Horoscope">
+                      <option value="">SELECT</option>
+                      <option>Must</option>
+                      <option>Not-Necessary</option>
+                    </select>
+                    <span
+                      *ngIf="ProfileDetails.get('Horoscope').hasError('required') &&
+                       (ProfileDetails.get('Horoscope').touched || ProfileDetails.get('Horoscope').dirty || isSubmitted)"
+                      class="text-danger" padding>
+                      Horoscope is a required field.</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="form-group">
+                  <div class="">
+                    <label class="left mandatory">Marital status</label>
+                    <select class="form-control" formControlName="Marrital">
+                      <option value="">SELECT</option>
+                      <option>Never Married</option>
+                      <option>Awaiting Divorce</option>
+                      <option>Divorced</option>
+                      <option>Widowed</option>
+                      <option>Annulled</option>
+                    </select>
+                    <span *ngIf="ProfileDetails.get('Marrital').hasError('required') &&
+                      (ProfileDetails.get('Marrital').touched || ProfileDetails.get('Marrital').dirty || isSubmitted)"
+                      class="text-danger" padding>
+                      Marrital status is a required field.</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+
+                <div class="form-group">
+                  <div class="">
+                    <label class="left mandatory">Height</label>
+                    <select class="form-control" formControlName="Height">
+                      <option value="">SELECT</option>
+                      <option>4.0</option>
+                      <option>5.0</option>
+                      <option>5.6</option>
+                      <option>5.10</option>
+                      <option>6.0</option>
+                    </select>
+
+                    <span *ngIf="ProfileDetails.get('Height').hasError('required') && 
+                      (ProfileDetails.get('Height').touched  || ProfileDetails.get('Height').dirty || isSubmitted)"
+                      class="text-danger" padding>
+                      Height is a required field.</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+
+            <br>
+
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-default" (click)="onSubmit(ProfileDetails.value)">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</form>
