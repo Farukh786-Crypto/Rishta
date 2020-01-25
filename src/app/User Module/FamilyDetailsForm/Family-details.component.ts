@@ -2,14 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 // import { ToastrService } from 'ngx-toastr';
 @Component({
-<<<<<<< Updated upstream
+  
   selector: 'app-family-details',
   templateUrl: './Family-details.component.html'
-=======
-  selector: 'familydetails_app',
-  templateUrl: './Family-details.componet.html'
->>>>>>> Stashed changes
- 
+
 })
 export class FamilyDetailsComponent{
 
