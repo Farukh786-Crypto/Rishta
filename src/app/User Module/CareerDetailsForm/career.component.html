@@ -1,0 +1,307 @@
+<!-- <h1>{{title}}</h1> -->
+
+
+
+
+<div class="container">
+    <!-- Trigger the modal with a button -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal4" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">Career Details</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="align-center form-horizontal" [formGroup]="careerDetails">
+                        <p> <b>Congrats! You are about to complete your profile details.</b></p>
+
+
+
+
+
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label">Country<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="Country" required>
+                                        <option disabled selected value></option>
+                                        <option>Afghanistan</option>
+                                        <option>Albania</option>
+                                        <option>Algeria</option>
+                                        <option>Andorra</option>
+                                        <option>Angola</option>
+                                        <option>Antigua and Barbuda</option>
+                                        <option>Argentina</option>
+                                        <option>Armenia</option>
+                                        <option>Australia</option>
+                                        <option>Austria</option>
+                                        <option>Azerbaijan</option>
+                                        <option>Bahamas</option>
+
+                                    </select>
+
+
+
+                                    <!-- <div class="alert alert-danger"
+                                        *ngIf="isSubmitted && careerDetails.get('Country').hasError('required')|| (careerDetails.get('Country').touched">
+                                        Country is required.
+                                    </div> -->
+                                    <div class="text-danger" *ngIf=" careerDetails.controls['Country'].hasError('required')&&
+    (careerDetails.controls.Country.touched ||careerDetails.controls['Country'].dirty|| isSubmitted)">
+                                        Country is required.
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label">State<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="State" required>
+                                        <option disabled selected value></option>
+                                        <option>Andaman and Nicobar Islands</option>
+                                        <option>Chandigarh</option>
+                                        <option>Dadar and Nagar Haveli</option>
+                                        <option>Daman and Diu</option>
+                                        <option>Delhi</option>
+                                        <option>Lakshadeep</option>
+                                        <option>Pondicherry</option>
+                                        <option>West Bengal</option>
+                                        <option>Uttar Pradesh</option>
+                                        <option>Uttaranchal</option>
+                                        <option>Tripura</option>
+                                    </select>
+                                    <div class="text-danger" *ngIf=" careerDetails.controls['State'].hasError('required')&&
+    (careerDetails.controls.State.touched ||careerDetails.controls['State'].dirty|| isSubmitted)">
+                                        State is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label">City Living In<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="City" required>
+                                        <option disabled selected value></option>
+                                        <option>Achalpur</option>
+                                        <option>Aheri</option>
+                                        <option>Ahmednagar</option>
+                                        <option>Ahmedpur</option>
+                                        <option>Ajara</option>
+                                        <option>Akkalkot</option>
+                                        <option>Akola</option>
+                                        <option>Akole</option>
+                                        <option>Akot</option>
+                                        <option>Alibagh</option>
+                                        <option>Amagaon</option>
+                                    </select>
+                                    <div class="text-danger"
+                                        *ngIf=" careerDetails.controls['City'].hasError('required')&&
+                                    (careerDetails.controls.City.touched ||careerDetails.controls['City'].dirty|| isSubmitted)">
+                                        City is required.
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="number" class="control-label">Pincode<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" formControlName="Pincode" required>
+                                    <div class="text-danger"
+                                        *ngIf=" careerDetails.controls['Pincode'].hasError('required')&&
+                                    (careerDetails.controls.Pincode.touched ||careerDetails.controls['Pincode'].dirty|| isSubmitted)">
+                                        Pincode is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label">Highest Degree In<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+
+                                    <select class="form-control" formControlName="HighestDegree" required>
+                                        <option disabled selected value></option>
+                                        <option>Ph.D</option>
+                                        <option>M.Phil</option>
+                                        <option>Post Graduate</option>
+                                        <option>Under Graduate</option>
+                                        <option>PG Diploma</option>
+                                        <option>Diploma</option>
+                                        <option>Certificate</option>
+                                        <option>Integrated</option>
+                                    </select>
+                                    <div class="text-danger" *ngIf=" careerDetails.controls['HighestDegree'].hasError('required')&&
+    (careerDetails.controls.HighestDegree.touched ||careerDetails.controls['HighestDegree'].dirty|| isSubmitted)">
+                                        Highest Degree is required.
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label">Employeed In<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="Emplyeed" required>
+                                        <option disabled selected value></option>
+                                        <option>Accountancy and Financial Management </option>
+                                        <option>Arts </option>
+                                        <option>Built Environment </option>
+                                        <option>Charities and the Voluntary Sector </option>
+                                        <option> Business</option>
+                                        <option>Consultancy </option>
+                                        <option>Banking and Investment </option>
+                                    </select>
+                                    <div class="text-danger" *ngIf=" careerDetails.controls['Emplyeed'].hasError('required')&&
+    (careerDetails.controls.Emplyeed.touched ||careerDetails.controls['Emplyeed'].dirty|| isSubmitted)">
+                                        Employeed In required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label">Occupation<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="Occupation" required>
+                                        <option disabled selected value></option>
+                                        <option>Cloud architect</option>
+                                        <option>IT consultant</option>
+                                        <option>Computer forensic investigator</option>
+                                        <option>Health IT specialist</option>
+                                        <option>Mobile application developer</option>
+                                        <option>Web developer</option>
+                                        <option>Software engineer</option>
+                                        <option>Information technology vendor manager</option>
+                                    </select>
+                                    <div class="text-danger" *ngIf=" careerDetails.controls['Occupation'].hasError('required')&&
+    (careerDetails.controls.Occupation.touched ||careerDetails.controls['Occupation'].dirty|| isSubmitted)">
+                                        Occupation is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="number" class="control-label">Annual Income<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" formControlName="Income" required>
+                                    <div class="text-danger" *ngIf=" careerDetails.controls['Income'].hasError('required')&&
+    (careerDetails.controls.Income.touched ||careerDetails.controls['Income'].dirty|| isSubmitted)">
+                                        Annual income is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label"> Express Yourself!<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+
+                                    <textarea class="form-control" id="word_count" rows="4" cols="50"
+                                        formControlName="Express" required></textarea><br>
+                                    Total word count: <span id="display_count">0</span> words.
+                                    Words left: <span id="word_left">200</span>
+                                    <div class="text-danger" *ngIf=" careerDetails.controls['Express'].hasError('required')&&
+    (careerDetails.controls.Express.touched ||careerDetails.controls['Express'].dirty|| isSubmitted)">
+                                        Minimum 200 words needed.<br>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-danger">Complete Registration</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                        (click)="onSubmit(careerDetails.value)">SUBMIT</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

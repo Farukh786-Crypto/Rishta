@@ -1,0 +1,340 @@
+<!-- <h1>{{title}}</h1> -->
+
+<div class="container">
+    <!-- Trigger the modal with a button -->
+    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open</button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                    <h4 class="modal-title">Astro and Religion Details</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="align-center" [formGroup]="AstroreligionDetails">
+                        <p> You are about to complete your Astro and Religion details.</p>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="text">Marital_Status<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="Marital_Status" required>
+                                        <option disabled selected value></option>
+                                        <option>Married</option>
+                                        <option>UnMarried</option>
+                                        <option>Widow</option>
+                                        <option>divorced</option>
+                                    </select>
+
+                                    <!-- <div class="alert alert-danger"
+                                        *ngIf="isSubmitted && AstroreligionDetails.get('Country').hasError('required')|| (AstroreligionDetails.get('Country').touched">
+                                        Country is required.
+                                    </div> -->
+                                    <div class="text-danger"
+                                        *ngIf="isSubmitted && AstroreligionDetails.controls['Marital_Status'].hasError('required')&&
+    (AstroreligionDetails.controls.Marital_Status.touched ||AstroreligionDetails.controls['Marital_Status'].dirty|| isSubmitted)">
+                                        Marital_Status is required.
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="text">Mother_Tongue<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="Mother_Tongue" required>
+                                        <option disabled selected value></option>
+                                        <option>Hindi</option>
+                                        <option>English</option>
+                                        <option>Bengali</option>
+                                        <option>Marathi</option>
+                                        <option>Telugu</option>
+                                        <option>Tamil</option>
+                                        <option>Gujarati</option>
+                                        <option>Urdu</option>
+                                        <option>Kannada</option>
+                                        <option>Odia</option>
+                                        <option>Malayalam</option>
+                                        <option>Punjabi</option>
+                                        <option>Sanskrit</option>
+                                        <option>Other</option>
+                                    </select>
+                                    <div class="text-danger"
+                                        *ngIf=" AstroreligionDetails.controls['Mother_Tongue'].hasError('required')&&
+    (AstroreligionDetails.controls.Mother_Tongue.touched ||AstroreligionDetails.controls['Mother_Tongue'].dirty|| isSubmitted)">
+                                        Mother_Tongue is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Religion<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="Religion" required>
+                                        <option disabled selected value></option>
+                                        <option>Hinduism</option>
+                                        <option>Islam</option>
+                                        <option>Christianity</option>
+                                        <option>Sikhism</option>
+                                        <option>Buddhism</option>
+                                        <option>Jainism</option>
+                                        <option>Others/Religion not specified</option>
+
+                                    </select>
+                                    <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Religion'].hasError('required')&&
+(AstroreligionDetails.controls.Religion.touched ||AstroreligionDetails.controls['Religion'].dirty|| isSubmitted)">
+                                        Religion is required.
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label for="number">Pincode<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="number" class="form-control"formControlName="Pincode"required>
+                                    <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Pincode'].hasError('required')&&
+                                    (AstroreligionDetails.controls.Pincode.touched ||AstroreligionDetails.controls['Pincode'].dirty|| isSubmitted)">
+                                    Pincode is required.
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr> -->
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Caste<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+
+                                    <select class="form-control" formControlName="Caste" required>
+                                        <option disabled selected value></option>
+                                        <option>Scs</option>
+                                        <option>STs</option>
+                                        <option>OBSs</option>
+                                        <option>Forward Caste/Others</option>
+
+                                    </select>
+                                    <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Caste'].hasError('required')&&
+    (AstroreligionDetails.controls.Caste.touched ||AstroreligionDetails.controls['Caste'].dirty|| isSubmitted)">
+                                        Caste is required.
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Sub_Caste<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="SubCaste" required>
+                                        <option disabled selected value></option>
+                                        <option>Adaviyar </option>
+                                        <option>Agri (caste) </option>
+                                        <option>Ahir </option>
+                                        <option>Ahirwar </option>
+                                        <option> Ahluwalia (caste)</option>
+                                        <option>Anjana Chaudhari </option>
+                                        <option>Arora </option>
+                                        <option>Other </option>
+                                    </select>
+                                    <div class="text-danger" *ngIf=" AstroreligionDetails.controls['SubCaste'].hasError('required')&&
+    (AstroreligionDetails.controls.SubCaste.touched ||AstroreligionDetails.controls['SubCaste'].dirty|| isSubmitted)">
+                                        SubCaste In required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Devak<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="Devak" required>
+                                        <option disabled selected value></option>
+                                        <option>Pali</option>
+                                        <option>Saundal</option>
+                                        <option>Other</option>
+
+                                    </select>
+                                    <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Devak'].hasError('required')&&
+    (AstroreligionDetails.controls.Devak.touched ||AstroreligionDetails.controls['Devak'].dirty|| isSubmitted)">
+                                        Occupation is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="text">Horoscope<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="Horoscope" required>
+                                        <option disabled selected value></option>
+                                        <option>Aries</option>
+                                        <option>Taurus</option>
+                                        <option>Gemini</option>
+                                        <option>Cancer</option>
+                                        <option>Leo</option>
+                                        <option>Vigro</option>
+                                        <option>Libra</option>
+                                        <option>Scorpio</option>
+                                        <option>Other</option>
+                                    </select>
+                                    <div class="text-danger"
+                                        *ngIf=" AstroreligionDetails.controls['Horoscope'].hasError('required')&&
+    (AstroreligionDetails.controls.Horoscope.touched ||AstroreligionDetails.controls['Horoscope'].dirty|| isSubmitted)">
+                                        Occupation is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Horoscope<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="Nakshtra" required>
+                                        <option disabled selected value></option>
+                                        <option>Ashvini</option>
+                                        <option>Bharani</option>
+                                        <option>Krittika</option>
+                                        <option>Rohini</option>
+                                        <option>Mrigashīrsha</option>
+                                        <option>Ardrao</option>
+                                        <option>Pushya</option>
+                                        <option>Āshleshā</option>
+                                        <option>Other</option>
+                                    </select>
+                                    <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Nakshtra'].hasError('required')&&
+    (AstroreligionDetails.controls.Nakshtra.touched ||AstroreligionDetails.controls['Nakshtra'].dirty|| isSubmitted)">
+                                        Occupation is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+
+                                <div class="form-group">
+                                    <label for="text">Manglik<i class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="Gotra" required>
+                                        <option disabled selected value></option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+
+                                        <option>Other</option>
+
+                                    </select>
+                                    <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Manglik'].hasError('required')&&
+    (AstroreligionDetails.controls.Manglik.touched ||AstroreligionDetails.controls['Manglik'].dirty|| isSubmitted)">
+                                        Gotra is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- <tr>
+                            <td>
+                                <div class="form-group">
+                                    <label for="text"> Express Yourself!<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+
+                                    <textarea class="form-control" id="word_count" rows="4" cols="50"
+                                        formControlName="Express" required></textarea><br>
+                                    Total word count: <span id="display_count">0</span> words.
+                                    Words left: <span id="word_left">200</span>
+                                    <div class="text-danger" *ngIf=" AstroreligionDetails.controls['Express'].hasError('required')&&
+    (AstroreligionDetails.controls.Express.touched ||AstroreligionDetails.controls['Express'].dirty|| isSubmitted)">
+                                        Minimum 200 words needed.<br>
+
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr> -->
+                        
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                        (click)="onSubmit(AstroreligionDetails.value)">SUBMIT</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

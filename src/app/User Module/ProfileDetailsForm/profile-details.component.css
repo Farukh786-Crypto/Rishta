@@ -1,0 +1,13 @@
+
+
+.mandatory:after {
+    content: '*';
+    color: #ED2D2C;
+}
+/* .modal-content
+{
+    background-image: url('src\assets\Images\pexels-photo-414660.jpg');
+    background-repeat:repeat-y;
+    background-size: cover;
+    width: 600px;
+} */
