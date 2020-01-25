@@ -29,8 +29,6 @@ constructor(){
     
     }
      
-     
-    
 
 onSubmit(data:any)
 {
