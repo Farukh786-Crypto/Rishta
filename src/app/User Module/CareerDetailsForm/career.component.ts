@@ -29,20 +29,19 @@ constructor(){
     
     }
      
-     
-    
 
 onSubmit(data:any)
 {
     this.isSubmitted=true;
     if(this.careerDetails.valid)
    { 
-       return false;
+        // alert(JSON.stringify(this.careerDetails.value));
+        alert(JSON.stringify(data));
+      
     }
     else
     {
-        // alert(JSON.stringify(this.careerDetails.value));
-        alert(JSON.stringify(data));
+        return false;
     }
 
 }

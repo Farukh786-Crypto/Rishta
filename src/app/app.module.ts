@@ -11,10 +11,12 @@ import { ToastrModule } from 'ngx-toastr';
 import { AstroreligionComponent } from './User Module/AstroandreligionForm/Astroreligion.component';
 
 import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component';
+import { FeedbackComponent } from './User Module/Feedback/Feedback.component';
 
 @NgModule({
   declarations: [
     AppComponent
+    
   ],
   imports: [
     BrowserModule,

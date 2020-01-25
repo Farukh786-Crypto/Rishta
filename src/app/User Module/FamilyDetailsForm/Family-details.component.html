@@ -1,8 +1,4 @@
 <h1>{{title}}</h1>
-
-
-
-
 <div class="container">
 
     <!-- Modal -->
@@ -12,14 +8,12 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Family Details</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
                 </div>
                 <div class="modal-body">
                     <!-- <p>Some text in the modal.</p> -->
-
-
-
                     <div class="container">
 
                         <form [formGroup]="FamilyDetailsModel" novalidate>
@@ -27,7 +21,7 @@
                                 <div class="row">
 
                                     <div class="col-md-3">
-                                        <label for="username1">Family Type:</label>
+                                        <label>Family Type:</label>
                                     </div>
                                     <div class="col-md-8">
                                         <select class="form-control" formControlName="familytype">
@@ -51,7 +45,7 @@
                                 <div class="row">
 
                                     <div class="col-md-3">
-                                        <label for="username1">Father's Occupations:</label>
+                                        <label>Father's Occupations:</label>
                                     </div>
                                     <div class="col-md-8">
                                         <select class="form-control" formControlName="fatherocc">
@@ -76,7 +70,7 @@
                                 <div class="row">
 
                                     <div class="col-md-3">
-                                        <label for="username1">Mather's Occupations:</label>
+                                        <label>Mother's Occupations:</label>
                                     </div>
                                     <div class="col-md-8">
                                         <select class="form-control" formControlName="motherocc">
@@ -102,48 +96,76 @@
                                 <div class="row">
 
                                     <div class="col-md-3">
-                                        <label for="username1">Brother:</label>
+                                        <label>Brother:</label>
                                     </div>
                                     <div class="col-md-8">
                                         <select class="form-control" formControlName="brother">
                                             <option value="">SELECT</option>
+                                            <option>0</option>
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
                                             <option>4</option>
-                                            <option>5/option>
+                                            <option>5</option>
                                         </select>
                                         <span
                                             *ngIf="FamilyDetailsModel.get('brother').hasError('required') &&
                                             (FamilyDetailsModel.get('brother').touched || FamilyDetailsModel.get('brother').dirty|| isSubmitted)"
                                             class="text-danger" padding>
-                                            Brother Occupations Required.</span>
+                                            How Many Brothers is Required.</span>
                                     </div>
 
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <div class="row">
 
                                     <div class="col-md-3">
-                                        <label for="username1">Sister:</label>
+                                        <label>How Many Brother Married:</label>
                                     </div>
                                     <div class="col-md-8">
-                                        <select class="form-control" formControlName="sister">
+                                        <select class="form-control" formControlName="brothermarried" >
                                             <option value="">SELECT</option>
+                                            <option>0</option>
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
                                             <option>4</option>
-                                            <option>5/option>
+                                            <option>5</option>
+                                        </select>
+                                        <span
+                                            *ngIf="FamilyDetailsModel.get('brothermarried').hasError('required') &&
+                                            (FamilyDetailsModel.get('brothermarried').touched || FamilyDetailsModel.get('brothermarried').dirty|| isSubmitted)"
+                                            class="text-danger" padding>
+                                            How Many Married Brothers is Required.</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label>Sister:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select class="form-control" formControlName="sister">
+                                            <option value="">SELECT</option>
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
                                         </select>
                                         <span
                                             *ngIf="FamilyDetailsModel.get('sister').hasError('required') &&
                                             (FamilyDetailsModel.get('sister').touched || FamilyDetailsModel.get('sister').dirty|| isSubmitted)"
                                             class="text-danger" padding>
-                                            sister Occupations Required.</span>
+                                            How Many Sisters is Required.</span>
                                     </div>
-
                                 </div>
                             </div>
 
@@ -151,7 +173,33 @@
                                 <div class="row">
 
                                     <div class="col-md-3">
-                                        <label for="username1">Family livin In:</label>
+                                        <label>How Many Married Sisters:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <select class="form-control" formControlName="sistermarried">
+                                            <option value="">SELECT</option>
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                        <span
+                                            *ngIf="FamilyDetailsModel.get('sistermarried').hasError('required') &&
+                                            (FamilyDetailsModel.get('sistermarried').touched || FamilyDetailsModel.get('sistermarried').dirty|| isSubmitted)"
+                                            class="text-danger" padding>
+                                            How Many Married Sisters is Required.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <label>Family livin In:</label>
                                     </div>
                                     <div class="col-md-8">
                                         <select class="form-control" formControlName="livingstate">
@@ -166,7 +214,7 @@
                                             *ngIf="FamilyDetailsModel.get('livingstate').hasError('required') &&
                                             (FamilyDetailsModel.get('livingstate').touched || FamilyDetailsModel.get('livingstate').dirty|| isSubmitted)"
                                             class="text-danger" padding>
-                                            Family living state Required.</span>
+                                            Family Living State Required.</span>
                                     </div>
 
                                 </div>
@@ -176,7 +224,7 @@
                                 <div class="row">
 
                                     <div class="col-md-3">
-                                        <label for="username1">City:</label>
+                                        <label>City:</label>
                                     </div>
                                     <div class="col-md-8">
                                         <select class="form-control" formControlName="livingcity">
@@ -191,7 +239,7 @@
                                             *ngIf="FamilyDetailsModel.get('livingcity').hasError('required') &&
                                             (FamilyDetailsModel.get('livingcity').touched || FamilyDetailsModel.get('livingcity').dirty|| isSubmitted)"
                                             class="text-danger" padding>
-                                            Family living city is Required.</span>
+                                            Family Living  Required.</span>
                                     </div>
 
                                 </div>
@@ -201,7 +249,7 @@
                                 <div class="row">
 
                                     <div class="col-md-3">
-                                        <label for="address">Contact Address :</label>
+                                        <label>Contact Address :</label>
                                     </div>
                                     <div class="col-md-8">
                                         <input type="text" class="form-control" placeholder="Enter the Address"
@@ -210,7 +258,7 @@
                                             *ngIf="FamilyDetailsModel.get('address').hasError('required') &&
                                             (FamilyDetailsModel.get('address').touched || FamilyDetailsModel.get('address').dirty|| isSubmitted)"
                                             class="text-danger" padding>
-                                            Contact Address is a required field.</span>
+                                            Address Required.</span>
                                     </div>
 
                                 </div>
@@ -221,36 +269,29 @@
                                 <div class="row">
 
                                     <div class="col-md-3">
-                                        <label for="mobileno1">About My Family:</label>
+                                        <label>About My Family:</label>
                                     </div>
                                     <div class="col-md-8">
 
-                                        <textarea class="form-control" id="word_count" rows="4" cols="50"
-                                            formControlName="Express" required
-                                            placeholder="Write about your parents and brothers or sisters.where do they live? what are they doing?"
-                                            formControlName="aboutfamily"></textarea><br>
-                                        Total word count: <span id="display_count">0</span> words.
-                                        Words left: <span id="word_left">200</span>
 
+                                        <textarea class="form-control" id="word_count" rows="4" cols="50"
+                                        formControlName="aboutfamily" required placeholder="Write about your parents and brothers or sisters.where do they live? what are they doing?"></textarea><br>
+                                    Total word count: <span id="display_count">0</span> words.
+                                    Words left: <span id="word_left">200</span>
                                         <span
                                             *ngIf="FamilyDetailsModel.get('aboutfamily').hasError('required') &&
                                             (FamilyDetailsModel.get('aboutfamily').touched || FamilyDetailsModel.get('aboutfamily').dirty|| isSubmitted)"
                                             class="text-danger" padding>
-                                            Contact Address is a required field.</span>
+                                            About Family Required </span>
                                     </div>
 
                                 </div>
                             </div>
-
                             <br>
                             <div class="row">
                                 <div class="form-group">
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-default"
-                                            (click)="onSubmit(FamilyDetailsModel.value)">Submit</button>
-                                        <button type="button" class="btn btn-default"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
+                                        <button type="submit" class="btn btn-default" (click)="onSubmit(FamilyDetailsModel.value)">Submit</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </form>

@@ -11,7 +11,7 @@ import { LifestyleComponent } from './User Module/LifestyleDetailsForm/Lifestyle
 import { EducationComponent } from './User Module/EducationDetailsForm/EducationDetails.component'
 //import {}  from './User Module/RegisterForm/RegisterLazy.module#RegisterLazyClass'
 //import {} from './User Module/AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass'
- 
+
 export const MyRoute: Routes = [
 
    { path: '', loadChildren: './User Module/RegisterForm/RegisterLazy.module#RegisterLazyClass' },
@@ -23,7 +23,8 @@ export const MyRoute: Routes = [
 
     { path:'Educationdetails' , loadChildren:'./User Module/EducationDetailsForm/EducationDetailsLazy.module#EducationLazyClass'},
     { path:'LifestyleDetails' , loadChildren:'./User Module/LifestyleDetailsForm/LifestyleDetailsLazy.module#LifestyleLazyClass'},
-    { path:'personalDetails' , loadChildren:'./User Module/PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass'}
+    { path:'personalDetails' , loadChildren:'./User Module/PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass'},
+    { path:'feedbackDetails' , loadChildren:'./User Module/Feedback/feedbackLazy.module#FeedbackLazyClass'}
     
 ]
 
