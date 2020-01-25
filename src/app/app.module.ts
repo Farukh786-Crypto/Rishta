@@ -8,15 +8,24 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MyRoute } from './route.config';
 import { ToastrModule } from 'ngx-toastr';
+import { LayoutComponent } from './layout/layout.component';
+import { GroomsComponent } from './layout/admin/dashboard/grooms/grooms.component';
+import { BridesComponent } from './layout/admin/dashboard/brides/brides.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './Services/data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
+    LayoutComponent,
+    GroomsComponent,
+    BridesComponent
     
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     CommonModule,
     FormsModule,
     BrowserAnimationsModule, // required animations module
@@ -24,7 +33,7 @@ import { ToastrModule } from 'ngx-toastr';
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,72 @@
+{
+"profile": [
+
+{
+    "id": 1,
+    "name":"Satura",
+    "age":24,
+    "city":"pune",
+    "religion":"hindu",
+    "status":"unmarried",
+    "mothertongue":"marathi",
+    "email": "sastrura123@gmail.com",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"
+},
+{
+    "id": 2,
+    "name":"Sujata",
+    "age":21,
+    "city":"pune",
+    "religion":"hindu",
+    "mothertongue":"marathi",
+    "status":"unmarried",
+    "email": "sujata123@gmail.com",
+    "avatar": "assets/images/images (1).jpg"
+},
+{
+    "id": 3,
+    "name":"Akshta",
+    "age":24,
+    "city":"pune",
+    "religion":"hindu",
+    "mothertongue":"marathi",
+    "status":"unmarried",
+    "email": "akshta123@gmail.com",
+    "avatar": "assets/images/images (2).jpg"
+},
+{
+    "id": 4,
+    "name":"Marathi",
+    "age":22,
+    "city":"pune",
+    "religion":"hindu",
+    "mothertongue":"marathi",
+    "status":"unmarried",
+    "email": "mayuri123@gmail.com",   
+    "avatar": "assets/images/images.jpg"
+},
+{
+    "id": 5,
+    "name":"Divyshri",
+    "age":23,
+    "city":"pune",
+    "religion":"hindu",
+    "mothertongue":"marathi",
+    "status":"unmarried",
+    "email": "divyashri123@gmail.com",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"
+},
+{
+    "id": 6,
+    "name":"Farukh",
+    "age":24,
+    "city":"pune",
+    "religion":"hindu",
+    "status":"married",
+    "mothertongue":"marathi",
+    "email": "sastrura123@gmail.com",
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"
+}
+]
+
+}
