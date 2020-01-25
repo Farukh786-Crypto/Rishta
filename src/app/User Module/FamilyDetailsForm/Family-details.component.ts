@@ -23,6 +23,7 @@ export class FamilyDetailsComponent{
       livingstate: new FormControl('',Validators.required),
       livingcity: new FormControl('',Validators.required),
       address: new FormControl('',Validators.required),
+      aboutfamily: new FormControl('',Validators.required)
       
   })
   }
