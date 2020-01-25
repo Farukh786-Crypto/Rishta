@@ -10,6 +10,7 @@ import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/pers
 import { LifestyleComponent } from './User Module/LifestyleDetailsForm/LifestyleDetails.component'
 //import {}  from './User Module/RegisterForm/RegisterLazy.module#RegisterLazyClass'
 //import {} from './User Module/AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass'
+//import {} from './User Module/Feedback/feedbackLazy.module#FeedbackLazyClass'
 
 export const MyRoute: Routes = [
 
@@ -19,7 +20,8 @@ export const MyRoute: Routes = [
     { path:'CareerDetails' , loadChildren:'./User Module/CareerDetailsForm/careerLazy.module#CareerLazyClass'},
     { path:'familydetails' , loadChildren:'./User Module/FamilyDetailsForm/Family-detailsLazy.modules#FamilyLazyClass'},
     { path:'LifestyleDetails' , loadChildren:'./User Module/LifestyleDetailsForm/LifestyleDetailsLazy.module#LifestyleLazyClass'},
-    { path:'personalDetails' , loadChildren:'./User Module/PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass'}
+    { path:'personalDetails' , loadChildren:'./User Module/PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass'},
+    { path:'feedbackDetails' , loadChildren:'./User Module/Feedback/feedbackLazy.module#FeedbackLazyClass'}
     
 ]
 
