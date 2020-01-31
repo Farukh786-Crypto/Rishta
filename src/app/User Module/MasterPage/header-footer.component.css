@@ -1,0 +1,17 @@
+#hero-image {
+    background-image: url('src\assets\Images\background image (2).jpg');
+    background-color: #cccccc;
+    height: 800px; 
+    background-position:right;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: fixed;
+  }
+  #MainNavBar{
+        background-color: teal;
+  }
+ 
+  footer{
+        background-color: teal;
+  }
+ 
