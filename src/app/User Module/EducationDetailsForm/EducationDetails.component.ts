@@ -9,23 +9,20 @@ templateUrl:'./EducationDetails.component.html'
 
 export class EducationComponent{
 title:string='Education Demo Component '
-careerDetails:FormGroup
+EduacationDetails:FormGroup
 str:string
 disabled:boolean
 isSubmitted:boolean;
 constructor(){
 
-    // this.careerDetails=new FormGroup({
-    //     Country:new FormControl('',Validators.required),
-    //     State:new FormControl('',[Validators.required]),
-    //     City:new FormControl('',[Validators.required]),
-    //     Pincode:new FormControl('',[Validators.required]),
-    //     HighestDegree:new FormControl('',[Validators.required]),
-    //     Emplyeed:new FormControl('',[Validators.required]),
-    //     Occupation:new FormControl('',[Validators.required]),
-    //     Income:new FormControl('',[Validators.required]),
-    //     Express:new FormControl('',[Validators.required])
-    // }) 
+    this.EduacationDetails=new FormGroup({
+        AEduacation:new FormControl('',Validators.required),
+        HighestDegree:new FormControl('',[Validators.required]),
+        GraduationDegree:new FormControl('',[Validators.required]),
+        GraduationCollage:new FormControl('',[Validators.required]),
+        SchoolName:new FormControl('',[Validators.required]),
+         
+    }) 
     
     }
      
@@ -35,7 +32,7 @@ constructor(){
 onSubmit(data:any)
 {
     this.isSubmitted=true;
-    if(this.careerDetails.valid)
+    if(this.EduacationDetails.valid)
    {  alert(JSON.stringify(data));
       
     }
