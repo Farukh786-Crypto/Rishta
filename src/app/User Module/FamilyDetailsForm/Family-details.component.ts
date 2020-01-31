@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 // import { ToastrService } from 'ngx-toastr';
 @Component({
   
@@ -23,7 +24,9 @@ export class FamilyDetailsComponent{
       livingstate: new FormControl('',Validators.required),
       livingcity: new FormControl('',Validators.required),
       address: new FormControl('',Validators.required),
-      
+      aboutfamily: new FormControl('',Validators.required),
+      brothermarried:new FormControl('',Validators.required),
+      sistermarried:new FormControl('',Validators.required)
   })
   }
   onSubmit(data:any) {
@@ -39,8 +42,17 @@ export class FamilyDetailsComponent{
       alert(JSON.stringify(this.FamilyDetailsModel.value))
       //this.toastr.remove;
     }
-
-  }
  
+  }
+
+
+  brotherddl:Number
+
+  selectChangeHandler(event:any)
+  {
+  this.brotherddl=event.target.value;
+  console.log("if change in method "+this.brotherddl)
+  }
+
 }
 

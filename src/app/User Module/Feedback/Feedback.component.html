@@ -1,0 +1,161 @@
+<!-- <h1>{{title}}</h1> -->
+
+
+
+
+<div class="container">
+    <!-- Trigger the modal with a button -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="feedModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title">FeedBack Details</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="align-center form-horizontal" [formGroup]="feedbackDetails">
+                        <p> <b>Congrats! You are about to complete your feedback details.</b></p>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label">Email<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                   
+                                    <input type="text" class="form-control" placeholder="Enter Email"
+                                            formControlName="email">
+
+                                    <!-- <div class="alert alert-danger"
+                                        *ngIf="isSubmitted && feedbackDetails.get('email').hasError('required')|| (feedbackDetails.get('email').touched">
+                                        email is required.
+                                    </div> -->
+                                    <div class="text-danger" *ngIf=" feedbackDetails.controls['email'].hasError('required')&&
+    (feedbackDetails.controls.email.touched ||feedbackDetails.controls['email'].dirty|| isSubmitted)">
+                                        email is required.
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label">name<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter name"
+                                    formControlName="name">
+
+                                    <div class="text-danger" *ngIf=" feedbackDetails.controls['name'].hasError('required')&&
+    (feedbackDetails.controls.name.touched ||feedbackDetails.controls['name'].dirty|| isSubmitted)">
+                                        name is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label">category<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <select class="form-control" formControlName="category" required>
+                                        <option disabled selected value></option>
+                                        <option>Achalpur</option>
+                                        <option>Aheri</option>
+                                        <option>Ahmednagar</option>
+                                        <option>Ahmedpur</option>
+                                        <option>Ajara</option>
+                                        <option>Akkalkot</option>
+                                        <option>Akola</option>
+                                        <option>Akole</option>
+                                        <option>Akot</option>
+                                        <option>Alibagh</option>
+                                        <option>Amagaon</option>
+                                    </select>
+                                    <div class="text-danger"
+                                        *ngIf=" feedbackDetails.controls['category'].hasError('required')&&
+                                    (feedbackDetails.controls.category.touched ||feedbackDetails.controls['category'].dirty|| isSubmitted)">
+                                        category is required.
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        
+                        
+
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="text" class="control-label"> Reason??<i
+                                            class="fa fa-asterisk text-danger">*</i></label>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+
+                                    <textarea class="form-control" id="word_count" rows="4" cols="50"
+                                        formControlName="reason" required></textarea><br>
+                                        <div class="text-danger" *ngIf=" feedbackDetails.controls['reason'].hasError('required')&&
+    (feedbackDetails.controls.reason.touched ||feedbackDetails.controls['reason'].dirty|| isSubmitted)">
+                                        Minimum 200 words needed.<br> 
+
+                                    <!-- Total word count: <span id="display_count">0</span> words.
+                                    Words left: <span id="word_left">200</span>
+                                    <div class="text-danger" *ngIf=" feedbackDetails.controls['reason'].hasError('required')&&
+    (feedbackDetails.controls.reason.touched ||feedbackDetails.controls['reason'].dirty|| isSubmitted)">
+                                        Minimum 200 words needed.<br> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-danger">Complete Registration</button>
+                                </div>
+                            </div>
+
+                        </div> -->
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                        (click)="onSubmit(feedbackDetails.value)">POST</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

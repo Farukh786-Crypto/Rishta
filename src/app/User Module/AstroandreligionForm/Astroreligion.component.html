@@ -40,7 +40,7 @@
                                         Country is required.
                                     </div> -->
                                     <div class="text-danger"
-                                        *ngIf="isSubmitted && AstroreligionDetails.controls['Marital_Status'].hasError('required')&&
+                                        *ngIf="AstroreligionDetails.controls['Marital_Status'].hasError('required')&&
     (AstroreligionDetails.controls.Marital_Status.touched ||AstroreligionDetails.controls['Marital_Status'].dirty|| isSubmitted)">
                                         Marital_Status is required.
 
@@ -78,7 +78,7 @@
                                     </select>
                                     <div class="text-danger"
                                         *ngIf=" AstroreligionDetails.controls['Mother_Tongue'].hasError('required')&&
-    (AstroreligionDetails.controls.Mother_Tongue.touched ||AstroreligionDetails.controls['Mother_Tongue'].dirty|| isSubmitted)">
+    (AstroreligionDetails.controls.Mother_Tongue.touched ||AstroreligionDetails.controls['Mother_Tongue'].dirty || isSubmitted)">
                                         Mother_Tongue is required.
                                     </div>
                                 </div>
