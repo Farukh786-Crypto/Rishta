@@ -35,6 +35,7 @@
                                     <div class="col-md-8">
                                         <input type="text" class="form-control" placeholder="Enter UserName"
                                             formControlName="UserName">
+        
                                         <div class="text-danger"
                                             *ngIf="isSubmited &&  RegisterModel.controls['UserName'].hasError('required')">
                                             ** UserName is Required **
