@@ -12,10 +12,11 @@ import { AstroreligionComponent } from './User Module/AstroandreligionForm/Astro
 
 import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component';
 import { FeedbackComponent } from './User Module/Feedback/Feedback.component';
+import { HeaderFooterComponent } from './User Module/MasterPage/header-footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,HeaderFooterComponent
     
   ],
   imports: [
