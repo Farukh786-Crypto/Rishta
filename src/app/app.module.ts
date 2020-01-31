@@ -17,8 +17,9 @@ import { HeaderFooterComponent } from './User Module/MasterPage/header-footer.co
 @NgModule({
   declarations: [
     AppComponent,HeaderFooterComponent
+
     
-  ],
+  ], 
   imports: [
     BrowserModule,
     CommonModule,

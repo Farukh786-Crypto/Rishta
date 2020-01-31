@@ -14,7 +14,7 @@ import { EducationComponent } from './User Module/EducationDetailsForm/Education
 
 export const MyRoute: Routes = [
 
-   { path: '', loadChildren: './User Module/RegisterForm/RegisterLazy.module#RegisterLazyClass' },
+   { path: '', loadChildren: './User Module/RegisterForm/RegisterLazy.module#RegisterLazyClass'},
     { path:'astroandreligion' , loadChildren:'./User Module/AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass'},
     { path:'profiledetails' , loadChildren:'./User Module/ProfileDetailsForm/ProfileDetailsLazy.module#RegisterLazyClass'},
     { path:'CareerDetails' , loadChildren:'./User Module/CareerDetailsForm/careerLazy.module#CareerLazyClass'},

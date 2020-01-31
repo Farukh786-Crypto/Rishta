@@ -20,7 +20,7 @@ const route1: Routes = [
         
         ReactiveFormsModule, RouterModule.forChild(route1)],
     providers: [],
-    // exports: [RegisterFormComponent]
+    exports: [RegisterFormComponent]
 
 })
 
