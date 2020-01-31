@@ -12,22 +12,14 @@ import { AstroreligionComponent } from './User Module/AstroandreligionForm/Astro
 
 import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component';
 import { FeedbackComponent } from './User Module/Feedback/Feedback.component';
-<<<<<<< HEAD
- 
-
-@NgModule({
-  declarations: [
-    AppComponent
-     
-=======
 import { HeaderFooterComponent } from './User Module/MasterPage/header-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,HeaderFooterComponent
->>>>>>> 5199b23b5f217127869f0ad0dc0b2be3ca2be878
+
     
-  ],
+  ], 
   imports: [
     BrowserModule,
     CommonModule,
