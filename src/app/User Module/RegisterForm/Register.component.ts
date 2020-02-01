@@ -1,12 +1,14 @@
 import { Component } from '@angular/core'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
+import {RegisterService} from './Register.service'
 
 @Component({
 
     selector: 'register-comp',
     templateUrl: './Register.component.html',
-    styleUrls: ['./Register.component.css']
+    styleUrls: ['./Register.component.css'],
+    providers:[RegisterService]
 
 })
 
@@ -15,7 +17,7 @@ export class RegisterFormComponent {
     disabledAgreement: boolean = true
     RegisterModel: FormGroup
     isSubmited: boolean;
-    constructor(private toastr: ToastrService) {
+    constructor(private toastr: ToastrService,private rm:RegisterService) {
 
         this.RegisterModel = new FormGroup({
 
@@ -27,6 +29,26 @@ export class RegisterFormComponent {
             gender: new FormControl('male',[Validators.required])
         })
     }
+
+
+    public postInfo:any;
+    public savePostInfo(){
+
+        // this.rm.savePostInfo(this.userModel.value).subscribe(res=>{
+        //     this.postInfo=res},
+        //        err=>{this.postInfo=err})
+        //     console.log(this.postInfo)
+
+        this.rm.getUser()._subscribe(res=>{
+            this.postInfo=res},
+                err=>{this.postInfo=err})
+            
+            console.log(this.postInfo);
+
+
+    }
+
+
 
 
     // showSuccess() {
