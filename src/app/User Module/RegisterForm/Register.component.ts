@@ -2,11 +2,13 @@ import { Component } from '@angular/core'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
 
+
 @Component({
 
     selector: 'register-comp',
     templateUrl: './Register.component.html',
-    styleUrls: ['./Register.component.css']
+    styleUrls: ['./Register.component.css'],
+    providers:[]
 
 })
 
@@ -15,6 +17,8 @@ export class RegisterFormComponent {
     disabledAgreement: boolean = true
     RegisterModel: FormGroup
     isSubmited: boolean;
+    required: Boolean;
+    disableRipple: Boolean;
     constructor(private toastr: ToastrService) {
 
         this.RegisterModel = new FormGroup({
@@ -27,6 +31,10 @@ export class RegisterFormComponent {
             gender: new FormControl('male',[Validators.required])
         })
     }
+
+
+
+
 
 
     // showSuccess() {

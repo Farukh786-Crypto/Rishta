@@ -29,23 +29,35 @@
                             <div class="form-group">
                                 <div class="row">
 
-                                    <div class="col-md-3">
-                                        <label for="username1">UserName:</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control" placeholder="Enter UserName"
-                                            formControlName="UserName">
+                                    <!-- <div class="col-md-3">
+                                        <label for="username1">UserName:</label>                                                                               
+                                    </div> -->
+                                    <!-- <div class="example-container"> -->
+                                        <!-- <input type="text" class="form-control" placeholder="Enter UserName"
+                                            formControlName="UserName"> -->
+
+                                        <mat-form-field class="full-width">
+                                                <mat-label>UserName:</mat-label>
+                                                <input id="name11" matInput placeholder="Enter UserName" formControlName="UserName" required>
+                                        </mat-form-field>
+                                        
+
                                         <div class="text-danger"
                                             *ngIf="isSubmited &&  RegisterModel.controls['UserName'].hasError('required')">
                                             ** UserName is Required **
 
                                         </div>
 
-                                    </div>
+                                    <!-- </div> -->
 
                                 </div>
                             </div>
+                            <!-- <div>
+                                <mat-form-field>
+                                        <input id="name11" matInput placeholder="Enter Name">
+                                </mat-form-field>
 
+                            </div> -->
 
                             <!-- <div class="row">
                                 <div class="col-md-12">
@@ -60,8 +72,23 @@
                             </div> -->
                             <div class="form-group">
                                 <div class="row">
+                                    
+                                    <mat-form-field class="full-width">
+                                        <mat-label>Email:</mat-label>
+                                        <input id="email1" matInput placeholder="Enter Email" formControlName="email" required>
+                                    </mat-form-field>
 
-                                    <div class="col-md-3">
+
+                                    <div class="text-danger"
+                                    *ngIf="isSubmited && RegisterModel.controls['email'].hasError('required')">
+                                    ** Email is required **
+                                </div>
+                                <span class="text-danger"
+                                    *ngIf="RegisterModel.controls['email'].hasError('pattern')">
+                                   ** Please enter valid email address **</span>
+
+
+                                    <!-- <div class="col-md-3">
                                         <label for="email1">Email :</label>
                                     </div>
                                     <div class="col-md-8">
@@ -74,7 +101,7 @@
                                         <span class="text-danger"
                                             *ngIf="RegisterModel.controls['email'].hasError('pattern')">
                                            ** Please enter valid email address **</span>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                             </div>
@@ -88,10 +115,34 @@
                             <div class="form-group">
                                 <div class="row">
 
-                                    <div class="col-md-3">
+
+                                    <mat-form-field class="full-width">
+                                        <mat-label>Password :</mat-label>
+                                        <show-hide-password size="md" btnStyle="primary" [btnOutline]="true">
+
+                                            <input id="password1" matInput placeholder="Password" formControlName="password" required>
+
+                                        </show-hide-password>
+                                        
+                                    </mat-form-field>
+
+
+                                    <span class="text-danger" *ngIf="isSubmited && RegisterModel.controls['password'].hasError('required') && (RegisterModel.controls['password'].dirty 
+                                    || RegisterModel.controls.password.touched)">
+                                       ** Create the Password **
+                                    </span>
+                                    <span class="text-danger" *ngIf="isSubmited && RegisterModel.controls['password'].hasError('pattern') &&
+                            (RegisterModel.controls.password.dirty || RegisterModel.controls['password'].touched)">
+                                        Please use Correct Password like At least 8 characters in length and
+                                        Lowercase letters and Uppercase letters and Numbers Special characters
+
+                                    </span>
+
+
+                                    <!-- <div class="col-md-3">
                                         <label for="Password1">Password :</label>
-                                    </div>
-                                    <div class="col-md-8">
+                                    </div> -->
+                                    <!-- <div class="col-md-8">
                                         <show-hide-password size="md" btnStyle="primary" [btnOutline]="true">
                                             <input type="password" class="form-control" placeholder="Password"
                                                 formControlName="password">
@@ -106,7 +157,7 @@
                                             Lowercase letters and Uppercase letters and Numbers Special characters
 
                                         </span>
-                                    </div>
+                                    </div> -->
 
 
 
@@ -130,7 +181,21 @@
                             <div class="form-group">
                                 <div class="row">
 
-                                    <div class="col-md-3">
+
+                                <mat-form-field class="full-width">
+                                        <mat-label>Enter Mobile Number :</mat-label>
+                                        <input id="mobileno1" matInput placeholder="Enter Mobile Number" formControlName="mobileno" required>
+                                </mat-form-field> 
+
+
+
+                                <span class="text-danger"
+                                *ngIf="isSubmited && RegisterModel.controls['mobileno'].hasError('pattern')">
+                                ** Please enter 10 digit mobile no **
+                                </span>
+
+
+                                    <!-- <div class="col-md-3">
                                         <label for="mobileno1">Mobile No:</label>
                                     </div>
                                     <div class="col-md-8">
@@ -145,7 +210,7 @@
                                             *ngIf="isSubmited && RegisterModel.controls['mobileno'].hasError('pattern')">
                                             ** Please enter 10 digit mobile no **
                                         </span>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                             </div>
@@ -168,7 +233,41 @@
                             <div class="form-group">
                                 <div class="row">
 
-                                    <div class="col-md-3">
+
+                                    <!-- <mat-form-field>
+                                        <mat-label>Create Profile By :</mat-label>
+                                        <mat-select>       
+                                          <mat-option value="select">SELECT</mat-option>
+                                          <mat-option value="self">Self</mat-option>
+                                          <mat-option value="parents">Parents</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>  -->
+                                
+                                    <mat-form-field>
+                                        <mat-label>Select student</mat-label>
+                                        <mat-select>
+                                          <mat-option value="101">Krishna</mat-option>
+                                          <mat-option value="102">Mahesh</mat-option>
+                                          <mat-option value="103">Shiva</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+
+                                    
+                                <mat-form-field>
+                                    <mat-label>Create Profile By :</mat-label>
+                                    <select matNativeControl  formControlName="profile" required>
+                                    <option value="select">SELECT</option>
+                                    <option value="self">Self</option>
+                                    <option value="parents">Parents</option>
+                                    <!-- <option value="audi">Audi</option> -->
+                                    </select>
+                                </mat-form-field>
+
+
+
+
+
+                                    <!-- <div class="col-md-3">
                                         <label for="profile1">Create Profile By :</label>
                                     </div>
                                     <div class="col-md-8">
@@ -177,20 +276,45 @@
                                             <option>Self</option>
                                             <option>Parents</option>
                                         </select>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <!-- <label class="example-margin">Gender:</label>
+                                        <mat-radio-group>
+                                            <mat-radio-button class="example-margin" value="after">Male</mat-radio-button>
+                                            <mat-radio-button class="example-margin" value="before">Female</mat-radio-button>
+                                            <mat-radio-button class="example-margin" value="before">Other</mat-radio-button>
+                                        </mat-radio-group> -->
+
+
+
+                                        <label>Gender:</label>
+                                        <mat-radio-group aria-label="Select an option" name="gender" required>
+                                            <mat-radio-button   value="Male" [disableRipple]="true"  color="primary" checked>Male</mat-radio-button>
+                                            <mat-radio-button   value="Female" [disableRipple]="true"    color="accent">Female</mat-radio-button>
+                                            <mat-radio-button   value="other" [disableRipple]="true"    color="warn" >Other</mat-radio-button>
+                                        </mat-radio-group>
+
+
+
+
+                                        <!-- <div class="col-md-3">
                                             <label>Gender</label>
                                         </div>
                                         <div class="col-md-8">
                                             <input type="radio" value="Male" name="gender" formControlName="gender" value="male" [checked]="true">
                                             <span>Male</span>
-                                            <input type="radio" value="Female" name="gender" formControlName="gender" value="female">
+                                            <input type="radio" value="Female" name="gender" formControlName="gender">
                                             <span>Female</span>
-                                        </div>
+                                        </div> -->
+                                        <!-- <label class="example-margin">Gender:</label>
+                                        <mat-radio-group [(ngModel)]="gender">
+                                          <mat-radio-button class="example-margin" value="after">Male</mat-radio-button>
+                                          <mat-radio-button class="example-margin" value="before">Female</mat-radio-button>
+                                          <mat-radio-button class="example-margin" value="before">Other</mat-radio-button>
+                                        </mat-radio-group> -->
                                     </div>
                                 </div>
                                 <!-- <div class="row">
@@ -203,6 +327,14 @@
                                     </div>
                                 </div> -->
                             </div>
+                            <!-- <div>
+                                <mat-form-field>
+                                    <mat-label>Date of Birth</mat-label>
+                                <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </mat-form-field>
+                            </div> -->
 
                             <!-- <div class="row">
                     <div class="form-group">
@@ -212,13 +344,19 @@
                    </div>
                 </div> -->
                             <br>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary"
                                         (click)="loginUser(RegisterModel.value)">Register</button>
                                     <button type="submit" class="btn btn-secondary" style="margin-left: 20px;"
                                         data-dismiss="modal">Cancel</button>
+                                         <button mat-raised-button>Hello World</button> 
                                 </div>
+                            </div> -->
+                            <div class="buttonSubmit">
+                                <button mat-fab color="primary" (click)="loginUser(RegisterModel.value)">Register</button>
+                                <!-- <button mat-raised-button type="button" (click)="setDefault()">Default Value</button> -->
+                                <button mat-fab color="warn" type="submit" style="margin-left: 20px;" >Cancel</button>
                             </div>
                         </form>
 
