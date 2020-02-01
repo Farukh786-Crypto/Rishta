@@ -13,6 +13,8 @@ import { AstroreligionComponent } from './User Module/AstroandreligionForm/Astro
 import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component';
 import { FeedbackComponent } from './User Module/Feedback/Feedback.component';
 import { HeaderFooterComponent } from './User Module/MasterPage/header-footer.component';
+import { MaterialModule } from './material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { HeaderFooterComponent } from './User Module/MasterPage/header-footer.co
     ReactiveFormsModule,
     NgxSpinnerModule,
     RouterModule.forRoot(MyRoute),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
