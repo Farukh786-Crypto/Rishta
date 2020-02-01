@@ -242,11 +242,20 @@
                                           <mat-option value="parents">Parents</mat-option>
                                         </mat-select>
                                     </mat-form-field>  -->
+                                
+                                    <mat-form-field>
+                                        <mat-label>Select student</mat-label>
+                                        <mat-select>
+                                          <mat-option value="101">Krishna</mat-option>
+                                          <mat-option value="102">Mahesh</mat-option>
+                                          <mat-option value="103">Shiva</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
 
                                     
                                 <mat-form-field>
                                     <mat-label>Create Profile By :</mat-label>
-                                    <select matNativeControl required>
+                                    <select matNativeControl  formControlName="profile" required>
                                     <option value="select">SELECT</option>
                                     <option value="self">Self</option>
                                     <option value="parents">Parents</option>
@@ -254,15 +263,7 @@
                                     </select>
                                 </mat-form-field>
 
-                                <!-- <mat-form-field>
-                                    <mat-label>Select an option</mat-label>
-                                    <mat-select>
-                                      <mat-option>None</mat-option>
-                                      <mat-option value="option1">Option 1</mat-option>
-                                      <mat-option value="option2">Option 2</mat-option>
-                                      <mat-option value="option3">Option 3</mat-option>
-                                    </mat-select>
-                                  </mat-form-field> -->
+
 
 
 
@@ -290,10 +291,10 @@
 
 
                                         <label>Gender:</label>
-                                        <mat-radio-group aria-label="Select an option">
-                                            <mat-radio-button value="1">Male</mat-radio-button>
-                                            <mat-radio-button value="2">FeMale</mat-radio-button>
-                                            <mat-radio-button value="3">Other</mat-radio-button>
+                                        <mat-radio-group aria-label="Select an option" name="gender" required>
+                                            <mat-radio-button   value="Male" [disableRipple]="true"  color="primary" checked>Male</mat-radio-button>
+                                            <mat-radio-button   value="Female" [disableRipple]="true"    color="accent">Female</mat-radio-button>
+                                            <mat-radio-button   value="other" [disableRipple]="true"    color="warn" >Other</mat-radio-button>
                                         </mat-radio-group>
 
 
@@ -305,7 +306,7 @@
                                         <div class="col-md-8">
                                             <input type="radio" value="Male" name="gender" formControlName="gender" value="male" [checked]="true">
                                             <span>Male</span>
-                                            <input type="radio" value="Female" name="gender" formControlName="gender" value="female">
+                                            <input type="radio" value="Female" name="gender" formControlName="gender">
                                             <span>Female</span>
                                         </div> -->
                                         <!-- <label class="example-margin">Gender:</label>
@@ -343,14 +344,19 @@
                    </div>
                 </div> -->
                             <br>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary"
                                         (click)="loginUser(RegisterModel.value)">Register</button>
                                     <button type="submit" class="btn btn-secondary" style="margin-left: 20px;"
                                         data-dismiss="modal">Cancel</button>
-                                        <!-- <button mat-raised-button>Hello World</button> -->
+                                         <button mat-raised-button>Hello World</button> 
                                 </div>
+                            </div> -->
+                            <div class="buttonSubmit">
+                                <button mat-fab color="primary" (click)="loginUser(RegisterModel.value)">Register</button>
+                                <!-- <button mat-raised-button type="button" (click)="setDefault()">Default Value</button> -->
+                                <button mat-fab color="warn" type="submit" style="margin-left: 20px;" >Cancel</button>
                             </div>
                         </form>
 
