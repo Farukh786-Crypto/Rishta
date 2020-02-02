@@ -15,12 +15,14 @@ import { FeedbackComponent } from './User Module/Feedback/Feedback.component';
 import { HeaderFooterComponent } from './User Module/MasterPage/header-footer.component';
 import { MaterialModule } from './material/material.module';
 import { MatSelectModule} from '@angular/material'
+import { ErrorComponent } from './User Module/Error.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderFooterComponent
+    AppComponent,HeaderFooterComponent,
+    ErrorComponent
     
   ], 
   imports: [

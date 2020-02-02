@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
+import { RegService } from './Register.service';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
     selector: 'register-comp',
     templateUrl: './Register.component.html',
     styleUrls: ['./Register.component.css'],
-    providers:[]
+    providers:[RegService]
 
 })
 
@@ -19,7 +20,7 @@ export class RegisterFormComponent {
     isSubmited: boolean;
     required: Boolean;
     disableRipple: Boolean;
-    constructor(private toastr: ToastrService) {
+    constructor(private toastr: ToastrService,private re:RegService) {
 
         this.RegisterModel = new FormGroup({
 
@@ -33,7 +34,16 @@ export class RegisterFormComponent {
     }
 
 
+    
+    public postRegisterInfo:any;
+    userId:number;
+    public SaveRegisterInfo(){
+        this.re.getSingleRegisterUsers(this.userId).subscribe(res=>{
+            this.postRegisterInfo=res},
+                err=>{this.postRegisterInfo=err})
+        
 
+    }
 
 
 
