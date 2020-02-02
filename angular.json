@@ -24,8 +24,9 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css",
-               "node_modules/ngx-toastr/toastr.css" 
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -121,6 +122,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "rishta"
 }
