@@ -13,7 +13,7 @@ careerDetails:FormGroup
 str:string
 disabled:boolean
 isSubmitted:boolean;
-constructor(){
+constructor(private toastr: ToastrService){
 
     this.careerDetails=new FormGroup({
         Country:new FormControl('',Validators.required),
@@ -36,7 +36,8 @@ onSubmit(data:any)
     if(this.careerDetails.valid)
    { 
         // alert(JSON.stringify(this.careerDetails.value));
-        alert(JSON.stringify(data));
+        //alert(JSON.stringify(data));
+        this.toastr.success('Congrats!!', ' You are about to complete your Career details. !!');
       
     }
     else

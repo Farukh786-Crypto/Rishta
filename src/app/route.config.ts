@@ -9,6 +9,7 @@ import { ProfileDetailsComponent } from './User Module/ProfileDetailsForm/profil
 import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component'
 import { LifestyleComponent } from './User Module/LifestyleDetailsForm/LifestyleDetails.component'
 import { EducationComponent } from './User Module/EducationDetailsForm/EducationDetails.component'
+import { ErrorComponent } from './User Module/Error.component'
 //import {}  from './User Module/RegisterForm/RegisterLazy.module#RegisterLazyClass'
 //import {} from './User Module/AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass'
 
@@ -19,12 +20,11 @@ export const MyRoute: Routes = [
     { path:'profiledetails' , loadChildren:'./User Module/ProfileDetailsForm/ProfileDetailsLazy.module#RegisterLazyClass'},
     { path:'CareerDetails' , loadChildren:'./User Module/CareerDetailsForm/careerLazy.module#CareerLazyClass'},
     { path:'familydetails' , loadChildren:'./User Module/FamilyDetailsForm/Family-detailsLazy.modules#FamilyLazyClass'},
-
-
     { path:'Educationdetails' , loadChildren:'./User Module/EducationDetailsForm/EducationDetailsLazy.module#EducationLazyClass'},
     { path:'LifestyleDetails' , loadChildren:'./User Module/LifestyleDetailsForm/LifestyleDetailsLazy.module#LifestyleLazyClass'},
     { path:'personalDetails' , loadChildren:'./User Module/PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass'},
-    { path:'feedbackDetails' , loadChildren:'./User Module/Feedback/feedbackLazy.module#FeedbackLazyClass'}
+    { path:'feedbackDetails' , loadChildren:'./User Module/Feedback/feedbackLazy.module#FeedbackLazyClass'},
+    { path:'**' , component:ErrorComponent}
     
 ]
 

@@ -4,6 +4,11 @@ import { CommonModule } from '@angular/common';
 import { RegisterFormComponent } from './Register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
+import { MatFormFieldModule, MatInputModule, MatSelectModule, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatButtonModule } from '@angular/material';
+import { MaterialModule } from 'src/app/material/material.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 const route1: Routes = [
 
@@ -16,8 +21,17 @@ const route1: Routes = [
 
     declarations: [RegisterFormComponent],
     imports: [CommonModule,
+        FormsModule,
         ShowHidePasswordModule,
-        
+        MatFormFieldModule,
+        MatInputModule,
+        MaterialModule,
+        MatSelectModule,
+        MatRadioModule,
+        MatAutocompleteModule,
+        MatCheckboxModule,
+        MatButtonModule,
+        HttpClientModule,
         ReactiveFormsModule, RouterModule.forChild(route1)],
     providers: [],
     exports: [RegisterFormComponent]
