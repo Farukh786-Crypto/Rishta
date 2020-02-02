@@ -15,20 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './Services/data.service';
 import { AstroreligionComponent } from './User Module/AstroandreligionForm/Astroreligion.component';
 
-import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component';
-<<<<<<< HEAD
-import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
-import { viewComponent } from './layout/admin/dashboard/view/view.component';
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    LayoutComponent,
-    GroomsComponent,
-    BridesComponent,
-  DashboardComponent,
-  viewComponent],
-=======
 import { FeedbackComponent } from './User Module/Feedback/Feedback.component';
 import { HeaderFooterComponent } from './User Module/MasterPage/header-footer.component';
 import { MaterialModule } from './material/material.module';
@@ -36,14 +22,23 @@ import { MatSelectModule} from '@angular/material'
 import { ErrorComponent } from './User Module/Error.component';
 
 
+import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component';
+
+import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
+import { viewComponent } from './layout/admin/dashboard/view/view.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderFooterComponent,
-    ErrorComponent
-    
-  ], 
->>>>>>> 1306c979eb40ff8177ea8663bf9de73dadaec2a5
+    AppComponent,
+    ErrorComponent,
+    LayoutComponent,
+    GroomsComponent,
+    BridesComponent,
+  DashboardComponent,
+  viewComponent
+],
+
   imports: [
     BrowserModule,
     HttpClientModule,
