@@ -13,6 +13,7 @@ import { ErrorComponent } from './User Module/Error.component'
 //import {}  from './User Module/RegisterForm/RegisterLazy.module#RegisterLazyClass'
 //import {} from './User Module/AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass'
 
+
 export const MyRoute: Routes = [
 
    { path: '', loadChildren: './User Module/RegisterForm/RegisterLazy.module#RegisterLazyClass'},
