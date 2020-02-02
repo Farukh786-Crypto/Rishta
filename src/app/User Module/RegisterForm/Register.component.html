@@ -3,6 +3,9 @@
 {{RegisterModel.value|json}}
 
 
+
+
+
 <div class="container">
     <!-- <h2>Modal Example</h2> -->
     <!-- Trigger the modal with a button -->
@@ -21,12 +24,20 @@
                 <div class="modal-body" style="font-family:cursive">
                     <!-- <p>Some text in the modal.</p> -->
 
+                    <div class="row">
 
+                        User Id: <input type="number" class="form-control" placeholder="Enter user id" [(ngModel)]="userId">
+                        <button type="submit" class="btn btn-primary" (click)="SaveRegisterInfo()">Get Single user</button>
+                        {{postRegisterInfo|json}}
+
+
+                    </div>
 
                     <div class="container">
 
                         <form [formGroup]="RegisterModel" novalidate>
                             <div class="form-group">
+                                
                                 <div class="row">
 
                                     <!-- <div class="col-md-3">
@@ -38,7 +49,7 @@
 
                                         <mat-form-field class="full-width">
                                                 <mat-label>UserName:</mat-label>
-                                                <input id="name11" matInput placeholder="Enter UserName" formControlName="UserName" required>
+                                                <input id="name11" matInput placeholder="Enter UserName" formControlName="UserName" [ngModel]="postRegisterInfo.id" required>
                                         </mat-form-field>
                                         
 
