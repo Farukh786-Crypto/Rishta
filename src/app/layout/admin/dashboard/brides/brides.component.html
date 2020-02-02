@@ -1,7 +1,8 @@
-<form style="margin-left: 100px;">
-<div *ngFor="let info of myDetail?.profile"> 
+<!-- <div *ngFor="let info of myDetail?.profile"> 
+  
 <div class="row">
-    <div class="col-md-3" >
+
+    <div class="col-4" >
       <img src="{{info.avatar}}"  style="height: 180px;width: 230px;">
       <br><b>
       Name:{{info.name}}<br>
@@ -11,7 +12,7 @@
       City:{{info.city}}<br>
       Marital status:{{info.status}}</b>
       </div>
-      <div class="col-md-3" >
+      <div class="col-4" >
         <img src="{{info.avatar}}"  style="height: 180px;width: 230px;"><br><b>
         Name:{{info.name}}<br>
         Age:{{info.age}}<br>
@@ -20,7 +21,7 @@
         City:{{info.city}}<br>
         Marital status:{{info.status}}</b>
         </div>
-        <div class="col-md-3">
+        <div class="col-4">
           <img src="{{info.avatar}}"  style="height: 180px;width: 230px;"><br><b>
           Name:{{info.name}}<br>
           Age:{{info.age}}<br>
@@ -34,7 +35,39 @@
   </div>
   <br>
 
-</div>
-<form>
+</div> -->
 
-      
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px; margin-top: 20px;">
+  <input type="text" placeholder="Enter Id to Search.." name="search"  [(ngModel)]="uid">
+  <button type="submit" (click)="search()"><i class="fa fa-search"></i></button>
+</form>
+
+<div class="container" style="padding: 50px;">
+  <table class="table border border-dark" style="padding: 20px;">
+    <thead class="thead-dark">
+      <tr style="padding: 20px;text-align: center;">
+        <th>ID</th>
+        <th>Photo</th>
+        <th>Details</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let info of myDetail?.profile">
+        <td>{{info.id}}</td>
+        <td style="text-align: center;"><img src="{{info.avatar}}" style="height: 180px;width: 230px;"></td>
+        <td style="font-size: 20px;"><b> Name:</b>{{info.name}}<br>
+          <b>Age:</b>{{info.age}}<br>
+          <b> Religion:</b>{{info.religion}}<br>
+          <b> Mother Tongue:</b>{{info.mothertongue}}<br>
+          <b> City:</b>{{info.city}}<br>
+          <b> Marital status:</b>{{info.status}}</td>
+        <td style="text-align: center;"><button type="button" class="btn btn-primary"
+            style="margin-right: 10px;">View</button>
+          <button type="button" class="btn btn-primary" style="margin-right: 10px;">Edit</button>
+          <button type="button" class="btn btn-primary">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

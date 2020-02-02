@@ -16,13 +16,17 @@ import { DataService } from './Services/data.service';
 import { AstroreligionComponent } from './User Module/AstroandreligionForm/Astroreligion.component';
 
 import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component';
+import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
+import { viewComponent } from './layout/admin/dashboard/view/view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     GroomsComponent,
-    BridesComponent],
+    BridesComponent,
+  DashboardComponent,
+  viewComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

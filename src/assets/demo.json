@@ -10,7 +10,7 @@
     "status":"unmarried",
     "mothertongue":"marathi",
     "email": "sastrura123@gmail.com",
-    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"
+    "avatar": "assets/images/1.jpg"
 },
 {
     "id": 2,
@@ -21,7 +21,7 @@
     "mothertongue":"marathi",
     "status":"unmarried",
     "email": "sujata123@gmail.com",
-    "avatar": "assets/images/images (1).jpg"
+    "avatar": "assets/images/2.jpg"
 },
 {
     "id": 3,
@@ -32,7 +32,7 @@
     "mothertongue":"marathi",
     "status":"unmarried",
     "email": "akshta123@gmail.com",
-    "avatar": "assets/images/images (2).jpg"
+    "avatar": "assets/images/7.jpg"
 },
 {
     "id": 4,
@@ -43,7 +43,7 @@
     "mothertongue":"marathi",
     "status":"unmarried",
     "email": "mayuri123@gmail.com",   
-    "avatar": "assets/images/images.jpg"
+    "avatar": "assets/images/4.jpg"
 },
 {
     "id": 5,
@@ -54,18 +54,18 @@
     "mothertongue":"marathi",
     "status":"unmarried",
     "email": "divyashri123@gmail.com",
-    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"
+    "avatar": "assets/images/5.jpg"
 },
 {
     "id": 6,
-    "name":"Farukh",
+    "name":"Kalyani",
     "age":24,
     "city":"pune",
     "religion":"hindu",
     "status":"married",
     "mothertongue":"marathi",
-    "email": "sastrura123@gmail.com",
-    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"
+    "email": "kalyani123@gmail.com",
+    "avatar": "assets/images/6.jpg"
 }
 ]
 

@@ -1,0 +1,72 @@
+{
+    "profile": [
+    
+    {
+        "id": 1,
+        "name":"Rahul",
+        "age":25,
+        "city":"pune",
+        "religion":"hindu",
+        "status":"unmarried",
+        "mothertongue":"marathi",
+        "email": "rahul123@gmail.com",
+        "avatar": "assets/images/h1.jpg"
+    },
+    {
+        "id": 2,
+        "name":"Raj",
+        "age":24,
+        "city":"pune",
+        "religion":"hindu",
+        "mothertongue":"marathi",
+        "status":"unmarried",
+        "email": "raj123@gmail.com",
+        "avatar": "assets/images/h2.jpg"
+    },
+    {
+        "id": 3,
+        "name":"Faruk",
+        "age":23,
+        "city":"pune",
+        "religion":"hindu",
+        "mothertongue":"marathi",
+        "status":"unmarried",
+        "email": "faruk123@gmail.com",
+        "avatar": "assets/images/h3.jpg"
+    },
+    {
+        "id": 4,
+        "name":"Aditya",
+        "age":24,
+        "city":"pune",
+        "religion":"hindu",
+        "mothertongue":"marathi",
+        "status":"unmarried",
+        "email": "aditya123@gmail.com",   
+        "avatar": "assets/images/h1.jpg"
+    },
+    {
+        "id": 5,
+        "name":"Shekar",
+        "age":23,
+        "city":"pune",
+        "religion":"hindu",
+        "mothertongue":"marathi",
+        "status":"unmarried",
+        "email": "shekhar123@gmail.com",
+        "avatar": "assets/images/h5.jpg"
+    },
+    {
+        "id": 6,
+        "name":"Akshay",
+        "age":24,
+        "city":"pune",
+        "religion":"hindu",
+        "status":"married",
+        "mothertongue":"marathi",
+        "email": "akshay123@gmail.com",
+        "avatar": "assets/images/h6.jpg"
+    }
+    ]
+    
+    }
