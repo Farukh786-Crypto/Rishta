@@ -19,7 +19,7 @@
                 </div>
                 <div class="modal-body">
                     <form class="align-center form-horizontal" [formGroup]="careerDetails">
-                        <p> <b>Congrats! You are about to complete your profile details.</b></p>
+                        <!-- <p> <b>Congrats! You are about to complete your Career details.</b></p> -->
 
 
 
@@ -37,7 +37,7 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <select class="form-control" formControlName="Country" required>
-                                        <option disabled selected value></option>
+                                        <option disabled selected value>SELECT</option>
                                         <option>Afghanistan</option>
                                         <option>Albania</option>
                                         <option>Algeria</option>
@@ -81,7 +81,7 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <select class="form-control" formControlName="State" required>
-                                        <option disabled selected value></option>
+                                        <option disabled selected value>SELECT</option>
                                         <option>Andaman and Nicobar Islands</option>
                                         <option>Chandigarh</option>
                                         <option>Dadar and Nagar Haveli</option>
@@ -112,7 +112,7 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <select class="form-control" formControlName="City" required>
-                                        <option disabled selected value></option>
+                                        <option disabled selected value>Enter your current city</option>
                                         <option>Achalpur</option>
                                         <option>Aheri</option>
                                         <option>Ahmednagar</option>
@@ -144,7 +144,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" formControlName="Pincode" required>
+                                    <input type="number" class="form-control" placeholder="Enter your pincode"formControlName="Pincode" required>
                                     <div class="text-danger"
                                         *ngIf=" careerDetails.controls['Pincode'].hasError('required')&&
                                     (careerDetails.controls.Pincode.touched ||careerDetails.controls['Pincode'].dirty|| isSubmitted)">
@@ -164,8 +164,8 @@
                             <div class="col-md-8">
                                 <div class="form-group">
 
-                                    <select class="form-control" formControlName="HighestDegree" required>
-                                        <option disabled selected value></option>
+                                    <select class="form-control" placeholder="Enter your highest qualification" formControlName="HighestDegree" required>
+                                        <option disabled selected value>Enter your highest qualification</option>
                                         <option>Ph.D</option>
                                         <option>M.Phil</option>
                                         <option>Post Graduate</option>
@@ -193,8 +193,8 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <select class="form-control" formControlName="Emplyeed" required>
-                                        <option disabled selected value></option>
+                                    <select class="form-control" formControlName="Emplyeed"placeholder="SELECT" required>
+                                        <option disabled selected value>SELECT</option>
                                         <option>Accountancy and Financial Management </option>
                                         <option>Arts </option>
                                         <option>Built Environment </option>
@@ -221,8 +221,8 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <select class="form-control" formControlName="Occupation" required>
-                                        <option disabled selected value></option>
+                                    <select class="form-control" placeholder="What is your occupation?" formControlName="Occupation" required>
+                                        <option disabled selected value>What is your occupation?</option>
                                         <option>Cloud architect</option>
                                         <option>IT consultant</option>
                                         <option>Computer forensic investigator</option>
@@ -249,7 +249,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" formControlName="Income" required>
+                                    <input type="number" class="form-control"placeholder="5.4lakh" formControlName="Income" required>
                                     <div class="text-danger" *ngIf=" careerDetails.controls['Income'].hasError('required')&&
     (careerDetails.controls.Income.touched ||careerDetails.controls['Income'].dirty|| isSubmitted)">
                                         Annual income is required.
@@ -279,6 +279,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            
 
                         </div>
                         <div class="row">
