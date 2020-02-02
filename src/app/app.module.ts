@@ -35,8 +35,9 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
     LayoutComponent,
     GroomsComponent,
     BridesComponent,
-  DashboardComponent,
-  viewComponent
+    DashboardComponent,
+    viewComponent,
+    HeaderFooterComponent
 ],
 
   imports: [
