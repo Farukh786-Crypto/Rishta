@@ -8,7 +8,6 @@ import { MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatCheckboxM
 import { MaterialModule } from 'src/app/material/material.module';
 
 import { HttpClientModule } from '@angular/common/http';
-import { MatSelectModule } from '@angular/material/select'
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -26,9 +25,10 @@ const route1: Routes = [
     imports: [CommonModule,
         FormsModule,        
         ShowHidePasswordModule, 
-        MaterialModule,               
+                    
         HttpClientModule,
-        ReactiveFormsModule, RouterModule.forChild(route1)],
+        ReactiveFormsModule, RouterModule.forChild(route1),
+        MaterialModule],
     providers: [],
     exports: [
         RegisterFormComponent

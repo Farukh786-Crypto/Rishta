@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
 import { RegService } from './Register.service';
 import {Router} from '@angular/router';
+import { Registerprofile } from 'src/app/model';
 
 export interface profCreated {
     value: string;
@@ -29,7 +30,7 @@ export class RegisterFormComponent {
     
     pCreated:profCreated[]=[{value:'self', viewValue:'Self'},{value:'parent', viewValue:'Parent'}]
     
-    constructor(private toastr: ToastrService,private re:RegService,private _router:Router) {
+    constructor(private toastr: ToastrService,private register:RegService,private _router:Router) {
 
         
         this.RegisterModel = new FormGroup({
@@ -46,56 +47,73 @@ export class RegisterFormComponent {
     }
 
 
+    public RegisterPost:any;
     
-    public postRegisterInfo:any;
-    userId:number;
-    public SaveRegisterInfo(){
-        this.re.getSingleRegisterUsers(this.userId).subscribe(res=>{
+    public RegisterUser(content:Registerprofile){
 
-            this.postRegisterInfo=res;
-            // this.RegisterModel.patchValue(res[0]);
-            this.RegisterModel.patchValue(this.postRegisterInfo[0])
+        this.register.addContent(content).subscribe(res=>{
+
+                     this.RegisterPost=res,
+                    this.toastr.success('Sucess!!')
+                    
+                    
+                    },
+                     err=>{this.RegisterPost=err})
+                     
+                    
+           }
+
+
+    
+    // public postRegisterInfo:any;
+    // userId:number;
+    // public SaveRegisterInfo(){
+    //     this.re.getSingleRegisterUsers(this.userId).subscribe(res=>{
+
+    //         this.postRegisterInfo=res;
+    //         // this.RegisterModel.patchValue(res[0]);
+    //         this.RegisterModel.patchValue(this.postRegisterInfo[0])
         
         
         
-        },
-                err=>{this.postRegisterInfo=err})
+    //     },
+    //             err=>{this.postRegisterInfo=err})
 
 
 
                 
         
-        // this.re.getSingleRegisterUsers(this.userId).subscribe(
+    //     this.re.getSingleRegisterUsers(this.userId).subscribe(
 
-        //     res=>{
+    //         res=>{
 
-        //             this.postRegisterInfo=res
-        //             if(this.postRegisterInfo=="Record Update Sucessfully!!!"){
-        //                     // this.toastr.warning("User Has already signed up with this Number","Warning..!!");
-        //                     // this._router.navigate(['postRegisterInfo'])
-        //             }
-        //             else{
-        //                 this.toastr.success("User has Sucessfully Signed Up..!!");
-        //             }
-        //     }
+    //                 this.postRegisterInfo=res
+    //                 if(this.postRegisterInfo=="Record Update Sucessfully!!!"){
+    //                         // this.toastr.warning("User Has already signed up with this Number","Warning..!!");
+    //                         // this._router.navigate(['postRegisterInfo'])
+    //                 }
+    //                 else{
+    //                     this.toastr.success("User has Sucessfully Signed Up..!!");
+    //                 }
+    //         }
 
-        // )
+    //     )
 
 
-    }
+    // }
 
 
 
     // showSuccess() {
     //     this.toastr.success('Hello world!', 'Toastr fun!');
     //   }
-    loginUser(data: any) {
+    // loginUser(data: any) {
 
-        this.isSubmited = true;
-        if (this.RegisterModel.valid) {
-            this.toastr.success('Hello world!', 'Register form Succesfully sent !!');
-            alert(JSON.stringify(data))
-        }
+    //     this.isSubmited = true;
+    //     if (this.RegisterModel.valid) {
+    //         this.toastr.success('Hello world!', 'Register form Succesfully sent !!');
+    //         alert(JSON.stringify(data))
+    //     }
 
-    }
+    // }
 }
