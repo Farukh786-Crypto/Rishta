@@ -25,21 +25,12 @@ const route1: Routes = [
     declarations: [RegisterFormComponent],
     imports: [CommonModule,
         FormsModule,        
-        ShowHidePasswordModule,                
-        MatFormFieldModule,
-        MatInputModule,
-        MaterialModule,
-        MatSelectModule,
-        MatRadioModule,
+        ShowHidePasswordModule, 
+        MaterialModule,               
         HttpClientModule,
         ReactiveFormsModule, RouterModule.forChild(route1)],
     providers: [],
     exports: [
-        MatFormFieldModule,
-        MatInputModule,
-        MaterialModule,
-        MatSelectModule,
-        MatRadioModule,
         RegisterFormComponent
     ]
 

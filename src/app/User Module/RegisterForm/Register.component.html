@@ -51,8 +51,8 @@
 
                                     <mat-form-field class="full-width">
                                         <mat-label>UserName:</mat-label>
-                                        <input id="name11" matInput placeholder="Enter UserName"
-                                            formControlName="UserName" required>
+                                        <input formControlName="username" matInput placeholder="Enter User Name" class="form-control"
+                                          required>
                                     </mat-form-field>
 
 
@@ -200,31 +200,31 @@
 
                                     <mat-form-field class="full-width">
                                         <mat-label>Enter Mobile Number :</mat-label>
-                                        <input id="mobileno1" matInput placeholder="Enter Mobile Number"
-                                            formControlName="mobileno" required>
+                                        <input id="mobile1" matInput placeholder="Enter Mobile Number"
+                                            formControlName="mobile" required>
                                     </mat-form-field>
 
 
 
                                     <span class="text-danger"
-                                        *ngIf="isSubmited && RegisterModel.controls['mobileno'].hasError('pattern')">
+                                        *ngIf="isSubmited && RegisterModel.controls['mobile'].hasError('pattern')">
                                         ** Please enter 10 digit mobile no **
                                     </span>
 
 
                                     <!-- <div class="col-md-3">
-                                        <label for="mobileno1">Mobile No:</label>
+                                        <label for="mobile1">Mobile No:</label>
                                     </div>
                                     <div class="col-md-8">
                                         <input type="text" class="form-control" placeholder="Enter Mobile Number"
-                                            formControlName="mobileno">
+                                            formControlName="mobile">
                                         <div class="text-danger"
-                                            *ngIf="isSubmited && RegisterModel.controls['mobileno'].hasError('required')">
+                                            *ngIf="isSubmited && RegisterModel.controls['mobile'].hasError('required')">
                                             ** Mobile Number is Required **
 
                                         </div>
                                         <span class="text-danger"
-                                            *ngIf="isSubmited && RegisterModel.controls['mobileno'].hasError('pattern')">
+                                            *ngIf="isSubmited && RegisterModel.controls['mobile'].hasError('pattern')">
                                             ** Please enter 10 digit mobile no **
                                         </span>
                                     </div> -->
@@ -236,12 +236,12 @@
 
 
                                     <div class="alert alert-danger"
-                                        *ngIf="isSubmited && RegisterModel.controls['mobileno'].hasError('required')">
+                                        *ngIf="isSubmited && RegisterModel.controls['mobile'].hasError('required')">
                                         Mobile Number is Required
 
                                     </div>
                                     <span class="alert alert-danger"
-                                        *ngIf="isSubmited && RegisterModel.controls['mobileno'].hasError('pattern')">
+                                        *ngIf="isSubmited && RegisterModel.controls['mobile'].hasError('pattern')">
                                         Please enter 10 digit mobile no
                                     </span>
 
@@ -260,33 +260,23 @@
                                         </mat-select>
                                     </mat-form-field>  -->
 
-                                    <mat-form-field>
-                                        <mat-label>Select student</mat-label>
-                                        <mat-select>
-                                            <mat-option value="101">Krishna</mat-option>
-                                            <mat-option value="102">Mahesh</mat-option>
-                                            <mat-option value="103">Shiva</mat-option>
-                                        </mat-select>
-                                    </mat-form-field>
-
-                                    <mat-form-field>
-                                        <mat-label>Favorite food</mat-label>
-                                        <mat-select>
-                                          <mat-option *ngFor="let food of pCreated" [value]="food.value">
-                                            {{food.viewValue}}
+                                    <!-- <mat-form-field>
+                                        <mat-select placeholder="OrderStatus" #filter [(value)]="selectedOrderStatus" (change)="filterorder()"  multiple>
+                                         <mat-option value="All">All</mat-option>-->
+                                          <!-- <mat-option *ngFor="let status of orderStatus" [value]="status.id">
+                                            {{status.name}}
                                           </mat-option>
                                         </mat-select>
-                                      </mat-form-field>
+                                      </mat-form-field> --> 
 
-                                    {{pCreated|json}}
+
+
                                     <mat-form-field>
+                                        <mat-label>Create Profile By</mat-label>
                                         <mat-select>
-                                            <mat-option *ngFor="let s of pCreated">
-                                                {{s.viewValue}}
-                                            </mat-option>
-                                        </mat-select>
+                                            <mat-option>all</mat-option>
+                                        </mat-select> 
                                     </mat-form-field>
-
 
 
 
@@ -366,7 +356,7 @@
                             <!-- <div class="row">
                     <div class="form-group">
                    
-                        <label for="mobileno1">Create Profile For :</label>
+                        <label for="mobile1">Create Profile For :</label>
                         <input type="text" class="form-control" formControlName="self">
                    </div>
                 </div> -->
