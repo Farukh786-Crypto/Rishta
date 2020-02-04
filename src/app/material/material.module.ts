@@ -4,6 +4,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 // const MaterialComponents =[
 
 //   MatButtonModule,
@@ -35,7 +36,9 @@ import {MatCardModule} from '@angular/material/card';
     MatCheckboxModule,
     MatRadioModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatListModule
+
   ],
   exports: [MatButtonModule,
     MatButtonToggleModule,
@@ -49,7 +52,8 @@ import {MatCardModule} from '@angular/material/card';
   MatCheckboxModule,
   MatRadioModule,
   MatCardModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatListModule
 
   ]  
   

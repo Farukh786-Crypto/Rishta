@@ -1,0 +1,18 @@
+.container{
+    top: 15%;
+}
+
+.login{
+    margin-top: 10em ;
+    padding-right: initial; 
+}
+.login .card{
+    border-color: deepskyblue;
+}
+.login .row{
+    padding-right: initial; 
+}
+.login h5{
+    font-style: bold;
+    color: deepskyblue;
+}

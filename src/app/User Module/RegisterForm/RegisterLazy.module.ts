@@ -25,7 +25,7 @@ const route1: Routes = [
     imports: [CommonModule,
         FormsModule,        
         ShowHidePasswordModule, 
-                    
+        MatListModule,       
         HttpClientModule,
         ReactiveFormsModule, RouterModule.forChild(route1),
         MaterialModule],

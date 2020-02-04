@@ -8,22 +8,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MyRoute } from './route.config';
 import { ToastrModule } from 'ngx-toastr';
-import { LayoutComponent } from './layout/layout.component';
 import { GroomsComponent } from './layout/admin/dashboard/grooms/grooms.component';
 import { BridesComponent } from './layout/admin/dashboard/brides/brides.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './Services/data.service';
-import { AstroreligionComponent } from './User Module/AstroandreligionForm/Astroreligion.component';
-
-import { FeedbackComponent } from './User Module/Feedback/Feedback.component';
-import { HeaderFooterComponent } from './User Module/MasterPage/header-footer.component';
 import { MaterialModule } from './material/material.module';
-import { MatSelectModule} from '@angular/material'
+import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './User Module/Error.component';
-
-
-import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component';
-
 import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
 import { viewComponent } from './layout/admin/dashboard/view/view.component';
 
@@ -32,13 +23,11 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
   declarations: [
     AppComponent,
     ErrorComponent,
-    LayoutComponent,
     GroomsComponent,
     BridesComponent,
     DashboardComponent,
     viewComponent,
-    HeaderFooterComponent
-],
+  ],
 
   imports: [
     BrowserModule,
@@ -54,4 +43,5 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
   providers: [DataService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
