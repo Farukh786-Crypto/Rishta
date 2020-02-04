@@ -9,18 +9,19 @@ import { RouterModule } from '@angular/router';
 import { MyRoute } from './route.config';
 import { ToastrModule } from 'ngx-toastr';
 import { AstroreligionComponent } from './User Module/AstroandreligionForm/Astroreligion.component';
-
 import { PersonalDetailsComponent } from './User Module/PersonalDetailsForm/personaldetails.component';
 import { FeedbackComponent } from './User Module/Feedback/Feedback.component';
 import { HeaderFooterComponent } from './User Module/MasterPage/header-footer.component';
 import { MaterialModule } from './material/material.module';
+import { MatSelectModule} from '@angular/material'
+
 
 
 @NgModule({
   declarations: [
     AppComponent,HeaderFooterComponent
     
-  ],
+  ], 
   imports: [
     BrowserModule,
     CommonModule,
@@ -28,6 +29,8 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule, // required animations module
     ReactiveFormsModule,
     NgxSpinnerModule,
+   // MaterialModule,
+    MatSelectModule,
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot(),
     MaterialModule

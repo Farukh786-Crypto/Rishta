@@ -14,3 +14,26 @@
     text-align: left;
 
   } */
+
+
+/* .buttonSubmit{
+
+  margin: 3rem;
+
+} */
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .full-width {
+    width: 100%;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+  
