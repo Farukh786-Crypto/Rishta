@@ -16,6 +16,7 @@ import { HeaderFooterComponent } from './User Module/MasterPage/header-footer.co
 import { MaterialModule } from './material/material.module';
 import { MatSelectModule} from '@angular/material'
 import { ErrorComponent } from './User Module/Error.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -34,6 +35,8 @@ import { ErrorComponent } from './User Module/Error.component';
     NgxSpinnerModule,
     MaterialModule,
     MatSelectModule,
+    MatDialogModule,
+    
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot()
   ],
