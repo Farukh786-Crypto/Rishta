@@ -1,0 +1,72 @@
+{
+"profile": [
+
+{
+    "id": 1,
+    "name":"Satura",
+    "age":24,
+    "city":"pune",
+    "religion":"hindu",
+    "status":"unmarried",
+    "mothertongue":"marathi",
+    "email": "sastrura123@gmail.com",
+    "avatar": "assets/images/1.jpg"
+},
+{
+    "id": 2,
+    "name":"Sujata",
+    "age":21,
+    "city":"pune",
+    "religion":"hindu",
+    "mothertongue":"marathi",
+    "status":"unmarried",
+    "email": "sujata123@gmail.com",
+    "avatar": "assets/images/2.jpg"
+},
+{
+    "id": 3,
+    "name":"Akshta",
+    "age":24,
+    "city":"pune",
+    "religion":"hindu",
+    "mothertongue":"marathi",
+    "status":"unmarried",
+    "email": "akshta123@gmail.com",
+    "avatar": "assets/images/7.jpg"
+},
+{
+    "id": 4,
+    "name":"Marathi",
+    "age":22,
+    "city":"pune",
+    "religion":"hindu",
+    "mothertongue":"marathi",
+    "status":"unmarried",
+    "email": "mayuri123@gmail.com",   
+    "avatar": "assets/images/4.jpg"
+},
+{
+    "id": 5,
+    "name":"Divyshri",
+    "age":23,
+    "city":"pune",
+    "religion":"hindu",
+    "mothertongue":"marathi",
+    "status":"unmarried",
+    "email": "divyashri123@gmail.com",
+    "avatar": "assets/images/5.jpg"
+},
+{
+    "id": 6,
+    "name":"Kalyani",
+    "age":24,
+    "city":"pune",
+    "religion":"hindu",
+    "status":"married",
+    "mothertongue":"marathi",
+    "email": "kalyani123@gmail.com",
+    "avatar": "assets/images/6.jpg"
+}
+]
+
+}

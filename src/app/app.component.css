@@ -2,6 +2,7 @@
 
     color:'red'
 }
+<<<<<<< HEAD
 #MyNavBar{
     background-color:burlywood;   
     
@@ -11,4 +12,9 @@ a{color: firebrick;
 }
 a:hover{color: black;
 
+=======
+
+.model{
+    margin-left: 0.5rem;
+>>>>>>> dd8f028a73a0c7d3e44a101a382f7eac8924f8f6
 }

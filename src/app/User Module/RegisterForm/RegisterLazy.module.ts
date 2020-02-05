@@ -4,15 +4,17 @@ import { CommonModule } from '@angular/common';
 import { RegisterFormComponent } from './Register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
-import { MatFormFieldModule, MatInputModule, MatSelectModule, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatButtonModule } from '@angular/material';
-import { MaterialModule } from 'src/app/material/material.module';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatExpansionModule, MatGridListModule, MatIconModule, MatListModule, MatMenuModule, MatNativeDateModule, MatProgressBarModule, MatProgressSpinnerModule, MatRippleModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
+
 import { HttpClientModule } from '@angular/common/http';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialModule } from 'src/app/material/material.module';
+
 
 const route1: Routes = [
 
-    // { path:'' , redirectTo:'register' , pathMatch:'full' } ,
+    //{ path:'' , redirectTo:'register' , pathMatch:'full' } ,
     { path: '', component: RegisterFormComponent }
 
 ]
@@ -21,20 +23,16 @@ const route1: Routes = [
 
     declarations: [RegisterFormComponent],
     imports: [CommonModule,
-        FormsModule,
-        ShowHidePasswordModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MaterialModule,
-        MatSelectModule,
-        MatRadioModule,
-        MatAutocompleteModule,
-        MatCheckboxModule,
-        MatButtonModule,
+        FormsModule,        
+        ShowHidePasswordModule, 
+        MatListModule,       
         HttpClientModule,
-        ReactiveFormsModule, RouterModule.forChild(route1)],
+        ReactiveFormsModule, RouterModule.forChild(route1),
+        MaterialModule],
     providers: [],
-    exports: [RegisterFormComponent]
+    exports: [
+        RegisterFormComponent
+    ]
 
 })
 

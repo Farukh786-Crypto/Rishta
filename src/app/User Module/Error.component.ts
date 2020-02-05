@@ -4,14 +4,16 @@ import { Component } from '@angular/core'
 selector:'Error-comp',
 templateUrl:'./Error.component.html'
 
+    selector: 'Error-comp',
+    templateUrl: './Error.component.html'
 
 })
 
 
-export class ErrorComponent{
+export class ErrorComponent {
 
 
-    title:string='Error Component is Occured';
+    title: string = 'Error Component is Occured';
 
 }
 
