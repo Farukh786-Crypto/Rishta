@@ -15,13 +15,13 @@ import { DataService } from './Services/data.service';
 import { MaterialModule } from './material/material.module';
 import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './User Module/Error.component';
-<<<<<<< HEAD
+ 
 import {MatDialogModule} from '@angular/material/dialog';
 
-=======
+ 
 import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
 import { viewComponent } from './layout/admin/dashboard/view/view.component';
->>>>>>> dd8f028a73a0c7d3e44a101a382f7eac8924f8f6
+ 
 
 
 @NgModule({

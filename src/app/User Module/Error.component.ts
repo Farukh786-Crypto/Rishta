@@ -4,8 +4,7 @@ import { Component } from '@angular/core'
 selector:'Error-comp',
 templateUrl:'./Error.component.html'
 
-    selector: 'Error-comp',
-    templateUrl: './Error.component.html'
+    
 
 })
 
