@@ -76,20 +76,12 @@
                                     <!-- <input type="text" class="form-control" placeholder="Enter UserName"
                                             formControlName="UserName"> -->
 
-<<<<<<< HEAD
-                                        <!-- <mat-form-field class="full-width">
-                                                <mat-label>UserName:</mat-label>
-                                                <input id="name11" matInput placeholder="Enter UserName" formControlName="UserName" [ngModel]="postRegisterInfo.id" required>
-                                        </mat-form-field> -->
-                                        
-=======
                                     <mat-form-field class="full-width">
                                         <mat-label>UserName:</mat-label>
                                         <input formControlName="username" matInput placeholder="Enter User Name" class="form-control"
                                           required>
                                     </mat-form-field>
 
->>>>>>> dd8f028a73a0c7d3e44a101a382f7eac8924f8f6
 
                                     <div class="text-danger"
                                         *ngIf="isSubmited &&  RegisterModel.controls['UserName'].hasError('required')">
