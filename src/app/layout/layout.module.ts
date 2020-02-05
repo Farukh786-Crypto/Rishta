@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
+import { DefaultCompComponent } from './admin/dashboard/default-comp/default-comp.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent],
+  declarations: [LayoutComponent, DefaultCompComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule
