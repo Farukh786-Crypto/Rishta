@@ -3,21 +3,6 @@
     {{RegisterModel.value|json}}
 
 
-<<<<<<< HEAD
-
-    <div class="container">
-        <form [formGroup]="RegisterModel" novalidate>
-            <div class="example-container">
-            
-                <mat-form-field class="full-width">
-                    <mat-label>UserName:</mat-label>
-                    <input formControlName="username" matInput placeholder="Enter User Name" class="form-control"
-                    required>
-                    <mat-error *ngIf="isSubmited &&  RegisterModel.controls['UserName'].hasError('required')">
-                        ** UserName is Required **
-                    </mat-error> 
-                </mat-form-field>            
-=======
 <div class="container">
     <!-- <h2>Modal Example</h2> -->
     <!-- Trigger the modal with a button -->
@@ -374,7 +359,6 @@
                     </div>
                 </div>
 
->>>>>>> 18340d8613b7e904303684890ce1c30f0fbccaeb
             </div>
         </form>
         
