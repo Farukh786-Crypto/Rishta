@@ -1,16 +1,23 @@
 import { Component } from '@angular/core'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
+import { RegService } from './Register.service';
+import { Router } from '@angular/router';
 
+export interface profCreated {
+    value: string;
+    viewValue: string;
+}
 
 @Component({
 
     selector: 'register-comp',
     templateUrl: './Register.component.html',
     styleUrls: ['./Register.component.css'],
-    providers: []
+    providers: [RegService]
 
 })
+
 
 
 export class RegisterFormComponent {
@@ -24,7 +31,10 @@ export class RegisterFormComponent {
     isSubmited: boolean;
     required: Boolean;
     disableRipple: Boolean;
-    constructor(private toastr: ToastrService) {
+    pCreated: profCreated[] = [{ value: 'self', viewValue: 'Self' }, { value: 'parent', viewValue: 'Parent' }]
+
+    constructor(  private toastr: ToastrService, private re: RegService, private _router: Router) {
+
 
         this.RegisterModel = new FormGroup({
 
@@ -35,7 +45,42 @@ export class RegisterFormComponent {
             profile: new FormControl('', [Validators.required]),
             gender: new FormControl('male', [Validators.required])
         })
+
+        // this.pCreated=
     }
+
+
+
+    public postRegisterInfo: any;
+    userId: number;
+    public SaveRegisterInfo() {
+        // this.re.getSingleRegisterUsers(this.userId).subscribe(res=>{
+        //     this.postRegisterInfo=res},
+        //         err=>{this.postRegisterInfo=err})
+
+        this.re.getSingleRegisterUsers(this.userId).subscribe(
+
+            res => {
+
+                this.postRegisterInfo = res
+                if (this.postRegisterInfo == "Record Update Sucessfully!!!") {
+                    // this.toastr.warning("User Has already signed up with this Number","Warning..!!");
+                    // this._router.navigate(['postRegisterInfo'])
+                }
+                else {
+                    this.toastr.success("User has Sucessfully Signed Up..!!");
+                }
+            }
+
+        )
+
+
+
+
+
+    }
+
+
 
     // showSuccess() {
     //     this.toastr.success('Hello world!', 'Toastr fun!');
