@@ -32,6 +32,8 @@ export class RegisterFormComponent {
     isSubmited: boolean;
     required: Boolean;
     title:'Farukh';
+    hide = true;
+    
     disableRipple: Boolean;
     pCreated: profCreated[] = [{ value: 'self', viewValue: 'Self' }, { value: 'parent', viewValue: 'Parent' }]
 
@@ -46,12 +48,35 @@ export class RegisterFormComponent {
             mobile: new FormControl('', [Validators.required, Validators.pattern(/^(\+\d{0,1,3}[- ]?)?\d{10}$/)]),
            // password: new FormControl('', [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]),
             mobileno: new FormControl('', [Validators.required, Validators.pattern(/^(\+\d{0,1,3}[- ]?)?\d{10}$/)]),
-            profile: new FormControl('', [Validators.required]),
-            gender: new FormControl('male', [Validators.required])
+            create_profile_by: new FormControl('', [Validators.required]),
+            gender: new FormControl('male', [Validators.required]),
+            date:new FormControl(new Date())
+
         })
 
-        // this.pCreated=
+
     }
+
+
+            
+        // public postRegisterInfo:any;
+        // userId:number;
+        // public SaveRegisterInfo(){
+        //     this.register.getSingleRegisterUsers(this.userId).subscribe(res=>{
+                
+        //         this.postRegisterInfo=res;
+        //         console.log(res);
+        //         this.RegisterModel.patchValue(res[0]);
+        //         this.RegisterModel.patchValue(this.postRegisterInfo[0])
+            
+            
+            
+        //     },
+        //             err=>{this.postRegisterInfo=err})
+        // }
+    
+
+
 
 
     public RegisterPost:any;
@@ -70,80 +95,14 @@ export class RegisterFormComponent {
                     
            }
 
+        //    loginUser(data: any) {
 
-    
-    // public postRegisterInfo:any;
-    // userId:number;
-    // public SaveRegisterInfo(){
-    //     this.re.getSingleRegisterUsers(this.userId).subscribe(res=>{
-
-    //         this.postRegisterInfo=res;
-    //         // this.RegisterModel.patchValue(res[0]);
-    //         this.RegisterModel.patchValue(this.postRegisterInfo[0])
-        
-        
-        
-    //     },
-    //             err=>{this.postRegisterInfo=err})
-
-    public postRegisterInfo: any;
-    userId: number;
-    public SaveRegisterInfo() {
-        // this.re.getSingleRegisterUsers(this.userId).subscribe(res=>{
-        //     this.postRegisterInfo=res},
-        //         err=>{this.postRegisterInfo=err})
-
-        // this.register.getSingleRegisterUsers(this.userId).subscribe(
-
-        //     res => {
-
-        //         this.postRegisterInfo = res
-        //         if (this.postRegisterInfo == "Record Update Sucessfully!!!") {
-        //             // this.toastr.warning("User Has already signed up with this Number","Warning..!!");
-        //             // this._router.navigate(['postRegisterInfo'])
+        //         this.isSubmited = true;
+        //         if (this.RegisterModel.valid) {
+        //             this.toastr.success('Hello world!', 'Register form Succesfully sent !!');
+        //             alert(JSON.stringify(data))
         //         }
-        //         else {
-        //             this.toastr.success("User has Sucessfully Signed Up..!!");
-        //         }
+        
         //     }
-
-
-
-                
-        
-    //     this.re.getSingleRegisterUsers(this.userId).subscribe(
-
-
-    //         res=>{
-
-    //                 this.postRegisterInfo=res
-    //                 if(this.postRegisterInfo=="Record Update Sucessfully!!!"){
-    //                         // this.toastr.warning("User Has already signed up with this Number","Warning..!!");
-    //                         // this._router.navigate(['postRegisterInfo'])
-    //                 }
-    //                 else{
-    //                     this.toastr.success("User has Sucessfully Signed Up..!!");
-    //                 }
-    //         }
-
-    //     )
-
-
-    // }
-
-
-
-    // showSuccess() {
-    //     this.toastr.success('Hello world!', 'Toastr fun!');
-    //   }
-    // loginUser(data: any) {
-
-    //     this.isSubmited = true;
-    //     if (this.RegisterModel.valid) {
-    //         this.toastr.success('Hello world!', 'Register form Succesfully sent !!');
-    //         alert(JSON.stringify(data))
-    //     }
-
-    // }
-    }
+    
 }

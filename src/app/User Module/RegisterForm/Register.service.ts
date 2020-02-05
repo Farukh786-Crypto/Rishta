@@ -22,17 +22,16 @@ export class RegService{
     addContent(content:Registerprofile):Observable<Registerprofile>{
 
         const httpOption = {headers:new HttpHeaders({'Content-Type':'application/json'})};
-        return this.http.post<Registerprofile>(this.url+'content/',content,httpOption);
+        return this.http.post<Registerprofile>(this.url+'/create',content,httpOption);
 
     }    
 
 
     // public getSingleRegisterUsers(no:number){
-    //     let url='http://192.168.0.123:8080/api/registers/getRegisterById/'+no
+    //     let url='http://192.168.0.123:8080/api/registers/getRegisterById/'+no;
+    //     console.log(this.http.get(url));
     //     return this.http.get(url);
     // }
-
-
 
 
     // public saveUser(userModel:any){
