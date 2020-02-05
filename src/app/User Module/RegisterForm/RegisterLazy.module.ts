@@ -14,7 +14,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const route1: Routes = [
 
-    // { path:'' , redirectTo:'register' , pathMatch:'full' } ,
+    //{ path:'' , redirectTo:'register' , pathMatch:'full' } ,
     { path: '', component: RegisterFormComponent }
 
 ]

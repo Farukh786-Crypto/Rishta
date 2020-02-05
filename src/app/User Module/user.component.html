@@ -1,38 +1,44 @@
 <head-foot></head-foot>
 <div class="demo" style="background-image: url('assets/Images/background image (2).jpg');height: 800px; width:100%;">
-    <a routerLink="/register">
-      Register 
-    </a>
-    <!-- <a routerLink="./profiledetails">
-        <a data-toggle="modal"> Profile Details </a>
-    </a>
-
-    <a routerLink="./CareerDetails">
-        <a data-toggle="modal"> Career Details </a>
-    </a>
-
-    <a routerLink="./familydetails">
-        <a data-toggle="modal"> Family Details </a>
-    </a>
-    <a routerLink="./personalDetails">
-      Personal Details </a>
-    </a>
-    <a routerLink="./Educationdetails">
-          Education Details 
-    </a>
-
-
-    <a routerLink="./LifestyleDetails">
-        <a data-toggle="modal"> Lifestyle Details </a>
-    </a>
-
-    <a routerLink="./astroandreligion">
-        <a data-toggle="modal">Astro and Religion </a>
-    </a>
-
-    <a data-toggle="modal" routerLink="./feedbackDetails">
-        <a data-toggle="modal"> FeedBack </a>
-    </a> -->
+    <nav id="MyNavBar" class="navbar navbar-expand-lg static-top">
+        <div class="container">       
+        <button class="navbar-toggler" data-toggle="collapse">               
+            </button>
+<!-- <div class="collapse navbar-collapse" id="uiNavbar"> -->
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+            <a routerLink="/"    class="nav-link"  >Register</a>            
+        </li>
+        <li class="nav-item " >
+            <a routerLink="/profiledetails"    class="nav-link" >Profile Details</a>  
+        </li>
+        <li class="nav-item">
+            <a routerLink="/CareerDetails"  class="nav-link"  >Career Details</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/familydetails"  class="nav-link"  >Family Details</a>  
+        </li>
+    
+        <li class="nav-item">
+            <a routerLink="/personalDetails"   class="nav-link"  >Personal Details</a>  
+        </li>
+        <li class="nav-item">
+            <a routerLink="/EducationDetails"   class="nav-link"  >Education Details</a>  
+        </li>
+        <li class="nav-item">
+            <a routerLink="/LifestyleDetails"   class="nav-link"  >Lifestyle Details</a>  
+        </li>        
+        <li class="nav-item ">
+            <a routerLink="/astroandreligion"    class="nav-link"  >Astro and Religion</a>
+        </li>  
+        <li class="nav-item">
+        <a routerLink="/feedbackDetails"   class="nav-link"  >FeedBack</a>  
+    </li>
+    
+    </ul>
+<!-- </div> -->
+ </div>
+ </nav>
 
 </div>
 <router-outlet></router-outlet>

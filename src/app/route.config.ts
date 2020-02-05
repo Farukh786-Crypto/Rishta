@@ -8,4 +8,3 @@ export const MyRoute: Routes = [
     { path: 'users', loadChildren: './User Module/user.module#UserModule' },
     { path: '**', component: ErrorComponent }
 ]
-

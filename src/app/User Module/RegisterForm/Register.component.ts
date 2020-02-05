@@ -26,6 +26,7 @@ export class RegisterFormComponent {
     RegisterModel: FormGroup
     isSubmited: boolean;
     required: Boolean;
+    title:'Farukh';
     disableRipple: Boolean;
     pCreated: profCreated[] = [{ value: 'self', viewValue: 'Self' }, { value: 'parent', viewValue: 'Parent' }]
 

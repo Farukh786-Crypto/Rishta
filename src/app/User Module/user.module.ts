@@ -22,7 +22,6 @@ const route: Routes = [
         ]
     },
 ]
-
 @NgModule({
 
     declarations: [UserComponent, HeaderFooterComponent],
@@ -34,6 +33,6 @@ const route: Routes = [
 
 })
 
-export class UserModule {
+export class UserModule{
 
 }

@@ -28,7 +28,6 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
     DashboardComponent,
     viewComponent,
   ],
-
   imports: [
     BrowserModule,
     HttpClientModule,
