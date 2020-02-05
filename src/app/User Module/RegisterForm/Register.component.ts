@@ -22,6 +22,11 @@ export interface profCreated {
 
 
 export class RegisterFormComponent {
+
+    states: string[] = [
+        'Self', 'Parents'
+    ];
+
     disabledAgreement: boolean = true
     RegisterModel: FormGroup
     isSubmited: boolean;
