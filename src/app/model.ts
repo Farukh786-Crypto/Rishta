@@ -4,7 +4,7 @@ export class Registerprofile{
     email:string;
     password:string;
     mobile:number;
-    profile:string;
+    create_profile_by:string;
     gender:string;
 
 
