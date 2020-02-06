@@ -1,12 +1,33 @@
-<div class="jumbotron bg-dark">
-  <div class="container text-center">
-      <h1>Rishta.com</h1>
-      <!-- <img src="assets\1.jpg"> -->
-  </div>
+<div class="header">
+  <a class="logo">
+    <img src="assets/Images/rishtalogo.png" height=50px ></a>
+ <div class="right">
+  <a class="btn btn-info btn-lg">
+    <span class="glyphicon glyphicon-log-in"></span> Admin
+  </a>
+ </div>
 </div>
-<nav class="navbar nav">
 
-</nav>
+<div class="topnav" id="myTopnav">
+  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Dashboard</a>
+    <ul class="dropdown-menu">
+        <li><a  >Grooms</a ></li>
+        <li><a >Brides</a></li>
+    </ul>
+</li>
+  <a >User</a>
+  <a >Search By</a>
+  <a >Matching</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Packages
+      <i class="fa fa-caret-down"></i>
+    </button>
+  </div>
+  <a>Payment</a>
+  
+</div>
+
 <div class="content">
   <router-outlet></router-outlet>
   <!-- <app-grooms></app-grooms>  -->
