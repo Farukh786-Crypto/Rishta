@@ -18,11 +18,17 @@ export class LoginComponent implements OnInit {
   login() {
     if (this.username === 'admin' && this.password === 'admin@143') {
       console.log("Login succesfully");
-      this.router.navigate(['./admin']);
+      localStorage.setItem('isLoginUser','true');
+      localStorage.setItem('userRole','admin');
+      setTimeout(()=>{this.router.navigate(['./admin']);},250);
     }
     else if (this.username === 'user' && this.password === 'user@143') {
       console.log("Login Succesfully");
-      this.router.navigate(['./users'])
+      localStorage.setItem('isLoginUser','true');
+      localStorage.setItem('userRole','user');
+      setTimeout(()=>{
+        this.router.navigate(['./users']);
+      },250)
     }
     else {
       console.log("Login Failed");
