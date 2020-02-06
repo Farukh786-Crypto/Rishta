@@ -1,309 +1,159 @@
-<!-- <h1>{{title}}</h1> -->
 
+ 
+<mat-card class="example-card">
+    <mat-card-header>
+      
+      <mat-card-title>Career Details</mat-card-title>
+       
+    </mat-card-header>
+     
+    <mat-card-content>
+      <form   [formGroup]="careerDetails" >
+        <div class="form-group">
+            <mat-form-field class="demo-full-width">
 
-
-
-<div class="container">
-    <!-- Trigger the modal with a button -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal3" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h4 class="modal-title">Career Details</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form class="align-center form-horizontal" [formGroup]="careerDetails">
-                        <!-- <p> <b>Congrats! You are about to complete your Career details.</b></p> -->
-
-
-
-
-
-
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="text" class="control-label">Country<i
-                                            class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="Country" required>
-                                        <option disabled selected value>SELECT</option>
-                                        <option>Afghanistan</option>
-                                        <option>Albania</option>
-                                        <option>Algeria</option>
-                                        <option>Andorra</option>
-                                        <option>Angola</option>
-                                        <option>Antigua and Barbuda</option>
-                                        <option>Argentina</option>
-                                        <option>Armenia</option>
-                                        <option>Australia</option>
-                                        <option>Austria</option>
-                                        <option>Azerbaijan</option>
-                                        <option>Bahamas</option>
-
-                                    </select>
-
-
-
-                                    <!-- <div class="alert alert-danger"
-                                        *ngIf="isSubmitted && careerDetails.get('Country').hasError('required')|| (careerDetails.get('Country').touched">
-                                        Country is required.
-                                    </div> -->
-                                    <div class="text-danger" *ngIf=" careerDetails.controls['Country'].hasError('required')&&
-    (careerDetails.controls.Country.touched ||careerDetails.controls['Country'].dirty|| isSubmitted)">
-                                        Country is required.
-                                    </div>
-
-
-
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="text" class="control-label">State<i
-                                            class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="State" required>
-                                        <option disabled selected value>SELECT</option>
-                                        <option>Andaman and Nicobar Islands</option>
-                                        <option>Chandigarh</option>
-                                        <option>Dadar and Nagar Haveli</option>
-                                        <option>Daman and Diu</option>
-                                        <option>Delhi</option>
-                                        <option>Lakshadeep</option>
-                                        <option>Pondicherry</option>
-                                        <option>West Bengal</option>
-                                        <option>Uttar Pradesh</option>
-                                        <option>Uttaranchal</option>
-                                        <option>Tripura</option>
-                                    </select>
-                                    <div class="text-danger" *ngIf=" careerDetails.controls['State'].hasError('required')&&
-    (careerDetails.controls.State.touched ||careerDetails.controls['State'].dirty|| isSubmitted)">
-                                        State is required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="text" class="control-label">City Living In<i
-                                            class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="City" required>
-                                        <option disabled selected value>Enter your current city</option>
-                                        <option>Achalpur</option>
-                                        <option>Aheri</option>
-                                        <option>Ahmednagar</option>
-                                        <option>Ahmedpur</option>
-                                        <option>Ajara</option>
-                                        <option>Akkalkot</option>
-                                        <option>Akola</option>
-                                        <option>Akole</option>
-                                        <option>Akot</option>
-                                        <option>Alibagh</option>
-                                        <option>Amagaon</option>
-                                    </select>
-                                    <div class="text-danger"
-                                        *ngIf=" careerDetails.controls['City'].hasError('required')&&
-                                    (careerDetails.controls.City.touched ||careerDetails.controls['City'].dirty|| isSubmitted)">
-                                        City is required.
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="number" class="control-label">Pincode<i
-                                            class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <input type="number" class="form-control" placeholder="Enter your pincode"formControlName="Pincode" required>
-                                    <div class="text-danger"
-                                        *ngIf=" careerDetails.controls['Pincode'].hasError('required')&&
-                                    (careerDetails.controls.Pincode.touched ||careerDetails.controls['Pincode'].dirty|| isSubmitted)">
-                                        Pincode is required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="text" class="control-label">Highest Degree In<i
-                                            class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-group">
-
-                                    <select class="form-control" placeholder="Enter your highest qualification" formControlName="HighestDegree" required>
-                                        <option disabled selected value>Enter your highest qualification</option>
-                                        <option>Ph.D</option>
-                                        <option>M.Phil</option>
-                                        <option>Post Graduate</option>
-                                        <option>Under Graduate</option>
-                                        <option>PG Diploma</option>
-                                        <option>Diploma</option>
-                                        <option>Certificate</option>
-                                        <option>Integrated</option>
-                                    </select>
-                                    <div class="text-danger" *ngIf=" careerDetails.controls['HighestDegree'].hasError('required')&&
-    (careerDetails.controls.HighestDegree.touched ||careerDetails.controls['HighestDegree'].dirty|| isSubmitted)">
-                                        Highest Degree is required.
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="text" class="control-label">Employeed In<i
-                                            class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="Emplyeed"placeholder="SELECT" required>
-                                        <option disabled selected value>SELECT</option>
-                                        <option>Accountancy and Financial Management </option>
-                                        <option>Arts </option>
-                                        <option>Built Environment </option>
-                                        <option>Charities and the Voluntary Sector </option>
-                                        <option> Business</option>
-                                        <option>Consultancy </option>
-                                        <option>Banking and Investment </option>
-                                    </select>
-                                    <div class="text-danger" *ngIf=" careerDetails.controls['Emplyeed'].hasError('required')&&
-    (careerDetails.controls.Emplyeed.touched ||careerDetails.controls['Emplyeed'].dirty|| isSubmitted)">
-                                        Employeed In required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="text" class="control-label">Occupation<i
-                                            class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <select class="form-control" placeholder="What is your occupation?" formControlName="Occupation" required>
-                                        <option disabled selected value>What is your occupation?</option>
-                                        <option>Cloud architect</option>
-                                        <option>IT consultant</option>
-                                        <option>Computer forensic investigator</option>
-                                        <option>Health IT specialist</option>
-                                        <option>Mobile application developer</option>
-                                        <option>Web developer</option>
-                                        <option>Software engineer</option>
-                                        <option>Information technology vendor manager</option>
-                                    </select>
-                                    <div class="text-danger" *ngIf=" careerDetails.controls['Occupation'].hasError('required')&&
-    (careerDetails.controls.Occupation.touched ||careerDetails.controls['Occupation'].dirty|| isSubmitted)">
-                                        Occupation is required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="number" class="control-label">Annual Income<i
-                                            class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <input type="number" class="form-control"placeholder="5.4lakh" formControlName="Income" required>
-                                    <div class="text-danger" *ngIf=" careerDetails.controls['Income'].hasError('required')&&
-    (careerDetails.controls.Income.touched ||careerDetails.controls['Income'].dirty|| isSubmitted)">
-                                        Annual income is required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="text" class="control-label"> Express Yourself!<i
-                                            class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-group">
-
-                                    <textarea class="form-control" id="word_count" rows="4" cols="50"
-                                        formControlName="Express" required></textarea><br>
-                                    Total word count: <span id="display_count">0</span> words.
-                                    Words left: <span id="word_left">200</span>
-                                    <div class="text-danger" *ngIf=" careerDetails.controls['Express'].hasError('required')&&
-    (careerDetails.controls.Express.touched ||careerDetails.controls['Express'].dirty|| isSubmitted)">
-                                        Minimum 200 words needed.<br>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                    <button type="button" class="btn btn-danger">Complete Registration</button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default"
-                        (click)="onSubmit(careerDetails.value)">SUBMIT</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
-                </div>
+                <mat-label> Country </mat-label>
+                <mat-select  class="form-control"   formControlName="Country" required>
+                  <mat-option>-- Select Any --</mat-option>
+                  <mat-option value="4"> Afghanistan </mat-option>
+                  <mat-option value="1">Albania </mat-option>
+                  <mat-option value="2">Algeria </mat-option>
+                  <mat-option value="3">India </mat-option>
+                </mat-select>
+                <mat-error>  
+                    <span   *ngIf="careerDetails.controls['Country'].hasError('required')&&
+                    (careerDetails.controls.Country.touched ||careerDetails.controls['Country'].dirty||
+                     isSubmitted)">
+                    Country is required </span>  
+                </mat-error>
+              </mat-form-field>           
+          </div>
+          <div class="form-group">
+              <mat-form-field class="demo-full-width">
+                  <mat-label> State </mat-label>
+                  <mat-select  class="form-control"   formControlName="State" required>
+                    <mat-option>-- Select Any --</mat-option>
+                    <mat-option value="4"> Andaman and Nicobar Islands </mat-option>
+                    <mat-option value="1">Chandigarh </mat-option>
+                    <mat-option value="2">Uttaranchal </mat-option>
+                    <mat-option value="3">Uttar Pradesh </mat-option>
+                  </mat-select>
+                  <mat-error>  
+                      <span   *ngIf="careerDetails.controls['State'].hasError('required')&&
+                      (careerDetails.controls.State.touched ||careerDetails.controls['State'].dirty|| isSubmitted)">
+                      State is required </span>  
+                  </mat-error>
+                </mat-form-field> 
             </div>
+            <div class="form-group">
+                <mat-form-field class="demo-full-width">
+                    <mat-label> City </mat-label>
+                    <mat-select  class="form-control"   formControlName="City" required>
+                      <mat-option>-- Select Any --</mat-option>
+                      
+                      <mat-option value="1"> Akkalkot </mat-option>
+                      <mat-option value="2"> Akola </mat-option>
+                      <mat-option value="3">Ahmednagar </mat-option>
+                      <mat-option value="4"> Pune </mat-option>
+                      <mat-option value="5"> Solapur </mat-option>
+                    </mat-select>
+                    <mat-error>  
+                        <span   *ngIf="careerDetails.controls['City'].hasError('required')&&
+                        (careerDetails.controls.City.touched ||careerDetails.controls['City'].dirty|| isSubmitted)">
+                             
+                        City is required </span>  
+                    </mat-error>
+                  </mat-form-field> 
+              </div>
+              <div class="form-group">
+                  <mat-form-field class="demo-full-width">
+                      <input matInput placeholder="Pincode" formControlName="Pincode">
+                      <mat-error>  
+                          <span   *ngIf=" careerDetails.controls['Pincode'].hasError('required')&&
+                          (careerDetails.controls.Pincode.touched ||careerDetails.controls['Pincode'].dirty|| isSubmitted)">
+                              Pincode is required.  </span>  
+                      </mat-error>
+                    </mat-form-field> 
+                </div>
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
 
-        </div>
-    </div>
+                        <mat-label> Highest Degree </mat-label>
+                        <mat-select  class="form-control"   formControlName="HighestDegree" required>
+                          <mat-option>-- Select Any --</mat-option>
+                          
+                          <mat-option value="1"> Post Graduate </mat-option>
+                          <mat-option value="2"> PG Diploma </mat-option>
+                          <mat-option value="3">Ahmednagar </mat-option>
+                          <mat-option value="4"> Certificate </mat-option>
+                          <mat-option value="5"> Integrated </mat-option>
+                        </mat-select>
+                        <mat-error>  
+                            <span   *ngIf="careerDetails.controls['HighestDegree'].hasError('required')&&
+                            (careerDetails.controls.HighestDegree.touched ||careerDetails.controls['HighestDegree'].dirty|| isSubmitted)">
+                                                                Highest Degree is required.  </span>  
+                        </mat-error>
+                      </mat-form-field> 
+                  </div>
+                  <div class="form-group">
+                      <mat-form-field class="demo-full-width">Employeed In
 
-</div>
+                          <input matInput placeholder="Employeed In" formControlName="Emplyeed">
+                          <mat-error>  
+                              <span  *ngIf="careerDetails.controls['Emplyeed'].hasError('required')&&
+                              (careerDetails.controls.Emplyeed.touched ||careerDetails.controls['Emplyeed'].dirty|| isSubmitted)">
+                                                                  Employeed In required.  </span>  
+                          </mat-error>
+                        </mat-form-field> 
+                    </div>
+                    <div class="form-group">
+                        <mat-form-field class="demo-full-width">
+
+                            <mat-label> Occupation</mat-label>
+                            <mat-select  class="form-control"   formControlName="Occupation" required>
+                              <mat-option>-- Select Any --</mat-option>
+                              
+                              <mat-option value="1">  Cloud architect</mat-option>
+                              <mat-option value="2">  IT consultant</mat-option>
+                              <mat-option value="3">  Software engineer</mat-option>
+                              <mat-option value="4">   Web developer</mat-option>
+                              <mat-option value="5">Information technology vendor manager   </mat-option>
+                            </mat-select>
+                            <mat-error>  
+                                <span   *ngIf="careerDetails.controls['Occupation'].hasError('required')&&
+                                (careerDetails.controls.Occupation.touched ||careerDetails.controls['Occupation'].dirty|| isSubmitted)">
+                                                                    Occupation is required.  </span>  
+                            </mat-error>
+                          </mat-form-field> 
+                      </div>
+                      <div class="form-group">
+                          <mat-form-field class="demo-full-width">
+                              <input matInput placeholder="Annual Income " formControlName="Income">
+                              <mat-error>  
+                                  <span  *ngIf="careerDetails.controls['Income'].hasError('required')&&
+                                  (careerDetails.controls.Income.touched ||careerDetails.controls['Income'].dirty|| isSubmitted)">
+                                                                      Annual income is required.</span>  
+                              </mat-error>
+                            </mat-form-field> 
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="demo-full-width">
+                                <textarea matInput placeholder="Express Yourself!" formControlName="Express">
+
+                                </textarea>
+                                <mat-error>  
+                                    <span  *ngIf="careerDetails.controls['Express'].hasError('required')&&
+                                    (careerDetails.controls.Express.touched ||careerDetails.controls['Express'].dirty|| isSubmitted)">
+                                                                        Minimum 200 words needed. </span>  
+                                </mat-error>
+                              </mat-form-field> 
+                          </div>
+                          <button mat-raised-button color="primary" (click)="onSubmit(careerDetails.value)">SUBMIT</button>
+      <button mat-raised-button color="warn" style="margin-left: 20px;">Clear</button> 
+      </form>
+    </mat-card-content>
+     
+      
+            
+     
+  </mat-card>

@@ -29,23 +29,19 @@ constructor(private toastr: ToastrService){
     
     }
      
+    onSubmit(data: any) {
 
-onSubmit(data:any)
-{
-    this.isSubmitted=true;
-    if(this.careerDetails.valid)
-   { 
-        // alert(JSON.stringify(this.careerDetails.value));
-        //alert(JSON.stringify(data));
-        this.toastr.success('Congrats!!', ' You are about to complete your Career details. !!');
-      
-    }
-    else
-    {
-        return false;
-    }
+        this.isSubmitted = true;
+        if (this.careerDetails.valid) {
+            this.toastr.success(' Succesfully Saved !!');
+            alert(JSON.stringify(data))
+        }
+       
+      }
+    
+    
+ 
 
-}
 
 
 }
