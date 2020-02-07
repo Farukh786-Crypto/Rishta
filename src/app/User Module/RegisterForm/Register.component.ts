@@ -19,8 +19,6 @@ export interface profCreated {
 
 })
 
-
-
 export class RegisterFormComponent {
 
     states: string[] = [
@@ -70,15 +68,11 @@ export class RegisterFormComponent {
         //         this.RegisterModel.patchValue(this.postRegisterInfo[0])
             
             
-            
+code             
         //     },
         //             err=>{this.postRegisterInfo=err})
         // }
     
-
-
-
-
     public RegisterPost:any;
     
     public RegisterUser(content:Registerprofile){
@@ -95,6 +89,9 @@ export class RegisterFormComponent {
                     
            }
 
+
+        
+
         //    loginUser(data: any) {
 
         //         this.isSubmited = true;
@@ -106,3 +103,21 @@ export class RegisterFormComponent {
         //     }
     
 }
+
+
+// console.log(customer);
+//     this.customerService.editCustomer(customer, this.custId).subscribe(result => {
+//       this.customerSaveResult = result;
+//       console.log(this.customerSaveResult);
+//       //this.router.navigate(['/customer/83']);
+//       this.router.navigateByUrl("/customer/"+this.custId);
+//     });
+
+
+//    editCustomer(customer: Object, custId: number): Observable<any>{
+        //     const httpOptions = {
+        //       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+        //     };
+        //     const URL = '/api/tc/customer/'+custId;
+        //     return this.httpClient.put(AppSettings.API_ENDPOINT+URL, customer, httpOptions);
+        //   }        
