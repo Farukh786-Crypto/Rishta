@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import {CommonModule} from '@angular/common'
+// import {} from '@angular/material'
 
 
 //import{MatButtonModule} from '@angular/material';
@@ -55,7 +57,7 @@ const MaterialComponents =[
 
 @NgModule({
   
-  imports: [MatButtonModule,],
+  imports: [CommonModule, MatButtonModule,MatSelectModule],
   exports: [MatButtonModule, A11yModule,
     CdkStepperModule,
     CdkTableModule,

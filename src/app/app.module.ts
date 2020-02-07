@@ -17,6 +17,8 @@ import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './User Module/Error.component';
 import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
 import { viewComponent } from './layout/admin/dashboard/view/view.component';
+import { employeecomponent } from './User Module/Employee/employees.component';
+import { EmployeesService } from './shared/employees.service';
 
 
 @NgModule({
@@ -26,7 +28,7 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
     GroomsComponent,
     BridesComponent,
     DashboardComponent,
-    viewComponent,
+    viewComponent,employeecomponent
   ],
 
   imports: [
@@ -43,7 +45,7 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
     ToastrModule.forRoot(),
     MaterialModule
   ],
-  providers: [DataService],
+  providers: [DataService,EmployeesService],
   bootstrap: [AppComponent]
 })
 
