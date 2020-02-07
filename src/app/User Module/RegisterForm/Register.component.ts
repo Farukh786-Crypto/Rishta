@@ -69,8 +69,6 @@ export class RegisterFormComponent {
                      
                     
            }
-
-
     
     // public postRegisterInfo:any;
     // userId:number;

@@ -9,11 +9,11 @@
      
     <mat-card-content>
       <form   [formGroup]="careerDetails" >
-        <div class="form-group">
-            <mat-form-field class="demo-full-width">
+        <!-- <div class="form-group"> -->
+            <mat-form-field>
 
                 <mat-label> Country </mat-label>
-                <mat-select  class="form-control"   formControlName="Country" required>
+                <mat-select   formControlName="Country" required>
                   <mat-option>-- Select Any --</mat-option>
                   <mat-option value="4"> Afghanistan </mat-option>
                   <mat-option value="1">Albania </mat-option>
@@ -27,7 +27,7 @@
                     Country is required </span>  
                 </mat-error>
               </mat-form-field>           
-          </div>
+          <!-- </div> -->
           <div class="form-group">
               <mat-form-field class="demo-full-width">
                   <mat-label> State </mat-label>

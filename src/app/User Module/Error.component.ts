@@ -11,7 +11,6 @@ templateUrl:'./Error.component.html'
 
 export class ErrorComponent {
 
-
     title: string = 'Error Component is Occured';
 
 }
