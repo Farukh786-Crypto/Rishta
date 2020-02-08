@@ -8,25 +8,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MyRoute } from './route.config';
 import { ToastrModule } from 'ngx-toastr';
-import { GroomsComponent } from './layout/admin/dashboard/grooms/grooms.component';
-import { BridesComponent } from './layout/admin/dashboard/brides/brides.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './Services/data.service';
 import { MaterialModule } from './material/material.module';
 import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './User Module/Error.component';
-import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
-import { viewComponent } from './layout/admin/dashboard/view/view.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent,
-    GroomsComponent,
-    BridesComponent,
-    DashboardComponent,
-    viewComponent,
+   
   ],
 
   imports: [

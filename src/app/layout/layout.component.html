@@ -1,41 +1,40 @@
-<div class="header">
-  <a class="logo">
-    <img src="assets/Images/rishtalogo.png" height=50px ></a>
- <div class="right">
-  <a class="btn btn-info btn-lg">
-    <span class="glyphicon glyphicon-log-in"></span> Admin
-  </a>
- </div>
-</div>
+<mat-toolbar color="warn">
+  <mat-toolbar-row>
+    <div> <a><img src="assets/Images/rishtalogo.png"></a></div>
+    <div class="right">
+      <button mat-button [matMenuTriggerFor]="menu1">Admin</button>
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item (click)="SignOut()">SignOut</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <div>
+      <button mat-button [matMenuTriggerFor]="menu">Dashboard</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Grooms</button>
+        <button mat-menu-item>Brides</button>
+      </mat-menu>
+      <a mat-button > Matching </a>
+      <a mat-button > Packages </a>
+      <a mat-button > Payment </a>
+      <a mat-button > User </a>
+    
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-<div class="topnav" id="myTopnav">
-  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Dashboard</a>
-    <ul class="dropdown-menu">
-        <li><a  >Grooms</a ></li>
-        <li><a >Brides</a></li>
-    </ul>
-</li>
-  <a >User</a>
-  <a >Search By</a>
-  <a >Matching</a>
+<!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu> -->
 
-  <div class="dropdown">
-    <button class="dropbtn">Packages
-      <i class="fa fa-caret-down"></i>
-    </button>
+
+
+
+<footer class="md-padding fixed-bottom" >
+  <div id="btmFooter" flex>
+    <p>@2020 Copyright: Assimilate Technology.</p>
   </div>
-  <a>Payment</a>
-  
-</div>
-
-<div class="content">
-  <router-outlet></router-outlet>
-  <!-- <app-grooms></app-grooms>  -->
-  <!-- <view-comp></view-comp> -->
-  <!-- <app-brides></app-brides> -->
-</div>
-    <!-- This is Footer! -->
-    <footer class="container-fluid text-center fixed-bottom">
-      <p>©Copyright 2020 Assimilate technologies All Rights Reserved</p>
-
-  </footer>
+</footer>
