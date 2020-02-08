@@ -8,10 +8,10 @@ const routes: Routes = [
   {
     path:'',component:LayoutComponent,children: [
 
-        {path:'',redirectTo:'layout',pathMatch:'full',canActivate:[AdminAuthGuard]},
-        {path:'brides',loadChildren:'./admin/dashboard/brides#BridesModule',canActivate:[AdminAuthGuard]},
-        {path:'grooms',loadChildren:'./admin/dashboard/grooms#GroomsModule',canActivate:[AdminAuthGuard]},
-        {path:'dashboard',loadChildren:'./admin/dashboard/dashboard#DashboardModule',canActivate:[AdminAuthGuard]},
+        {path:'',redirectTo:'dashboard',pathMatch:'full',canActivate:[AdminAuthGuard]},
+        {path:'brides',loadChildren:'./admin/dashboard/brides/brides.module#BridesModule',canActivate:[AdminAuthGuard]},
+        {path:'grooms',loadChildren:'./admin/dashboard/grooms.module#GroomsModule',canActivate:[AdminAuthGuard]},
+        {path:'dashboard',loadChildren:'./admin/dashboard/dashboard.module#DashboardModule',canActivate:[AdminAuthGuard]},
         {path:'view',loadChildren:'./admin/dashboard/view#ViewModule',canActivate:[AdminAuthGuard]}
         
     ]

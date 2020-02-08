@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatMenuModule} from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatCardModule} from '@angular/material/card';
 
 
 const MaterialComponents =[
@@ -16,7 +17,8 @@ const MaterialComponents =[
   MatAutocompleteModule,
   MatCheckboxModule,
   MatRadioModule,
-  MatMenuModule
+  MatMenuModule,
+  MatCardModule
 
 ];
 

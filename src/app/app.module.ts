@@ -37,6 +37,7 @@ import { ErrorComponent } from './User Module/Error.component';
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
+  //bootstrap:[DashboardComponent]
 })
 
 export class AppModule { }
