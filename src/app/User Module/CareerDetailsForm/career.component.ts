@@ -2,7 +2,7 @@ import{Component} from '@angular/core'
 import{FormControl, Validators,FormGroup}from'@angular/forms'
 import { ToastrService } from 'ngx-toastr';
 import { CareerService } from './career.service';
-import { CareerProfile } from 'src/app/model';
+
 @Component({
 selector:'career-comp',
 templateUrl:'./career.component.html',
