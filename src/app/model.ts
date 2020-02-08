@@ -9,7 +9,7 @@ export class Registerprofile{
 
 
 }
-<<<<<<< HEAD
+
 export class CareerProfile{
     Country:string; 
     State:string;  
@@ -24,5 +24,3 @@ export class CareerProfile{
 
 
 }
-=======
->>>>>>> 607b0c774f22a2becad0583c07e52955eb12aa08

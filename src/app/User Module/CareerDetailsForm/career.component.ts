@@ -1,13 +1,8 @@
 import{Component} from '@angular/core'
 import{FormControl, Validators,FormGroup}from'@angular/forms'
 import { ToastrService } from 'ngx-toastr';
-<<<<<<< HEAD
-import { CareerService } from './career.service';
-
-=======
 import { CareerService } from './career.service';//imported
 import { CareerProfile } from 'src/app/model';
->>>>>>> 0690f3538ec31ab26fa62ddeef5776dbe04bb482
 @Component({
 selector:'career-comp',
 templateUrl:'./career.component.html',
@@ -55,8 +50,6 @@ constructor(private toastr: ToastrService,private Career: CareerService){
         }      
       }
     
-<<<<<<< HEAD
-=======
       //firstCareerId: number=1;
       public getCareerInfo: any;
       
@@ -77,6 +70,5 @@ constructor(private toastr: ToastrService,private Career: CareerService){
     //         err=>{this.careerDetailsInfo=err};)
     //     } 
 
->>>>>>> 0690f3538ec31ab26fa62ddeef5776dbe04bb482
 
 
