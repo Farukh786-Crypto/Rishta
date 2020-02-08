@@ -1,10 +1,13 @@
 import{Component} from '@angular/core'
 import{FormControl, Validators,FormGroup}from'@angular/forms'
 import { ToastrService } from 'ngx-toastr';
- 
+import { CareerService } from './career.service';
+import { CareerProfile } from 'src/app/model';
 @Component({
 selector:'career-comp',
-templateUrl:'./career.component.html'
+templateUrl:'./career.component.html',
+styleUrls: ['./career.component.css'],
+providers: [CareerService]
 })
 
 export class CareerComponent{
@@ -13,7 +16,7 @@ careerDetails:FormGroup
 str:string
 disabled:boolean
 isSubmitted:boolean;
-constructor(private toastr: ToastrService){
+constructor(private toastr: ToastrService,private Career: CareerService){
 
     this.careerDetails=new FormGroup({
         Country:new FormControl('',Validators.required),
@@ -29,23 +32,19 @@ constructor(private toastr: ToastrService){
     
     }
      
+    onSubmit(data: any) {
 
-onSubmit(data:any)
-{
-    this.isSubmitted=true;
-    if(this.careerDetails.valid)
-   { 
-        // alert(JSON.stringify(this.careerDetails.value));
-        //alert(JSON.stringify(data));
-        this.toastr.success('Congrats!!', ' You are about to complete your Career details. !!');
-      
-    }
-    else
-    {
-        return false;
-    }
+        this.isSubmitted = true;
+        if (this.careerDetails.valid) {
+            this.toastr.success(' Succesfully Saved !!');
+            alert(JSON.stringify(data))
+        }
+       
+      }
+    
+    
+ 
 
-}
 
 
 }

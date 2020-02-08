@@ -9,7 +9,6 @@ import { Registerprofile } from 'src/app/model';
 
 export class RegService{
     private url='http://192.168.0.123:8080/api/registers'
-
     constructor(private http:HttpClient){
  }
 
@@ -18,6 +17,8 @@ export class RegService{
     //     return this.http.get<Registerprofile>(url);
     // }
 
+
+    
 
     addContent(content:Registerprofile):Observable<Registerprofile>{
 

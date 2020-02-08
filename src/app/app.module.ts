@@ -15,10 +15,18 @@ import { DataService } from './Services/data.service';
 import { MaterialModule } from './material/material.module';
 import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './User Module/Error.component';
+ 
+import {MatDialogModule} from '@angular/material/dialog';
+
+ 
 import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
 import { viewComponent } from './layout/admin/dashboard/view/view.component';
+<<<<<<< HEAD
 import { employeecomponent } from './User Module/Employee/employees.component';
 import { EmployeesService } from './shared/employees.service';
+=======
+ 
+>>>>>>> 607b0c774f22a2becad0583c07e52955eb12aa08
 
 
 @NgModule({
@@ -40,6 +48,8 @@ import { EmployeesService } from './shared/employees.service';
     NgxSpinnerModule,
    MaterialModule,
     MatSelectModule,
+    MatDialogModule,
+    
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot(),
     MaterialModule
