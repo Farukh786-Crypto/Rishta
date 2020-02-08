@@ -42,9 +42,6 @@ constructor(private toastr: ToastrService,private Career: CareerService){
        
       }
     
-    
- 
-
 
 
 }
