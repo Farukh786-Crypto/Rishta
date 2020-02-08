@@ -4,11 +4,12 @@ export class Registerprofile{
     email:string;
     password:string;
     mobile:number;
-    profile:string;
+    create_profile_by:string;
     gender:string;
 
 
 }
+<<<<<<< HEAD
 export class CareerProfile{
     Country:string; 
     State:string;  
@@ -23,3 +24,5 @@ export class CareerProfile{
 
 
 }
+=======
+>>>>>>> 607b0c774f22a2becad0583c07e52955eb12aa08

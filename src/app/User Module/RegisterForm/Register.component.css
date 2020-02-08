@@ -1,40 +1,33 @@
-/* h1,p{
-
-    text-align: center;
-    padding-bottom: 3%;
-
+.example-card {
+  max-width: 60%;
+  margin: 20px auto;
+  height: 100%;
 }
- Set a grey background color and center the text of the "sign in" section 
-.signin {
-    background-color: #f1f1f1;
-    text-align: center;
-  }
-  .modal-header{
 
-    text-align: left;
+.mat-hint{
+  padding: 10px 0 10px 0;
+}
 
-  } */
+.example-container {
+  display: inline;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
 
 
-/* .buttonSubmit{
 
-  margin: 3rem;
+input.example-right-align {
+  -moz-appearance: textfield;
+}
 
-} */
-  .example-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .full-width {
-    width: 80%;
-  
-  }
-  
-  .example-container > * {
-    width: 100%;
-  }
-
-  .mat-radio-button ~ .mat-radio-button {
-    margin-left: 16px;
-  }
-  
