@@ -18,6 +18,8 @@ export class RegService{
     // }
 
 
+    
+
     addContent(content:Registerprofile):Observable<Registerprofile>{
 
         const httpOption = {headers:new HttpHeaders({'Content-Type':'application/json'})};

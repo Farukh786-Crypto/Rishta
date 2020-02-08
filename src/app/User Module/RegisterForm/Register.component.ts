@@ -73,7 +73,7 @@ export class RegisterFormComponent {
     // public postRegisterInfo:any;
     // userId:number;
     // public SaveRegisterInfo(){
-    //     this.re.getSingleRegisterUsers(this.userId).subscribe(res=>{
+    //     this.register.getSingleRegisterUsers(this.userId).subscribe(res=>{
 
     //         this.postRegisterInfo=res;
     //         // this.RegisterModel.patchValue(res[0]);
