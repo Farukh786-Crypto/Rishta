@@ -1,39 +1,50 @@
 import {Injectable} from '@angular/core'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-//import { CareerProfile } from 'src/app/model';
+import { CareerProfile } from 'src/app/model';
 
 
 @Injectable()
+// public getsingleUsersCareerProfile(){
+//     this.getCareerInfo=this.Career.getuserCareerProfile(this.firstCareerId)
+//     let url='http://192.168.0.120:8080/api/master/getAll'
+//     let url='http://192.168.0.120:8080/api/occupation/getAll' 
+//     let url='http://192.168.0.120:8080/api/employeement/getAll'
+
+
+
+//     return this.careerDetails.get(url);
+// }
 
 
 export class CareerService{
-    private url='http://192.168.0.123:8080/api/registers'
+    
     constructor(private http:HttpClient){
- }
-
- public getUsersCareerProfile(no:number){
-         let url='http://192.168.0.123:8080/api/registers/getCareerById/'+no
-         return this.http.get(url);
     }
-    // public postRegisterInfo:any;
-    // userId:number;
-    // public SaveRegisterInfo(){
-    //     this.register.getSingleRegisterUsers(this.userId).subscribe(res=>{
+    
 
-    //         this.postRegisterInfo=res;
-    //         // this.RegisterModel.patchValue(res[0]);
-    //         this.RegisterModel.patchValue(this.postRegisterInfo[0])
-        
-        
-        
-    //     },
-    //             err=>{this.postRegisterInfo=err})
-    // public getSingleRegisterUsers(no:number):Observable<Registerprofile>{
-    //     let url='http://192.168.0.123:8080/api/registers/getRegisterById/'+no
-    //     return this.http.get<Registerprofile>(url);
+    // public getuserCareerProfile(no:number){
+    //       let url='http://192.168.0.120:8080/api/master/getAll'
+    //         return this.http.get(url);
     // }
-
+      public getall(){
+        let url='http://192.168.0.120:8080/api/master/getAll'
+        return this.http.get(url);
+      }   
 
 }
+    // private careerlist:[{
+    //     Country:'india',
+    // State:'maharasthra',
+    // City: 'solapur',
+    // Pincode:413221, 
+    // HighestDegree:'mba',  
+    // Emplyeed: ' govt',
+    // Occupation: 'it', 
+    // Income: 12000,
+    // Express:'you'
+
+    // }]
+   
+
  

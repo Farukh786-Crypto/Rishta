@@ -18,7 +18,7 @@ export class RegService{
     // }
 
 
-    
+
 
     addContent(content:Registerprofile):Observable<Registerprofile>{
 

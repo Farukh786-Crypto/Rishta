@@ -1,4 +1,5 @@
-
+{{getCareerInfo|json}}
+<button type="submit" (click)="SaveCareerInfo()"> Get </button>
  
 <mat-card class="example-card">
     <mat-card-header>
@@ -84,7 +85,7 @@
                           
                           <mat-option value="1"> Post Graduate </mat-option>
                           <mat-option value="2"> PG Diploma </mat-option>
-                          <mat-option value="3">Ahmednagar </mat-option>
+                          <mat-option value="3">Diploma </mat-option>
                           <mat-option value="4"> Certificate </mat-option>
                           <mat-option value="5"> Integrated </mat-option>
                         </mat-select>
@@ -92,6 +93,28 @@
                             <span   *ngIf="careerDetails.controls['HighestDegree'].hasError('required')&&
                             (careerDetails.controls.HighestDegree.touched ||careerDetails.controls['HighestDegree'].dirty|| isSubmitted)">
                                                                 Highest Degree is required.  </span>  
+                        </mat-error>
+                      </mat-form-field> 
+                  </div>
+
+
+                  <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+
+                        <mat-label> Bachlor Degree </mat-label>
+                        <mat-select  class="form-control"   formControlName="BachlorDegree" required>
+                          <mat-option>-- Select Any --</mat-option>
+                          
+                          <mat-option value="1"> BA </mat-option>
+                          <mat-option value="2"> BDS </mat-option>
+                          <mat-option value="3">Diploma </mat-option>
+                          <mat-option value="4"> Certificate </mat-option>
+                          <mat-option value="5"> Integrated </mat-option>
+                        </mat-select>
+                        <mat-error>  
+                            <span   *ngIf="careerDetails.controls['BachlorDegree'].hasError('required')&&
+                            (careerDetails.controls.BachlorDegree.touched ||careerDetails.controls['BachlorDegree'].dirty|| isSubmitted)">
+                            Bachlor Degree is required.  </span>  
                         </mat-error>
                       </mat-form-field> 
                   </div>
@@ -149,7 +172,7 @@
                               </mat-form-field> 
                           </div>
                           <button mat-raised-button color="primary" (click)="onSubmit(careerDetails.value)">SUBMIT</button>
-      <button mat-raised-button color="warn" style="margin-left: 20px;">Clear</button> 
+      <button mat-raised-button color="warn" (click)="SaveCareerInfo()"style="margin-left: 20px;">Save</button> 
       </form>
     </mat-card-content>
      
