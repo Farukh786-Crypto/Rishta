@@ -10,9 +10,6 @@ export class DashboardComponent{
     {
         
     }
-    public getAll()
-    {
-        this.data.getTotalMembers().
-    }
+   
     
 }
