@@ -28,7 +28,6 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
     DashboardComponent,
     viewComponent,
   ],
-
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -37,10 +36,11 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
     BrowserAnimationsModule, // required animations module
     ReactiveFormsModule,
     NgxSpinnerModule,
-    MaterialModule,
+   MaterialModule,
     MatSelectModule,
     RouterModule.forRoot(MyRoute),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MaterialModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
