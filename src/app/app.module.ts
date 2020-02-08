@@ -22,12 +22,8 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorComponent,
-    GroomsComponent,
-    BridesComponent,
-    DashboardComponent,
-    viewComponent,
-  ],
+    ErrorComponent
+     ],
 
   imports: [
     BrowserModule,
@@ -44,6 +40,7 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
+  //bootstrap:[DashboardComponent]
 })
 
 export class AppModule { }
