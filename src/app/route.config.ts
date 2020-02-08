@@ -11,4 +11,3 @@ export const MyRoute: Routes = [
     // { path: 'sign-up', loadChildren: './signup/signup.module#SignupModule' },
     { path: '**', component: ErrorComponent }
 ]
-

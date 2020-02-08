@@ -30,7 +30,6 @@ import { EmployeesService } from './shared/employees.service';
     DashboardComponent,
     viewComponent,employeecomponent
   ],
-
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -39,7 +38,7 @@ import { EmployeesService } from './shared/employees.service';
     BrowserAnimationsModule, // required animations module
     ReactiveFormsModule,
     NgxSpinnerModule,
-   // MaterialModule,
+   MaterialModule,
     MatSelectModule,
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot(),
