@@ -19,7 +19,7 @@ const route: Routes = [
             { path: '', redirectTo: 'register', pathMatch: 'full' },
             { path: 'register', loadChildren: './RegisterForm/RegisterLazy.module#RegisterLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'astroandreligion', loadChildren: './AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass',canActivate:[UsersAuthGuard] },
-            { path: 'profiledetails', loadChildren: './ProfileDetailsForm/ProfileDetailsLazy.module#RegisterLazyClass',canActivate:[UsersAuthGuard] },
+            { path: 'profiledetails', loadChildren: './ProfileDetailsForm/ProfileDetailsLazy.module#ProfileDetailsLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'CareerDetails', loadChildren: './CareerDetailsForm/careerLazy.module#CareerLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'familydetails', loadChildren: './FamilyDetailsForm/Family-detailsLazy.modules#FamilyLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'Educationdetails', loadChildren: './EducationDetailsForm/EducationDetailsLazy.module#EducationLazyClass' ,canActivate:[UsersAuthGuard]},

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { NgxSpinnerService } from 'ngx-spinner';
+
 // import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-profile-details',

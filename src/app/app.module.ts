@@ -21,12 +21,9 @@ import {MatDialogModule} from '@angular/material/dialog';
  
 import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
 import { viewComponent } from './layout/admin/dashboard/view/view.component';
-<<<<<<< HEAD
 import { employeecomponent } from './User Module/Employee/employees.component';
 import { EmployeesService } from './shared/employees.service';
-=======
  
->>>>>>> 607b0c774f22a2becad0583c07e52955eb12aa08
 
 
 @NgModule({

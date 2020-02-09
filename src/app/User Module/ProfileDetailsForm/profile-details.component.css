@@ -4,14 +4,58 @@
     content: '*';
     color: #ED2D2C;
 }
-.example-container {
+
+/* .example-container {
   display: flex;
   flex-direction: column;
 }
 
 .example-container > * {
   width: 100%;
+} */
+
+.example-card {
+  max-width: 500px;
+  margin: 20px auto;
+  height: 100%;
+  
+
 }
+
+.mat-hint{
+  padding: 10px 0 10px 0;
+}
+
+.example-container {
+  display: inline;
+  flex-direction: column;
+  
+}
+
+/* .example-container > * {
+  width: 100%;
+} */
+/* .example-right-align {
+  text-align: right;
+} */
+
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+
 
 /* .modal-content
 {
