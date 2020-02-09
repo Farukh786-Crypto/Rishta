@@ -57,7 +57,6 @@ constructor(private toastr: ToastrService,private Career: CareerService){
             //console.log("hhhhh")
         this.Career.getall().subscribe(res=>{this.getCareerInfo=res,
         console.log(JSON.stringify(res))
-
         },
                err=>{this.getCareerInfo=err})
         }

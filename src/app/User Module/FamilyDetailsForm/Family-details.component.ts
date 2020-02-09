@@ -5,7 +5,8 @@ import { analyzeAndValidateNgModules } from '@angular/compiler';
 @Component({
 
   selector: 'app-family-details',
-  templateUrl: './Family-details.component.html'
+  templateUrl: './Family-details.component.html',
+  styleUrls:['./Family-details.component.css']
 
 })
 export class FamilyDetailsComponent {
@@ -14,7 +15,7 @@ export class FamilyDetailsComponent {
   isSubmitted: boolean;
 
   constructor() {
-    console.log('---------------------------------------');
+  //  console.log('---------------------------------------');
     this.FamilyDetailsModel = new FormGroup({
       familytype: new FormControl('', Validators.required),
       fatherocc: new FormControl('', Validators.required),
