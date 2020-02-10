@@ -1,508 +1,257 @@
-<div class="container">
+<!-- <mat-toolbar color="accent">
+  <span> Lifestyle Details</span>
+  <span class="demo-toolbar"></span>
 
-    <!-- Trigger the modal with a button -->
+</mat-toolbar> -->
+<mat-card class="example-card">
+  <!-- Title of an Card -->
+   
+  <mat-card-header>
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <img mat-card-avatar src="assets\Images\lifeicon.jpg" class="rounded">  
+     
+    <mat-card-title>Lifestyle Details</mat-card-title>
+    <mat-card-subtitle> </mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content>
+    {{LifestyleModel.value|json}}
+    <form [formGroup]="LifestyleModel"(ngSubmit)="onFormSubmit(LifestyleModel.value)"  >
+    <!-- <form>     -->
+    <table>
+      <tr>
+        <td>
+          <span>Assets</span>
 
+        </td>
+        <td>
+          <span>Own a house?</span>
+          <mat-radio-group formControlName="house">
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal7" role="dialog">
-        <div class="modal-dialog">
+            <mat-radio-button value="1">Yes</mat-radio-button>
+            <mat-radio-button value="2">No</mat-radio-button>
+          </mat-radio-group><br><br>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['house'].hasError('required')&&
+            (LifestyleModel.controls.house.touched ||LifestyleModel.controls['house'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
 
+          <span>Own a car?</span>
 
-            
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Lifestyle Details</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <mat-radio-group formControlName="car">
 
-                </div>
-                <div class="modal-body">
+            <mat-radio-button value="1">Yes</mat-radio-button>
+            <mat-radio-button value="2">No</mat-radio-button>
+          </mat-radio-group>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['car'].hasError('required')&&
+            (LifestyleModel.controls.car.touched ||LifestyleModel.controls['car'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="demo-full-width">
 
+            <mat-label> Languages I Speak </mat-label>
+            <mat-select multiple formControlName="Languages">
+              <mat-option>-- Select Any --</mat-option>
+              <mat-option value="1">Hindi </mat-option>
+              <mat-option value="2">English </mat-option>
+              <mat-option value="3">Marathi </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['house'].hasError('required')&&
+            (LifestyleModel.controls.house.touched ||LifestyleModel.controls['house'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+        </td>
+      </tr>
 
+      <tr>
+        <td>
+          <mat-form-field class="demo-full-width">
+            <input matInput placeholder=" Food I Cook " formControlName="Food">
+          </mat-form-field>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['Food'].hasError('required')&&
+            (LifestyleModel.controls.Food.touched ||LifestyleModel.controls['Food'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+        </td>
 
+        <td>
+          <mat-form-field class="demo-full-width">
+            <input matInput placeholder="Favourite Books " formControlName="Books">
+          </mat-form-field>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['Books'].hasError('required')&&
+            (LifestyleModel.controls.Books.touched ||LifestyleModel.controls['Books'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+        </td>
+        
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="demo-full-width">
+            <input matInput placeholder="Favourite  food"formControlName="Favouritefood">
+          </mat-form-field>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['Favouritefood'].hasError('required')&&
+            (LifestyleModel.controls.Favouritefood.touched ||LifestyleModel.controls['Favouritefood'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+        </td>
 
+        <td>
+          <mat-form-field class="demo-full-width">
+            <input matInput placeholder="Favourite   sports"formControlName="sports">
+          </mat-form-field>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['sports'].hasError('required')&&
+            (LifestyleModel.controls.sports.touched ||LifestyleModel.controls['sports'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+        </td>
+      </tr>
 
-                    <div class="row">
-                        <div class="col-sm-2">
-                            <div class="form-group">
-                                <label for="text">Habits</label>
-                            </div>
-                        </div>
-                        <div class="col-sm-10">
+      <tr>
+        <td>
+          <mat-form-field class="demo-full-width">
+            <input matInput placeholder="Favourite Music"formControlName="Music">
+          </mat-form-field>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['Music'].hasError('required')&&
+            (LifestyleModel.controls.Music.touched ||LifestyleModel.controls['Music'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+        </td>
+        <td>
+          <mat-form-field class="demo-full-width">
+            <input matInput placeholder=" Interests"formControlName="Interests">
+          </mat-form-field>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['Interests'].hasError('required')&&
+            (LifestyleModel.controls.Interests.touched ||LifestyleModel.controls['Interests'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="demo-full-width">
+            <input matInput placeholder="Vacation Destination"formControlName="Destination">
+          </mat-form-field>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['Destination'].hasError('required')&&
+            (LifestyleModel.controls.Destination.touched ||LifestyleModel.controls['Destination'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+        </td>
+        <td>
+          <mat-form-field class="demo-full-width">
+            <input matInput placeholder="Movies">
+          </mat-form-field>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['Movies'].hasError('required')&&
+            (LifestyleModel.controls.Movies.touched ||LifestyleModel.controls['Movies'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+        </td>
+      </tr>
 
+      <tr>
+        <td>
+          <mat-form-field class="demo-full-width">
+            <input matInput placeholder=" TV Shows">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="demo-full-width">
+            <input matInput placeholder=" Serial">
+          </mat-form-field>
+        </td>
+      </tr>
 
+      <tr>
+        <td>
+          <mat-form-field>
+            <mat-label> Dress Style</mat-label>
+            <mat-select multiple>
+              <mat-option>-- Select Any --</mat-option>
+              <mat-option value="1">Classic India</mat-option>
+              <mat-option value="2">Classic Western</mat-option>
+              <mat-option value="3">Designer </mat-option>
+              <mat-option value="4">Casual </mat-option>
+              <mat-option value="5">Trendy </mat-option>
 
-                            <!-- </label>
-                        <label  for="text">Do you drink?</label><br> -->
-                            <label class="form-check-label" for="radio1">Do you drink?</label><br>
-                            <div class="form-check-inline">
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+           
+            <mat-label>Are you open to pets? </mat-label>
+          </td>
+          <td> 
+            <mat-radio-group>
+              <mat-radio-button value="1">Yes</mat-radio-button>
+              <mat-radio-button value="2">No </mat-radio-button>
+            </mat-radio-group>
+           
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-label>Habits </mat-label>
+        </td>
+        <td>
+          <mat-form-field>
+          <mat-label>Do you drink?</mat-label>
+          <mat-select formControlName="drink">
+            <mat-option>-- Select Any --</mat-option>
+            <mat-option value="1"> Yes</mat-option>
+            <mat-option value="2">No </mat-option>
+            <mat-option value="3">Occasionally </mat-option>
+          </mat-select>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['drink'].hasError('required')&&
+            (LifestyleModel.controls.drink.touched ||LifestyleModel.controls['drink'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+          </mat-form-field><br>
+          <mat-form-field>
+          <mat-label>Do you smoke?</mat-label>
+          <mat-select formControlName="smoke">
+            <mat-option>-- Select Any --</mat-option>
+            <mat-option value="1"> Yes</mat-option>
+            <mat-option value="2">No </mat-option>
+            <mat-option value="3">Occasionally </mat-option>
+          </mat-select>
+          <mat-error>  
+            <span *ngIf="LifestyleModel.controls['smoke'].hasError('required')&&
+            (LifestyleModel.controls.smoke.touched ||LifestyleModel.controls['smoke'].dirty|| isSubmitted)"  >
+              Please  select any one.</span>  
+        </mat-error>
+          </mat-form-field>
+        </td>
+      </tr> 
+      <tr>
+        <td></td>
+        <td colspan="2" class="content-center">
+          <button mat-raised-button  (click)="onSaveSuccess(LifestyleModel.value)"  color="primary">Submit</button>
+          <button mat-raised-button color="warn" style="margin-left: 20px;">Clear</button>
+        </td>
+      </tr>
 
-                                <input type="radio" class="form-check-input" name="drink">Yes
-                                <input type="radio" class="form-check-input" name="drink">No
-                                <input type="radio" class="form-check-input" name="drink">Occasionally
-
-                            </div><br>
-                            <label class="form-check-label" for="radio1">Do you smoke?</label><br>
-                            <div class="form-check-inline">
-
-                                <input type="radio" class="form-check-input" name="smoke">Yes
-                                <input type="radio" class="form-check-input" name="smoke">No
-                                <input type="radio" class="form-check-input" name="smoke">Occasionally
-
-                            </div><br>
-                            <label class="form-check-label" for="radio1">Are you open to pets?</label><br>
-                            <div class="form-check-inline">
-
-                                <input type="radio" class="form-check-input" name="pets">Yes
-                                <input type="radio" class="form-check-input" name="pets">No
-
-
-                            </div>
-
-
-
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="text"> Assets</label>
-
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <label class="form-check-label" for="radio1">Own a house?</label><br>
-                            <div class="form-check-inline">
-
-                                <input type="radio" class="form-check-input" name="House">Yes
-                                <input type="radio" class="form-check-input" name="House">No
-
-                            </div><br>
-                            <label class="form-check-label" for="radio1">Own a car?</label><br>
-                            <div class="form-check-inline">
-
-                                <input type="radio" class="form-check-input" name="car">Yes
-                                <input type="radio" class="form-check-input" name="car">No
-
-
-                            </div><br>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="text">Languages I Speak</label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-
-                            <select class="form-control" multiple>
-                                <option value="" disabled selected> SELECT</option>
-                                <option value="1">Assamese</option>
-                                <option value="2">Bengali</option>
-                                <option value="3">Bodo</option>
-                                <option value="4">Punjabi</option>
-                                <option value="5">Gujarati</option>
-                                <option value="6">Kannada</option>
-                                <option value="7">Hindi</option>
-                                <option value="8">Konkani</option>
-                                <option value="9">Malayalam</option>
-                                <option value="10">Sanskrit</option>
-                                <option value="11">Marathi</option>
-                                <option value="12">Tamil</option>
-                                <option value="13">Telugu</option>
-                                <option value="14">Urdu</option>
-                            </select>
-
-
-
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="text">Food I Cook</label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="Food" name="Food"placeholder="Not filled in">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-
-                                <label for="text">Hobbies</label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Painting">
-                                        Painting</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Cooking">
-                                        Cooking</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Photography">
-                                        Photography</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Film">
-                                        Film-making</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Gardening">
-                                        Gardening/Landscaping</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Fishing">
-                                        Fishing</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Singing">
-                                        Singing</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Dancing">
-                                        Dancing</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Acting">
-                                        Acting</label>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-
-                                <label for="text">Interests</label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Writing">
-                                        Writing</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Reading">
-                                        Reading</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="languages">
-                                        Learning new languages</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Photography">
-                                        Listining new music</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="television">
-                                        Watching television</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Movies">
-                                        Movies</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Traveling">
-                                        Traveling</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Indoor">
-                                        Sports-Indoor</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Outdoor">
-                                        Sports-Outdoor</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Video">
-                                        Video/Computer games</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="text">Favourite Books</label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Science Fiction">
-                                        Science Fiction </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="poetry">
-                                        Poetry</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="biographies">
-                                        Biographies</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="fantasy">
-                                        Fantasy</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="autobiographies">
-                                        Autobiographies</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="religious">
-                                        Religious</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="history">
-                                        history</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="diaries">
-                                        Diaries</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="text">Favourite Music</label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Musical">
-                                        Musical theatre</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Pop">
-                                        Pop music</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Heavy">
-                                        Heavy metal</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="rock">
-                                        Punk rock</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Folk">
-                                        Folk metal</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Rapper">
-                                        Rapper</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Classical">
-                                        Classical music</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Popular">
-                                        Popular music</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="text">Dress Style</label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Indian">
-                                        Classic Indian</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Western">
-                                        Classic Western</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Designer">
-                                        Designer</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Trendy">
-                                        Trendy</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Casual">
-                                        Casual</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="text">Sports </label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Casual">
-                                        Aerobics</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Casual">
-                                        Golf</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Casual">
-                                        Volleyball</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="Casual">
-                                        Handball</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="tennis">
-                                        Table tennis</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="carrom">
-                                        Carrom</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="basketball">
-                                        Basketball</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="text"> Vacation Destination </label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <input type="text" id="Languages" name="Languages"placeholder="Not filled in">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="text"> Movies </label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <input type="text" id="Languages" name="Languages"placeholder="Not filled in">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="text"> TV Shows </label>
-                            </div>
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <input type="text" id="Languages" name="Languages"placeholder="Not filled in">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2">
-
-                        </div>
-                        <div class="col-md-10">
-                            <div class="form-group">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">SAVE</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-</div>
+    </table>
+  </form>
+    <!-- </form>     -->
+  </mat-card-content>
+</mat-card>

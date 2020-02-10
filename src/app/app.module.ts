@@ -14,17 +14,22 @@ import { MaterialModule } from './material/material.module';
 import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './User Module/Error.component';
 
-
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
+ 
+import {MatDialogModule} from '@angular/material/dialog';
+
+
+ 
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent,
-
+  
   ],
-
   imports: [
     platformBrowser.BrowserModule,
     HttpClientModule,
@@ -34,10 +39,14 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter'
     ReactiveFormsModule,
     NgxSpinnerModule,
     Ng2SearchPipeModule,
-    MaterialModule,
+    
+   MaterialModule,
     MatSelectModule,
+    MatDialogModule,
+    
     RouterModule.forRoot(MyRoute),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MaterialModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
