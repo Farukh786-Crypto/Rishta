@@ -4,6 +4,15 @@
     content: '*';
     color: #ED2D2C;
 }
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
 /* .modal-content
 {
     background-image: url('src\assets\Images\pexels-photo-414660.jpg');
