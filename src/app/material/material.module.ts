@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 
-
+import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatMenuModule} from '@angular/material';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatCardModule} from '@angular/material/card';
 //import{MatButtonModule} from '@angular/material';
 import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule} from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -37,6 +39,21 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
+
+//   MatButtonModule,
+//   MatButtonToggleModule,
+//   MatIconModule,
+//   MatBadgeModule,
+//   MatToolbarModule,
+//   MatFormFieldModule,
+//   MatInputModule,
+//   MatSelectModule,
+//   MatAutocompleteModule,
+//   MatCheckboxModule,
+//   MatRadioModule,
+//   MatMenuModule,
+//   MatCardModule
+
 //   MatButtonModule,
 //   MatButtonToggleModule,
 //   MatIconModule,
@@ -49,12 +66,18 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 //   MatCheckboxModule,
 //   MatRadioModule
 
+
 // ];
 
 
 
 @NgModule({
   
+
+  imports: [MaterialComponents,],
+  exports: [MaterialComponents]  
+  
+
   imports: [MatButtonToggleModule,
     MatIconModule,
     MatBadgeModule,
@@ -121,5 +144,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 export class MaterialModule{ 
+
 
 }

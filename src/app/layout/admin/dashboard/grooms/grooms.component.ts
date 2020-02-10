@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/Services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-grooms',
@@ -10,7 +11,7 @@ import { DataService } from 'src/app/Services/data.service';
 export class GroomsComponent implements OnInit {
   myDetail:any
 
-  constructor(private data:DataService) { }
+  constructor(private data:DataService,private route:Router) { }
 
   ngOnInit() {
     this.getGroomsData();
@@ -25,15 +26,12 @@ export class GroomsComponent implements OnInit {
       error=>{this.myDetail=error}
       )
   }
-  uid: number
-  public search() {
-      this.data.getSingleUsers(this.uid).subscribe(res => {
-          if (res && res['data']) {
 
-              this.myDetail = res['data']
-          }
-      }, err => { this.myDetail= err })
-  }
 
+ public view()
+ {
+    this.route.navigate(['./view']);
+
+ }
 
 }
