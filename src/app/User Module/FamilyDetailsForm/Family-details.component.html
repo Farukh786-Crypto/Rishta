@@ -33,7 +33,7 @@
                                         </select> -->
 
                                 <mat-form-field>
-                                    <mat-label>Mother tongue:</mat-label>
+                                    <mat-label>Family Type:</mat-label>
                                     <mat-select formControlName="familytype">
                                         <mat-option value="">SELECT</mat-option>
                                         <mat-option value="JointFamily">Joint Family</mat-option>
@@ -395,8 +395,9 @@
                                     formControlName="aboutfamily"> -->
                                     <mat-form-field appearance="outline">
                                         <mat-label>About My Family:</mat-label>
-                                        <input formControlName="aboutfamily" matInput placeholder="Write about your parents and brothers or sisters.where do they live? what are they doing?" required>
+                                        <textarea formControlName="aboutfamily" matInput placeholder="Write about your parents and brothers or sisters.where do they live? what are they doing?" required>
                                         <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                       </textarea>
                                         <mat-error
                                         *ngIf="FamilyDetailsModel.get('aboutfamily').hasError('required') &&
                                                 (FamilyDetailsModel.get('aboutfamily').touched || FamilyDetailsModel.get('aboutfamily').dirty|| isSubmitted)"

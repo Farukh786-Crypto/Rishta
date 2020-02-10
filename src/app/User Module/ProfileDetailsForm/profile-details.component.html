@@ -96,15 +96,15 @@
                   <mat-label>Mother tongue:</mat-label>
                   <mat-select formControlName="Mothertng">
                     <mat-option value="">SELECT</mat-option>
-                    <mat-option value="self">Marathi</mat-option>
-                    <mat-option value="Hindi">Hindi</mat-option>
+                    <mat-option *ngFor="let Mothertng of mothertounge" [value]="Mothertng.mothertongue_id">{{Mothertng.mothertongue_name}}</mat-option>
+                    <!-- <mat-option value="Hindi">Hindi</mat-option>
                     <mat-option value="Kannada">Kannada</mat-option>
                     <mat-option value="English">English</mat-option>
                     <mat-option value="Sikkim">Sikkim</mat-option>
                     <mat-option value="Bengali">Bengali</mat-option>
                     <mat-option value="Oriya">Oriya</mat-option>
                     <mat-option value="Tamil">Tamil</mat-option>
-                    <mat-option value="Telugu">Telugu</mat-option>
+                    <mat-option value="Telugu">Telugu</mat-option> -->
                   </mat-select>
                 </mat-form-field>
                 <mat-error *ngIf="ProfileDetails.get('Mothertng').hasError('required') &&
@@ -135,18 +135,17 @@
 
               <mat-form-field>
                 <mat-label>Religion:</mat-label>
-                <mat-select formControlName="religion">
+                <mat-select formControlName="religion" (change)="onChangeCountry($event.target.value)">
                   <mat-option value="">SELECT</mat-option>
-                  <mat-option value="Hindu">Hindu</mat-option>
-                  <mat-option value="Hindi">Hindi</mat-option>
-                  <mat-option value="Muslim">Muslim</mat-option>
+                  <mat-option *ngFor="let religion of allreligions" [value]="religion.religion_id">{{religion.religion_name}}</mat-option>
+                  <!-- <mat-option value="Muslim">Muslim</mat-option>
                   <mat-option value="Sikh">Sikh</mat-option>
                   <mat-option value="Christian">Christian</mat-option>
                   <mat-option value="Buddhist">Buddhist</mat-option>
                   <mat-option value="Jain">Jain</mat-option>
                   <mat-option value="Parsi">Parsi</mat-option>
                   <mat-option value="Jewish">Jewish</mat-option>
-                  <mat-option value="Jewish">Jewish</mat-option>
+                  <mat-option value="Jewish">Jewish</mat-option> -->
                 </mat-select>
               </mat-form-field>
               <mat-error *ngIf="ProfileDetails.get('religion').hasError('required') 
@@ -181,8 +180,8 @@
                   <mat-label>Caste:</mat-label>
                   <mat-select formControlName="Caste">
                     <mat-option value="">SELECT</mat-option>
-                    <mat-option value="Maratha">Maratha</mat-option>
-                    <mat-option value="Mali">Mali</mat-option>
+                    <mat-option *ngFor="let Caste of allcastes" [value]="Caste.caste_id">{{Caste.caste_name}}</mat-option>
+                    <!-- <mat-option value="Mali">Mali</mat-option>
                     <mat-option value="Muslim">Muslim</mat-option>
                     <mat-option value="AdiKarnataka">Adi Karnataka</mat-option>
                     <mat-option value="Jungum">Jungum</mat-option>
@@ -190,7 +189,7 @@
                     <mat-option value="Teli">Teli</mat-option>
                     <mat-option value="Parsi">Parsi</mat-option>
                     <mat-option value="Gujjar">Gujjar</mat-option>
-                    <mat-option value="Patil">Patil</mat-option>
+                    <mat-option value="Patil">Patil</mat-option> -->
                   </mat-select>
                 </mat-form-field>
 
@@ -290,7 +289,7 @@
                     </select> -->
 
                 <mat-form-field>
-                  <mat-label>>Horoscope match is necessary?:</mat-label>
+                  <mat-label>Horoscope match is necessary?:</mat-label>
                   <mat-select formControlName="Horoscope">
                     <mat-option value="">SELECT</mat-option>
                     <mat-option value="Must">Must</mat-option>
@@ -323,7 +322,7 @@
 
 
                 <mat-form-field>
-                  <mat-label>>Marital status</mat-label>
+                  <mat-label>Marital status</mat-label>
                   <mat-select formControlName="Marrital">
                     <mat-option value="">SELECT</mat-option>
                     <mat-option value="NeverMarried">Never Married</mat-option>
@@ -358,7 +357,7 @@
                       <option>6.0</option>
                     </select> -->
                 <mat-form-field>
-                  <mat-label>>Marital status</mat-label>
+                  <mat-label>Marital status</mat-label>
                   <mat-select formControlName="Height">
                     <mat-option value="">SELECT</mat-option>
                     <mat-option value="1">4.0</mat-option>

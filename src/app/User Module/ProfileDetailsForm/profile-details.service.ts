@@ -9,9 +9,31 @@ export class ProfileDetailsService {
   constructor(private http: HttpClient) { }
 
   public getMothertounge() {
-    let url: ''
+    let url='http://192.168.0.127:8082/api/getmothertoungue'
     return this.http.get(url);
 
   }
+  public getReligion()
+  {
+    let url='http://192.168.0.127:8082/api/religion/getReligion'
+    return this.http.get(url);
 
-}
+  }
+  public getCaste(religion_Id:number)
+  {
+    let url='http://192.168.0.127:8082/api/caste/getCaste/${religion_Id}'
+    return this.http.get(url);
+  }
+ 
+  }
+//   apiBaseUrl='http://locahost/dev/tcxapp';
+
+// public getUsers()
+// {
+//     let url='https:/reqres.in/api/users?id=2'
+//     //return this.http.get(url)
+//     return this.http.get('${this.apiBaseUrl}api/countries');
+//     // /api/users/2
+// }
+
+
