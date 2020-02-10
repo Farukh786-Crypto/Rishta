@@ -17,13 +17,19 @@ import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './User Module/Error.component';
 import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
 import { viewComponent } from './layout/admin/dashboard/view/view.component';
+import { MatchesComponent } from './layout/admin/matches/matches.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorComponent
-     ],
+    ErrorComponent,
+    GroomsComponent,
+    BridesComponent,
+    DashboardComponent,
+    viewComponent,
+    MatchesComponent
+  ],
 
   imports: [
     BrowserModule,
@@ -39,8 +45,8 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
     ToastrModule.forRoot()
   ],
   providers: [DataService],
-  bootstrap: [AppComponent]
-  //bootstrap:[DashboardComponent]
+  //bootstrap: [AppComponent]
+  bootstrap:[MatchesComponent]
 })
 
 export class AppModule { }

@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core'
-import { HttpClient } from '@angular/common/http'
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
  
-export class TotalBridesService{
+export class TotalCountService{
     constructor(private http:HttpClient)
     {
 
@@ -12,17 +12,17 @@ export class TotalBridesService{
   public getTotalMembers()
   {
       let url=''
-      this.http.get(url);
+      return this.http.get(url);
   }
  
   public getTotalGrooms()
   {
     let url=''
-    this.http.get(url);
+    return this.http.get(url);
   }
   public getTotalBrides()
   {
     let url=''
-    this.http.get(url);
+   return this.http.get(url);
   }
 }

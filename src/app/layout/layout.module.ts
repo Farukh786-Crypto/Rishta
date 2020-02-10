@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
+import { MatchesComponent } from './admin/matches/matches.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent],
+  declarations: [LayoutComponent, MatchesComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule
