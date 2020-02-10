@@ -5,18 +5,10 @@ import { ViewService } from '../../allservices/view.service';
     selector : 'view-comp',
     templateUrl : './view.component.html',
     styleUrls : ['./view.component.css'],
-    providers : [ViewService]
+   
 })
 
-export class viewComponent
+export class ViewComponent
 {
-    view:any
-   constructor(private vc:ViewService)
-   {
-
-   }
-   public getAll()
-   {
-       this.vc.viewAll().subscribe(res=>{this.view=res},err=>{this.view=err})
-   }
+  
 }

@@ -10,7 +10,7 @@
   </mat-toolbar-row>
   <mat-toolbar-row>
     <div>
-      <button mat-button [matMenuTriggerFor]="menu">Dashboard</button>
+      <a routerLink="./dashboard"><button mat-button [matMenuTriggerFor]="menu">Dashboard</button></a>
       <mat-menu #menu="matMenu">
         <a routerLink="./grooms"><button mat-menu-item>Grooms</button></a>
         <a routerLink="./brides"><button mat-menu-item>Brides</button></a>
