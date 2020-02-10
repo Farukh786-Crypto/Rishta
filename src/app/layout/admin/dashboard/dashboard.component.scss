@@ -1,8 +1,8 @@
 .example-card {
     max-width: 300px;
     max-height: 200px;
-     margin-left: 1000px;
-     margin-top: 400px;
+     margin-left: 300px;
+     margin-top: 100px;
     background-image: url('src/assets/Images/indian-bride.jpg');
     color: white;
   }
@@ -12,23 +12,19 @@
     background-size: cover;
   }
 
-  .example{
-    background-color: aquamarine;
-  }
   .example-card1 {
-    max-width: 300px;
+    max-width: 350px;
     max-height: 200px;
     margin-left: 20px;
-    margin-top: 230px;
+    margin-top: 100px;
     background-image: url('src/assets/Images/indian-bride.jpg');
     color: white;
   }
   .example-card2 {
-    max-width: 300px;
+    max-width: 350px;
     max-height: 200px;
     margin-left: 20px;
-    margin-top: 230px;
-    margin-right: 350px;
+    margin-top: 100px;
     background-image: url('src/assets/Images/indian-bride.jpg');
     color: white;
   }

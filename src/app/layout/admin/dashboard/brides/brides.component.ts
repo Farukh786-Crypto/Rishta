@@ -15,6 +15,7 @@ export class BridesComponent implements OnInit {
   ngOnInit() {
     this.getAllData();
   }
+  
   public getAllData()
   {
   
@@ -25,15 +26,6 @@ export class BridesComponent implements OnInit {
       error=>{this.myDetail=error}
       )
   }
-  uid: number
-  public search() {
-      this.data.getSingleUsers(this.uid).subscribe(res => {
-          if (res && res['data']) {
-
-              this.myDetail = res['data']
-          }
-      }, err => { this.myDetail= err })
-  }
-  
+ 
 
 }

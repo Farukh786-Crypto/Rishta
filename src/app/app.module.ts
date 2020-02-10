@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import * as platformBrowser from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -13,7 +13,7 @@ import { DataService } from './Services/data.service';
 import { MaterialModule } from './material/material.module';
 import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './User Module/Error.component';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter'
 
 @NgModule({
   declarations: [
@@ -23,13 +23,14 @@ import { ErrorComponent } from './User Module/Error.component';
   ],
 
   imports: [
-    BrowserModule,
+    platformBrowser.BrowserModule,
     HttpClientModule,
     CommonModule,
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ReactiveFormsModule,
     NgxSpinnerModule,
+    Ng2SearchPipeModule,
     MaterialModule,
     MatSelectModule,
     RouterModule.forRoot(MyRoute),
