@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatRadioModule} from '@angular/material';
+import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatMenuModule} from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatCardModule} from '@angular/material/card';
 import {MatPaginatorModule} from '@angular/material/paginator';
@@ -20,10 +20,15 @@ const MaterialComponents =[
   MatAutocompleteModule,
   MatCheckboxModule,
   MatRadioModule,
+
   MatCardModule,
   MatPaginatorModule,
   MatTableModule,
-  MatSortModule
+  MatSortModule,
+
+  MatMenuModule,
+  MatCardModule
+
 
 ];
 
@@ -31,7 +36,7 @@ const MaterialComponents =[
 
 @NgModule({
   
-  imports: [MaterialComponents],
+  imports: [MaterialComponents,],
   exports: [MaterialComponents]  
   
 

@@ -8,10 +8,13 @@ import { Observable } from 'rxjs'
     providers : [TotalCountService]
 })
 export class DashboardComponent{
+
     constructor(private data:TotalCountService)
+
     {
        this.getAllCount() 
     }
+
     totalMembers:any;
     totalBrides:any;
     totalGrooms:any;

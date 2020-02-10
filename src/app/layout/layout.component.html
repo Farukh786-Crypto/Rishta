@@ -1,21 +1,36 @@
-<div class="jumbotron bg-dark">
-  <div class="container text-center">
-      <h1>Rishta.com</h1>
-      <!-- <img src="assets\1.jpg"> -->
+<mat-toolbar color="warn">
+  <mat-toolbar-row>
+    <div> <a><img src="assets/Images/rishtalogo.png"></a></div>
+    <div class="right">
+      <button mat-button [matMenuTriggerFor]="menu1">Admin</button>
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item (click)="SignOut()">SignOut</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <div>
+      <button mat-button [matMenuTriggerFor]="menu">Dashboard</button>
+      <mat-menu #menu="matMenu">
+        <a routerLink="./grooms"><button mat-menu-item>Grooms</button></a>
+        <a routerLink="./brides"><button mat-menu-item>Brides</button></a>
+      </mat-menu>
+      <a mat-button > Matching </a>
+      <a mat-button > Packages </a>
+      <a mat-button > Payment </a>
+      <a mat-button > User </a>
+    
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>
+
+
+
+<footer class="md-padding fixed-bottom" >
+  <div id="btmFooter" flex>
+    <p>@2020 Copyright: Assimilate Technology.</p>
   </div>
-</div>
-<nav class="navbar nav">
-
-</nav>
-<div class="content">
-  <router-outlet></router-outlet>
-  <!-- <app-grooms></app-grooms>  -->
-  <!-- <view-comp></view-comp> -->
-  <!-- <app-brides></app-brides> -->
-  <!-- <dash-comp></dash-comp> -->
-</div>
-    <!-- This is Footer! -->
-    <footer class="container-fluid text-center fixed-bottom">
-      <p>©Copyright 2020 Assimilate technologies All Rights Reserved</p>
-
-  </footer>
+</footer>

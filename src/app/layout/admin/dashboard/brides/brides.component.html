@@ -1,49 +1,12 @@
-<!-- <div *ngFor="let info of myDetail?.profile"> 
-  
-<div class="row">
-
-    <div class="col-4" >
-      <img src="{{info.avatar}}"  style="height: 180px;width: 230px;">
-      <br><b>
-      Name:{{info.name}}<br>
-      Age:{{info.age}}<br>
-      Religion:{{info.religion}}<br>
-      Mother Tongue:{{info.mothertongue}}<br>
-      City:{{info.city}}<br>
-      Marital status:{{info.status}}</b>
-      </div>
-      <div class="col-4" >
-        <img src="{{info.avatar}}"  style="height: 180px;width: 230px;"><br><b>
-        Name:{{info.name}}<br>
-        Age:{{info.age}}<br>
-        Religion:{{info.religion}}<br>
-        Mother Tongue:{{info.mothertongue}}<br>
-        City:{{info.city}}<br>
-        Marital status:{{info.status}}</b>
-        </div>
-        <div class="col-4">
-          <img src="{{info.avatar}}"  style="height: 180px;width: 230px;"><br><b>
-          Name:{{info.name}}<br>
-          Age:{{info.age}}<br>
-          Religion:{{info.religion}}<br>
-          Mother Tongue:{{info.mothertongue}}<br>
-          City:{{info.city}}<br>
-          Marital status:{{info.status}}</b>
-          </div>
-
-
-  </div>
-  <br>
-
-</div> -->
 
 <form class="example" action="/action_page.php" style="margin:auto;max-width:300px; margin-top: 20px;">
-  <input type="text" placeholder="Enter Id to Search.." name="search"  [(ngModel)]="uid">
-  <button type="submit" (click)="search()"><i class="fa fa-search"></i></button>
+  <input type="text" placeholder="Search by Name,Id,etc..." autocomplete="off" name="search" [(ngModel)]="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 
 <div class="container" style="padding: 50px;">
-  <table class="table border border-dark" style="padding: 20px;background-image: url('assets/images/indian-bride.jpg');color: white;">
+  <table class="table border border-dark"
+    style="padding: 20px;background-image: url('assets/Images/indian-bride.jpg');color: white;">
     <thead class="thead-dark">
       <tr style="padding: 20px;text-align: center;">
         <th>ID</th>
@@ -53,7 +16,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let info of myDetail?.profile">
+      <tr *ngFor="let info of myDetail?.profile|filter:search">
         <td>{{info.id}}</td>
         <td style="text-align: center;"><img src="{{info.avatar}}" style="height: 180px;width: 230px;"></td>
         <td style="font-size: 20px;"><b> Name:</b>{{info.name}}<br>
