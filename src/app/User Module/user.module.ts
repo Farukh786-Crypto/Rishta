@@ -3,8 +3,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserComponent } from './user.component';
 import { HeaderFooterComponent } from './MasterPage/header-footer.component';
+
+import { MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from "@angular/material";
+//import { FlexLayoutModule } from "@angular/flex-layout";
+
 import {UsersAuthGuard} from '../Guard/users-auth.guard'
 import { from } from 'rxjs';
+
 
 
 const route: Routes = [
@@ -24,18 +29,23 @@ const route: Routes = [
         ]
     },
 ]
-
 @NgModule({
 
     declarations: [UserComponent, HeaderFooterComponent],
     imports: [CommonModule,
-        RouterModule.forChild(route)
+        MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule,
+   // FlexLayoutModule,
+    RouterModule.forChild(route)
     ],
     providers: [],
     exports: []
 
 })
 
-export class UserModule {
+export class UserModule{
 
 }

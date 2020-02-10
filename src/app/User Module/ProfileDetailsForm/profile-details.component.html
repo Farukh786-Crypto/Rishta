@@ -3,10 +3,10 @@
   <div class="container">
 
     <div class="col-md-12">
-       
+
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal fade" id="myModal2" role="dialog">
       <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -21,17 +21,17 @@
               <td>
                 <div class="form-group">
 
-                    <label class="left mandatory">Bride's Name</label>
-                    <input type="text" class="form-control" formControlName="Name" placeholder="Enter the Name">
-                    <span *ngIf="ProfileDetails.get('Name').hasError('required') &&
+                  <label class="left mandatory">Bride's Name</label>
+                  <input type="text" class="form-control" formControlName="Name" placeholder="Enter the Name">
+                  <span *ngIf="ProfileDetails.get('Name').hasError('required') &&
                     (ProfileDetails.get('Name').touched || ProfileDetails.get('Name').dirty|| isSubmitted)"
                     class="text-danger" padding>
                     Name is a required field.</span>
-                    <!-- <div class="col-md-5">
+                  <!-- <div class="col-md-5">
                      
                       </div> -->
 
-                
+
 
 
 
@@ -47,8 +47,8 @@
                     <input type="date" class="form-control" formControlName="Dob">
                     <span *ngIf="ProfileDetails.get('Dob').hasError('required') &&
                     (ProfileDetails.get('Dob').touched || ProfileDetails.get('Dob').dirty|| isSubmitted)"
-                    class="text-danger" padding>
-                    Date is a required field.</span>
+                      class="text-danger" padding>
+                      Date is a required field.</span>
                   </div>
 
                 </div>
@@ -268,3 +268,42 @@
   </div>
 
 </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form [formGroup]="ProfileDetails">
+  
+<div class="example-container">
+  <mat-form-field class="full-width">
+
+    <mat-label class="left mandatory">Bride's Name:</mat-label>
+
+    <input matInput placeholder="Enter the Name" formControlName="Name">
+    <span *ngIf="ProfileDetails.get('Name').hasError('required') &&
+    (ProfileDetails.get('Name').touched || ProfileDetails.get('Name').dirty|| isSubmitted)" class="text-danger"
+      padding>
+      Name is a required field.</span>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Textarea"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Select">
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+</form> -->
