@@ -1,8 +1,13 @@
-.example-card{
-    max-width: 400px; 
-    margin:auto;
-}
-.example-card-actions{
-    display: flex;
-}
- 
+.example-card {
+    max-width: 600px;
+    margin: 0px auto;
+    height: 100%;
+  
+    
+  }
+  .example-container
+  {
+      max-width: 300px;
+      margin-left: 180px;
+      text-align: center;
+  }
