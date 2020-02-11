@@ -2,6 +2,10 @@
     box-sizing: border-box;
   }
   
+  .ids{
+    font-size: 25px;
+    padding-top: 7rem;
+  }
   form.example input[type=text] {
     padding: 10px;
     font-size: 17px;
@@ -32,4 +36,5 @@
     clear: both;
     display: table;
   }
+  
   

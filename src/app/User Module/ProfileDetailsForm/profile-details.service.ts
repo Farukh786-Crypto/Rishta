@@ -24,7 +24,12 @@ export class ProfileDetailsService {
     let url='http://192.168.0.127:8082/api/caste/getCaste/${religion_Id}'
     return this.http.get(url);
   }
- 
+ public getSubcaste(subcaste_id:number)
+ {
+  let url='http://192.168.0.127:8082/api/caste/getCaste/${religion_Id}'
+  return this.http.get(url);
+
+ }
   }
 //   apiBaseUrl='http://locahost/dev/tcxapp';
 
