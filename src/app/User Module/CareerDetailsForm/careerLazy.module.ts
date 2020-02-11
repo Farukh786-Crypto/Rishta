@@ -3,24 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from 'src/app/material/material.module';
 
-import {  
-    
-    MatButtonModule,  
-    MatMenuModule,  
-    MatToolbarModule,  
-    MatIconModule,  
-    MatCardModule,  
-    MatFormFieldModule,  
-    MatInputModule,  
-    MatDatepickerModule,  
-    MatDatepicker,  
-    MatNativeDateModule,  
-    MatRadioModule,  
-    MatSelectModule,  
-    MatOptionModule,  
-    MatSlideToggleModule,ErrorStateMatcher,ShowOnDirtyErrorStateMatcher  
-  } from '@angular/material';
  
 import { CareerComponent } from './career.component';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,6 +20,7 @@ const careerroute: Routes = [
     FormsModule,  
     ReactiveFormsModule,  
     HttpClientModule,
+    MaterialModule,
     ReactiveFormsModule, RouterModule.forChild(careerroute)],
     providers: [],
     exports: [CareerComponent]
