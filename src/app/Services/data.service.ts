@@ -9,17 +9,14 @@ export class DataService{
     }
     public getData()
     {
-       let url='assets/demo.json';
+       let url="assets/demo.json";
         return this.http.get(url);
     }
     public getGrooms()
     {
-        let url="assets/grooms.json";
+        let url="assets/demo.json";
         return this.http.get(url);
     }
-    public getSingleUsers(no:number)
-    {
-        return this.http.get('assets/grooms.json/'+no);
-    }
+   
 
 }
