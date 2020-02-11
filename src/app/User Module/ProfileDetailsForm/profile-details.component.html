@@ -28,28 +28,9 @@
                      
                       </div> -->
 
-<<<<<<< HEAD
-
-              <mat-form-field appearance="outline">
-                <mat-label>Bride's Name:</mat-label>
-                <input formControlName="Name" matInput placeholder="Enter User Name" required>
-                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                <mat-error *ngIf="ProfileDetails.get('Name').hasError('required') &&
-                        (ProfileDetails.get('Name').touched || ProfileDetails.get('Name').dirty|| isSubmitted)">
-                  ** Name is a required **
-                </mat-error>
-              </mat-form-field>
-
-
-
-            </div>
-          </td>
-        </tr>
-=======
                 </div>
               </td>
             </tr>
->>>>>>> 22a3c55fe726d4251c19d4213ec2b41b04430d89
 
         <tr>
           <td>
@@ -184,7 +165,7 @@
 
                 <mat-form-field>
                   <mat-label>Caste:</mat-label>
-                  <mat-select formControlName="Caste">
+                  <mat-select formControlName="Caste" (change)="onChangeSubCaste($event.target.value)">
                     <mat-option value="">SELECT</mat-option>
                     <mat-option *ngFor="let Caste of allcastes" [value]="Caste.caste_id">{{Caste.caste_name}}</mat-option>
                     <!-- <mat-option value="Mali">Mali</mat-option>
@@ -230,8 +211,8 @@
                   <mat-label>Sub Caste:</mat-label>
                   <mat-select formControlName="SubCaste">
                     <mat-option value="">SELECT</mat-option>
-                    <mat-option value="96kuli Maratha">96 kuli Maratha</mat-option>
-                    <mat-option value="Patil">Patil</mat-option>
+                    <mat-option *ngFor="let SubCaste of allsubcastes" [value]="SubCaste.subcaste_id">{{SubCaste.subcaste_name}}</mat-option>
+                    <!-- <mat-option value="Patil">Patil</mat-option>
                     <mat-option value="Muslim">Muslim</mat-option>
                     <mat-option value="Deshmukh">Deshmukh</mat-option>
                     <mat-option value="Lingayat">Lingayat</mat-option>
@@ -239,7 +220,7 @@
                     <mat-option value="Gauda">Gauda</mat-option>
                     <mat-option value="Teli">Teli</mat-option>
                     <mat-option value="Gujjar">Gujjar</mat-option>
-                    <mat-option value="Deshpande">Deshpande</mat-option>
+                    <mat-option value="Deshpande">Deshpande</mat-option> -->
                   </mat-select>
                 </mat-form-field>
 

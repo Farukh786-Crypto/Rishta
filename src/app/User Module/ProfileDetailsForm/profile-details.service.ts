@@ -24,9 +24,9 @@ export class ProfileDetailsService {
     let url='http://192.168.0.127:8082/api/caste/getCaste/${religion_Id}'
     return this.http.get(url);
   }
- public getSubcaste(subcaste_id:number)
+ public getSubcaste(caste_id:number)
  {
-  let url='http://192.168.0.127:8082/api/caste/getCaste/${religion_Id}'
+  let url='http://192.168.0.127:8082/api/caste/getSubcaste/${caste_id}'
   return this.http.get(url);
 
  }

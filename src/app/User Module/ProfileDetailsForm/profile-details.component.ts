@@ -72,10 +72,20 @@ export class ProfileDetailsComponent implements OnInit{
         
       );
         }
-      // else {
-    //   this.castes = null;
-    //   this.subcastes = null;
+     
       
+        onChangeSubCaste(caste_id: number) {
+          // if (religion_Id) {
+            this.pd.getSubcaste(caste_id).subscribe(
+              data => 
+                this.allsubcastes = data
+               // this.subcastes = null;
+              
+            );
+              }
+
+
+
   onSubmit(data:any) {
     this.isSubmitted = true;
     if (!this.ProfileDetails.valid) {
