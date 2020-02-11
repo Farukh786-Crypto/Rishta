@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 import { ProfileDetailsComponent } from './profile-details.component';
+import { MaterialModule } from 'src/app/material/material.module';
+
 
 const profileroute: Routes = [
 
@@ -17,6 +19,7 @@ const profileroute: Routes = [
 
     declarations: [ProfileDetailsComponent],
     imports: [CommonModule,
+        MaterialModule,
         ShowHidePasswordModule,
         ReactiveFormsModule, RouterModule.forChild(profileroute)],
     providers: [],
@@ -24,6 +27,6 @@ const profileroute: Routes = [
 
 })
 
-export class RegisterLazyClass{
+export class ProfileDetailsLazyClass{
 
 }

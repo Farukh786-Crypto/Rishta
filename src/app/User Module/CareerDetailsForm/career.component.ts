@@ -120,6 +120,19 @@ export class CareerComponent implements OnInit{
 
 
     
+
+      //firstCareerId: number=1;
+      public getCareerInfo: any;
+      
+      public SaveCareerInfo() {
+            //console.log("hhhhh")
+        this.Career.getall().subscribe(res=>{this.getCareerInfo=res,
+        console.log(JSON.stringify(res))
+        },
+               err=>{this.getCareerInfo=err})
+        }    
+}
+
         onChangeCountry(CountryId:number) {
             if(CountryId){
                 this.Career.getStates(CountryId).subscribe(
@@ -130,6 +143,7 @@ export class CareerComponent implements OnInit{
             this.city=null;
 
         }             } 
+
 
 
             onChangeState(StateId:number) {

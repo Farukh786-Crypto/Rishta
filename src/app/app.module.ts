@@ -17,10 +17,13 @@ import { ErrorComponent } from './User Module/Error.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
  
 import {MatDialogModule} from '@angular/material/dialog';
-
  
+
 import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
 import { viewComponent } from './layout/admin/dashboard/view/view.component';
+import { employeecomponent } from './User Module/Employee/employees.component';
+ 
+import { EmployeesService } from './shared/employees.service';
  
 
 
@@ -49,7 +52,7 @@ import { viewComponent } from './layout/admin/dashboard/view/view.component';
     ToastrModule.forRoot(),
     MaterialModule
   ],
-  providers: [DataService],
+  providers: [DataService,EmployeesService],
   bootstrap: [AppComponent]
   //bootstrap:[DashboardComponent]
 })
