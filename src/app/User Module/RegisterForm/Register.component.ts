@@ -69,12 +69,7 @@ export class RegisterFormComponent {
         //         this.RegisterModel.patchValue(res[0]);
         //         this.RegisterModel.patchValue(this.postRegisterInfo[0])
             
-<<<<<<< HEAD
-            
-           
-=======
-                        
->>>>>>> 22a3c55fe726d4251c19d4213ec2b41b04430d89
+ 
         //     },
         //             err=>{this.postRegisterInfo=err})
         // }

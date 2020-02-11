@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 @Injectable()
  
 export class CareerService{
-<<<<<<< HEAD
+
   
 
   constructor(private http: HttpClient) { }
@@ -57,43 +57,6 @@ export class CareerService{
    
 }
    
-=======
+
     
-    constructor(private http:HttpClient){
-    }
     
-    // public getuserCareerProfile(no:number){
-    //       let url='http://192.168.0.120:8080/api/master/getAll'
-    //         return this.http.get(url);
-    // }
-      public getall(){
-        let url='http://192.168.0.120:8080/api/master/getAll'
-        return this.http.get(url);
-      }   
-
-      
-      // getAllStates(): Observable<IdName[]> {
-      //  const URL = '/api/tc/customer/state';
-      //  return this.httpClient.get<IdName[]>(AppSettings.API_ENDPOINT + URL);
-      //  }
-
-      // -------------- Sujata -------
-
-      
-      // getAllDistict(state_id: number[]): Observable<IdName[]> {
-      //   const URL = '/api/tc/customer/state/' + state_id + '/alldistrict';
-      //   return this.httpClient.get<IdName[]>(AppSettings.API_ENDPOINT + URL, { params: new HttpParams().set('stateId', state_id.toString()) });
-        // }
-    }
-    // private careerlist:[{
-    //     Country:'india',
-    // State:'maharasthra',
-    // City: 'solapur',
-    // Pincode:413221, 
-    // HighestDegree:'mba',  
-    // Emplyeed: ' govt',
-    // Occupation: 'it', 
-    // Income: 12000,
-    // Express:'you'
-    // }] 
->>>>>>> 22a3c55fe726d4251c19d4213ec2b41b04430d89
