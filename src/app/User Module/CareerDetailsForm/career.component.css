@@ -1,0 +1,12 @@
+.example-card {
+    max-width: 600px;
+    margin: 0px auto;
+    height: 100%;
+  
+    
+  }
+  .example-container
+  {
+      max-width: 300px;
+      margin-left: 50px;
+  }
