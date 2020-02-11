@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 import { FamilyDetailsComponent } from './Family-details.component'
+import { MaterialModule } from 'src/app/material/material.module';
 
 const familyroute: Routes = [
 
@@ -16,7 +17,7 @@ const familyroute: Routes = [
 @NgModule({
 
     declarations: [FamilyDetailsComponent],
-    imports: [CommonModule,
+    imports: [CommonModule,MaterialModule,
         ShowHidePasswordModule,
         ReactiveFormsModule, RouterModule.forChild(familyroute)],
     providers: [],

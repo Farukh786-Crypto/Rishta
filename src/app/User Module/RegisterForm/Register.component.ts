@@ -25,6 +25,11 @@ export class RegisterFormComponent {
         'Self', 'Parents'
     ];
 
+    createdby=[
+        {id:1,value:'Self'},
+        {id:2,value:'Parents'}
+    ];
+
     disabledAgreement: boolean = true
     RegisterModel: FormGroup
     isSubmited: boolean;
