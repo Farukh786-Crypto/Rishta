@@ -110,8 +110,16 @@ export class CareerComponent implements OnInit{
     express:string;
     income:number;
     clear(){
-        this.careerDetails=null    
-       
+        // this.careerDetails=null;    
+        this.country='';
+       this.state='';
+       this.city ='';
+       this.bachlorDegree ='';
+       this.emplyeed ='';
+       this.occupation ='';
+       this.highestDegree ='';
+        this.express='';
+        this.income= 0;
 
         }    
 
