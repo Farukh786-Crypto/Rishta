@@ -1,14 +1,14 @@
 import {Injectable} from '@angular/core'
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Registerprofile } from 'src/app/model';
+import { Registerprofile, feedbackprofile } from 'src/app/model';
 
 
 @Injectable()
 
 
-export class RegService{
-    private url='http://192.168.0.123:8080/api/registers'
+export class FeedbackService{
+    private url='http://192.168.0.120:8080/api/feedback/create'
     constructor(private http:HttpClient){
  }
 
@@ -17,16 +17,12 @@ export class RegService{
     //     return this.http.get<Registerprofile>(url);
     // }
 
+    addContent(feedbackprofile:feedbackprofile):Observable<feedbackprofile>{
 
-
-
-    addContent(content:Registerprofile):Observable<Registerprofile>{
-
-        const httpOption = {headers:new HttpHeaders({'Content-Type':'application/json'})};
-        return this.http.post<Registerprofile>(this.url+'/create',content,httpOption);
+        const httpOption = {headers:new HttpHeaders({'Content-Type':'application/json' },)};
+        return this.http.post<feedbackprofile>(this.url,feedbackprofile,httpOption);
 
     }    
-
 
     // public getSingleRegisterUsers(no:number){
     //     let url='http://192.168.0.123:8080/api/registers/getRegisterById/'+no;

@@ -1,9 +1,4 @@
 import { NgModule } from '@angular/core';
-
-import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatMenuModule} from '@angular/material';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatCardModule} from '@angular/material/card';
-//import{MatButtonModule} from '@angular/material';
 import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule} from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge';
 import {A11yModule} from '@angular/cdk/a11y';
@@ -38,47 +33,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
-
-//   MatButtonModule,
-//   MatButtonToggleModule,
-//   MatIconModule,
-//   MatBadgeModule,
-//   MatToolbarModule,
-//   MatFormFieldModule,
-//   MatInputModule,
-//   MatSelectModule,
-//   MatAutocompleteModule,
-//   MatCheckboxModule,
-//   MatRadioModule,
-//   MatMenuModule,
-//   MatCardModule
-
-//   MatButtonModule,
-//   MatButtonToggleModule,
-//   MatIconModule,
-//   MatBadgeModule,
-//   MatToolbarModule,
-//   MatFormFieldModule,
-//   MatInputModule,
-//   MatSelectModule,
-//   MatAutocompleteModule,
-//   MatCheckboxModule,
-//   MatRadioModule
-
-
-// ];
-
-
-
-@NgModule({
-  
-
-  imports: [MaterialComponents,],
-  exports: [MaterialComponents]  
-  
-
-  imports: [MatButtonToggleModule,
+ 
+  const MaterialComponents= [
+    MatButtonToggleModule,
     MatIconModule,
     MatBadgeModule,
     MatToolbarModule,
@@ -91,11 +48,20 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatCardModule,
     MatFormFieldModule,
     MatListModule,
-    MatDatepickerModule
-    
-
-  ],
-  exports: [MatButtonModule, A11yModule,
+    MatDatepickerModule,
+    MatBadgeModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatListModule,
+    MatDatepickerModule, 
+    A11yModule,
     CdkStepperModule,
     CdkTableModule,
     CdkTreeModule,
@@ -138,9 +104,19 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     PortalModule,
     ScrollingModule,
     MatCardModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatInputModule
 
-  ]})
+  ]
+  @NgModule({
+  
+
+    imports: [MaterialComponents,],
+    exports: [MaterialComponents]  
+    
+  
+  })
+      
 
 
 export class MaterialModule{ 

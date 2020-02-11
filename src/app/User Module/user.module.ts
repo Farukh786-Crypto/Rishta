@@ -9,6 +9,7 @@ import { MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, Mat
 
 import {UsersAuthGuard} from '../Guard/users-auth.guard'
 import { from } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -39,6 +40,7 @@ const route: Routes = [
     MatIconModule,
     MatButtonModule,
    // FlexLayoutModule,
+   HttpClientModule,
     RouterModule.forChild(route)
     ],
     providers: [],
