@@ -10,7 +10,7 @@
         "status":"unmarried",
         "mothertongue":"marathi",
         "email": "rahul123@gmail.com",
-        "avatar": "assets/images/h1.jpg"
+        "avatar": "assets/Images/h1.jpg"
     },
     {
         "id": 2,
@@ -21,7 +21,7 @@
         "mothertongue":"marathi",
         "status":"unmarried",
         "email": "raj123@gmail.com",
-        "avatar": "assets/images/h2.jpg"
+        "avatar": "assets/Images/h2.jpg"
     },
     {
         "id": 3,
@@ -32,7 +32,7 @@
         "mothertongue":"marathi",
         "status":"unmarried",
         "email": "faruk123@gmail.com",
-        "avatar": "assets/images/h3.jpg"
+        "avatar": "assets/Images/h3.jpg"
     },
     {
         "id": 4,
@@ -43,7 +43,7 @@
         "mothertongue":"marathi",
         "status":"unmarried",
         "email": "aditya123@gmail.com",   
-        "avatar": "assets/images/h1.jpg"
+        "avatar": "assets/Images/h1.jpg"
     },
     {
         "id": 5,
@@ -54,7 +54,7 @@
         "mothertongue":"marathi",
         "status":"unmarried",
         "email": "shekhar123@gmail.com",
-        "avatar": "assets/images/h5.jpg"
+        "avatar": "assets/Images/h5.jpg"
     },
     {
         "id": 6,
@@ -65,7 +65,7 @@
         "status":"married",
         "mothertongue":"marathi",
         "email": "akshay123@gmail.com",
-        "avatar": "assets/images/h6.jpg"
+        "avatar": "assets/Images/h6.jpg"
     }
     ]
     

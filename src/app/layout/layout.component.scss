@@ -1,34 +1,81 @@
-
-  .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #343a40;
-    color: white;
-}
-// @media (min-width: 576px)
-.jumbotron {
-    padding: 10px;
-    color: white;
-    margin-bottom: 0;
-}
-.navbar {
-  // margin-bottom: 0;
-  // border-radius: 0;
-  margin-bottom: 50px;
-  border-radius: 0;
-  background-color: #151616;
-  color: white;
-}
-
-.dropdown{
-  color: white;
-}
-// .row.content {height: 450px}
-
-// @media screen and (max-width: 767px) {
-  
-//   .row.content {height:auto;} 
+// .navbar{
+//     justify-content: space-between;
 // }
+img{
+    height: 60px;
+}
+
+// .span {
+//     padding-right: 1rem;
+// }
+.right
+{
+margin-left: 1050px;
+background-color: black;
+
+}
+
+
+#btmFooter {
+    align-self: flex-end;
+  }
+
+  footer {
+    background-color: #f44336;
+    border: 2px solid rgb(46, 5, 5);
+    text-align: center;
+    padding: 10px;
+    color: beige;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .example-card {
+    max-width: 300px;
+    max-height: 200px;
+     margin-left: 1000px;
+     margin-top: 400px;
+    background-image: url('src/assets/Images/indian-bride.jpg');
+    color: white;
+  }
+  
+  .example-header-image {
+    background-image: url('src/assets/Images/rishtalogo.png');
+    background-size: cover;
+  }
+
+  .example{
+    background-color: aquamarine;
+  }
+  .example-card1 {
+    max-width: 300px;
+    max-height: 200px;
+    margin-left: 20px;
+    margin-top: 230px;
+    background-image: url('src/assets/Images/indian-bride.jpg');
+    color: white;
+  }
+  .example-card2 {
+    max-width: 300px;
+    max-height: 200px;
+    margin-left: 20px;
+    margin-top: 230px;
+    margin-right: 350px;
+    background-image: url('src/assets/Images/indian-bride.jpg');
+    color: white;
+  }
+
+.mat-button:hover{
+  background-color: rgb(13, 14, 13);
+}
+.mat-button:active{
+  background-color: rgb(13, 14, 13);
+}

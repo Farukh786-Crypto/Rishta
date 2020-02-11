@@ -11,6 +11,7 @@ styleUrls: ['./career.component.css'],
 providers: [CareerService]
 })
 
+<<<<<<< HEAD
 export class CareerComponent implements OnInit{
  
     title:string='career Demo Component '
@@ -25,6 +26,59 @@ export class CareerComponent implements OnInit{
     
      
     CareerService: any;
+=======
+export class CareerComponent{
+    states: string[] = [
+        'Self', 'Parents'
+    ];
+
+title:string='career Demo Component '
+careerDetails:FormGroup
+str:string
+disabled:boolean
+isSubmitted:boolean;
+careerDetailsInfo:any;
+// --------- Sujata ----------------
+// selectedStateId: number[];
+//districts: IdName[];
+//  states: IdName[]; districts: IdName[];
+// ---------------------------------
+//careerInfo:any
+constructor(private toastr: ToastrService,private Career: CareerService){
+    this.careerDetails=new FormGroup({
+        Country:new FormControl('',Validators.required),
+        // -------- Sujata --------
+        //stateCtrl: ['', []],
+        State:new FormControl('',[Validators.required]),
+        City:new FormControl('',[Validators.required]),
+        Pincode:new FormControl('',[Validators.required]),
+        HighestDegree:new FormControl('',[Validators.required]),
+        BachlorDegree:new FormControl('',[Validators.required]),
+        Emplyeed:new FormControl('',[Validators.required]),
+        Occupation:new FormControl('',[Validators.required]),
+        Income:new FormControl('',[Validators.required]),
+        Express:new FormControl('',[Validators.required])
+    }) 
+    
+    }  
+    
+    // ----------------- Sujata -----------
+
+    // getAllDistict(selectedStateId: number[]) {
+
+    //     //  console.log(this.thirdFormGroup.controls.stateCtrl.value);
+    //       if (selectedStateId.length === 0) return;
+    //       this.customerService.getAllDistict(selectedStateId).subscribe(districts => {
+    //         this.districts = districts;
+    //       });
+    //     }
+    //     getAllTahsils(selectedDistrictId: number[]) {
+    //       if (selectedDistrictId.length === 0) return;
+    //       this.customerService.getAllTahsils(selectedDistrictId).subscribe(tahsils => {
+    //         this.tahsils = tahsils;
+    //       });
+    //     }
+>>>>>>> 22a3c55fe726d4251c19d4213ec2b41b04430d89
      
     constructor( private toastr: ToastrService,private Career: CareerService) { }
     call_to_service(){
@@ -44,6 +98,7 @@ export class CareerComponent implements OnInit{
         this.Career.getall().subscribe(res=>{this.getCareerInfo=res,
         console.log(JSON.stringify(res)) },
                err=>{this.getCareerInfo=err})
+<<<<<<< HEAD
 
                this.careerDetails.patchValue(this.getCareerInfo[0])
         }
@@ -120,6 +175,14 @@ export class CareerComponent implements OnInit{
     //     this.income=null
 
        
+=======
+        }    
+}
+    // public getAllUsersCareerProfile(){
+    //     this.Career.getuserCareerProfile().subscribe(res=>{this.careerDetailsInfo=res};
+    //         err=>{this.careerDetailsInfo=err};)
+    //     } 
+>>>>>>> 22a3c55fe726d4251c19d4213ec2b41b04430d89
 
 
     }

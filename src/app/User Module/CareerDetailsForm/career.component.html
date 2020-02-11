@@ -2,6 +2,7 @@
 <!-- <button type="submit" (click)="SaveCareerInfo()"> Get </button> -->
 <button type="submit" (click)="call_to_service()"> Get </button>
 <mat-card class="example-card">
+<<<<<<< HEAD
   <mat-card-header style="text-align:center"><b><h2>Career Details</h2></b> </mat-card-header>
 
   <mat-card-content>
@@ -19,6 +20,51 @@
           </mat-select>
           <mat-error>
             <span *ngIf="careerDetails.controls['Country'].hasError('required')&&
+=======
+    <mat-card-header>
+      
+      <mat-card-title>Career Details</mat-card-title>
+       
+    </mat-card-header>
+     
+    <mat-card-content>
+      <form   [formGroup]="careerDetails" >
+        <!-- <div class="form-group"> -->
+          <!-- <mat-form-field>
+            <mat-select placeholder="State" formControlName="stateCtrl" multiple (change)="getAllDistict($event.value)">
+              <mat-option *ngFor="let state of states" [value]="state.id">{{state.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div *ngIf="thirdFormGroup.controls.stateCtrl.invalid && (thirdFormGroup.controls.stateCtrl.dirty || thirdFormGroup.controls.stateCtrl.touched)"
+            style="color: red">
+            <div *ngIf="thirdFormGroup.controls.stateCtrl.errors.isWrong">
+              Please select from list or leave it blank.
+            </div>
+          </div>        
+          <mat-form-field>
+            <mat-select placeholder="Distict" formControlName="districtCtrl" multiple (change)="getAllTahsils($event.value)">
+              <mat-option *ngFor="let district of districts" [value]="district.id">{{district.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div *ngIf="thirdFormGroup.controls.districtCtrl.invalid && (thirdFormGroup.controls.districtCtrl.dirty || thirdFormGroup.controls.districtCtrl.touched)"
+            style="color: red">
+            <div *ngIf="thirdFormGroup.controls.districtCtrl.errors.isWrong">
+              Please select from list or leave it blank.
+            </div>
+          </div>        
+          <mat-form-field> -->
+            <mat-form-field>              
+                <mat-label> Country </mat-label>
+                <mat-select   formControlName="Country" required>
+                  <mat-option>-- Select Any --</mat-option>
+                  <mat-option value="4"> Afghanistan </mat-option>
+                  <mat-option value="1">Albania </mat-option>
+                  <mat-option value="2">Algeria </mat-option>
+                  <mat-option value="3">India </mat-option>
+                </mat-select>
+                <mat-error>  
+                    <span   *ngIf="careerDetails.controls['Country'].hasError('required')&&
+>>>>>>> 22a3c55fe726d4251c19d4213ec2b41b04430d89
                     (careerDetails.controls.Country.touched ||careerDetails.controls['Country'].dirty||
                      isSubmitted)">
               Country is required </span>
@@ -39,6 +85,7 @@
             <mat-error>
               <span *ngIf="careerDetails.controls['State'].hasError('required')&&
                       (careerDetails.controls.State.touched ||careerDetails.controls['State'].dirty|| isSubmitted)">
+<<<<<<< HEAD
                 State is required </span>
             </mat-error>
           </mat-form-field>
@@ -55,6 +102,26 @@
             </mat-select>
             <mat-error>
               <span *ngIf="careerDetails.controls['City'].hasError('required')&&
+=======
+                      State is required </span>  
+                  </mat-error>
+                </mat-form-field> 
+          </div>
+            <div class="form-group">
+                <mat-form-field class="demo-full-width">
+                    <mat-label> City </mat-label>
+                    <mat-select  class="form-control"   formControlName="City" required>
+                      <mat-option>-- Select Any --</mat-option>
+                      
+                      <mat-option value="1"> Akkalkot </mat-option>
+                      <mat-option value="2"> Akola </mat-option>
+                      <mat-option value="3">Ahmednagar </mat-option>
+                      <mat-option value="4"> Pune </mat-option>
+                      <mat-option value="5"> Solapur </mat-option>
+                    </mat-select>
+                    <mat-error>  
+                        <span   *ngIf="careerDetails.controls['City'].hasError('required')&&
+>>>>>>> 22a3c55fe726d4251c19d4213ec2b41b04430d89
                         (careerDetails.controls.City.touched ||careerDetails.controls['City'].dirty|| isSubmitted)">
 
                 City is required </span>

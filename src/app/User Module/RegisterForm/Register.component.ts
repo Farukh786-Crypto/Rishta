@@ -35,7 +35,7 @@ export class RegisterFormComponent {
     disableRipple: Boolean;
     pCreated: profCreated[] = [{ value: 'self', viewValue: 'Self' }, { value: 'parent', viewValue: 'Parent' }]
 
-    constructor(private toastr: ToastrService, private register: RegService, private _router: Router) {
+    constructor(private toastr: ToastrService,private register: RegService, private _router: Router) {
 
 
         this.RegisterModel = new FormGroup({
@@ -69,8 +69,12 @@ export class RegisterFormComponent {
         //         this.RegisterModel.patchValue(res[0]);
         //         this.RegisterModel.patchValue(this.postRegisterInfo[0])
             
+<<<<<<< HEAD
             
            
+=======
+                        
+>>>>>>> 22a3c55fe726d4251c19d4213ec2b41b04430d89
         //     },
         //             err=>{this.postRegisterInfo=err})
         // }
@@ -82,13 +86,9 @@ export class RegisterFormComponent {
         this.register.addContent(content).subscribe(res=>{
 
                      this.RegisterPost=res,
-                    this.toastr.success('Sucess!!')
-                    
-                    
+                    this.toastr.success('Sucess!!') 
                     },
-                     err=>{this.RegisterPost=err})
-                     
-                    
+                     err=>{this.RegisterPost=err})         
            }
         
 
