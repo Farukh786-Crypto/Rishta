@@ -20,23 +20,28 @@
     <!-- <form>     -->
     <table>
       <tr>
-        <td>
+        <td><div class="form-group">
           <span>Assets</span>
+        </div>
+          
 
         </td>
         <td>
-          <span>Own a house?</span>
-          <mat-radio-group formControlName="house">
-
-            <mat-radio-button value="1">Yes</mat-radio-button>
-            <mat-radio-button value="2">No</mat-radio-button>
-          </mat-radio-group><br><br>
-          <mat-error>  
-            <span *ngIf="LifestyleModel.controls['house'].hasError('required')&&
-            (LifestyleModel.controls.house.touched ||LifestyleModel.controls['house'].dirty|| isSubmitted)"  >
-              Please  select any one.</span>  
-        </mat-error>
-
+          <div class="form-group">
+            <span>Own a house?</span>
+            <mat-radio-group formControlName="house">
+  
+              <mat-radio-button value="1">Yes</mat-radio-button>
+              <mat-radio-button value="2">No</mat-radio-button>
+            </mat-radio-group><br><br>
+            <mat-error>  
+              <span *ngIf="LifestyleModel.controls['house'].hasError('required')&&
+              (LifestyleModel.controls.house.touched ||LifestyleModel.controls['house'].dirty|| isSubmitted)"  >
+                Please  select any one.</span>  
+          </mat-error>
+          </div>
+         
+        <div class="form-group">
           <span>Own a car?</span>
 
           <mat-radio-group formControlName="car">
@@ -49,14 +54,17 @@
             (LifestyleModel.controls.car.touched ||LifestyleModel.controls['car'].dirty|| isSubmitted)"  >
               Please  select any one.</span>  
         </mat-error>
+        </div>
+          
 
         </td>
       </tr>
       <tr>
         <td>
-          <mat-form-field class="demo-full-width">
-
-            <mat-label> Languages I Speak </mat-label>
+          
+            <div class="form-group">
+              <mat-form-field class="demo-full-width"> 
+              <mat-label> Languages I Speak </mat-label>
             <mat-select multiple formControlName="Languages">
               <mat-option>-- Select Any --</mat-option>
               <mat-option value="1">Hindi </mat-option>
@@ -69,35 +77,43 @@
             (LifestyleModel.controls.house.touched ||LifestyleModel.controls['house'].dirty|| isSubmitted)"  >
               Please  select any one.</span>  
         </mat-error>
+            </div>
+            
         </td>
       </tr>
 
       <tr>
         <td>
-          <mat-form-field class="demo-full-width">
-            <input matInput placeholder=" Food I Cook " formControlName="Food">
-          </mat-form-field>
-          <mat-error>  
-            <span *ngIf="LifestyleModel.controls['Food'].hasError('required')&&
-            (LifestyleModel.controls.Food.touched ||LifestyleModel.controls['Food'].dirty|| isSubmitted)"  >
-              Please  select any one.</span>  
-        </mat-error>
+          <div class="form-group">
+            <mat-form-field class="demo-full-width">
+              <input matInput placeholder=" Food I Cook " formControlName="Food">
+            </mat-form-field>
+            <mat-error>  
+              <span *ngIf="LifestyleModel.controls['Food'].hasError('required')&&
+              (LifestyleModel.controls.Food.touched ||LifestyleModel.controls['Food'].dirty|| isSubmitted)"  >
+                Please  select any one.</span>  
+          </mat-error>
+          </div>
+          
         </td>
 
         <td>
-          <mat-form-field class="demo-full-width">
-            <input matInput placeholder="Favourite Books " formControlName="Books">
-          </mat-form-field>
-          <mat-error>  
-            <span *ngIf="LifestyleModel.controls['Books'].hasError('required')&&
-            (LifestyleModel.controls.Books.touched ||LifestyleModel.controls['Books'].dirty|| isSubmitted)"  >
-              Please  select any one.</span>  
-        </mat-error>
+          <div class="form-group">
+            <mat-form-field class="demo-full-width">
+              <input matInput placeholder="Favourite Books " formControlName="Books">
+            </mat-form-field>
+            <mat-error>  
+              <span *ngIf="LifestyleModel.controls['Books'].hasError('required')&&
+              (LifestyleModel.controls.Books.touched ||LifestyleModel.controls['Books'].dirty|| isSubmitted)"  >
+                Please  select any one.</span>  
+          </mat-error>
+          </div>
+          
         </td>
         
       </tr>
       <tr>
-        <td>
+        <td><div class="form-group">
           <mat-form-field class="demo-full-width">
             <input matInput placeholder="Favourite  food"formControlName="Favouritefood">
           </mat-form-field>
@@ -106,9 +122,11 @@
             (LifestyleModel.controls.Favouritefood.touched ||LifestyleModel.controls['Favouritefood'].dirty|| isSubmitted)"  >
               Please  select any one.</span>  
         </mat-error>
+        </div>
+         
         </td>
 
-        <td>
+        <td><div class="form-group">
           <mat-form-field class="demo-full-width">
             <input matInput placeholder="Favourite   sports"formControlName="sports">
           </mat-form-field>
@@ -117,11 +135,13 @@
             (LifestyleModel.controls.sports.touched ||LifestyleModel.controls['sports'].dirty|| isSubmitted)"  >
               Please  select any one.</span>  
         </mat-error>
+        </div>
+         
         </td>
       </tr>
 
       <tr>
-        <td>
+        <td><div class="form-group">
           <mat-form-field class="demo-full-width">
             <input matInput placeholder="Favourite Music"formControlName="Music">
           </mat-form-field>
@@ -130,8 +150,10 @@
             (LifestyleModel.controls.Music.touched ||LifestyleModel.controls['Music'].dirty|| isSubmitted)"  >
               Please  select any one.</span>  
         </mat-error>
+        </div>
+          
         </td>
-        <td>
+        <td><div class="form-group">
           <mat-form-field class="demo-full-width">
             <input matInput placeholder=" Interests"formControlName="Interests">
           </mat-form-field>
@@ -140,10 +162,12 @@
             (LifestyleModel.controls.Interests.touched ||LifestyleModel.controls['Interests'].dirty|| isSubmitted)"  >
               Please  select any one.</span>  
         </mat-error>
+        </div>
+          
         </td>
       </tr>
       <tr>
-        <td>
+        <td><div class="form-group">
           <mat-form-field class="demo-full-width">
             <input matInput placeholder="Vacation Destination"formControlName="Destination">
           </mat-form-field>
@@ -152,8 +176,10 @@
             (LifestyleModel.controls.Destination.touched ||LifestyleModel.controls['Destination'].dirty|| isSubmitted)"  >
               Please  select any one.</span>  
         </mat-error>
+        </div>
+          
         </td>
-        <td>
+        <td><div class="form-group">
           <mat-form-field class="demo-full-width">
             <input matInput placeholder="Movies">
           </mat-form-field>
@@ -162,24 +188,30 @@
             (LifestyleModel.controls.Movies.touched ||LifestyleModel.controls['Movies'].dirty|| isSubmitted)"  >
               Please  select any one.</span>  
         </mat-error>
+        </div>
+          
         </td>
       </tr>
 
       <tr>
-        <td>
+        <td><div class="form-group">
           <mat-form-field class="demo-full-width">
             <input matInput placeholder=" TV Shows">
           </mat-form-field>
+        </div>
+         
         </td>
-        <td>
+        <td><div class="form-group">
           <mat-form-field class="demo-full-width">
             <input matInput placeholder=" Serial">
           </mat-form-field>
+        </div>
+         
         </td>
       </tr>
 
       <tr>
-        <td>
+        <td><div class="form-group">
           <mat-form-field>
             <mat-label> Dress Style</mat-label>
             <mat-select multiple>
@@ -192,14 +224,18 @@
 
             </mat-select>
           </mat-form-field>
+        </div>
+          
         </td>
       </tr>
       <tr>
-        <td>
+        <td><div class="form-group">
+          <mat-label>Are you open to pets? </mat-label>
+        </div>
            
-            <mat-label>Are you open to pets? </mat-label>
+            
           </td>
-          <td> 
+          <td><div class="form-group"></div> 
             <mat-radio-group>
               <mat-radio-button value="1">Yes</mat-radio-button>
               <mat-radio-button value="2">No </mat-radio-button>
@@ -208,45 +244,55 @@
         </td>
       </tr>
       <tr>
-        <td>
+        <td><div class="form-group">
           <mat-label>Habits </mat-label>
+        </div>
+         
         </td>
-        <td>
+        <td><div class="form-group">
           <mat-form-field>
-          <mat-label>Do you drink?</mat-label>
-          <mat-select formControlName="drink">
-            <mat-option>-- Select Any --</mat-option>
-            <mat-option value="1"> Yes</mat-option>
-            <mat-option value="2">No </mat-option>
-            <mat-option value="3">Occasionally </mat-option>
-          </mat-select>
-          <mat-error>  
-            <span *ngIf="LifestyleModel.controls['drink'].hasError('required')&&
-            (LifestyleModel.controls.drink.touched ||LifestyleModel.controls['drink'].dirty|| isSubmitted)"  >
-              Please  select any one.</span>  
-        </mat-error>
-          </mat-form-field><br>
-          <mat-form-field>
-          <mat-label>Do you smoke?</mat-label>
-          <mat-select formControlName="smoke">
-            <mat-option>-- Select Any --</mat-option>
-            <mat-option value="1"> Yes</mat-option>
-            <mat-option value="2">No </mat-option>
-            <mat-option value="3">Occasionally </mat-option>
-          </mat-select>
-          <mat-error>  
-            <span *ngIf="LifestyleModel.controls['smoke'].hasError('required')&&
-            (LifestyleModel.controls.smoke.touched ||LifestyleModel.controls['smoke'].dirty|| isSubmitted)"  >
-              Please  select any one.</span>  
-        </mat-error>
-          </mat-form-field>
+            <mat-label>Do you drink?</mat-label>
+            <mat-select formControlName="drink">
+              <mat-option>-- Select Any --</mat-option>
+              <mat-option value="1"> Yes</mat-option>
+              <mat-option value="2">No </mat-option>
+              <mat-option value="3">Occasionally </mat-option>
+            </mat-select>
+            <mat-error>  
+              <span *ngIf="LifestyleModel.controls['drink'].hasError('required')&&
+              (LifestyleModel.controls.drink.touched ||LifestyleModel.controls['drink'].dirty|| isSubmitted)"  >
+                Please  select any one.</span>  
+          </mat-error>
+            </mat-form-field>
+        </div>
+          <br>
+
+          <div class="form-group">
+            <mat-form-field>
+              <mat-label>Do you smoke?</mat-label>
+              <mat-select formControlName="smoke">
+                <mat-option>-- Select Any --</mat-option>
+                <mat-option value="1"> Yes</mat-option>
+                <mat-option value="2">No </mat-option>
+                <mat-option value="3">Occasionally </mat-option>
+              </mat-select>
+              <mat-error>  
+                <span *ngIf="LifestyleModel.controls['smoke'].hasError('required')&&
+                (LifestyleModel.controls.smoke.touched ||LifestyleModel.controls['smoke'].dirty|| isSubmitted)"  >
+                  Please  select any one.</span>  
+            </mat-error>
+              </mat-form-field>
+          </div>
+          
         </td>
       </tr> 
       <tr>
         <td></td>
-        <td colspan="2" class="content-center">
+        <td colspan="2" class="content-center"><div class="form-group">
           <button mat-raised-button  (click)="onSaveSuccess(LifestyleModel.value)"  color="primary">Submit</button>
           <button mat-raised-button color="warn" style="margin-left: 20px;">Clear</button>
+        </div>
+          
         </td>
       </tr>
 

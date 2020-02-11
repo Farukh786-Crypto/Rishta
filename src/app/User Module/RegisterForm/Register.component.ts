@@ -56,7 +56,9 @@ export class RegisterFormComponent {
     }
 
 
-            
+
+
+    
         // public postRegisterInfo:any;
         // userId:number;
         // public SaveRegisterInfo(){
@@ -68,7 +70,7 @@ export class RegisterFormComponent {
         //         this.RegisterModel.patchValue(this.postRegisterInfo[0])
             
             
-code             
+           
         //     },
         //             err=>{this.postRegisterInfo=err})
         // }
