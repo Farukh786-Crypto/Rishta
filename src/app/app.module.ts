@@ -18,9 +18,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter'
  
 import {MatDialogModule} from '@angular/material/dialog';
 
- 
-import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
-import { viewComponent } from './layout/admin/dashboard/view/view.component';
+
  
 
 

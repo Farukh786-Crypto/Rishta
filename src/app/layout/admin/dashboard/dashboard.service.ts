@@ -1,28 +1,31 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-
+import {environment} from '../../../../environments/environment';
 @Injectable()
 
 export class DashboardService
 {
     constructor(private http:HttpClient)
     {
+        
 
     }
-
-    public getTotalCount()
+   public getTotalCount()
     {
-        let url='http://192.168.0.136:8080/api/registers/getTotalMembers';
+        const Base_Url=environment.Base_Url;
+        let url= Base_Url + 'registers/getTotalMembers';
         return this.http.get(url);
     }
     public getGroomsCount()
     {
-        let url='http://192.168.0.136:8080/api/registers/getTotalGrooms';
+        const Base_Url=environment.Base_Url;
+        let url= Base_Url +'registers/getTotalGrooms';
         return this.http.get(url);
     }
     public getBridesCount()
     {
-        let url='http://192.168.0.136:8080/api/registers/getTotalBrides';
+        const Base_Url=environment.Base_Url;
+        let url= Base_Url +'registers/getTotalBrides';
         return this.http.get(url);
     }
 }

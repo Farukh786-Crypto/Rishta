@@ -1,5 +1,4 @@
-import { Component } from '@angular/core'
-import { ViewService } from '../../allservices/view.service';
+import { Component } from '@angular/core';
 
 @Component({
     selector : 'view-comp',
