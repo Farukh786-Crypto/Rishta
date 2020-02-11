@@ -11,8 +11,30 @@
     <mat-card-content>
       <form   [formGroup]="careerDetails" >
         <!-- <div class="form-group"> -->
-            <mat-form-field>
-
+          <!-- <mat-form-field>
+            <mat-select placeholder="State" formControlName="stateCtrl" multiple (change)="getAllDistict($event.value)">
+              <mat-option *ngFor="let state of states" [value]="state.id">{{state.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div *ngIf="thirdFormGroup.controls.stateCtrl.invalid && (thirdFormGroup.controls.stateCtrl.dirty || thirdFormGroup.controls.stateCtrl.touched)"
+            style="color: red">
+            <div *ngIf="thirdFormGroup.controls.stateCtrl.errors.isWrong">
+              Please select from list or leave it blank.
+            </div>
+          </div>        
+          <mat-form-field>
+            <mat-select placeholder="Distict" formControlName="districtCtrl" multiple (change)="getAllTahsils($event.value)">
+              <mat-option *ngFor="let district of districts" [value]="district.id">{{district.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div *ngIf="thirdFormGroup.controls.districtCtrl.invalid && (thirdFormGroup.controls.districtCtrl.dirty || thirdFormGroup.controls.districtCtrl.touched)"
+            style="color: red">
+            <div *ngIf="thirdFormGroup.controls.districtCtrl.errors.isWrong">
+              Please select from list or leave it blank.
+            </div>
+          </div>        
+          <mat-form-field> -->
+            <mat-form-field>              
                 <mat-label> Country </mat-label>
                 <mat-select   formControlName="Country" required>
                   <mat-option>-- Select Any --</mat-option>
@@ -45,7 +67,7 @@
                       State is required </span>  
                   </mat-error>
                 </mat-form-field> 
-            </div>
+          </div>
             <div class="form-group">
                 <mat-form-field class="demo-full-width">
                     <mat-label> City </mat-label>

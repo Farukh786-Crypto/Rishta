@@ -1,10 +1,6 @@
 import { NgModule } from '@angular/core';
-import {CommonModule} from '@angular/common'
-// import {} from '@angular/material'
-
 import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatMenuModule} from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge';
-//import{MatButtonModule} from '@angular/material';
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {PortalModule} from '@angular/cdk/portal';
@@ -35,32 +31,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
-const MaterialComponents=[
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatIconModule,
-  MatBadgeModule,
-  MatToolbarModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatSelectModule,
-  MatAutocompleteModule,
-  MatCheckboxModule,
-  MatRadioModule,
-  MatMenuModule,
-  MatCardModule,
-  MatButtonToggleModule,
-  MatIconModule,
-  MatBadgeModule,
-  MatToolbarModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatSelectModule,
-  MatAutocompleteModule,
-  MatCheckboxModule,
-  MatRadioModule,
-  MatButtonToggleModule,
+ 
+  const MaterialComponents= [
+    MatButtonToggleModule,
     MatIconModule,
     MatBadgeModule,
     MatToolbarModule,
@@ -74,7 +47,19 @@ const MaterialComponents=[
     MatFormFieldModule,
     MatListModule,
     MatDatepickerModule,
-    MatButtonModule, A11yModule,
+    MatBadgeModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatListModule,
+    MatDatepickerModule, 
+    A11yModule,
     CdkStepperModule,
     CdkTableModule,
     CdkTreeModule,
@@ -117,18 +102,19 @@ const MaterialComponents=[
     PortalModule,
     ScrollingModule,
     MatCardModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatInputModule
 
+  ]
+  @NgModule({
+  
 
- ]
-
-
-
-@NgModule({
-
-  imports: [MaterialComponents,],
-  exports: [MaterialComponents]  
+    imports: [MaterialComponents,],
+    exports: [MaterialComponents]  
+    
+  
   })
+      
 
 
 export class MaterialModule{ 
