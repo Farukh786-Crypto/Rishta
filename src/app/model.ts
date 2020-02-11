@@ -9,6 +9,8 @@ export class Registerprofile{
 
 
 }
+
+
 export class CareerProfile{
     Country:string; 
     State:string;  

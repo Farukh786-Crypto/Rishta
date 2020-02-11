@@ -23,6 +23,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,7 @@ import {MatDialogModule} from '@angular/material/dialog';
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
-  //bootstrap:[DashboardComponent]
+  
 })
 
 export class AppModule { }

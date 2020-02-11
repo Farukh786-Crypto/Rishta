@@ -1,6 +1,11 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+<<<<<<< HEAD
 import {environment} from '../../../../environments/environment';
+=======
+
+
+>>>>>>> 4337419182d308cd8cad445b3f4f8fef94dab096
 @Injectable()
 
 export class DashboardService
