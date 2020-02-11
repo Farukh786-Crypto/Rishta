@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { AstroreligionComponent } from './Astroreligion.component';
+import { MaterialModule } from 'src/app/material/material.module';
 
 
 const astroroute: Routes = [
@@ -17,7 +18,8 @@ const astroroute: Routes = [
 
     declarations: [AstroreligionComponent],
     imports: [CommonModule,
-        ReactiveFormsModule, RouterModule.forChild(astroroute)],
+        ReactiveFormsModule, RouterModule.forChild(astroroute),
+        MaterialModule],
     providers: [],
     exports: [AstroreligionComponent]
 

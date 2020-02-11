@@ -55,7 +55,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   
-  imports: [MatButtonToggleModule,
+  imports: [
+    MatButtonModule,
+    MatButtonToggleModule,
     MatIconModule,
     MatBadgeModule,
     MatToolbarModule,
@@ -115,7 +117,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     PortalModule,
     ScrollingModule,
     MatCardModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatInputModule
 
   ]})
 
