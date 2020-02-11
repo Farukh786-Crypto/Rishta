@@ -94,7 +94,7 @@ export class CareerComponent implements OnInit{
     }
     public CareerPost:any;
     
-    public RegisterUser(content:CareerProfile){
+    public CareerUser(content:CareerProfile){
 
         this.Career.addContent(content).subscribe(res=>{
 
