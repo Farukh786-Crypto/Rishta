@@ -53,10 +53,10 @@ export class ProfileDetailsComponent implements OnInit{
     }, 2000);
   }
 
-  public GetAllMothertounge()
-  {
-      this.pd.getMothertounge().subscribe(res=>{this.ProfileInfo=res},err=>{this.ProfileInfo=err})
-  }
+  // public GetAllMothertounge()
+  // {
+  //     this.pd.getMothertounge().subscribe(res=>{this.ProfileInfo=res},err=>{this.ProfileInfo=err})
+  // }
   public getrel()
   {
     this.pd.getReligion().subscribe(
