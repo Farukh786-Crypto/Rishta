@@ -13,18 +13,15 @@
       <div class="form-group">
         <mat-form-field>
           <mat-label> Country </mat-label>
-          <mat-select formControlName="Country" (change)="onChangeCountry($event.target.value) ;" required>
+          <mat-select formControlName="Country" (change)="onChangeCountry()" required>
             <mat-option>-- Select--</mat-option>
             <mat-option *ngFor="let Countrys of country  " value={{Countrys.country_id}}>
               {{Countrys.country_name | uppercase}}
             </mat-option>
-
           </mat-select>
           <mat-error>
-            <span *ngIf="careerDetails.controls['Country'].hasError('required')&&
- 
-       
-                    (careerDetails.controls.Country.touched ||careerDetails.controls['Country'].dirty||
+            <span *ngIf="careerDetails.controls['Country'].hasError('required') &&        
+                    (careerDetails.controls.Country.touched || careerDetails.controls['Country'].dirty ||
                      isSubmitted)">
               Country is required </span>
           </mat-error>
@@ -35,7 +32,7 @@
       <div class="form-group">
         <mat-form-field class="demo-full-width">
           <mat-label> State </mat-label>
-          <mat-select formControlName="State" (change)="onChangeState($event.target.value) ;" required>
+          <mat-select formControlName="State" (change)="onChangeState($event.target.value);" required>
             <mat-option>-- Select--</mat-option>
             <mat-option *ngFor="let States of  state" value={{States.state_id}}>
               {{States.state_name}} </mat-option>
@@ -145,7 +142,7 @@
       </div>
       <div class="form-group">
         <mat-form-field class="demo-full-width">
-          <input matInput placeholder="Annual Income " formControlName="Income">
+          <input type="number" matInput placeholder="Annual Income " formControlName="Income">
           <mat-error>
             <span
               *ngIf="careerDetails.controls['Income'].hasError('required')&&

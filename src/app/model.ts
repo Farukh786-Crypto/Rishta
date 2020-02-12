@@ -47,3 +47,10 @@ export class feedbackprofile{
     suggestion:string;
     // gender:string;
 }
+export class EducationProfile{
+    highestDegree:string;
+    SchoolName:string
+    graduationCollage:string;
+    graduationDegree:string;
+    AEduacation:string;
+}

@@ -1,157 +1,99 @@
-<div class="container">
-     
-    <!-- Trigger the modal with a button -->
-     
+<!-- <mat-card class="example-card"> -->
+
+  <mat-card-title style="text-align:center"><b>
+      <h2>Education Details</h2>
+    </b> </mat-card-title>
+
   
-    <!-- Modal -->
-     
-          
-          <div class="modal-body">
-            <h4 class="modal-title"> Education Details </h4>
-            <form class="align-center form-horizontal" [formGroup]="EduacationDetails">
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="email"class="control-label"> About My Education
-                    </label>
-                </div>
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <textarea class="form-control" id="About" rows="4" cols="50"formControlName="AEduacation"
-                        placeholder="Which institutions have you attended?What courses/specialisation have you studied?" required>
-                    </textarea>
-                    <div class="text-danger" *ngIf=" EduacationDetails.controls['AEduacation'].hasError('required')&&
-                    (EduacationDetails.controls.AEduacation.touched ||EduacationDetails.controls['AEduacation'].dirty|| isSubmitted)">
-                   Field is required.
-                                                    </div>       
-                    </div>
-                </div>
-
-            </div> 
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="email"class="control-label">Highest Education</label>
-                </div>
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <select class="form-control" formControlName="HighestDegree" required>
-                            <option disabled selected value>SELECT</option>
-                            <option>B.Arch  </option>
-                            <option> B.Des </option>
-                            <option> BE/BTech </option>
-                            <option> B.Pharma </option>
-                            <option> M.Arch </option>
-                            <option> M.Des </option>
-                            <option> ME/MTech </option>
-                            <option> M.Pharma </option>
-                            <option>  MS</option>
-                            <option>  BIT</option>
-                            <option>  BCA</option>
-                            <option>  MCA/PGDCA</option>
-                            <option> B.Com </option>
-                            <option>  CA</option>
-                            <option>  CFA</option>
-                            <option>  CS</option>
-                            <option>  ICWA</option>
-                            <option>  M.Com</option>                             
-                        </select>
-                        <div class="text-danger" *ngIf=" EduacationDetails.controls['HighestDegree'].hasError('required')&&
-                    (EduacationDetails.controls.HighestDegree.touched ||EduacationDetails.controls['HighestDegree'].dirty|| isSubmitted)">
-                    Highest   Education is required.
-                                                    </div>
-                        
-
-
-                    </div>
-                </div>
-
-            </div> 
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="email"class="control-label">Graduation Degree</label>
-                </div>
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <select class="form-control" formControlName="GraduationDegree"required>
-                            <option disabled selected value>SELECT</option>
-                            <option>B.Arch  </option>
-                            <option> B.Des </option>
-                            <option> BE/BTech </option>
-                            <option> B.Pharma </option>
-                            <option> BAMS </option>
-                            <option> BDS </option>
-                            <option>BCA </option>
-                            <option> BFA </option>
-                            <option>  MS</option>
-                            <option>  BIT</option>
-                            <option>  BCA</option>
-                            <option>  BHM</option>
-                            <option> BHMS </option>
-                            <option>  oTHERS</option>
-
-                            <option>  MBBS</option>                             
-                        </select>
-                        <div class="text-danger" *ngIf=" EduacationDetails.controls['GraduationDegree'].hasError('required')&&
-    (EduacationDetails.controls.GraduationDegree.touched ||EduacationDetails.controls['GraduationDegree'].dirty|| isSubmitted)">
-    Graduation  Degree is required.
-                                    </div>                          
-                    </div>
-                </div>
-
-            </div> 
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="email"class="control-label">Graduation 
-                        College
-                    </label>
-                </div>
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="College" placeholder="Not filled in"
-                        formControlName="GraduationCollage">  
-                        <div class="text-danger" *ngIf=" EduacationDetails.controls['GraduationCollage'].hasError('required')&&
-    (EduacationDetails.controls.GraduationCollage.touched ||EduacationDetails.controls['GraduationCollage'].dirty|| isSubmitted)">
-    Graduation  College is required.
-                                    </div>             
-                    </div>
-                </div>
-
-            </div> 
-        <div class="row">
-            <div class="col-md-4">
-                <label for="email"class="control-label"> School Name                   
-                </label>
-            </div>
-            <div class="col-md-8">
-                <div class="form-group">
-                    <input type="text" class="form-control" formControlName="SchoolName"id="School" placeholder="Not filled in">               
-                    <div class="text-danger" *ngIf=" EduacationDetails.controls['SchoolName'].hasError('required')&&
-                    (EduacationDetails.controls.SchoolName.touched ||EduacationDetails.controls['SchoolName'].dirty|| isSubmitted)">
-                    School Name is required.
-                                                    </div>  
-                </div>
-            </div>
-
-        </div> 
-        <div class="row">
-            <div class="col-md-8">
-                <div class="form-group align-center">
-            <button type="button" class="btn btn-primary" (click)="onSubmit()" > SAVE</button>
-        </div>
+ 
+<form  [formGroup]="EduacationDetails">
+ 
+    <div class="form-group">
+        <mat-form-field class="example-full-width">
+            <mat-label>About My Education</mat-label>
+            <textarea   matInput #message maxlength="256" rows="12" cols="100" class="form-control" formControlName="AEduacation"
+                placeholder="Ex. Which institutions have you attended?What courses/specialisation have you studied?...">
+            </textarea>
+            <!-- <mat-hint  ><strong>Don't disclose personal info</strong> </mat-hint> -->
+            <mat-hint  >{{message.value.length}} / 256</mat-hint>
+            <mat-error>
+                <span
+                    *ngIf="EduacationDetails.controls['AEduacation'].hasError('required')&&
+                          (EduacationDetails.controls.AEduacation.touched ||EduacationDetails.controls['AEduacation'].dirty|| isSubmitted)">
+                    Field is required. </span>
+            </mat-error>
+        </mat-form-field>
     </div>
 
-        </div>
-        
-        <button type="button" class="btn btn-default"(click)="onSubmit(EduacationDetails.value)">
-            SUBMIT</button>
+    <div class="form-group">
+        <mat-form-field class="example-full-width">
+            <mat-label>Highest Education</mat-label>
 
+            <mat-select formControlName="HighestDegree" required>
+                <mat-option>-- Select --</mat-option>
+                <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                    {{highestDegrees.state_name}} </mat-option>
+            </mat-select>
+            <mat-error>
+                <span
+                    *ngIf=" EduacationDetails.controls['HighestDegree'].hasError('required')&&
+                                  (EduacationDetails.controls.HighestDegree.touched ||EduacationDetails.controls['HighestDegree'].dirty|| isSubmitted)">
+                    Highest Education is required. </span>
+            </mat-error>
+        </mat-form-field>
+    </div>
 
+    <div class="form-group">
+        <mat-form-field class="example-full-width">
+            <mat-label>Graduation Degree</mat-label>
 
+            <mat-select formControlName="GraduationDegree" required>
+                <mat-option>-- Select --</mat-option>
+                <mat-option *ngFor="let graduationDegrees of  graduationDegree" value={{highestDegrees.state_id}}>
+                    {{highestDegrees.state_name}} </mat-option>
+            </mat-select>
+            <mat-error>
+                <span
+                    *ngIf=" EduacationDetails.controls['GraduationDegree'].hasError('required')&&
+                                      (EduacationDetails.controls.GraduationDegree.touched ||EduacationDetails.controls['GraduationDegree'].dirty|| isSubmitted)">
+                    Graduation Degree is required. </span>
+            </mat-error>
+        </mat-form-field>
+    </div>
 
+    <div class="form-group">
+        <mat-form-field class="example-full-width">
+            <mat-label>Graduation Collage</mat-label>
+            <input type="text" matInput placeholder="Not filled in" formControlName="GraduationCollage">
+             
+            <mat-error>
+                <span
+                    *ngIf=" EduacationDetails.controls['GraduationCollage'].hasError('required')&&
+                                      (EduacationDetails.controls.GraduationCollage.touched ||EduacationDetails.controls['GraduationCollage'].dirty|| isSubmitted)">
+                    Graduation College is required. </span>
+            </mat-error>
+        </mat-form-field>
+    </div>
 
-    </form>
-          </div>
-           
-         
-    
-  </div>
-  
+    <div class="form-group">
+        <mat-form-field class="example-full-width">
+            <mat-label>School Name </mat-label>
+            <input matInput placeholder="Not filled in" formControlName="SchoolName">
+
+            <mat-error>
+                <span
+                    *ngIf="EduacationDetails.controls['SchoolName'].hasError('required')&&
+                                          (EduacationDetails.controls.SchoolName.touched ||EduacationDetails.controls['SchoolName'].dirty|| isSubmitted)">
+                    School Name is required. </span>
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <button mat-raised-button color="primary" (click)="onSubmit(EduacationDetails.value)">SUBMIT</button>
+       <!-- <button mat-raised-button color="warn"   style="margin-left: 20px;">SAVE</button> -->
+       <button mat-raised-button color="primary" (click)="EducationUser(EduacationDetails.value)">SAVE</button>
+     </div>
+
+</form>
+
+<!-- </mat-card> -->

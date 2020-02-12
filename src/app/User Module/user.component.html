@@ -1,20 +1,5 @@
-
 <div>
-  <mat-toolbar color="primary">
-    <!-- <mat-toolbar-row>
-            <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-              <mat-icon>menu</mat-icon>
-            </button>
-             
-            <span class="menu-spacer"></span>
-            <div fxShow="true" fxHide.lt-md>
-               The following menu items will be hidden on both SM and XS screen sizes -->
-    <!-- <a href="#" mat-button>Menu Item 1</a>
-                           </div>
-          </mat-toolbar-row> -->
-  </mat-toolbar>
-  <!-- <mat-sidenav-container fxFlexFill>
-          <mat-sidenav #sidenav> -->
+
   <mat-nav-list>
 
     <button mat-button routerLink="./register" data-target="#myModal1">Register</button>
@@ -27,12 +12,9 @@
     <button mat-button routerLink="./astroandreligion" data-target="#myModal7"> Astro and Religion</button>
     <button mat-button routerLink="./feedbackDetails" data-target="#myModa8"> FeedBack</button>
     
-  </mat-nav-list> 
-  <!-- </mat-sidenav>          
-        </mat-sidenav-container> -->
-        <div class="container">
+  </mat-nav-list>   
         <router-outlet></router-outlet>
-      </div>
+
 </div>
 
 
