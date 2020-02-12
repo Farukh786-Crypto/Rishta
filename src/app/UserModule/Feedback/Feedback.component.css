@@ -32,5 +32,7 @@
       text-align: center;
   }
   .buttonprimary{
-      margin-left: auto;
+    max-width: 300px;
+    margin-left: 70px;
+
   }
