@@ -16,7 +16,7 @@
           <mat-select formControlName="Country" (change)="onChangeCountry()" required>
             <mat-option>-- Select--</mat-option>
             <mat-option *ngFor="let Countrys of country  " value={{Countrys.country_id}}>
-              {{Countrys.country_name | uppercase}}
+              {{Countrys.country_name | titlecase}}
             </mat-option>
           </mat-select>
           <mat-error>
@@ -35,7 +35,7 @@
           <mat-select formControlName="State" (change)="onChangeState($event.target.value);" required>
             <mat-option>-- Select--</mat-option>
             <mat-option *ngFor="let States of  state" value={{States.state_id}}>
-              {{States.state_name}} </mat-option>
+              {{States.state_name|titlecase}} </mat-option>
 
           </mat-select>
           <mat-error>
@@ -53,7 +53,7 @@
             <mat-option>-- Select --</mat-option>
 
             <!-- <mat-option *ngFor="let cities of  city" value={{cities.city_id}}>
-                {{cities.city_name}}    </mat-option> -->
+                {{cities.city_name|titlecase}}    </mat-option> -->
 
           </mat-select>
           <mat-error>
@@ -72,7 +72,7 @@
           <mat-select formControlName="HighestDegree" required>
             <mat-option>-- Select --</mat-option>
             <!-- <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
-                {{highestDegrees.state_name}}  </mat-option>               -->
+                {{highestDegrees.state_name|titlecase}}  </mat-option>               -->
           </mat-select>
           <mat-error>
             <span
@@ -92,7 +92,7 @@
             <mat-option>-- Select Any --</mat-option>
 
             <!-- <mat-option *ngFor="let bachlorDegrees of  bachlorDegree" value={{bachlorDegrees.state_id}}>
-                {{bachlorDegrees.state_name}}  </mat-option>
+                {{bachlorDegrees.state_name|titlecase}}  </mat-option>
                 -->
           </mat-select>
           <mat-error>
@@ -110,7 +110,7 @@
             <mat-option>-- Select --</mat-option>
 
             <!-- <mat-option *ngFor="let employeeds of  employeed" value={{employeeds.state_id}}>
-                {{employeeds.state_name}}  </mat-option>                -->
+                {{employeeds.state_name|titlecase}}  </mat-option>                -->
           </mat-select>
 
           <mat-error>
@@ -129,7 +129,7 @@
             <mat-option>-- Select --</mat-option>
 
             <!-- <mat-option  *ngFor="let occupations of  occupation" value={{occupations.state_id}}>
-                {{occupations.state_name}}  </mat-option>
+                {{occupations.state_name|titlecase}}  </mat-option>
                 -->
           </mat-select>
           <mat-error>
