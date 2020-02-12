@@ -1,0 +1,109 @@
+<!-- <h1>{{title}}</h1> -->
+{{RegisterModel.value|json}}
+<!-- <mat-form-field>
+        <input type="number" matInput placeholder="Enter user id" [(ngModel)]="userId"  required>       
+    <button mat-raised-button color="warn" (click)="SaveRegisterInfo()">Get Single
+        user</button>        
+    </mat-form-field> -->
+<mat-card class="example-card">
+  <mat-card-header>
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title>Register Form</mat-card-title>
+    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="RegisterModel" novalidate>
+      <div class="example-container">
+        <!-- {{postRegisterInfo|json}}
+ -->
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>UserName:</mat-label>
+            <input formControlName="username" matInput placeholder="Enter User Name" required>
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-error *ngIf="isSubmited &&  RegisterModel.controls['UserName'].hasError('required')">
+              ** UserName is Required **
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Email:</mat-label>
+            <input formControlName="email" matInput placeholder="Enter Email" required>
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-error *ngIf="isSubmited && RegisterModel.controls['email'].hasError('required')">
+              ** Email is required **
+            </mat-error>
+            <mat-error *ngIf="RegisterModel.controls['email'].hasError('pattern')">
+              ** Please enter valid email address **
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Password :</mat-label>
+            <input matInput placeholder="Enter your password" formControlName="password" matTooltip="password"
+              [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <!-- <mat-hint align="start"> **Password like At least 8 characters in length,Lowercase letters and Uppercase
+              letters and Numbers Special characters</mat-hint> -->
+            <div>
+              <mat-error *ngIf="isSubmited && RegisterModel.controls['password'].hasError('required') && (RegisterModel.controls['password'].dirty 
+              || RegisterModel.controls.password.touched)">
+                ** Create the Password **
+              </mat-error>
+              <mat-error *ngIf="isSubmited && RegisterModel.controls['password'].hasError('pattern') &&
+              (RegisterModel.controls.password.dirty || RegisterModel.controls['password'].touched)">
+                Please use Correct Password like At least 8 characters in length and
+                Lowercase letters and Uppercase letters and Numbers Special characters
+              </mat-error>
+            </div>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter Mobile Number :</mat-label>
+            <input formControlName="mobile" matInput placeholder="Enter Mobile Number" required>
+            <mat-icon matSuffix>phone</mat-icon>
+            <!-- <mat-hint align="start">** Please enter 10 digit mobile no **</mat-hint> -->
+            <mat-error *ngIf="isSubmited && RegisterModel.controls['mobile'].hasError('pattern')">
+              ** Please enter 10 digit mobile no **
+            </mat-error>
+          </mat-form-field>  
+        </div>
+        <div>
+          <label>Gender : </label>
+          <mat-radio-group formControlName="gender">
+            <mat-radio-button style="padding-right: 10px;" value="male" [checked]="true">Male</mat-radio-button>
+            <mat-radio-button style="padding-right: 10px;" value="female">Female</mat-radio-button>
+            <mat-radio-button style="padding-right: 10px;" value="other">Other</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Create Profile By :</mat-label>
+            <mat-select formControlName="create_profile_by">
+              <mat-option value="">SELECT</mat-option>
+              <mat-option value="self">Self</mat-option>
+              <mat-option value="parents">Parents</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>        
+      </div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="RegisterUser(RegisterModel.value)">Register</button>
+    <button mat-raised-button color="warn">Cancel</button>
+  </mat-card-actions>
+</mat-card>
