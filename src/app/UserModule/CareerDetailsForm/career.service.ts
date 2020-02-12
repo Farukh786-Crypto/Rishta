@@ -7,9 +7,7 @@ import { catchError } from 'rxjs/operators';
 
 @Injectable()
  
-export class CareerService{
-
-  
+export class CareerService{ 
 
   constructor(private http: HttpClient) { }
 
@@ -38,12 +36,15 @@ export class CareerService{
 }    
 
   getCountries() {
+    console.log("hhhh");
     let url='http://192.168.0.127:8082/api/getcountries'     
          return this.http.get(url);    
   }
 
   getStates(country_id:number) {
-    let url='http://192.168.0.127:8082/api/getstates/'+country_id;
+    console.log("hhhh");
+    let url='http://192.168.0.127:8082/api/getstates/1';
+    // let url='http://192.168.0.127:8082/api/getstates/'+country_id;
     return this.http.get(url);     
   }
   getCities(state_id:number)

@@ -1,30 +1,27 @@
-{{getCareerInfo|json}}
-<!-- <button type="submit" (click)="SaveCareerInfo()"> Get </button> -->
-<button type="submit" (click)="call_to_service()"> Get </button>
+<!-- {{getCareerInfo|json}}
+<!<button type="submit" (click)="SaveCareerInfo()"> Get </button> -->
+<!-- <button type="submit" (click)="call_to_service()"> Get </button> --> 
 <mat-card class="example-card">
-
-  <mat-card-title style="text-align:center"><b>
-      <h2>Career Details</h2>
+  <mat-card-header>
+  <mat-card-title><b>
+      Career Details
     </b> </mat-card-title>
-
+</mat-card-header>
   <mat-card-content>
-    <form [formGroup]="careerDetails">
-      <div class="example-container">
+    <form [formGroup]="careerDetails" class="form">
+      <div   class="example-container">
       <div class="form-group">
         <mat-form-field>
           <mat-label> Country </mat-label>
-          <mat-select formControlName="Country" (change)="onChangeCountry($event.target.value) ;" required>
+          <mat-select formControlName="Country" (change)="onChangeCountry()" required>
             <mat-option>-- Select--</mat-option>
             <mat-option *ngFor="let Countrys of country  " value={{Countrys.country_id}}>
-              {{Countrys.country_name | uppercase}}
+              {{Countrys.country_name | titlecase}}
             </mat-option>
-
           </mat-select>
           <mat-error>
-            <span *ngIf="careerDetails.controls['Country'].hasError('required')&&
- 
-       
-                    (careerDetails.controls.Country.touched ||careerDetails.controls['Country'].dirty||
+            <span *ngIf="careerDetails.controls['Country'].hasError('required') &&        
+                    (careerDetails.controls.Country.touched || careerDetails.controls['Country'].dirty ||
                      isSubmitted)">
               Country is required </span>
           </mat-error>
@@ -35,10 +32,10 @@
       <div class="form-group">
         <mat-form-field class="demo-full-width">
           <mat-label> State </mat-label>
-          <mat-select formControlName="State" (change)="onChangeState($event.target.value) ;" required>
+          <mat-select formControlName="State" (change)="onChangeState($event.target.value);" required>
             <mat-option>-- Select--</mat-option>
             <mat-option *ngFor="let States of  state" value={{States.state_id}}>
-              {{States.state_name}} </mat-option>
+              {{States.state_name|titlecase}} </mat-option>
 
           </mat-select>
           <mat-error>
@@ -56,7 +53,7 @@
             <mat-option>-- Select --</mat-option>
 
             <!-- <mat-option *ngFor="let cities of  city" value={{cities.city_id}}>
-                {{cities.city_name}}    </mat-option> -->
+                {{cities.city_name|titlecase}}    </mat-option> -->
 
           </mat-select>
           <mat-error>
@@ -75,7 +72,7 @@
           <mat-select formControlName="HighestDegree" required>
             <mat-option>-- Select --</mat-option>
             <!-- <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
-                {{highestDegrees.state_name}}  </mat-option>               -->
+                {{highestDegrees.state_name|titlecase}}  </mat-option>               -->
           </mat-select>
           <mat-error>
             <span
@@ -95,7 +92,7 @@
             <mat-option>-- Select Any --</mat-option>
 
             <!-- <mat-option *ngFor="let bachlorDegrees of  bachlorDegree" value={{bachlorDegrees.state_id}}>
-                {{bachlorDegrees.state_name}}  </mat-option>
+                {{bachlorDegrees.state_name|titlecase}}  </mat-option>
                 -->
           </mat-select>
           <mat-error>
@@ -113,7 +110,7 @@
             <mat-option>-- Select --</mat-option>
 
             <!-- <mat-option *ngFor="let employeeds of  employeed" value={{employeeds.state_id}}>
-                {{employeeds.state_name}}  </mat-option>                -->
+                {{employeeds.state_name|titlecase}}  </mat-option>                -->
           </mat-select>
 
           <mat-error>
@@ -132,7 +129,7 @@
             <mat-option>-- Select --</mat-option>
 
             <!-- <mat-option  *ngFor="let occupations of  occupation" value={{occupations.state_id}}>
-                {{occupations.state_name}}  </mat-option>
+                {{occupations.state_name|titlecase}}  </mat-option>
                 -->
           </mat-select>
           <mat-error>
@@ -145,7 +142,7 @@
       </div>
       <div class="form-group">
         <mat-form-field class="demo-full-width">
-          <input matInput placeholder="Annual Income " formControlName="Income">
+          <input type="number" matInput placeholder="Annual Income " formControlName="Income">
           <mat-error>
             <span
               *ngIf="careerDetails.controls['Income'].hasError('required')&&
@@ -157,8 +154,7 @@
       <div class="form-group">
         <mat-form-field class="demo-full-width">
           <textarea matInput placeholder="Express Yourself!" formControlName="Express">
-
-                                </textarea>
+           </textarea>
           <mat-error>
             <span
               *ngIf="careerDetails.controls['Express'].hasError('required')&&
@@ -167,9 +163,11 @@
           </mat-error>
         </mat-form-field>
       </div>
+      <div class="form-group">
       <button mat-raised-button color="primary" (click)="CareerUser(careerDetails.value)">SUBMIT</button>
       <!-- <button mat-raised-button color="warn" (click)="SaveCareerInfo()"style="margin-left: 20px;">Save</button>  -->
-      <button mat-raised-button color="warn" (click)="clear()" style="margin-left: 20px;">CLEAR</button>
+      <button class="button" mat-raised-button color="warn" (click)="clear()"  >CLEAR</button>
+    </div>
     </div>
     </form>
   </mat-card-content>
