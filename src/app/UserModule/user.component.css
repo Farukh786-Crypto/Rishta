@@ -1,0 +1,48 @@
+.menu-spacer {
+    flex: 1 1 auto;
+  }
+  .right
+{
+margin-left: 1050px;
+background-color: black;
+
+}
+.toolclass
+{
+  background-color: n;
+}
+
+#btmFooter {
+    align-self: flex-end;
+  }
+  .mat-form-field {
+    width: 100%;
+  }
+
+  footer {
+    background-color: #f44336;
+    border: 2px solid rgb(46, 5, 5);
+    text-align: center;
+    padding: 10px;
+    color: beige;
+  }
+  .mat-button:hover{
+    background-color: rgb(13, 14, 13);
+  }
+  .mat-button:active{
+    background-color: rgb(13, 14, 13);
+  }
+
+  img{
+    height: 60px;
+}
+.example-card
+{
+  background-color:#59cfd5;
+  margin-top: 30px;
+
+}
+.title
+{
+  font-weight: 200px;
+}

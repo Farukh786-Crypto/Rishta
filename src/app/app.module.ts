@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './Services/data.service';
 import { MaterialModule } from './material/material.module';
 import { MatSelectModule } from '@angular/material'
-import { ErrorComponent } from './User Module/Error.component';
+import { ErrorComponent } from './UserModule/Error.component';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
  
@@ -21,9 +21,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
 import { viewComponent } from './layout/admin/dashboard/view/view.component';
-import { employeecomponent } from './User Module/Employee/employees.component';
+import { employeecomponent } from './UserModule/Employee/employees.component';
  
 import { EmployeesService } from './shared/employees.service';
+import { UserComponent } from './UserModule/user.component';
  
 
 
@@ -32,6 +33,7 @@ import { EmployeesService } from './shared/employees.service';
   declarations: [
     AppComponent,
     ErrorComponent,
+    
    
   ],
   imports: [
