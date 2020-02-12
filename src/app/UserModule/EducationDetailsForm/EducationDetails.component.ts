@@ -7,11 +7,7 @@ import { EducationService } from './EduacationDetails.service';
 @Component({
 selector:'education-comp',
 templateUrl:'./EducationDetails.component.html',
-<<<<<<< HEAD:src/app/User Module/EducationDetailsForm/EducationDetails.component.ts
-providers: [EducationService]
-=======
 styleUrls : ['../user.component.css']
->>>>>>> 46e8144a82ca1a0a4dd5308694bd83bcc3a4812e:src/app/UserModule/EducationDetailsForm/EducationDetails.component.ts
 })
 export class EducationComponent implements OnInit{
 title:string='Education Demo Component '

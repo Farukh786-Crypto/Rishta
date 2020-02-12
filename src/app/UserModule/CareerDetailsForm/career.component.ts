@@ -5,18 +5,11 @@ import { CareerService } from './career.service';//imported
 import { Observable } from 'rxjs';
 import { CareerProfile } from 'src/app/model';
 @Component({
-<<<<<<< HEAD:src/app/User Module/CareerDetailsForm/career.component.ts
-    selector: 'career-comp',
-    templateUrl: './career.component.html',
-    styleUrls: ['./career.component.css'],
-    providers: [CareerService]
-=======
 selector:'career-comp',
 templateUrl:'./career.component.html',
 styleUrls: ['./career.component.css',
             '../user.component.css'],
 providers: [CareerService]
->>>>>>> 46e8144a82ca1a0a4dd5308694bd83bcc3a4812e:src/app/UserModule/CareerDetailsForm/career.component.ts
 })
 
 
@@ -107,11 +100,7 @@ export class CareerComponent implements OnInit {
             Express: new FormControl('', [Validators.required])
         });
     }
-<<<<<<< HEAD:src/app/User Module/CareerDetailsForm/career.component.ts
-    public CareerPost: any;
-
-    public CareerUser(content: CareerProfile) {
-=======
+ 
     public CareerPost:any;
     
     public CareerUser(content:CareerProfile){
@@ -156,60 +145,10 @@ export class CareerComponent implements OnInit {
                 else {
                     this.city= null;}
                 }       
->>>>>>> 46e8144a82ca1a0a4dd5308694bd83bcc3a4812e:src/app/UserModule/CareerDetailsForm/career.component.ts
+ 
 
-        this.Career.addContent(content).subscribe(res => {
-
-            this.CareerPost = res,
-                this.toastr.success('Sucess!!')
-        },
-            err => { this.CareerPost = err })
-    }
-    express: string;
-    income: number;
-
-    clear() {
-        // this.careerDetails=null;    
-        this.country = '';
-        this.state = '';
-        this.city = '';
-        this.bachlorDegree = '';
-        this.emplyeed = '';
-        this.occupation = '';
-        this.highestDegree = '';
-        this.express = '';
-        this.income = 0;
-
-    }
-
-    onChangeCountry() {
-        alert('hi')
-        // if (CountryId)
-        //  {
-        //     this.Career.getStates(CountryId).subscribe(
-        //         data => {
-        //         this.state = data;
-        //             this.city = null;
-        //         });
-        // }
-        // else {
-        // this.state = null;
-        //     this.city = null;
-
-        // }
+         
     }
 
 
-    onChangeState(StateId: number) {
-        if (StateId) {
-            this.Career.getCities(StateId).subscribe(
-                data => this.city = data
 
-            );
-        }
-        else {
-            this.city = null;
-        }
-    }
-
-}
