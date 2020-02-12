@@ -95,9 +95,13 @@
             <textarea matInput placeholder="Express Yourself!" formControlName="suggestion" required></textarea>
           </mat-form-field>
         </div>
-        <button mat-raised-button color="primary" (click)="FeedbackUser(feedbackDetails.value)">Submit</button>
+        <div class="buttonprimary">
 
-    </form>
+
+          <button mat-raised-button class="button_primary" color="primary" (click)="FeedbackUser(feedbackDetails.value)">Submit</button>
+    
+        </div>
+            </form>
   </mat-card-content>
 
 </mat-card>

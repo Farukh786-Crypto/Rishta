@@ -129,33 +129,4 @@ constructor(private toastr: ToastrService,private astrotreligion:AstroreligionSe
     }
 }
 }
- // editContent(content : Content) {
-    //     this.editFlag = true;
-    //     this.btn_name = 'Update';
-    //     this.contentIdUpdate = content.content_id;  
-    //     // this.contentForm.controls['image'].setValue(content.image);
-    //     // this.contentForm.controls['description'].setValue(content.description);
-    //     // this.contentForm.controls['location'].setValue(content.location); 
-    //     // this.contentForm.controls['menu_id'].setValue(content.menu_id); 
-    //     this.contentForm.patchvalue(content);   
-    // }
-    // updateContent(content : Content) { 
-    //     console.log(content);   
-    //     if(this.contentIdUpdate == null){
-    //       this.content_service.addContent(content).subscribe(  
-    //         () => {  
-    //           // this.contentIdUpdate = null;  
-    //           this.toaster.success('Content added successfully');
-    //           this.contentForm.reset();  
-    //         }
-    //       );  
-    //     }
-    //     else{
-    //       content.content_id = this.contentIdUpdate;
-    //       this.content_service.updateContent(content).subscribe(() => {  
-    //         this.contentIdUpdate = null;
-    //         this.toaster.success('Content updated successfully');
-    //         this.contentForm.reset();  
-    //       });
-    //     }
-    //   }
+ 

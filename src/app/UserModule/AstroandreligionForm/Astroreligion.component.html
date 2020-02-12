@@ -15,10 +15,7 @@
                         <mat-select formControlName="maritalstatus">
                             <mat-option>SELECT</mat-option>
                             <mat-option *ngFor="let maritalstatus of allmaritalstatus" [value]="maritalstatus.marital_status_id">{{maritalstatus.name}}</mat-option>
-                            <!-- <mat-option value="1">Married</mat-option>
-                            <mat-option value="2">UnMarried</mat-option>
-                            <mat-option value="3">Widow</mat-option>
-                            <mat-option value="4">divorced</mat-option> -->
+                           
                         </mat-select>
                     </mat-form-field>
                     <div>
@@ -35,19 +32,7 @@
                         <mat-select formControlName="mothertongue">
                             <mat-option>SELECT</mat-option>
                             <mat-option *ngFor="let mothertongue of allmothertounge" [value]="mothertongue.mothertongue_id">{{mothertongue.mothertongue_name}}</mat-option>
-                            <!-- <mat-option value="1">Hindi</mat-option>
-                            <mat-option value="2">English</mat-option>
-                            <mat-option value="3">Bengali</mat-option>
-                            <mat-option value="4">Marathi</mat-option>
-                            <mat-option value="5">Telugu</mat-option>
-                            <mat-option value="6">Tamil</mat-option>
-                            <mat-option value="7">Gujarati</mat-option>
-                            <mat-option value="8">Urdu</mat-option>
-                            <mat-option value="9">Odia</mat-option>
-                            <mat-option value="10">Malayalam</mat-option>
-                            <mat-option value="11">Punjabi</mat-option>
-                            <mat-option value="12">Sanskrit</mat-option>
-                            <mat-option value="13">Other</mat-option> -->
+                            
                         </mat-select>
                     </mat-form-field>
                     <div>
@@ -64,13 +49,7 @@
                         <mat-label>Religion</mat-label>
                         <mat-select formControlName="religion">
                             <mat-option>SELECT</mat-option>
-                            <!-- <mat-option value="1">Hinduism</mat-option>
-                            <mat-option value="2">Islam</mat-option>
-                            <mat-option value="3">Christianity</mat-option>
-                            <mat-option value="4">Sikhism</mat-option>
-                            <mat-option value="5">Buddhism</mat-option>
-                            <mat-option value="6">Jainism</mat-option>
-                            <mat-option value="7">Others/Religion not specified</mat-option> -->
+                            
                         </mat-select>
                     </mat-form-field>
                     <div>
@@ -86,10 +65,7 @@
                         <mat-label>Caste</mat-label>
                         <mat-select formControlName="caste">
                             <mat-option>SELECT</mat-option>
-                            <!-- <mat-option value="1">Scs</mat-option>
-                            <mat-option value="2">STs</mat-option>
-                            <mat-option value="3">OBSs</mat-option>
-                            <mat-option value="4">Sikhism</mat-option> -->
+                            
                         </mat-select>
                     </mat-form-field>
                     <div>
@@ -106,14 +82,7 @@
                         <mat-label>Sub_Caste</mat-label>
                         <mat-select formControlName="subcaste">
                             <mat-option>SELECT</mat-option>
-                            <!-- <mat-option value="1">Adaviyar</mat-option>
-                            <mat-option value="2">Agri (caste) </mat-option>
-                            <mat-option value="3">Ahir</mat-option>
-                            <mat-option value="4">Ahirwar </mat-option>
-                            <mat-option value="5">Ahluwalia (caste)</mat-option>
-                            <mat-option value="6">Anjana Chaudhari </mat-option>
-                            <mat-option value="7">Arora</mat-option>
-                            <mat-option value="8">Other </mat-option> -->
+                          
                         </mat-select>
                     </mat-form-field>
                     <div>
@@ -130,8 +99,7 @@
                         <mat-select formControlName="devak">
                             <mat-option>SELECT</mat-option>
                             <mat-option *ngFor="let devak of allgetDevak" [value]="devak.devak_id">{{devak.name}}</mat-option>
-                            <!-- <mat-option value="1">Yes</mat-option>
-                            <mat-option value="2">No</mat-option> -->
+                            
                         </mat-select>
                     </mat-form-field>
                     <div>
@@ -149,11 +117,7 @@
                         <mat-select formControlName="gotra">
                             <mat-option>SELECT</mat-option>
                             <mat-option *ngFor="let gotra of allgetDevak" [value]="gotra.gotra_id">{{gotra.name}}</mat-option>
-                            <!-- <mat-option value="1">Andhra Brahmins</mat-option>
-                            <mat-option value="2">Chitpavana Brahmins</mat-option>
-                            <mat-option value="3">Daivajna Brahmins</mat-option>
-                            <mat-option value="4">Deshastha Brahmins</mat-option>
-                            <mat-option value="4">Other</mat-option> -->
+                            
                         </mat-select>
                     </mat-form-field>
                     <div>
@@ -170,15 +134,7 @@
                         <mat-select formControlName="horoscope">
                             <mat-option>SELECT</mat-option>
                             <mat-option *ngFor="let horoscope of allgetHoroscope" [value]="horoscope.horoscope_id">{{horoscope.name}}</mat-option>
-                            <!-- <mat-option value="1">Aries</mat-option>
-                            <mat-option value="2">Taurus </mat-option>
-                            <mat-option value="3">Gemini</mat-option>
-                            <mat-option value="4">Cancer </mat-option>
-                            <mat-option value="5">Leo</mat-option>
-                            <mat-option value="6">Vigro</mat-option>
-                            <mat-option value="7">Libra</mat-option>
-                            <mat-option value="8">Scorpio </mat-option>
-                            <mat-option value="9">Other </mat-option> -->
+                            
                         </mat-select>
                     </mat-form-field>
                     <div>
@@ -196,14 +152,7 @@
                         <mat-select formControlName="nakshtra">
                             <mat-option>SELECT</mat-option>
                             <mat-option *ngFor="let nakshtra of allnakshtra" [value]="nakshtra.nakshtra_id">{{nakshtra.name}}</mat-option>
-                            <!-- <mat-option value="1">Ashvini</mat-option>
-                            <mat-option value="2">Bharani </mat-option>
-                            <mat-option value="3">Krittika</mat-option>
-                            <mat-option value="5">Rohini </mat-option>
-                            <mat-option value="6">Mrigashīrsha</mat-option>
-                            <mat-option value="7">Ardrao </mat-option>
-                            <mat-option value="8">Pushya</mat-option>
-                            <mat-option value="9">Āshleshā </mat-option> -->
+                            
                         </mat-select>
                     </mat-form-field>
                     <div>
@@ -221,8 +170,7 @@
                         <mat-select formControlName="manglik">
                             <mat-option *ngFor="let manglik of allgetManglik" [value]="manglik.manglik_id">{{manglik.name}}</mat-option>
                             <mat-option>SELECT</mat-option>
-                            <!-- <mat-option value="1">Yes</mat-option>
-                            <mat-option value="2">No</mat-option> -->
+             
                         </mat-select>
                     </mat-form-field>
                     <div>
