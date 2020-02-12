@@ -218,12 +218,14 @@
 
                 </div>
             </div>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="onSubmit(FamilyDetailsModel.value)">Submit</button>
+                <button mat-raised-button color="warn">Cancel</button>
+            </mat-card-actions>
         </form>
+        
     </mat-card-content>
-    <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="onSubmit(FamilyDetailsModel.value)">Submit</button>
-        <button mat-raised-button color="warn">Cancel</button>
-    </mat-card-actions>
+   
 </mat-card>
 
 
