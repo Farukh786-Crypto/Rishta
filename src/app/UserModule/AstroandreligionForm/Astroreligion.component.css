@@ -1,10 +1,10 @@
- .example-card {
-    max-width: 600px;
-    margin: 0px auto;
-    height: 100%;
+.example-card {
+  max-width: 500px;
+  margin: 20px auto;
+  height: 100%;
   
-    /* background-color: lightcoral; */
-  }
+
+}
 
   .mat-form-field-wrapper{
     width: 600px !important;

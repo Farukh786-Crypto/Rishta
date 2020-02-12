@@ -1,27 +1,4 @@
-<!-- <h1>{{title}}</h1> -->
-
-
-
-
-<!-- <div class="container">
-    <!- Trigger the modal with a button -->
-    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open</button> -->
-
-    <!-- Modal -->
-
-    <!-- <div class="modal fade" id="myModal6" role="dialog">
-=======
-    <div class="modal fade" id="myModal5" role="dialog">
-
-        <div class="modal-dialog">
-
-            <! Modal content-->
-            <!-- <div class="modal-content">
-                <div class="modal-header">
-                    <! <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-                    <!-- <h4 class="modal-title">Personal Details Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div> -->  
+  
                 <div class="modal-body">
                     <h4 class="modal-title">Personal Details Form</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -38,20 +15,10 @@
                                 <div class="form-group">
                                     <select class="form-control" formControlName="blood_group" required>
                                         <option value="">SELECT</option>
-                                        <option>A<sup>+</sup></option>
-                                        <option>A<sup>-</sup></option>
-                                        <option>B<sup>+</sup></option>
-                                        <option>B<sup>-</sup></option>
-                                        <option>AB<sup>+</sup></option>
-                                        <option>AB<sup>-</sup></option>
-                                        <option>O<sup>+</sup></option>
-                                        <option>O<sup>-</sup></option>
+                                        
                                     </select>
 
-                                    <!-- <div class="alert alert-danger"
-                                        *ngIf="isSubmitted && PersonalDetails.get('Country').hasError('required')|| (PersonalDetails.get('Country').touched">
-                                        Country is required.
-                                    </div> -->
+                                   
                                     <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['blood_group'].hasError('required')&&
     (PersonalDetails.controls.blood_group.touched ||PersonalDetails.controls['blood_group'].dirty|| isSubmitted)">
                                         blood_group is required.
@@ -132,36 +99,6 @@
 
                         </div>
 
-
-<!-- 
-                        <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="form-group">
-                                    <label for="text">Personality<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="personality" required>
-                                        <option value="">SELECT</option>
-                                        <option> </option>
-                                        <option> </option>
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
-                                        <option> </option>
-                                        <option> </option>
-                                        <option></option>
-                                    </select>
-                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['personality'].hasError('required')&&
-    (PersonalDetails.controls.personality.touched ||PersonalDetails.controls['personality'].dirty|| isSubmitted)">
-                                        physical_disability In required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div> -->
 
 
 
@@ -350,13 +287,3 @@
 
                     </form>
                 </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-default"
-                        (click)="onSubmit(PersonalDetails.value)">SUBMIT</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div> -->
