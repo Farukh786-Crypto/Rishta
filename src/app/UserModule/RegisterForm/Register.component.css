@@ -18,6 +18,28 @@ color: navy;
 
 }
 
+/* .radiobuttonclass{
+    padding-bottom: 2px;
+} */
+
+.buttonprimary{
+  max-width: 300px;
+  margin-left: 70px;
+  
+} 
+.buttonclass{
+  margin-left: 8px;
+  
+}
+.mat-input-wrapper{
+  width:600px !important;
+}
+.radiobuttonclass{
+    margin-bottom: 18px;
+}
+/* .mat-form-field {
+  width: 100%;
+} */
 .example-container
 {
     max-width: 300px;
