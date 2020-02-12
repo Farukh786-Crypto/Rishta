@@ -26,6 +26,7 @@ export class ProfileDetailsComponent implements OnInit {
 
 
     this.ProfileDetails = new FormGroup({
+      create_profile_by: new FormControl('', [Validators.required]),
       Name: new FormControl('', Validators.required),
       Dob: new FormControl('', Validators.required),
       religion: new FormControl('', Validators.required),

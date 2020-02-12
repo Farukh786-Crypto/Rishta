@@ -52,7 +52,7 @@ export class RegisterFormComponent {
             mobile: new FormControl('', [Validators.required, Validators.pattern(/^(\+\d{0,1,3}[- ]?)?\d{10}$/)]),
            // password: new FormControl('', [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]),
             mobileno: new FormControl('', [Validators.required, Validators.pattern(/^(\+\d{0,1,3}[- ]?)?\d{10}$/)]),
-            create_profile_by: new FormControl('', [Validators.required]),
+            // create_profile_by: new FormControl('', [Validators.required]),
             gender: new FormControl('male', [Validators.required]),
             date:new FormControl(new Date())
 
