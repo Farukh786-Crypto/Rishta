@@ -1,10 +1,10 @@
- .example-card {
-    max-width: 600px;
-    margin: 0px auto;
-    height: 100%;
+.example-card {
+  max-width: 500px;
+  margin: 20px auto;
+  height: 100%;
   
-    /* background-color: lightcoral; */
-  }
+
+}
 
   .mat-form-field-wrapper{
     width: 600px !important;
@@ -31,32 +31,3 @@
   {
       text-align: center;
   }
-/*    .mat-hint{
-    padding: 10px 0 10px 0;
-  }
-  
-  .example-container {
-      width: 100%;
-    display: flexbox;
-    flex-direction: column;
-  }
-  
-  .example-container > * {
-    width: 100%;
-  }
-  .example-right-align {
-    text-align: right;
-  }
-  
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-  
-  
-  
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-  
-   */

@@ -15,6 +15,9 @@ background-color: black;
 #btmFooter {
     align-self: flex-end;
   }
+  .mat-form-field {
+    width: 100%;
+  }
 
   footer {
     background-color: #f44336;
