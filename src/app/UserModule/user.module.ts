@@ -12,9 +12,6 @@ import {UsersAuthGuard} from '../Guard/users-auth.guard'
 import { from } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../material/material.module';
-
-
-
 const route: Routes = [
     {
         path: '', component: UserComponent, children: [

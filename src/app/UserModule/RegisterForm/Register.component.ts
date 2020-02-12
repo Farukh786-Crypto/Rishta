@@ -14,7 +14,8 @@ export interface profCreated {
 
     selector: 'register-comp',
     templateUrl: './Register.component.html',
-    styleUrls: ['./Register.component.css'],
+    styleUrls: ['./Register.component.css',
+                  '../user.component.css'],
     providers: [RegService]
 
 })

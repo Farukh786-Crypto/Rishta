@@ -3,7 +3,8 @@ import { ToastrService } from 'ngx-toastr';
 import { FormGroup, FormControl, Validators,NgForm } from '@angular/forms'
 @Component({
 selector:'Lifestyle-Comp',
-templateUrl:'./LifestyleDetails.component.html'
+templateUrl:'./LifestyleDetails.component.html',
+styleUrls:['../user.component.css']
 
  
 })

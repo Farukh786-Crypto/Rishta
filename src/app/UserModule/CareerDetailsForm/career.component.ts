@@ -7,7 +7,8 @@ import { CareerProfile } from 'src/app/model';
 @Component({
 selector:'career-comp',
 templateUrl:'./career.component.html',
-styleUrls: ['./career.component.css'],
+styleUrls: ['./career.component.css',
+            '../user.component.css'],
 providers: [CareerService]
 })
 

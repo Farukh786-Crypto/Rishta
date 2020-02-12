@@ -7,7 +7,7 @@ export const MyRoute: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', loadChildren: './login/login.module#LoginModule' },
     { path: 'admin', loadChildren: './layout/layout.module#LayoutModule',canActivate:[AdminAuthGuard]},
-    { path: 'users', loadChildren: './User Module/user.module#UserModule',canActivate:[UsersAuthGuard]},
+    { path: 'users', loadChildren: './UserModule/user.module#UserModule',canActivate:[UsersAuthGuard]},
     // { path: 'sign-up', loadChildren: './signup/signup.module#SignupModule' },
     { path: '**', component: ErrorComponent }
 ]

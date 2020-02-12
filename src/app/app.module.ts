@@ -33,7 +33,7 @@ import { UserComponent } from './UserModule/user.component';
   declarations: [
     AppComponent,
     ErrorComponent,
-    UserComponent
+    
    
   ],
   imports: [

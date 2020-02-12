@@ -6,7 +6,8 @@ import { analyzeAndValidateNgModules } from '@angular/compiler';
 
   selector: 'app-family-details',
   templateUrl: './Family-details.component.html',
-  styleUrls:['./Family-details.component.css']
+  styleUrls:['./Family-details.component.css',
+               '../user.component.css']
 
 })
 export class FamilyDetailsComponent {

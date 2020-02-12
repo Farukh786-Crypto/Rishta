@@ -7,7 +7,10 @@ margin-left: 1050px;
 background-color: black;
 
 }
-
+.toolclass
+{
+  background-color: n;
+}
 
 #btmFooter {
     align-self: flex-end;
@@ -29,4 +32,14 @@ background-color: black;
 
   img{
     height: 60px;
+}
+.example-card
+{
+  background-color:#59cfd5;
+  margin-top: 30px;
+
+}
+.title
+{
+  font-weight: 200px;
 }

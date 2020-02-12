@@ -4,7 +4,8 @@ import { ToastrService } from 'ngx-toastr';
  
 @Component({
 selector:'education-comp',
-templateUrl:'./EducationDetails.component.html'
+templateUrl:'./EducationDetails.component.html',
+styleUrls : ['../user.component.css']
 })
 
 export class EducationComponent{

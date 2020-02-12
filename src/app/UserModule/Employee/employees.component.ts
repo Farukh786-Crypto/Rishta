@@ -3,7 +3,8 @@ import { EmployeesService } from 'src/app/shared/employees.service';
 
 @Component({
 selector:'app-employees',
-templateUrl:'./employees.component.html'
+templateUrl:'./employees.component.html',
+styleUrls:['../user.component.css']
 
 })
 export class employeecomponent{
