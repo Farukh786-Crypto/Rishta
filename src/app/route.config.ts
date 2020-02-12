@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router'
-import { ErrorComponent } from './User Module/Error.component'
+import { ErrorComponent } from './UserModule/Error.component'
 import {AuthGuard} from './Guard/auth.guard';
 import { AdminAuthGuard } from './Guard/admin-auth.guard';
 import { UsersAuthGuard } from './Guard/users-auth.guard';
