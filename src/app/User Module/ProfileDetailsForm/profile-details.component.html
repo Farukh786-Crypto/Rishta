@@ -122,7 +122,7 @@
 
               <mat-form-field>
                 <mat-label>Religion:</mat-label>
-                <mat-select formControlName="religion" (change)="onChangeReligion($event.target.value);">
+                <mat-select formControlName="religion" (change)="onChangeReligion($event.Mothertng.mothertongue_id);">
                   <mat-option value="">SELECT</mat-option>
                   <mat-option *ngFor="let religion of allreligions" value={{religion.religion_id}}>{{religion.religion_name}}</mat-option>
                   <!-- <mat-option value="Muslim">Muslim</mat-option>
@@ -211,7 +211,7 @@
                   <mat-label>Sub Caste:</mat-label>
                   <mat-select formControlName="SubCaste">
                     <mat-option value="">SELECT</mat-option>
-                    <mat-option *ngFor="let SubCaste of allsubcastes" [value]="SubCaste.subcaste_id">{{SubCaste.subcaste_name}}</mat-option>
+                    <mat-option *ngFor="let SubCaste of allsubcastes" value={{SubCaste.subcaste_id}}>{{SubCaste.subcaste}}</mat-option>
                     <!-- <mat-option value="Patil">Patil</mat-option>
                     <mat-option value="Muslim">Muslim</mat-option>
                     <mat-option value="Deshmukh">Deshmukh</mat-option>

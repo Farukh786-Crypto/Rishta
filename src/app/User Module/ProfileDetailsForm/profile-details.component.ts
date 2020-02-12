@@ -51,6 +51,10 @@ export class ProfileDetailsComponent implements OnInit {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
     }, 2000);
+
+
+
+    
   }
 
   // public GetAllMothertounge()
@@ -62,17 +66,9 @@ export class ProfileDetailsComponent implements OnInit {
       data => this.allreligions = data
     );
   }
-  // onChangeReligion(religion_Id: number) {
-  //    if (religion_Id) {
-  //     this.pd.getCaste(religion_Id).subscribe(
-  //       data => 
-  //         this.allcastes = data;
-  //         this.allsubcastes = null;}
+  
 
-  //     );
-
-
-  onChangeReligion(religion_id: number) {
+  public onChangeReligion(religion_id: number) {
    
     if (religion_id) {
       this.pd.getCaste(religion_id).subscribe(
@@ -87,6 +83,15 @@ export class ProfileDetailsComponent implements OnInit {
 
     }
   }
+  // onChangeReligion(religion_Id: number) {
+  //    if (religion_Id) {
+  //     this.pd.getCaste(religion_Id).subscribe(
+  //       data => 
+  //         this.allcastes = data;
+  //         this.allsubcastes = null;}
+
+  //     );
+
   onChangeSubCaste(caste_id: number) {
     if (caste_id) {
       this.pd.getSubcaste(caste_id).subscribe(
