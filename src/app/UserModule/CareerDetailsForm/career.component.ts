@@ -5,18 +5,11 @@ import { CareerService } from './career.service';//imported
 import { Observable } from 'rxjs';
 import { CareerProfile } from 'src/app/model';
 @Component({
-<<<<<<< HEAD:src/app/User Module/CareerDetailsForm/career.component.ts
-    selector: 'career-comp',
-    templateUrl: './career.component.html',
-    styleUrls: ['./career.component.css'],
-    providers: [CareerService]
-=======
 selector:'career-comp',
 templateUrl:'./career.component.html',
 styleUrls: ['./career.component.css',
             '../user.component.css'],
 providers: [CareerService]
->>>>>>> b8810a2deae5cc7300ac13c7880a00726e404e44:src/app/UserModule/CareerDetailsForm/career.component.ts
 })
 
 
@@ -108,69 +101,6 @@ export class CareerComponent implements OnInit {
             Express: new FormControl('', [Validators.required])
         });
     }
-<<<<<<< HEAD:src/app/User Module/CareerDetailsForm/career.component.ts
-    public CareerPost: any;
-
-    public CareerUser(content: CareerProfile) {
-
-        this.Career.addContent(content).subscribe(res => {
-
-            this.CareerPost = res,
-                this.toastr.success('Sucess!!')
-
-
-        },
-            err => { this.CareerPost = err })
-
-
-    }
-    express: string;
-    income: number;
-    clear() {
-        this.careerDetails = null
-
-
-    }
-
-
-
-
-
-
-
-    //firstCareerId: number=1;
-
-
-
-    onChangeCountry(CountryId: number) {
-        if (CountryId) {
-            this.Career.getStates(CountryId).subscribe(
-                data => {
-                this.state = data;
-                    this.city = null;
-                });
-        }
-        else {
-        this.state = null;
-            this.city = null;
-
-        }
-    }
-
-
-
-    onChangeState(StateId: number) {
-        if (StateId) {
-            this.Career.getCities(StateId).subscribe(
-                data => this.city = data
-
-            );
-        }
-        else {
-            this.city = null;
-        }
-    }
-=======
     public CareerPost:any;
     
     public CareerUser(content:CareerProfile){
@@ -215,7 +145,6 @@ export class CareerComponent implements OnInit {
                 else {
                     this.city= null;}
                 }       
->>>>>>> b8810a2deae5cc7300ac13c7880a00726e404e44:src/app/UserModule/CareerDetailsForm/career.component.ts
 
 
 }
