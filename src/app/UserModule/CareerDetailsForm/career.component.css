@@ -14,6 +14,9 @@
     color: navy;
      
 }
+.mat-form-field{
+    width:100%;
+}
 
 .mat-card-header .mat-card-title {
   font-size: 25px;
