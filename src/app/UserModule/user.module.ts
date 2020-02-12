@@ -4,15 +4,14 @@ import { CommonModule } from '@angular/common';
 import { UserComponent } from './user.component';
 import { HeaderFooterComponent } from './MasterPage/header-footer.component';
 
+
 import { MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from "@angular/material";
 //import { FlexLayoutModule } from "@angular/flex-layout";
 
 import {UsersAuthGuard} from '../Guard/users-auth.guard'
 import { from } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
-
-
-
+import { MaterialModule } from '../material/material.module';
 const route: Routes = [
     {
         path: '', component: UserComponent, children: [
@@ -39,6 +38,7 @@ const route: Routes = [
     MatListModule,
     MatIconModule,
     MatButtonModule,
+    MaterialModule,
    // FlexLayoutModule,
    HttpClientModule,
     RouterModule.forChild(route)

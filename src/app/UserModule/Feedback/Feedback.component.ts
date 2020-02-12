@@ -7,7 +7,8 @@ import { feedbackprofile } from 'src/app/model';
 @Component({
     selector: 'Feedback-comp',
     templateUrl: './Feedback.component.html',
-    styleUrls: ['Feedback.component.css'],
+    styleUrls: ['Feedback.component.css',
+                '../user.component.css'],
     providers: [FeedbackService]
 })
 

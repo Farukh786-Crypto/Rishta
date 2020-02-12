@@ -3,10 +3,13 @@ import{FormControl, Validators,FormGroup}from'@angular/forms'
 import { ToastrService } from 'ngx-toastr';
 import { AstroreligionService } from './Astroreligion.service';
 import { AstroandReligion } from 'src/app/model';
+
+
 @Component({
     selector:'Astroreligion-comp',
     templateUrl:'./Astroreligion.component.html',
-    styleUrls: ['./Astroreligion.component.css'],
+    styleUrls: ['./Astroreligion.component.css',
+                '../user.component.css'],
     providers: [AstroreligionService]
 })
 export class AstroreligionComponent{
@@ -15,6 +18,16 @@ AstroreligionDetails:FormGroup
 str:string
 disabled:boolean
 isSubmitted:boolean;
+allmaritalstatus:{};
+allmothertounge:{};
+allreligions:{};
+allcastes:{};
+allsubcastes:{};
+allgetDevak:{};
+allgetGotra:{};
+allgetHoroscope:{};
+allnakshtra:{};
+allgetManglik:{};
 constructor(private toastr: ToastrService,private astrotreligion:AstroreligionService){
 
     this.AstroreligionDetails=new FormGroup({
@@ -34,23 +47,69 @@ constructor(private toastr: ToastrService,private astrotreligion:AstroreligionSe
     astroreligion: AstroandReligion[];
 
     ngOnInit() {
-        this.getAllAstroreligion();
-        // this.empSrv.getAllEmployees().subscribe(data => this.allEmployee = data)
+
+        /** spinner starts on init */
+    // this.spinner.show();
+
+    this.astrotreligion.getMaritalStatus().subscribe(
+        maritaldata=>this.allmaritalstatus=maritaldata
+
+    );
+    this.astrotreligion.getMothertounge().subscribe(
+      data=>this.allmothertounge=data
+      );
+    this.astrotreligion.getReligion().subscribe(
+        data=>this.allreligions=data
+      );
+
+      this.astrotreligion.getDevak().subscribe(
+            devakdata=>this.allgetDevak=devakdata
+      );
+
+      this.astrotreligion.getGotra().subscribe(
+          gotradata=>this.allgetGotra=gotradata
+      );
+
+      this.astrotreligion.getHoroscope().subscribe(
+          horoscopedata=>this.allgetHoroscope=horoscopedata
+      );
+
+    this.astrotreligion.getnakshtra().subscribe(
+        nakshtradata=>this.allnakshtra=nakshtradata
+    );
+    this.astrotreligion.getManglik().subscribe(
+        manglikdata=>this.allgetManglik=manglikdata
+    );
+    // setTimeout(() => {
+      /** spinner ends after 5 seconds */
+    //   this.spinner.hide();
+    // }, 2000);
+
       }
 
-    getAllAstroreligion() 
-    {
-        this.astrotreligion.getAllAstroreligion().subscribe(
-              (data: AstroandReligion[]) =>
-            {
-                this.astroreligion = data;
-            },
-              (error) => 
-            {
-                this.astroreligion = error;
+      onChangeSubCaste(caste_id: number) {
+        // if (religion_Id) {
+          this.astrotreligion.getSubcaste(caste_id).subscribe(
+            data => 
+              this.allsubcastes = data
+             // this.subcastes = null;
+            
+          );
             }
-        )
-    }
+
+    // getAllAstroreligion() 
+    // {
+    //     this.astrotreligion.getAllAstroreligion().subscribe(
+    //           (data: AstroandReligion[]) =>
+    //         {
+    //             this.astroreligion = data;
+    //         },
+    //           (error) => 
+    //         {
+    //             this.astroreligion = error;
+    //         }
+    //     )
+    // }
    
     onSubmit(data:any)
     {

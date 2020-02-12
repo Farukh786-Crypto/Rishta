@@ -3,7 +3,8 @@ import { FormControl, Validators, FormGroup } from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
 @Component({
     selector: 'personaldetail-comp',
-    templateUrl: './personaldetails.component.html'
+    templateUrl: './personaldetails.component.html',
+    styleUrls:['../user.component.css']
 })
 
 export class PersonalDetailsComponent {

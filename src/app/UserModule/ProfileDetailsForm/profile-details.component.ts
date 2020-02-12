@@ -7,7 +7,8 @@ import { ProfileDetailsService } from './profile-details.service';
 @Component({
   selector: 'app-profile-details',
   templateUrl: './profile-details.component.html',
-  styleUrls: ['./profile-details.component.css'],
+  styleUrls: ['./profile-details.component.css',
+              '../user.component.css'],
   providers:[ProfileDetailsService]
 })
 export class ProfileDetailsComponent implements OnInit{
