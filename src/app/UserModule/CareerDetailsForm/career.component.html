@@ -1,15 +1,15 @@
-{{getCareerInfo|json}}
-<!-- <button type="submit" (click)="SaveCareerInfo()"> Get </button> -->
-<button type="submit" (click)="call_to_service()"> Get </button>
+<!-- {{getCareerInfo|json}}
+<!<button type="submit" (click)="SaveCareerInfo()"> Get </button> -->
+<!-- <button type="submit" (click)="call_to_service()"> Get </button> --> 
 <mat-card class="example-card">
-
-  <mat-card-title style="text-align:center"><b>
-      <h2>Career Details</h2>
+  <mat-card-header>
+  <mat-card-title><b>
+      Career Details
     </b> </mat-card-title>
-
+</mat-card-header>
   <mat-card-content>
-    <form [formGroup]="careerDetails">
-      <div class="example-container">
+    <form [formGroup]="careerDetails" class="form">
+      <div   class="example-container">
       <div class="form-group">
         <mat-form-field>
           <mat-label> Country </mat-label>
@@ -154,8 +154,7 @@
       <div class="form-group">
         <mat-form-field class="demo-full-width">
           <textarea matInput placeholder="Express Yourself!" formControlName="Express">
-
-                                </textarea>
+           </textarea>
           <mat-error>
             <span
               *ngIf="careerDetails.controls['Express'].hasError('required')&&
@@ -164,9 +163,11 @@
           </mat-error>
         </mat-form-field>
       </div>
+      <div class="form-group">
       <button mat-raised-button color="primary" (click)="CareerUser(careerDetails.value)">SUBMIT</button>
       <!-- <button mat-raised-button color="warn" (click)="SaveCareerInfo()"style="margin-left: 20px;">Save</button>  -->
-      <button mat-raised-button color="warn" (click)="clear()" style="margin-left: 20px;">CLEAR</button>
+      <button class="button" mat-raised-button color="warn" (click)="clear()"  >CLEAR</button>
+    </div>
     </div>
     </form>
   </mat-card-content>
