@@ -3,7 +3,7 @@
 .example-card {
   max-width: 600px;
   margin: 0px auto;
-  height: 100%;
+  height: auto;
   margin-top:20px ;
    
 }
@@ -28,7 +28,7 @@ color: navy;
 }
 .button
 {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .form
 {
