@@ -25,6 +25,7 @@ Food: new FormControl('', [Validators.required]),
 Books: new FormControl('', [Validators.required]),
 Favouritefood: new FormControl('', [Validators.required]),
 sports: new FormControl('', [Validators.required]),
+
 Music: new FormControl('', [Validators.required]),
 Interests: new FormControl('', [Validators.required]),
 Destination: new FormControl('', [Validators.required]),
