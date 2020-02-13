@@ -18,9 +18,9 @@ title:string='Lifestyle Component demo'
 constructor(private toastr: ToastrService,  ){
   this.LifestyleModel = new FormGroup({
     
-house: new FormControl('', [Validators.required]),
-car: new FormControl('', [Validators.required]),
-//Languages: new FormControl('', [Validators.required]),
+//house: new FormControl('', [Validators.required]),
+//car: new FormControl('', [Validators.required]),
+Languages: new FormControl('', [Validators.required]),
 Food: new FormControl('', [Validators.required]),
 Books: new FormControl('', [Validators.required]),
 Favouritefood: new FormControl('', [Validators.required]),

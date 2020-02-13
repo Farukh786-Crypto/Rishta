@@ -4,12 +4,23 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
     selector: 'personaldetail-comp',
     templateUrl: './personaldetails.component.html',
-    styleUrls:['../user.component.css']
+    styleUrls:['../user.component.css','./personaldetails.component.css']
 })
 
 export class PersonalDetailsComponent {
     title: string = 'PersonalDetails Component '
     PersonalDetails: FormGroup
+    Blood_group:   {};
+            Height:   {};
+            Body_type:  {};             
+            Physical_disability:   {};
+            Lens:   {};
+            Spectacle:  {};
+            Complexion:   {};
+            NRIS:   {};
+            Smoking:   {};
+            Drinking:  {};
+            Eating_habits:  {};
     str: string
     disabled: boolean
     isSubmitted: boolean;
@@ -28,7 +39,7 @@ export class PersonalDetailsComponent {
             NRI: new FormControl('', [Validators.required]),
             smoking: new FormControl('', [Validators.required]),
             drinking: new FormControl('', [Validators.required]),
-            editing_habits: new FormControl('', [Validators.required]),
+            eating_habits: new FormControl('', [Validators.required]),
 
         })
 
