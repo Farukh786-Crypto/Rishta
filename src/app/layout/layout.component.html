@@ -10,13 +10,13 @@
   </mat-toolbar-row>
   <mat-toolbar-row>
     <div>
-      <a routerLink="./dashboard"><button mat-button [matMenuTriggerFor]="menu">Dashboard</button></a>
+      <a routerLink="./dashboard" style="color: white;"><button mat-button [matMenuTriggerFor]="menu">Dashboard</button></a>
       <mat-menu #menu="matMenu">
         <a routerLink="./grooms"><button class="mat-menu-item">Grooms</button></a>
         <a routerLink="./brides"><button mat-menu-item>Brides</button></a>
       </mat-menu>
-      <a routerLink="./matches"><button mat-button>Matches </button></a>
-      <a mat-button > Packages </a>
+      <a routerLink="./matches" style="color: white;"><button mat-button>Matches </button></a>
+      <a routerLink="./packages" style="color: white;"><button mat-button > Packages </button> </a>
       <a mat-button > Payment </a>
       <a><button mat-button [matMenuTriggerFor]="menu2">User</button></a>
       <mat-menu #menu2="matMenu">

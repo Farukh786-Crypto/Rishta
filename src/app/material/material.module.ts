@@ -33,6 +33,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { LayoutModule } from '@angular/cdk/layout';
 
 const MaterialComponents=[
 
@@ -60,6 +61,15 @@ const MaterialComponents=[
     MatCheckboxModule,
     MatRadioModule,
     MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
     MatFormFieldModule,
     MatListModule,
     MatDatepickerModule,
@@ -67,6 +77,8 @@ const MaterialComponents=[
     CdkStepperModule,
     CdkTableModule,
     CdkTreeModule,
+    MatSortModule,  
+    MatPaginatorModule,
     DragDropModule,
     MatAutocompleteModule,
     MatBadgeModule,
@@ -115,7 +127,7 @@ const MaterialComponents=[
 @NgModule({
   
 
-  imports: [MaterialComponents,],
+  imports: [MaterialComponents],
   exports: [MaterialComponents]  
 
   })
