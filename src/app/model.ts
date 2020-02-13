@@ -55,3 +55,17 @@ export class EducationProfile{
     graduationDegree:string;
     AEduacation:string;
 }
+export class LifestyleProfile{
+    house:  string;
+car:  string;
+Languages: string;
+Food:  string;
+Books:  string;
+Favouritefood:string;  
+sports:  string;
+Interests: string; 
+Destination: string; 
+Movies: string;
+drink:  string;
+smoke:  string;     
+}

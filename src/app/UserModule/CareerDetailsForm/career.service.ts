@@ -2,8 +2,7 @@ import {Injectable} from '@angular/core'
 import { HttpClient, HttpHeaders ,HttpErrorResponse} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CareerProfile } from 'src/app/model';
-import { throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+ 
 
 @Injectable()
  
