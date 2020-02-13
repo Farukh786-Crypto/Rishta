@@ -25,14 +25,13 @@ export class CareerComponent implements OnInit {
     emplyeed: {};
     occupation: {};
 
-    //CareerService: any;
+
+    CareerService: any;
     constructor(private toastr: ToastrService, private Career: CareerService) { }
     call_to_service() {
         this.SaveCareerInfo();
-        this.SaveCareerInfo1();
-        this.SaveCareerInfo2();
+        
     }
-
     //firstCareerId: number=1;
     public getCareerInfo: any;
     public getCareerInfo1: any;
@@ -49,6 +48,61 @@ export class CareerComponent implements OnInit {
 
         this.careerDetails.patchValue(this.getCareerInfo[0])
     }
+    // public SaveCareerInfo1() {
+    //     //console.log("hhhhh")
+    //     this.Career.getOne().subscribe(res => {
+    //     this.getCareerInfo1 = res,
+    //         console.log(JSON.stringify(res))
+    //     },
+    //         err => { this.getCareerInfo1 = err })
+
+    //     this.careerDetails.patchValue(this.getCareerInfo1[0])
+    // }
+    // public SaveCareerInfo2() {
+    //     //console.log("hhhhh")
+    //     this.Career.getTwo().subscribe(res => {
+    //     this.getCareerInfo2 = res,
+    //         console.log(JSON.stringify(res))
+    //     },
+    //         err => { this.getCareerInfo2 = err })
+
+    //     this.careerDetails.patchValue(this.getCareerInfo2[0])
+    // }
+    // public SaveCareerInfo3() {
+    //     //console.log("hhhhh")
+    //     this.Career.getThree().subscribe(res => {
+    //     this.getCareerInfo3 = res,
+    //         console.log(JSON.stringify(res))
+    //     },
+    //         err => { this.getCareerInfo3 = err })
+
+    //     this.careerDetails.patchValue(this.getCareerInfo3[0])
+    // }
+
+
+
+    // ngOnInit() {
+
+    //     this.Career.getCountries().subscribe(
+    //         data => this.country = data
+    //     );
+
+    // //firstCareerId: number=1;
+    // public getCareerInfo: any;
+    // public getCareerInfo1: any;
+    // public getCareerInfo2: any;
+    // public getCareerInfo3: any;
+
+    // public SaveCareerInfo() {
+    //     //console.log("hhhhh")
+    //     this.Career.getall().subscribe(res => {
+    //     this.getCareerInfo = res,
+    //         console.log(JSON.stringify(res))
+    //     },
+    //         err => { this.getCareerInfo = err })
+
+    //     this.careerDetails.patchValue(this.getCareerInfo[0])
+    // }
     public SaveCareerInfo1() {
         //console.log("hhhhh")
         this.Career.getOne().subscribe(res => {
@@ -79,11 +133,7 @@ export class CareerComponent implements OnInit {
 
         this.careerDetails.patchValue(this.getCareerInfo3[0])
     }
-
-
-
     ngOnInit() {
-
         this.Career.getCountries().subscribe(
             data => this.country = data
         );
@@ -112,16 +162,14 @@ export class CareerComponent implements OnInit {
                     
                     
                     },
-                     err=>{this.CareerPost=err})
-                     
+                     err=>{this.CareerPost=err})              
                     
            }
     express:string;
     income:number;
     clear(){
         this.careerDetails=null    }
-       
- 
+        
         onChangeCountry(CountryId:number) {
             if(CountryId){
                 this.Career.getStates(CountryId).subscribe(
@@ -133,8 +181,6 @@ export class CareerComponent implements OnInit {
 
         }             } 
 
-
-
             onChangeState(StateId:number) {
                 if(StateId){
                     this.Career.getCities(StateId).subscribe(
@@ -145,10 +191,5 @@ export class CareerComponent implements OnInit {
                 else {
                     this.city= null;}
                 }       
- 
-
-         
+          
     }
-
-
-

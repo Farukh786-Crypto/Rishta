@@ -1,0 +1,383 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title> Profile Details </mat-card-title>
+    <!-- <button mat-raised-button class="close" data-dismiss="modal">&times;</button> -->
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="ProfileDetails" class="form">
+
+      <div class="example-container">
+      <!-- <div class="container"> -->
+<!-- 
+        <div class="col-md-12">
+
+        </div> -->
+        
+        <tr>
+          <td>
+            <div class="">
+
+              <!-- <label class="left mandatory">Bride's Name</label>
+                  <input type="text" class="form-control" formControlName="Name" placeholder="Enter the Name">
+                  <span *ngIf="ProfileDetails.get('Name').hasError('required') &&
+                    (ProfileDetails.get('Name').touched || ProfileDetails.get('Name').dirty|| isSubmitted)"
+                    class="text-danger" padding>
+                    Name is a required field.</span> -->
+              <!-- <div class="col-md-5">
+                     
+                      </div> -->
+
+                </div>
+              </td>
+            </tr>
+
+        <tr>
+          <td>
+            <div class="form-group">
+              <div class="">
+                <!-- <label class="left mandatory">Date of Birth</label>
+                    <input type="date" class="form-control" formControlName="Dob">
+                    <span *ngIf="ProfileDetails.get('Dob').hasError('required') &&
+                    (ProfileDetails.get('Dob').touched || ProfileDetails.get('Dob').dirty|| isSubmitted)"
+                      class="text-danger" padding>
+                      Date is a required field.</span> -->
+
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="Dob">
+                  <mat-error *ngIf="ProfileDetails.get('Dob').hasError('required') &&
+                        (ProfileDetails.get('Dob').touched || ProfileDetails.get('Dob').dirty|| isSubmitted)"
+                    class="text-danger" padding>
+                    Date is a required field.</mat-error>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+
+              </div>
+
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-group">
+
+              <div class="">
+                <!-- <label class="left mandatory">Mother tongue</label>
+                    <select class="form-control" formControlName="Mothertng">
+                      <option value="">SELECT</option>
+                      <option>Marathi</option>
+                      <option>Hindi</option>
+                      <option>Kannada</option>
+                      <option>English</option>
+                      <option>Sikkim</option>
+                      <option>Assamese</option>
+                      <option>Bengali</option>
+                      <option>Oriya</option>
+                      <option>Tamil</option>
+                      <option>Telugu</option>
+                    </select> -->
+                <mat-form-field>
+                  <mat-label>Mother tongue:</mat-label>
+                  <mat-select formControlName="Mothertng">
+                    <mat-option value="">SELECT</mat-option>
+                    <mat-option *ngFor="let Mothertng of mothertounge" [value]="Mothertng.mothertongue_id">{{Mothertng.mothertongue_name}}</mat-option>
+                    <!-- <mat-option value="Hindi">Hindi</mat-option>
+                    <mat-option value="Kannada">Kannada</mat-option>
+                    <mat-option value="English">English</mat-option>
+                    <mat-option value="Sikkim">Sikkim</mat-option>
+                    <mat-option value="Bengali">Bengali</mat-option>
+                    <mat-option value="Oriya">Oriya</mat-option>
+                    <mat-option value="Tamil">Tamil</mat-option>
+                    <mat-option value="Telugu">Telugu</mat-option> -->
+                  </mat-select>
+                </mat-form-field>
+                <mat-error *ngIf="ProfileDetails.get('Mothertng').hasError('required') &&
+                      (ProfileDetails.get('Mothertng').touched || ProfileDetails.get('Mothertng').dirty|| isSubmitted)"
+                  class="text-danger" padding>
+                  Mother tongue is a required field.</mat-error>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="">
+              <!-- <label class="left mandatory">Religion</label>
+                  <select class="form-control" formControlName="religion">
+                    <option value="" disabled>SELECT</option>
+                    <option>Hindu</option>
+                    <option>Muslim</option>
+                    <option>Sikh</option>
+                    <option>Christian</option>
+                    <option>Buddhist</option>
+                    <option>Jain</option>
+                    <option>Parsi</option>
+                    <option>Jewish</option>
+                    <option>Bahai</option>
+
+                  </select> -->
+
+              <mat-form-field>
+                <mat-label>Religion:</mat-label>
+                <mat-select formControlName="religion" (change)="onChangeReligion($event.Mothertng.mothertongue_id);">
+                  <mat-option value="">SELECT</mat-option>
+                  <mat-option *ngFor="let religion of allreligions" value={{religion.religion_id}}>{{religion.religion_name}}</mat-option>
+                  <!-- <mat-option value="Muslim">Muslim</mat-option>
+                  <mat-option value="Sikh">Sikh</mat-option>
+                  <mat-option value="Christian">Christian</mat-option>
+                  <mat-option value="Buddhist">Buddhist</mat-option>
+                  <mat-option value="Jain">Jain</mat-option>
+                  <mat-option value="Parsi">Parsi</mat-option>
+                  <mat-option value="Jewish">Jewish</mat-option>
+                  <mat-option value="Jewish">Jewish</mat-option> -->
+                </mat-select>
+              </mat-form-field>
+              <mat-error *ngIf="ProfileDetails.get('religion').hasError('required') 
+                    && (ProfileDetails.get('religion').touched || ProfileDetails.get('religion').dirty|| isSubmitted)"
+                class="text-danger" padding>Religion is a required field.</mat-error>
+            </div>
+
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <div class="form-group">
+
+              <div class="">
+                <!-- <label class="left mandatory">Caste</label>
+                    <select class="form-control" formControlName="Caste">
+                      <option value="">SELECT</option>
+                      <option>Maratha</option>
+                      <option>Mali</option>
+                      <option>Brahmin</option>
+                      <option>Adi Karnataka</option>
+                      <option>Jungum</option>English
+                      <option>Gauda</option>English
+                      <option>Teli</option>English
+                      <option>Gujjar</option>English
+                      <option>Patil</option>English
+                    </select> -->
+
+                <mat-form-field>
+                  <mat-label>Caste:</mat-label>
+                  <mat-select formControlName="Caste" (change)="onChangeSubCaste($event.target.value);" required>
+                    <mat-option value="">SELECT</mat-option>
+                    <mat-option *ngFor="let castess of allcastes" value={{castess.caste_id}}>{{castess.caste_name}}</mat-option>
+                    <!-- <mat-option value="Mali">Mali</mat-option>
+                    <mat-option value="Muslim">Muslim</mat-option>
+                    <mat-option value="AdiKarnataka">Adi Karnataka</mat-option>
+                    <mat-option value="Jungum">Jungum</mat-option>
+                    <mat-option value="Gauda">Gauda</mat-option>
+                    <mat-option value="Teli">Teli</mat-option>
+                    <mat-option value="Parsi">Parsi</mat-option>
+                    <mat-option value="Gujjar">Gujjar</mat-option>
+                    <mat-option value="Patil">Patil</mat-option> -->
+                  </mat-select>
+                </mat-form-field>
+
+              </div>
+              <mat-error *ngIf="ProfileDetails.get('Caste').hasError('required') &&
+                    (ProfileDetails.get('Caste').touched || ProfileDetails.get('Caste').dirty|| isSubmitted)"
+                class="text-danger" padding>
+                Caste is a required field.</mat-error>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="form-group">
+
+              <div class="">
+                <!-- <label class="left mandatory">Sub Caste</label>
+                    <select class="form-control" formControlName="SubCaste">
+                      <option value="">SELECT</option>
+                      <option>96 kuli Maratha</option>
+                      <option>Patil</option>
+                      <option>Deshmukh</option>
+                      <option>Lingayat</option>
+                      <option>Vani</option>English
+                      <option>Gauda</option>English
+                      <option>Teli</option>English
+                      <option>Gujjar</option>English
+                      <option>Deshpande</option>English
+                    </select> -->
+                <mat-form-field>
+                  <mat-label>Sub Caste:</mat-label>
+                  <mat-select formControlName="SubCaste">
+                    <mat-option value="">SELECT</mat-option>
+                    <mat-option *ngFor="let SubCaste of allsubcastes" value={{SubCaste.subcaste_id}}>{{SubCaste.subcaste}}</mat-option>
+                    <!-- <mat-option value="Patil">Patil</mat-option>
+                    <mat-option value="Muslim">Muslim</mat-option>
+                    <mat-option value="Deshmukh">Deshmukh</mat-option>
+                    <mat-option value="Lingayat">Lingayat</mat-option>
+                    <mat-option value="Vani">Vani</mat-option>
+                    <mat-option value="Gauda">Gauda</mat-option>
+                    <mat-option value="Teli">Teli</mat-option>
+                    <mat-option value="Gujjar">Gujjar</mat-option>
+                    <mat-option value="Deshpande">Deshpande</mat-option> -->
+                  </mat-select>
+                </mat-form-field>
+
+              </div>
+              <mat-error *ngIf="ProfileDetails.get('SubCaste').hasError('required') 
+                    && (ProfileDetails.get('SubCaste').touched || ProfileDetails.get('SubCaste').dirty|| isSubmitted)"
+                class="text-danger" padding>
+                Caste is a required field.</mat-error>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="form-group">
+
+              <div class="">
+                <!-- <label class="left mandatory">Are You Manglik?</label>
+                    <select class="form-control" formControlName="Manglik">
+                      <option value="">SELECT</option>
+                      <option>Manglik</option>
+                      <option>Non-Manglik</option>
+                      <option>Anshik-Manglik</option>
+                    </select> -->
+                <mat-form-field>
+                  <mat-label>Are You Manglik?</mat-label>
+                  <mat-select formControlName="Manglik">
+                    <mat-option value="">SELECT</mat-option>
+                    <mat-option value="Manglik">Manglik</mat-option>
+                    <mat-option value="NonManglik">Non-Manglik</mat-option>
+                    <mat-option value="AnshikManglik">Anshik-Manglik</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <span *ngIf="ProfileDetails.get('Manglik').hasError('required') &&
+                      (ProfileDetails.get('Manglik').touched || ProfileDetails.get('Manglik').dirty || isSubmitted)"
+                  class="text-danger" padding>
+                  Manglik is a required field.</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+
+            <div class="form-group">
+              <div class="">
+                <!-- <label class="left mandatory">Horoscope match is necessary?</label>
+                    <select class="form-control" formControlName="Horoscope">
+                      <option value="">SELECT</option>
+                      <option>Must</option>
+                      <option>Not-Necessary</option>
+                    </select> -->
+
+                <mat-form-field>
+                  <mat-label>Horoscope match is necessary?:</mat-label>
+                  <mat-select formControlName="Horoscope">
+                    <mat-option value="">SELECT</mat-option>
+                    <mat-option value="Must">Must</mat-option>
+                    <mat-option value="NonManglik">Not-Necessary</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-error
+                  *ngIf="ProfileDetails.get('Horoscope').hasError('required') &&
+                       (ProfileDetails.get('Horoscope').touched || ProfileDetails.get('Horoscope').dirty || isSubmitted)"
+                  class="text-danger" padding>
+                  Horoscope is a required field.</mat-error>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-group">
+              <div class="">
+                <!-- <label class="left mandatory">Marital status</label>
+                    <select class="form-control" formControlName="Marrital">
+                      <option value="">SELECT</option>
+                      <option>Never Married</option>
+                      <option>Awaiting Divorce</option>
+                      <option>Divorced</option>
+                      <option>Widowed</option>
+                      <option>Annulled</option>
+                    </select> -->
+
+
+                <mat-form-field>
+                  <mat-label>Marital status</mat-label>
+                  <mat-select formControlName="Marrital">
+                    <mat-option value="">SELECT</mat-option>
+                    <mat-option value="NeverMarried">Never Married</mat-option>
+                    <mat-option value="AwaitingDivorce">Awaiting Divorce</mat-option>
+                    <mat-option value="AwaitingDivorce">Divorced</mat-option>
+                    <mat-option value="AwaitingDivorce">Widowed</mat-option>
+                    <mat-option value="AwaitingDivorce">Annulled</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-error *ngIf="ProfileDetails.get('Marrital').hasError('required') &&
+                      (ProfileDetails.get('Marrital').touched || ProfileDetails.get('Marrital').dirty || isSubmitted)"
+                  class="text-danger" padding>
+                  Marrital status is a required field.</mat-error>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+
+            <div class="form-group">
+              <div class="">
+                <!-- <label class="left mandatory">Height</label>
+                    <select class="form-control" formControlName="Height">
+                      <option value="">SELECT</option>
+                      <option>4.0</option>
+                      <option>5.0</option>
+                      <option>5.6</option>
+                      <option>5.10</option>
+                      <option>6.0</option>
+                    </select> -->
+                <mat-form-field>
+                  <mat-label>Marital status</mat-label>
+                  <mat-select formControlName="Height">
+                    <mat-option value="">SELECT</mat-option>
+                    <mat-option value="1">4.0</mat-option>
+                    <mat-option value="2">5.0</mat-option>
+                    <mat-option value="3">5.6</mat-option>
+                    <mat-option value="4">5.10</mat-option>
+                    <mat-option value="5">6.0</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-error *ngIf="ProfileDetails.get('Height').hasError('required') && 
+                      (ProfileDetails.get('Height').touched  || ProfileDetails.get('Height').dirty || isSubmitted)"
+                  class="text-danger" padding>
+                  Height is a required field.</mat-error>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+
+        <br>
+
+        <!-- 
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-default" (click)="onSubmit(ProfileDetails.value)">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div> -->
+      <!-- </div> -->
+</div>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit(ProfileDetails.value)">Submit</button>
+    <button mat-raised-button color="warn">Close</button>
+  </mat-card-actions>
+</mat-card>
