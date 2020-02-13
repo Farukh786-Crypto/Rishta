@@ -4,7 +4,7 @@ import { FormGroup, FormControl, Validators,NgForm } from '@angular/forms'
 @Component({
 selector:'Lifestyle-Comp',
 templateUrl:'./LifestyleDetails.component.html',
-styleUrls:['../user.component.css']
+styleUrls:['../user.component.css','./LifestyleDetails.component.css']
 
  
 })

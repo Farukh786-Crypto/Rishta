@@ -1,7 +1,40 @@
+
  
+.example-card {
+  max-width: 600px;
+  margin: 0px auto;
+  height: 100%;
+  margin-top:20px ;
+   
+}
+
+.mat-form-field-wrapper{
+  width: 600px !important;
+  
+   
+}
+ 
+.mat-card-header .mat-card-tiltle {
+font-size: 25px;
+font-family: "Arial Black", Gadget, sans-serif; 
+color: navy;
+}
+
+.example-container
+{
+    max-width: 300px;
+    margin-left: 50px;
+    margin-bottom: 55px;
+}
+.button
+{
+    margin-left: 20px;
+}
+.form
+{
+    text-align: center;
+}
+
   
   
-  /* .example-header-image {
-    background-image: url('/assets/Images/lifeicon.jpg');
-    background-size: cover;
-  } */
+  
