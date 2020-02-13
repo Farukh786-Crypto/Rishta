@@ -1,289 +1,216 @@
-  
-                <div class="modal-body">
-                    <h4 class="modal-title">Personal Details Form</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <form class="align-center" [formGroup]="PersonalDetails">
-                        <p> You are about to complete your Personal details.</p>
+<mat-card class="example-card">
+    <mat-card-header>
 
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="text">Blood_Group</label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="blood_group" required>
-                                        <option value="">SELECT</option>
-                                        
-                                    </select>
+        <mat-card-title>Personal Details</mat-card-title>
 
-                                   
-                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['blood_group'].hasError('required')&&
-    (PersonalDetails.controls.blood_group.touched ||PersonalDetails.controls['blood_group'].dirty|| isSubmitted)">
-                                        blood_group is required.
+    </mat-card-header>
+    <mat-card-content>
 
-                                    </div>
+        <form [formGroup]="PersonalDetails" class="form" class="form">
+            <div class="example-container">
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="text">height<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Height Ex:5.7 i.e 5 feet 7 inch"
-                                            formControlName="height">
-                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['height'].hasError('required')&&
-    (PersonalDetails.controls.height.touched ||PersonalDetails.controls['height'].dirty|| isSubmitted)">
-                                        height is required.
-                                    </div>
-                                </div>
-                            </div>
+                <span> You are about to complete your Personal details.</span>
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label>Blood_Group </mat-label>
+                        <mat-select formControlName="blood_group">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
 
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="form-group">
-                                    <label for="text">weight<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Enter Weight"
-                                    formControlName="weight">
-
-                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['weight'].hasError('required')&&
-(PersonalDetails.controls.weight.touched ||PersonalDetails.controls['weight'].dirty|| isSubmitted)">
-                                        weight is required.
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="form-group">
-                                    <label for="text">Body Type<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-
-                                    <select class="form-control" formControlName="body_type" required>
-                                        <option value="">SELECT</option>
-                                        <option>Slim</option>
-                                        <option>Average</option>
-                                        <option>Athletic</option>
-                                        <option>Heavy</option>
-                                        <option>Doesn't Matter</option>
-
-                                    </select>
-                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['body_type'].hasError('required')&&
-    (PersonalDetails.controls.body_type.touched ||PersonalDetails.controls['body_type'].dirty|| isSubmitted)">
-    Body Type is required.
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="form-group">
-                                    <label for="text">Lens<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="lens" required>
-                                        <option value="">SELECT</option>
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                       
-                                        
-                                    </select>
-                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['lens'].hasError('required')&&
-    (PersonalDetails.controls.lens.touched ||PersonalDetails.controls['lens'].dirty|| isSubmitted)">
-    Lens In required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        
-                        <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="form-group">
-                                    <label for="text">Spectacles<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="spectacles" required>
-                                        <option value="">SELECT</option>
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                        
-                                    </select>
-                                    <div class="text-danger" *ngIf=" PersonalDetails.controls['spectacles'].hasError('required')&&
-    (PersonalDetails.controls.spectacles.touched ||PersonalDetails.controls['spectacles'].dirty|| isSubmitted)">
-    Spectacles In required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="form-group">
-                                    <label for="text">Complexion<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="complexion" required>
-                                        <option value="">SELECT</option>
-                                        <option>Very Fair</option>
-                                        <option>Fair</option>
-                                        <option> Wheatish </option>
-                                        <option> Wheatish Brown </option>
-                                        <option> Dark </option>
-                                        
-                                    </select>
-                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['complexion'].hasError('required')&&
-    (PersonalDetails.controls.complexion.touched ||PersonalDetails.controls['complexion'].dirty)">
-    Spectacles In required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>    
-
-
-                        <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="form-group">
-                                    <label for="text">NRI<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="NRI" required>
-                                        <option value="">SELECT</option>
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                        
-                                    </select>
-                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['NRI'].hasError('required')&&
-    (PersonalDetails.controls.NRI.touched ||PersonalDetails.controls['NRI'].dirty)">
-    Spectacles In required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>    
-
-
-
-                        <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="form-group">
-                                    <label for="text">Smoking<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="smoking" required>
-                                        <option value="">SELECT</option>
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                        <option>Occasionally</option>
-                                    </select>
-                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['smoking'].hasError('required')&&
-    (PersonalDetails.controls.smoking.touched ||PersonalDetails.controls['smoking'].dirty)">
-    Spectacles In required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        
-                        <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="form-group">
-                                    <label for="text">Drinking<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="drinking" required>
-                                        <option value="">SELECT</option>
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                        <option>Occasionally</option>
-                                    </select>
-                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['drinking'].hasError('required')&&
-    (PersonalDetails.controls.drinking.touched ||PersonalDetails.controls['drinking'].dirty)">
-    Drinking In required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="row">
-                            <div class="col-md-3">
-
-                                <div class="form-group">
-                                    <label for="text">Editing Habits<i class="fa fa-asterisk text-danger">*</i></label>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="form-group">
-                                    <select class="form-control" formControlName="editing_habits" required>
-                                        <option value="">SELECT</option>
-                                        <option>Vegetarian</option>
-                                        <option> Non Vegetarian </option>
-                                        <option> Jain </option>
-                                        <option> Eggetarian </option>
-                                                                                
-                                    </select>
-                                    <div class="text-danger" *ngIf="isSubmitted && PersonalDetails.controls['editing_habits'].hasError('required')&&
-    (PersonalDetails.controls.editing_habits.touched ||PersonalDetails.controls['editing_habits'].dirty)">
-    Drinking In required.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </form>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span
+                            *ngIf="isSubmitted && PersonalDetails.controls['blood_group'].hasError('required')&&
+                    (PersonalDetails.controls.blood_group.touched ||PersonalDetails.controls['blood_group'].dirty|| isSubmitted)">
+                            blood_group is required.</span>
+                    </mat-error>
                 </div>
+
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label>height </mat-label>
+                        <mat-select formControlName="height">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf=" PersonalDetails.controls['height'].hasError('required')&&
+            (PersonalDetails.controls.height.touched ||PersonalDetails.controls['height'].dirty|| isSubmitted)">
+                            height is required.</span>
+                    </mat-error>
+                </div>
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label>weight </mat-label>
+                        <mat-select formControlName="weight">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf=" PersonalDetails.controls['weight'].hasError('required')&&
+    (PersonalDetails.controls.weight.touched ||PersonalDetails.controls['weight'].dirty|| isSubmitted)">
+                            weight is required.</span>
+                    </mat-error>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label>Body Type </mat-label>
+                        <mat-select formControlName="body_type">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="PersonalDetails.controls['body_type'].hasError('required')&&
+(PersonalDetails.controls.body_type.touched ||PersonalDetails.controls['body_type'].dirty|| isSubmitted)">
+                            Body Type is required.</span>
+                    </mat-error>
+                </div>
+
+
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label>Lens </mat-label>
+                        <mat-select formControlName="lens">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option>Yes</mat-option>
+                            <mat-option>No</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf=" PersonalDetails.controls['lens'].hasError('required')&&
+(PersonalDetails.controls.lens.touched ||PersonalDetails.controls['lens'].dirty|| isSubmitted)">
+                            Lens In required.</span>
+                    </mat-error>
+                </div>
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label>Spectacles </mat-label>
+                        <mat-select formControlName="spectacles">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option>Yes</mat-option>
+                            <mat-option>No</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf=" PersonalDetails.controls['spectacles'].hasError('required')&&
+(PersonalDetails.controls.spectacles.touched ||PersonalDetails.controls['spectacles'].dirty|| isSubmitted)">
+                            Spectacles In required.</span>
+                    </mat-error>
+                </div>
+
+
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label>Complexion </mat-label>
+                        <mat-select formControlName="complexion">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="isSubmitted && PersonalDetails.controls['complexion'].hasError('required')&&
+(PersonalDetails.controls.complexion.touched ||PersonalDetails.controls['complexion'].dirty)">
+                            Spectacles In required.</span>
+                    </mat-error>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label>NRI </mat-label>
+                        <mat-select formControlName="NRI">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option>Yes</mat-option>
+                            <mat-option>No</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf=" isSubmitted && PersonalDetails.controls['NRI'].hasError('required')&&
+(PersonalDetails.controls.NRI.touched ||PersonalDetails.controls['NRI'].dirty)">
+                            NRI In required.</span>
+                    </mat-error>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label>Smoking </mat-label>
+                        <mat-select formControlName="smoking">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option>Yes</mat-option>
+                            <mat-option>No</mat-option>
+                            <mat-option>Occasionally</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="isSubmitted && PersonalDetails.controls['smoking'].hasError('required')&&
+(PersonalDetails.controls.smoking.touched ||PersonalDetails.controls['smoking'].dirty)">
+                            smoking In required.</span>
+                    </mat-error>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label>Drinking </mat-label>
+                        <mat-select formControlName="drinking">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option>Yes</mat-option>
+                            <mat-option>No</mat-option>
+                            <mat-option>Occasionally</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="isSubmitted && PersonalDetails.controls['drinking'].hasError('required')&&
+(PersonalDetails.controls.drinking.touched ||PersonalDetails.controls['drinking'].dirty)">
+                            Drinking In required.</span>
+                    </mat-error>
+                </div>
+
+
+                <div class="form-group">
+                    <mat-form-field class="demo-full-width">
+                        <mat-label> Eating Habits </mat-label>
+                        <mat-select formControlName="eating_habits">
+                            <mat-option selected value disabled>-- Select --</mat-option>
+                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="iisSubmitted && PersonalDetails.controls['eating_habits'].hasError('required')&&
+(PersonalDetails.controls.eating_habits.touched ||PersonalDetails.controls['eating_habits'].dirty)">
+                            Drinking In required.</span>
+                    </mat-error>
+                </div>
+
+
+
+            </div>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="onSubmit(PersonalDetails.value)">Submit</button>
+                <button mat-raised-button class="button" color="warn">Close</button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+</mat-card>
