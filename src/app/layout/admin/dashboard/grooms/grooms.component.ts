@@ -7,26 +7,17 @@ import { ViewService } from '../view/view.service';
   selector: 'app-grooms',
   templateUrl: './grooms.component.html',
   styleUrls: ['./grooms.component.css'],
-  providers:[DataService,ViewService]
+  providers:[DataService]
 })
 export class GroomsComponent implements OnInit {
   myDetail:any
 
-  constructor(private data:DataService,private route:Router,private view:ViewService) { }
+  constructor(private data:DataService,private route:Router) { }
 
   ngOnInit() {
     this.getGroomsData();
   }
-  detail:any
-  getAllDetails()
-  {
-      this.view.getView().subscribe
-      (
-        response=>{this.detail=response},
-        error=>{this.detail=error}
-        );
-      
-  }
+  
   public getGroomsData()
   {
   
@@ -38,11 +29,5 @@ export class GroomsComponent implements OnInit {
       )
   }
 
-
-//  public view()
-//  {
-//     this.route.navigate(['./view']);
-
-//  }
 
 }

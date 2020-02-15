@@ -16,7 +16,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let info of myDetail?.profile|filter:search">
+      <tr *ngFor="let info of myDetail?.brides|filter:search">
         <td>{{info.id}}</td>
         <td style="text-align: center;"><img src="{{info.avatar}}" style="height: 180px;width: 230px;"></td>
         <td style="font-size: 20px;"><b> Name:</b>{{info.name}}<br>

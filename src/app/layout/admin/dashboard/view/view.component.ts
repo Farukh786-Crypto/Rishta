@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { ViewService } from './view.service'
-import { analyzeAndValidateNgModules } from '@angular/compiler'
+
 
 
 @Component({

@@ -6,6 +6,7 @@ import { BridesComponent } from './brides.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
+
 @NgModule({
   declarations: [BridesComponent],
   imports: [
