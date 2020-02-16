@@ -1,0 +1,13 @@
+.full-width-table {
+    width: 50%;
+    table-layout: auto;
+    border-color: black;
+    text-align:center;
+    
+  }
+  .app-data-table{
+  
+    width:80%;
+    margin:20px auto;
+  }
+  

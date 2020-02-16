@@ -3,14 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { MatchesRoutingModule } from './matches-routing.module';
 import { MatchesComponent } from './matches.component';
+import { MaterialModule } from '../../../material/material.module';
+
 
 
 @NgModule({
   declarations: [MatchesComponent],
   imports: [
     CommonModule,
-    MatchesRoutingModule
+    MatchesRoutingModule,
+    MaterialModule
   ],
-  // exports:[MatchesComponent]
+  exports:[MatchesComponent]
 })
-export class MatchesModule { }
+export class MatchesModule { 
+  
+}

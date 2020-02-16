@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
+<<<<<<< HEAD
 import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatMenuModule, MatRadioButton, MatRadioModule} from '@angular/material';
+=======
+import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule} from '@angular/material';
+>>>>>>> 899a0d63199f18ae23e71a9553eb8120846e942a
 import {MatBadgeModule} from '@angular/material/badge';
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
@@ -31,6 +35,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { LayoutModule } from '@angular/cdk/layout';
 
 const MaterialComponents=[
 
@@ -55,6 +60,15 @@ const MaterialComponents=[
     MatAutocompleteModule,
     MatCheckboxModule,
     MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
     MatFormFieldModule,
     MatListModule,
     MatDatepickerModule,
@@ -62,6 +76,8 @@ const MaterialComponents=[
     CdkStepperModule,
     CdkTableModule,
     CdkTreeModule,
+    MatSortModule,  
+    MatPaginatorModule,
     DragDropModule,
     MatAutocompleteModule,
     MatBadgeModule,
@@ -109,12 +125,19 @@ const MaterialComponents=[
   @NgModule({
   
 
+<<<<<<< HEAD
     imports: [MaterialComponents,],
     exports: [MaterialComponents]  
     
   
   })
       
+=======
+  imports: [MaterialComponents],
+  exports: [MaterialComponents]  
+
+  })
+>>>>>>> 899a0d63199f18ae23e71a9553eb8120846e942a
 
 
 export class MaterialModule {
