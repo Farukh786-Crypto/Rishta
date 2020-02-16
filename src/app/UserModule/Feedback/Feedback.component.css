@@ -1,0 +1,38 @@
+.example-card {
+    max-width: 600px;
+    margin: 0px auto;
+    height: 90%;
+  
+    /* background-color: lightcoral; */
+  }
+
+  .mat-form-field-wrapper{
+    width: 600px !important;
+}
+
+.mat-card-header .mat-card-title {
+  font-size: 25px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: navy;
+  
+  
+}
+
+.example-container
+  {
+      max-width: 300px;
+      margin-left: 50px;
+  }
+  .button
+  {
+      margin-left: 20px;
+  }
+  .form
+  {
+      text-align: center;
+  }
+  .buttonprimary{
+    max-width: 300px;
+    margin-left: 70px;
+
+  } 
