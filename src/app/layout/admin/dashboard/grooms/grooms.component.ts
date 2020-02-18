@@ -15,7 +15,11 @@ export interface DialogData {
   selector: 'app-grooms',
   templateUrl: './grooms.component.html',
   styleUrls: ['./grooms.component.css'],
+<<<<<<< HEAD
   providers: [DataService, ViewService]
+=======
+  providers:[DataService]
+>>>>>>> ec0b6fc833f8ae7350fd0a98249b02c0c8a432f1
 })
 export class GroomsComponent implements OnInit {
   myDetail: any
@@ -24,6 +28,7 @@ export class GroomsComponent implements OnInit {
   animal: string;
   name: string;
 
+<<<<<<< HEAD
 
   ngOnInit() {
   this.getGroomsData();
@@ -58,6 +63,17 @@ export class GroomsComponent implements OnInit {
   // }
   public getGroomsData() {
 
+=======
+  constructor(private data:DataService,private route:Router) { }
+
+  ngOnInit() {
+    this.getGroomsData();
+  }
+  
+  public getGroomsData()
+  {
+  
+>>>>>>> ec0b6fc833f8ae7350fd0a98249b02c0c8a432f1
     this.data.getGrooms().subscribe(
       response => {
         this.myDetail = response
@@ -67,6 +83,7 @@ export class GroomsComponent implements OnInit {
   }
 
 
+<<<<<<< HEAD
   //  public view()
   //  {
   //     this.route.navigate(['./view']);
@@ -88,5 +105,7 @@ export class DialogOverviewExampleDialog {
     this.dialogRef.close();
   }
 
+=======
+>>>>>>> ec0b6fc833f8ae7350fd0a98249b02c0c8a432f1
 }
 

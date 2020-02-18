@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
+<<<<<<< HEAD
 import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule} from '@angular/material';
+=======
+import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatMenuModule, MatRadioButton, MatRadioModule} from '@angular/material';
+>>>>>>> ec0b6fc833f8ae7350fd0a98249b02c0c8a432f1
 import {MatBadgeModule} from '@angular/material/badge';
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
@@ -17,7 +21,6 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
-import {MatMenuModule} from '@angular/material/menu';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
@@ -31,7 +34,6 @@ import {MatTableModule} from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
-import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { LayoutModule } from '@angular/cdk/layout';
 import { DialogOverviewExampleDialog } from '../layout/admin/dashboard/grooms/grooms.component';
@@ -49,8 +51,6 @@ const MaterialComponents=[
   MatSelectModule,
   MatAutocompleteModule,
   MatCheckboxModule,
-  MatRadioModule,
-  MatMenuModule,
   MatCardModule,
   MatButtonToggleModule,
     MatIconModule,
@@ -61,7 +61,6 @@ const MaterialComponents=[
     MatSelectModule,
     MatAutocompleteModule,
     MatCheckboxModule,
-    MatRadioModule,
     MatCardModule,
     MatTableModule,
     MatPaginatorModule,
@@ -99,12 +98,10 @@ const MaterialComponents=[
     MatIconModule,
     MatInputModule,
     MatListModule,
-    MatMenuModule,
     MatNativeDateModule,
     MatPaginatorModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
-    MatRadioModule,
     MatRippleModule,
     MatSelectModule,
     MatSidenavModule,
@@ -120,13 +117,14 @@ const MaterialComponents=[
     PortalModule,
     ScrollingModule,
     MatCardModule,
-    MatDatepickerModule
-]
+    MatDatepickerModule,
+    MatInputModule,
+    MatMenuModule,
+    MatRadioModule
+    
 
-
-
-
-@NgModule({
+  ]
+  @NgModule({
   
   
   imports: [MaterialComponents],

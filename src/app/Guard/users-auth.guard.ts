@@ -11,7 +11,7 @@ export class UsersAuthGuard implements CanActivate{
     constructor(private router:Router){}
     canActivate()
     {
-        if(localStorage.getItem('userRole')==='user')
+        if(sessionStorage.getItem('userRole')==='user')
         {
             return true;
         }
