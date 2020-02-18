@@ -1,9 +1,5 @@
 import { NgModule } from '@angular/core';
-<<<<<<< HEAD
-import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule} from '@angular/material';
-=======
 import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatMenuModule, MatRadioButton, MatRadioModule} from '@angular/material';
->>>>>>> ec0b6fc833f8ae7350fd0a98249b02c0c8a432f1
 import {MatBadgeModule} from '@angular/material/badge';
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
