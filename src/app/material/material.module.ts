@@ -34,6 +34,8 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { LayoutModule } from '@angular/cdk/layout';
+import { DialogOverviewExampleDialog } from '../layout/admin/dashboard/grooms/grooms.component';
+//import {MatDialogModule} from '@angular/material/dialog';
 
 const MaterialComponents=[
 
@@ -126,7 +128,7 @@ const MaterialComponents=[
 
 @NgModule({
   
-
+  
   imports: [MaterialComponents],
   exports: [MaterialComponents]  
 
