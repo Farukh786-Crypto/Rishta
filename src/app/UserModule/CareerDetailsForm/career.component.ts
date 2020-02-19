@@ -48,61 +48,61 @@ export class CareerComponent implements OnInit {
 
         this.careerDetails.patchValue(this.getCareerInfo[0])
     }
-    // public SaveCareerInfo1() {
-    //     //console.log("hhhhh")
-    //     this.Career.getOne().subscribe(res => {
-    //     this.getCareerInfo1 = res,
-    //         console.log(JSON.stringify(res))
-    //     },
-    //         err => { this.getCareerInfo1 = err })
+    public SaveCareerInfo1() {
+        //console.log("hhhhh")
+        this.Career.getOne().subscribe(res => {
+        this.getCareerInfo1 = res,
+            console.log(JSON.stringify(res))
+        },
+            err => { this.getCareerInfo1 = err })
 
-    //     this.careerDetails.patchValue(this.getCareerInfo1[0])
-    // }
-    // public SaveCareerInfo2() {
-    //     //console.log("hhhhh")
-    //     this.Career.getTwo().subscribe(res => {
-    //     this.getCareerInfo2 = res,
-    //         console.log(JSON.stringify(res))
-    //     },
-    //         err => { this.getCareerInfo2 = err })
+        this.careerDetails.patchValue(this.getCareerInfo1[0])
+    }
+    public SaveCareerInfo2() {
+        //console.log("hhhhh")
+        this.Career.getTwo().subscribe(res => {
+        this.getCareerInfo2 = res,
+            console.log(JSON.stringify(res))
+        },
+            err => { this.getCareerInfo2 = err })
 
-    //     this.careerDetails.patchValue(this.getCareerInfo2[0])
-    // }
-    // public SaveCareerInfo3() {
-    //     //console.log("hhhhh")
-    //     this.Career.getThree().subscribe(res => {
-    //     this.getCareerInfo3 = res,
-    //         console.log(JSON.stringify(res))
-    //     },
-    //         err => { this.getCareerInfo3 = err })
+        this.careerDetails.patchValue(this.getCareerInfo2[0])
+    }
+    public SaveCareerInfo3() {
+        //console.log("hhhhh")
+        this.Career.getThree().subscribe(res => {
+        this.getCareerInfo3 = res,
+            console.log(JSON.stringify(res))
+        },
+            err => { this.getCareerInfo3 = err })
 
-    //     this.careerDetails.patchValue(this.getCareerInfo3[0])
-    // }
+        this.careerDetails.patchValue(this.getCareerInfo3[0])
+    }
 
 
 
-    // ngOnInit() {
+    ngOnInit() {
 
-    //     this.Career.getCountries().subscribe(
-    //         data => this.country = data
-    //     );
+        this.Career.getCountries().subscribe(
+            data => this.country = data
+        );
 
-    // //firstCareerId: number=1;
-    // public getCareerInfo: any;
-    // public getCareerInfo1: any;
-    // public getCareerInfo2: any;
-    // public getCareerInfo3: any;
+    //firstCareerId: number=1;
+    public getCareerInfo: any;
+    public getCareerInfo1: any;
+    public getCareerInfo2: any;
+    public getCareerInfo3: any;
 
-    // public SaveCareerInfo() {
-    //     //console.log("hhhhh")
-    //     this.Career.getall().subscribe(res => {
-    //     this.getCareerInfo = res,
-    //         console.log(JSON.stringify(res))
-    //     },
-    //         err => { this.getCareerInfo = err })
+    public SaveCareerInfo() {
+        //console.log("hhhhh")
+        this.Career.getall().subscribe(res => {
+        this.getCareerInfo = res,
+            console.log(JSON.stringify(res))
+        },
+            err => { this.getCareerInfo = err })
 
-    //     this.careerDetails.patchValue(this.getCareerInfo[0])
-    // }
+        this.careerDetails.patchValue(this.getCareerInfo[0])
+    }
     public SaveCareerInfo1() {
         //console.log("hhhhh")
         this.Career.getOne().subscribe(res => {
