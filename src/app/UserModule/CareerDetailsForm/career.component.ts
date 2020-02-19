@@ -58,7 +58,7 @@ export class CareerComponent implements OnInit {
 
     //     this.careerDetails.patchValue(this.getCareerInfo1[0])
     // }
-    // public SaveCareerInfo2() {
+     // public SaveCareerInfo2() {
     //     //console.log("hhhhh")
     //     this.Career.getTwo().subscribe(res => {
     //     this.getCareerInfo2 = res,
