@@ -13,7 +13,7 @@ export class UserComponent {
 
     constructor(private router:Router) {
     }
-public user()
+public SignOut()
 {
     sessionStorage.clear();
     this.router.navigate(['./login']);
