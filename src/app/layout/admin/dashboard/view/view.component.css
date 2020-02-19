@@ -9,6 +9,10 @@
     background-image: url('src\assets\images\indian-bride.jpg');
     background-repeat: no-repeat;
 }
+.barcode
+{
+    margin-left: 360px;
+}
 .table
 {
     color: white;

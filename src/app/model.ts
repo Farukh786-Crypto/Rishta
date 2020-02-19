@@ -7,15 +7,12 @@ export class Registerprofile{
     date:Date;
     gender:string;
 }
-<<<<<<< HEAD
 export class Id{
     id: number;
 }
 export class IdName extends Id{
     name: string;     
 }
-=======
->>>>>>> 899a0d63199f18ae23e71a9553eb8120846e942a
 export class CareerProfile{
     Country:string; 
     State:string;  
@@ -57,7 +54,6 @@ export class EducationProfile{
     graduationDegree:string;
     AEduacation:string;
 }
-<<<<<<< HEAD
 export class LifestyleProfile{
     house:  string;
 car:  string;
@@ -75,5 +71,3 @@ smoke:  string;
 
 
 
-=======
->>>>>>> 899a0d63199f18ae23e71a9553eb8120846e942a
