@@ -1,89 +1,83 @@
 <!-- {{getCareerInfo|json}}
 <!<button type="submit" (click)="SaveCareerInfo()"> Get </button> -->
-<!-- <button type="submit" (click)="call_to_service()"> Get </button> --> 
+<!-- <button type="submit" (click)="call_to_service()"> Get </button> -->
 <mat-card class="example-card">
   <mat-card-header>
-  <mat-card-title><b>
-      Career Details
-    </b> </mat-card-title>
-</mat-card-header>
+    <mat-card-title><b>
+        Career Details
+      </b> </mat-card-title>
+  </mat-card-header>
   <mat-card-content>
     <form [formGroup]="careerDetails" class="form">
-      <div   class="example-container">
-      <div class="form-group">
-        <mat-form-field class="demo-full-width">
-          <mat-label> Country </mat-label>
-          <mat-select formControlName="Country" (change)="onChangeCountry()" required>
-            <mat-option>-- Select--</mat-option>
-            <mat-option *ngFor="let Countrys of country  " value={{Countrys.country_id}}>
-              {{Countrys.country_name | titlecase}}
-            </mat-option>
-          </mat-select>
-          <mat-error>
-            <span *ngIf="careerDetails.controls['Country'].hasError('required') &&        
+      <div class="example-container">
+        <div class="form-group">
+          <mat-form-field class="demo-full-width">
+            <mat-label> -- Select Country -- </mat-label>
+            <mat-select formControlName="Country" [(ngModel)]="country" (ngModelChange)="onChangeCountry()" required>
+              <mat-option *ngIf="countryInfo == ''" value="-1">-- Select--</mat-option>
+              <mat-option *ngFor="let country of countryInfo; let i = index" [value]="country.CountryName">
+                {{country.CountryName}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="careerDetails.controls['Country'].hasError('required') &&        
                     (careerDetails.controls.Country.touched || careerDetails.controls['Country'].dirty ||
                      isSubmitted)">
-              Country is required </span>
-          </mat-error>
-        </mat-form-field>
-      </div>
-
-
-      <div class="form-group">
-        <mat-form-field class="demo-full-width">
-          <mat-label> State </mat-label>
-          <mat-select formControlName="State" (change)="onChangeState($event.target.value);" required>
-            <mat-option>-- Select--</mat-option>
-            <mat-option *ngFor="let States of  state" value={{States.state_id}}>
-              {{States.state_name|titlecase}} </mat-option>
-
-          </mat-select>
-          <mat-error>
-            <span *ngIf="careerDetails.controls['State'].hasError('required')&&
+              Country is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field class="demo-full-width">
+            <mat-label> -- Select State -- </mat-label>
+            <mat-select formControlName="State" [(ngModel)]="state" (ngModelChange)="onChangeState()" required>
+              <mat-option *ngIf="stateInfo == ''" value="-1">-- Select--</mat-option>
+              <mat-option *ngFor="let state of stateInfo; let j = index" [value]="state.StateName">
+                {{state.StateName}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="careerDetails.controls['State'].hasError('required')&&
                       (careerDetails.controls.State.touched ||careerDetails.controls['State'].dirty|| isSubmitted)">
 
-              State is required </span>
-          </mat-error>
-        </mat-form-field>
-      </div>
-      <div class="form-group">
-        <mat-form-field class="demo-full-width">
-          <mat-label> City </mat-label>
-          <mat-select formControlName="City" required>
-            <mat-option>-- Select --</mat-option>
+              State is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field class="demo-full-width">
+            <mat-label> -- Select City -- </mat-label>
+            <mat-select formControlName="City" required>
+              <mat-option *ngIf="cityInfo == ''" value="-1">-- Select --</mat-option>
+              <mat-option *ngFor="let city of cityInfo; let k = index" value="{{k}}">
+                {{city}}
+              </mat-option>
 
-            <!-- <mat-option *ngFor="let cities of  city" value={{cities.city_id}}>
-                {{cities.city_name|titlecase}}    </mat-option> -->
-
-          </mat-select>
-          <mat-error>
-            <span *ngIf="careerDetails.controls['City'].hasError('required')&&                    
+            </mat-select>
+            <mat-error>
+              <span *ngIf="careerDetails.controls['City'].hasError('required')&&                    
                         (careerDetails.controls.City.touched ||careerDetails.controls['City'].dirty|| isSubmitted)">
 
-              City is required </span>
-          </mat-error>
-        </mat-form-field>
-      </div>
+                City is required </span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field class="demo-full-width">
 
-      <div class="form-group">
-        <mat-form-field class="demo-full-width">
-
-          <mat-label> Highest Degree </mat-label>
-          <mat-select formControlName="HighestDegree" required>
-            <mat-option>-- Select --</mat-option>
-            <!-- <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+            <mat-label> Highest Degree </mat-label>
+            <mat-select formControlName="HighestDegree" required>
+              <mat-option>-- Select --</mat-option>
+              <!-- <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
                 {{highestDegrees.state_name|titlecase}}  </mat-option>               -->
-          </mat-select>
-          <mat-error>
-            <span
-              *ngIf="careerDetails.controls['HighestDegree'].hasError('required')&&
+            </mat-select>
+            <mat-error>
+              <span
+                *ngIf="careerDetails.controls['HighestDegree'].hasError('required')&&
                             (careerDetails.controls.HighestDegree.touched ||careerDetails.controls['HighestDegree'].dirty|| isSubmitted)">
-              Highest Degree is required. </span>
-          </mat-error>
-        </mat-form-field>
+                Highest Degree is required. </span>
+            </mat-error>
+          </mat-form-field>
+        </div>
       </div>
-
-
       <div class="form-group">
         <mat-form-field class="demo-full-width">
 
@@ -92,13 +86,13 @@
             <mat-option>-- Select Any --</mat-option>
 
             <!-- <mat-option *ngFor="let bachlorDegrees of  bachlorDegree" value={{bachlorDegrees.state_id}}>
-                {{bachlorDegrees.state_name|titlecase}}  </mat-option>
-                -->
+              {{bachlorDegrees.state_name|titlecase}}  </mat-option>
+              -->
           </mat-select>
           <mat-error>
             <span
               *ngIf="careerDetails.controls['BachlorDegree'].hasError('required')&&
-                            (careerDetails.controls.BachlorDegree.touched ||careerDetails.controls['BachlorDegree'].dirty|| isSubmitted)">
+                          (careerDetails.controls.BachlorDegree.touched ||careerDetails.controls['BachlorDegree'].dirty|| isSubmitted)">
               Bachlor Degree is required. </span>
           </mat-error>
         </mat-form-field>
@@ -110,13 +104,13 @@
             <mat-option>-- Select --</mat-option>
 
             <!-- <mat-option *ngFor="let employeeds of  employeed" value={{employeeds.state_id}}>
-                {{employeeds.state_name|titlecase}}  </mat-option>                -->
+              {{employeeds.state_name|titlecase}}  </mat-option>                -->
           </mat-select>
 
           <mat-error>
             <span
               *ngIf="careerDetails.controls['Emplyeed'].hasError('required')&&
-                              (careerDetails.controls.Emplyeed.touched ||careerDetails.controls['Emplyeed'].dirty|| isSubmitted)">
+                            (careerDetails.controls.Emplyeed.touched ||careerDetails.controls['Emplyeed'].dirty|| isSubmitted)">
               Employeed In required. </span>
           </mat-error>
         </mat-form-field>
@@ -129,13 +123,13 @@
             <mat-option>-- Select --</mat-option>
 
             <!-- <mat-option  *ngFor="let occupations of  occupation" value={{occupations.state_id}}>
-                {{occupations.state_name|titlecase}}  </mat-option>
-                -->
+              {{occupations.state_name|titlecase}}  </mat-option>
+              -->
           </mat-select>
           <mat-error>
             <span
               *ngIf="careerDetails.controls['Occupation'].hasError('required')&&
-                                (careerDetails.controls.Occupation.touched ||careerDetails.controls['Occupation'].dirty|| isSubmitted)">
+                              (careerDetails.controls.Occupation.touched ||careerDetails.controls['Occupation'].dirty|| isSubmitted)">
               Occupation is required. </span>
           </mat-error>
         </mat-form-field>
@@ -146,7 +140,7 @@
           <mat-error>
             <span
               *ngIf="careerDetails.controls['Income'].hasError('required')&&
-                                  (careerDetails.controls.Income.touched ||careerDetails.controls['Income'].dirty|| isSubmitted)">
+                                (careerDetails.controls.Income.touched ||careerDetails.controls['Income'].dirty|| isSubmitted)">
               Annual income is required.</span>
           </mat-error>
         </mat-form-field>
@@ -154,25 +148,21 @@
       <div class="form-group">
         <mat-form-field class="demo-full-width">
           <textarea matInput placeholder="Express Yourself!" formControlName="Express">
-           </textarea>
+         </textarea>
           <mat-error>
             <span
               *ngIf="careerDetails.controls['Express'].hasError('required')&&
-                                    (careerDetails.controls.Express.touched ||careerDetails.controls['Express'].dirty|| isSubmitted)">
+                                  (careerDetails.controls.Express.touched ||careerDetails.controls['Express'].dirty|| isSubmitted)">
               Minimum 200 words needed. </span>
           </mat-error>
         </mat-form-field>
       </div>
       <div class="form-group">
-      <button mat-raised-button color="primary" (click)="CareerUser(careerDetails.value)">SUBMIT</button>
-      <!-- <button mat-raised-button color="warn" (click)="SaveCareerInfo()"style="margin-left: 20px;">Save</button>  -->
-      <button class="button" mat-raised-button color="warn" (click)="clear()"  >CLEAR</button>
-    </div>
-    </div>
+        <button mat-raised-button color="primary" (click)="CareerUser(careerDetails.value)">SUBMIT</button>
+        <!-- <button mat-raised-button color="warn" (click)="SaveCareerInfo()"style="margin-left: 20px;">Save</button>  -->
+        <button class="button" mat-raised-button color="warn" (click)="clear()">CLEAR</button>
+      </div>
+      
     </form>
   </mat-card-content>
-
-
-
-
 </mat-card>
