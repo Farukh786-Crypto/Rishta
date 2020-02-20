@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from 'src/app/material/material.module';
-
+import {MatSelectModule} from '@angular/material/select';
  
 import { CareerComponent } from './career.component';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +21,7 @@ const careerroute: Routes = [
     ReactiveFormsModule,  
     HttpClientModule,
     MaterialModule,
+    MatSelectModule,
     ReactiveFormsModule, RouterModule.forChild(careerroute)],
     providers: [],
     exports: [CareerComponent]
