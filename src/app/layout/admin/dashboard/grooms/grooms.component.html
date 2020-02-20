@@ -1,4 +1,4 @@
-<form class="example" style="margin:auto;max-width:300px; margin-top: 20px;">
+<!-- <form class="example" style="margin:auto;max-width:300px; margin-top: 20px;">
   <input type="text" placeholder="Search by Name..." autocomplete="off" name="search" [(ngModel)]="search">
   <button type="submit"><i class="fa fa-search"></i></button>
 
@@ -10,6 +10,7 @@
     <thead class="thead-dark">
       <tr style="padding: 20px;text-align: center;">
         <th>ID</th>
+
         <th>Photo</th>
         <th>Details</th>
         <th>Action</th>
@@ -35,4 +36,21 @@
   </table>
 </div>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+<div style="margin-left: 300px;">
+<ol>
+  <li>
+    <mat-form-field>
+      <mat-label>What's your name?</mat-label>
+      <input matInput [(ngModel)]="name">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="animal">
+    You chose: <i>{{animal}}</i>
+  </li>
+</ol>
+</div>
+<router-outlet></router-outlet> 
