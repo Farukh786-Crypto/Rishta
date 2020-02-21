@@ -1,13 +1,25 @@
 .full-width-table {
     width: 50%;
+    color: white;
     table-layout: auto;
-    border-color: black;
-    text-align:center;
+    border-color: white; 
+     text-align:center; 
+    background-image: url('src/assets/Images/indian-bride.jpg');
     
+  }
+  .mat-cell{
+    color: white;
+  }
+  .mat-header-cell
+  {
+    color: white;
+    align-items: center;
+    font-size: 17px;
   }
   .app-data-table{
   
     width:80%;
     margin:20px auto;
+    color: white;
   }
   

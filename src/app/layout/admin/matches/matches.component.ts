@@ -20,7 +20,7 @@ export class MatchesComponent implements  AfterViewInit, OnInit {
   dataSource: MatchesComponent;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name','amount'];
+  displayedColumns = ['id', 'detail','action'];
 
   ngOnInit() {
     this.dataSource = new MatchesComponent();
@@ -83,8 +83,8 @@ export class MatchesComponent implements  AfterViewInit, OnInit {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
-        case 'amount': return compare(+a.amount,+b.amount, isAsc);
+      //   case 'name': return compare(a.name, b.name, isAsc);
+      //   case 'amount': return compare(+a.amount,+b.amount, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
         default: return 0;
       }
@@ -92,27 +92,41 @@ export class MatchesComponent implements  AfterViewInit, OnInit {
   }
 }
 export interface DataTableItem {
-  name: string;
+  detail : {
+    name:string,
+    age:number;
+    religion:string;
+    mothertongue:string;
+    city:string;
+    maritalstatus:string;
+  };
   id: number;
-  amount:number;
+  //amount:number;
+ 
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: DataTableItem[] = [ // It s Dummy Table
-  {id: 1, name: 'Hydrogen',amount:20},
-  {id: 2, name: 'Helium',amount:30},
-  {id: 3, name: 'Lithium',amount:40},
-  {id: 4, name: 'Beryllium',amount:50},
-  {id: 5, name: 'Boron',amount:60},
-  {id: 6, name: 'Carbon',amount:70},
-  {id: 7, name: 'Nitrogen',amount:80},
-  {id: 8, name: 'Hydrogen',amount:20},
-  {id: 9, name: 'Helium',amount:30},
-  {id: 10, name: 'Lithium',amount:40},
-  {id: 11, name: 'Beryllium',amount:50},
-  {id: 12, name: 'Boron',amount:60},
-  {id: 13, name: 'Carbon',amount:70},
-  {id: 14, name: 'Nitrogen',amount:80},
+  {id: 1, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+  {id: 2, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+ 
+  {id: 3, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 4, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 5, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 6, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 7, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 8, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 9, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 10, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 11, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 12, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 13, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 14, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 15, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 16, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 17, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+  
+  
 ];
 function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
