@@ -4,9 +4,9 @@ import { BridesComponent } from './brides.component';
 
 
 const routes: Routes = [
-  {path:'',component:BridesComponent,children:[
+  {path:'',component:BridesComponent
   //  {path:'view',loadChildren:'./admin/dashboard/view/view.module#ViewModule'}
-  ]}
+  }
 ];
 
 @NgModule({

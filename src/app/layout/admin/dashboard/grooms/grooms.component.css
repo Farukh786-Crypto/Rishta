@@ -1,49 +1,11 @@
-/* * {
-    box-sizing: border-box;
-  }
-  
-  .ids{
-    font-size: 25px;
-    padding-top: 7rem;
-  }
-  form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: auto;
-    
-  }
-  
-  form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: rgb(8, 8, 8);
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
-  } 
-  
-  form.example button:hover {
-    background: #0b7dda;
-  }
-  
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  } */
-  
+
   .full-width-table {
     width: auto;
     color: white;
     table-layout: auto;
     border-color: white; 
-    padding: 15px 15px 15px 15px; 
-    /* margin-top: 20px; */
+    /* padding: 150px 150px 15px 15px; */
+    margin-top: 20px;
     background-image: url('src/assets/Images/indian-bride.jpg');
     
   }
@@ -57,20 +19,19 @@
   {
     margin-left: 15px;
   }
-  .mat-header-cell
+  /* .mat-header-cell
   {
     color: white;
     font-family: "Times New Roman", Times, serif;
     font-weight: 200px;
     font-size: 25px;
     /* color:rgb(144, 248, 231); */
-    color: white;
+    /* color: white;
+    text-align: center; */
 
     /* margin-left: 20px; */
-  }
-  .mat-header-cell{
-    text-align: center;
-  }
+  /* } */ 
+ 
   .label
   {
     font-size: 15px;
@@ -104,43 +65,5 @@
    
  
    
-   /* table {
-    
-     border-spacing: 0 8px !important;
-   } 
-   .card
-{
-    font-size: 20px;  
-    width: 800px;
-    height: auto;
-    margin: 0 auto;
-     float: none; 
-    margin-bottom: 10px;
-    background-color: black;
-    
-    background-image: url('src\assets\images\indian-bride.jpg'); 
-    background-repeat: no-repeat;
-   
-    
-}
 
-.barcode
-{
-    margin-left: 360px;
-}
-.table
-{
-    color:aqua;
-}
-.d1
-{
-    font-size: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:aqua;
-}
-.mat-dialog-title
-{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 60px;
-}
-   */
+  
