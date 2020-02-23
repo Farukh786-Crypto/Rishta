@@ -11,9 +11,19 @@
     border-radius: 8px;
     background-image: url('src/assets/Images/indian-bride.jpg');
     color: white;
-    height: 400px;
+    height: 500px;
     width: 300px;
     font-weight: 30px;
+  }
+  .pack
+  {
+    margin-left: 70px;
+    font-size: 20px;
+  }
+  .pack1
+  {
+    margin-left: 70px;
+    font-size: 20px;
   }
  
   h3{

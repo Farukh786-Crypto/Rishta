@@ -1,33 +1,40 @@
-.card
+table {
+    
+    border-spacing: 0 8px !important;
+  } 
+  .card
 {
-    font-size: 20px;  
-    width: 900px;
-    height: auto;
-    margin: 0 auto; /* Added */
-     float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-    background-image: url('src\assets\images\indian-bride.jpg');
-    background-repeat: no-repeat;
+   font-size: 20px;  
+   width: 800px;
+   height: auto;
+   margin: 0 auto; /* Added */
+    float: none; /* Added */
+   margin-bottom: 10px; /* Added */
+   background-color: black;
+   
+   /* background-image: url('src\assets\images\indian-bride.jpg'); */
+   background-repeat: no-repeat;
+  
+   
 }
+
 .barcode
 {
-    margin-left: 360px;
+   margin-left: 360px;
 }
 .table
 {
-    color: white;
+   color:aqua;
 }
 .d1
 {
-    font-size: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:white;
+   font-size: 30px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color:aqua;
 }
-
-.nav-item
+.mat-dialog-title
 {
-    font-size: 20px;
-    color: white;
-   
-
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ font-size: 60px;
 }
+ 

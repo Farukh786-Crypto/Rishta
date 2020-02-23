@@ -9,8 +9,9 @@
             </mat-card-header>
             <hr>
             <mat-card-content>
-             <center> 3 Months</center><br><br>
-               15
+                <span class="pack"> 3 Months<br><br></span>
+                    <span class="pack1"> {{silverPack | currency:'INR'}}
+                </span>
             
 
             </mat-card-content>
@@ -26,7 +27,9 @@
             <hr>
             <mat-card-content>
 
-               
+                <span class="pack"> 6 Months<br><br></span>
+                <span class="pack1"> {{goldPack | currency:'INR'}}
+            </span>
 
             </mat-card-content>
         </mat-card>
@@ -41,7 +44,9 @@
             <hr>
             <mat-card-content>
 
-                
+                <span class="pack"> 12 Months<br><br></span>
+                    <span class="pack1"> {{diamondPack | currency:'INR'}}
+                </span>
 
             </mat-card-content>
         </mat-card>

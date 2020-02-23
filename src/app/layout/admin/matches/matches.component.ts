@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { DataSource } from '@angular/cdk/collections';
  import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
@@ -20,7 +19,7 @@ export class MatchesComponent implements  AfterViewInit, OnInit {
   dataSource: MatchesComponent;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name','amount'];
+  displayedColumns = ['id','photo', 'detail','action'];
 
   ngOnInit() {
     this.dataSource = new MatchesComponent();
@@ -83,8 +82,8 @@ export class MatchesComponent implements  AfterViewInit, OnInit {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
-        case 'amount': return compare(+a.amount,+b.amount, isAsc);
+      //   case 'name': return compare(a.name, b.name, isAsc);
+      //   case 'amount': return compare(+a.amount,+b.amount, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
         default: return 0;
       }
@@ -92,32 +91,34 @@ export class MatchesComponent implements  AfterViewInit, OnInit {
   }
 }
 export interface DataTableItem {
-  name: string;
+  detail : {
+    name:string,
+    age:number;
+    religion:string;
+    mothertongue:string;
+    city:string;
+    maritalstatus:string;
+  };
   id: number;
-  amount:number;
+  photo:any
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: DataTableItem[] = [ // It s Dummy Table
-  {id: 1, name: 'Hydrogen',amount:20},
-  {id: 2, name: 'Helium',amount:30},
-  {id: 3, name: 'Lithium',amount:40},
-  {id: 4, name: 'Beryllium',amount:50},
-  {id: 5, name: 'Boron',amount:60},
-  {id: 6, name: 'Carbon',amount:70},
-  {id: 7, name: 'Nitrogen',amount:80},
-  {id: 8, name: 'Hydrogen',amount:20},
-  {id: 9, name: 'Helium',amount:30},
-  {id: 10, name: 'Lithium',amount:40},
-  {id: 11, name: 'Beryllium',amount:50},
-  {id: 12, name: 'Boron',amount:60},
-  {id: 13, name: 'Carbon',amount:70},
-  {id: 14, name: 'Nitrogen',amount:80},
+  {id: 1,photo:'./assets/Images/1.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+  {id: 2,photo:'./assets/Images/2.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+ 
+  {id: 3,photo:'./assets/Images/h1.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 4,photo:'./assets/Images/4.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 5, photo:'./assets/Images/h2.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 6, photo:'./assets/Images/5.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 7, photo:'./assets/Images/h3.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 8,photo:'./assets/Images/6.jpg',  detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 9,photo:'./assets/Images/h5.jpg',  detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 10,photo:'./assets/Images/h6.jpg',  detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi ',city:'pune',maritalstatus:'married'}},
+   
+  
 ];
 function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
-
-
-
-

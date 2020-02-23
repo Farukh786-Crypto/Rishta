@@ -5,27 +5,27 @@ import {environment} from '../../../../environments/environment';
 
 export class DashboardService
 {
+     Base_Url : string =environment.Base_Url;
     constructor(private http:HttpClient)
     {
-        
 
     }
    public getTotalCount()
     {
-        const Base_Url=environment.Base_Url;
-        let url= Base_Url + 'registers/getTotalMembers';
+       
+        let url= this.Base_Url + 'registers/getTotalMembers';
         return this.http.get(url);
     }
     public getGroomsCount()
     {
-        const Base_Url=environment.Base_Url;
-        let url= Base_Url +'registers/getTotalGrooms';
+        
+        let url= this.Base_Url +'registers/getTotalGrooms';
         return this.http.get(url);
     }
     public getBridesCount()
     {
-        const Base_Url=environment.Base_Url;
-        let url= Base_Url +'registers/getTotalBrides';
+       
+        let url= this.Base_Url +'registers/getTotalBrides';
         return this.http.get(url);
     }
 }

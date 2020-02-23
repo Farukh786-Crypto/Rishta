@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
   }
   
@@ -11,7 +11,7 @@
     font-size: 17px;
     border: 1px solid grey;
     float: left;
-    width: 80%;
+    width: auto;
     
   }
   
@@ -25,7 +25,7 @@
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
-  }
+  } 
   
   form.example button:hover {
     background: #0b7dda;
@@ -35,6 +35,112 @@
     content: "";
     clear: both;
     display: table;
+  } */
+  
+  .full-width-table {
+    width: auto;
+    color: white;
+    table-layout: auto;
+    border-color: white; 
+    padding: 15px 15px 15px 15px; 
+    /* margin-top: 20px; */
+    background-image: url('src/assets/Images/indian-bride.jpg');
+    
+  }
+  .mat-cell{
+    color: white;
+    font-size: medium;
+    padding: 15px 15px 15px 15px;
+    
+  }
+  .mat-flat-button
+  {
+    margin-left: 15px;
+  }
+  .mat-header-cell
+  {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 200px;
+    font-size: 25px;
+    /* color:rgb(144, 248, 231); */
+    color: white;
+
+    /* margin-left: 20px; */
+  }
+  .mat-header-cell{
+    text-align: center;
+  }
+  .label
+  {
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    color:rgb(182, 248, 234);
   }
   
+  /* .app-data-table{
   
+    width:80%;
+    margin:20px auto;
+    color: white;
+  }
+  */
+  .Detail
+  {
+    margin-left: 20px;
+  }
+
+  td.mat-cell {
+    padding: 15px 15px 15px 15px   ;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+   }
+   th.mat-header-cell
+   {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+   }
+   
+ 
+   
+   /* table {
+    
+     border-spacing: 0 8px !important;
+   } 
+   .card
+{
+    font-size: 20px;  
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
+     float: none; 
+    margin-bottom: 10px;
+    background-color: black;
+    
+    background-image: url('src\assets\images\indian-bride.jpg'); 
+    background-repeat: no-repeat;
+   
+    
+}
+
+.barcode
+{
+    margin-left: 360px;
+}
+.table
+{
+    color:aqua;
+}
+.d1
+{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:aqua;
+}
+.mat-dialog-title
+{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 60px;
+}
+   */

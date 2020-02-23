@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PackagesComponent implements OnInit {
 
+  silverPack:number = 1530;
+  goldPack:number = 2400;
+  diamondPack:number = 3150;
   constructor() { }
 
   ngOnInit() {
