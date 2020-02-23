@@ -18,7 +18,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
-import {MatPaginatorModule} from '@angular/material/paginator';
+//import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -32,11 +32,13 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { LayoutModule } from '@angular/cdk/layout';
-import { DialogOverviewExampleDialog } from '../layout/admin/dashboard/grooms/grooms.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
+//import { DialogOverviewExampleDialog } from '../layout/admin/dashboard/grooms/viewgrooms.component';
 //import {MatDialogModule} from '@angular/material/dialog';
 
 const MaterialComponents=[
-
+  MatPaginatorModule,
   MatButtonModule,
   MatButtonToggleModule,
   MatIconModule,

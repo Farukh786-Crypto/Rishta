@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { DataSource } from '@angular/cdk/collections';
  import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
@@ -20,7 +19,7 @@ export class MatchesComponent implements  AfterViewInit, OnInit {
   dataSource: MatchesComponent;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'detail','action'];
+  displayedColumns = ['id','photo', 'detail','action'];
 
   ngOnInit() {
     this.dataSource = new MatchesComponent();
@@ -101,37 +100,25 @@ export interface DataTableItem {
     maritalstatus:string;
   };
   id: number;
-  //amount:number;
- 
+  photo:any
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: DataTableItem[] = [ // It s Dummy Table
-  {id: 1, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-  {id: 2, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+  {id: 1,photo:'./assets/Images/1.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+  {id: 2,photo:'./assets/Images/2.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
  
-  {id: 3, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 4, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 5, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 6, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 7, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 8, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 9, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 10, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 11, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 12, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 13, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 14, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 15, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 16, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-   {id: 17, detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-  
+  {id: 3,photo:'./assets/Images/h1.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 4,photo:'./assets/Images/4.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 5, photo:'./assets/Images/h2.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 6, photo:'./assets/Images/5.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 7, photo:'./assets/Images/h3.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 8,photo:'./assets/Images/6.jpg',  detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 9,photo:'./assets/Images/h5.jpg',  detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
+   {id: 10,photo:'./assets/Images/h6.jpg',  detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi ',city:'pune',maritalstatus:'married'}},
+   
   
 ];
 function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
-
-
-
-

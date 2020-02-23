@@ -12,5 +12,16 @@ import { ViewService } from './view.service'
 export class ViewComponent
 {
   
+    dialogRef: any;
 
+    constructor()
+    {
+      
+    }
+     
+  
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+  
 }
