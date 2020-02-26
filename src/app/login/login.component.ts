@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  [x: string]: any;
-
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-  }
   username: string;
   password: string;
+  ngOnInit() {
+ 
+  }
+  constructor(private router: Router) { }
 
+  form: FormGroup = new FormGroup({
+    username: new FormControl('', [Validators.required]),
+    password: new FormControl(''),
+  });
   login() {
     if (this.username === 'admin' && this.password === 'admin@143') {
       console.log("Login succesfully");
@@ -34,6 +37,9 @@ export class LoginComponent implements OnInit {
       console.log("Login Failed");
     }
   }
+
+
+  
 
 }
 

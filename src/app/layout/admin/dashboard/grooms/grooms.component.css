@@ -3,50 +3,54 @@
     width: auto;
     color: white;
     table-layout: auto;
-    border-color: white; 
+    border-color:  white; 
     /* padding: 150px 150px 15px 15px; */
     margin-top: 20px;
-    background-image: url('src/assets/Images/indian-bride.jpg');
-    
+    background-color:rgb(245, 142, 170);
+
   }
   .mat-cell{
-    color: white;
+    color: black;
     font-size: medium;
     padding: 15px 15px 15px 15px;
+    background-color: transparent;
     
+  }
+
+  .mat-paginator
+  {
+    margin-left: auto;
+    width : auto;
+    background-color:transparent;
+    color: rgb(66, 8, 23 );;
+    font-size: small;
   }
   .mat-flat-button
   {
     margin-left: 15px;
-  }
-  /* .mat-header-cell
-  {
+    background-color:rgb(66, 8, 23 );
     color: white;
+
+  }
+  .mat-header-cell
+  {
+    
     font-family: "Times New Roman", Times, serif;
     font-weight: 200px;
     font-size: 25px;
-    /* color:rgb(144, 248, 231); */
-    /* color: white;
-    text-align: center; */
-
-    /* margin-left: 20px; */
-  /* } */ 
+     color: white;
+    text-align: center; 
+    background-color:rgb(66, 8, 23 );
+  } 
  
   .label
   {
     font-size: 15px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: large;
-    color:rgb(182, 248, 234);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color:black;
   }
   
-  /* .app-data-table{
-  
-    width:80%;
-    margin:20px auto;
-    color: white;
-  }
-  */
   .Detail
   {
     margin-left: 20px;
@@ -63,7 +67,3 @@
     border-top: 1px solid white;
    }
    
- 
-   
-
-  

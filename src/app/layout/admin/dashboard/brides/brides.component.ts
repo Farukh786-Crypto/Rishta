@@ -14,7 +14,7 @@ import { ViewComponent } from '../view/view.component';
   styleUrls: ['./brides.component.css'],
   providers:[]
 })
-export class BridesComponent implements OnInit {
+export class BridesComponent implements OnInit,AfterViewInit {
 
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
@@ -71,7 +71,7 @@ export class BridesComponent implements OnInit {
   
   openDialog(): void {
      const dialogRef = this.dialog.open(ViewComponent, {
-      width: '900px',height:'600px'
+      width: '800px',height:'600px'
       
     });
 

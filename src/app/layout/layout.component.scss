@@ -1,13 +1,7 @@
-// .navbar{
-//     justify-content: space-between;
-// }
+
 img{
     height: 60px;
 }
-
-// .span {
-//     padding-right: 1rem;
-// }
 .right
 {
 margin-left: 1050px;
@@ -18,10 +12,19 @@ background-color: black;
 {
   background-color: aquamarine;
 }
-mat-toolbar
-{
-  background-color: black;
-}
+ .mat-toolbar
+ {
+    width: 100%;
+  height:auto;
+  margin:0;
+  left:0;
+  right:0;
+  top:0;
+  overflow: hidden;
+  display: block;
+  position: sticky;
+  z-index: 1;
+ }
 
 #btmFooter {
     align-self: flex-end;
@@ -38,24 +41,11 @@ mat-toolbar
 {
   color:white;
   background-color: black;
-
-  
-  
 }
 .mat-menu-item:hover
 {
   background-color:black;
 }
-
-
-
-
-
-
-
-
-
-
   .example-card {
     max-width: 300px;
     max-height: 200px;
@@ -96,4 +86,8 @@ mat-toolbar
 }
 .mat-button:active{
   background-color: rgb(13, 14, 13);
+}
+.mat-toolbar
+{
+  background-color: rgb(66, 8, 23);
 }
