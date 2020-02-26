@@ -8,6 +8,6 @@ export const MyRoute: Routes = [
     { path: 'login', loadChildren: './login/login.module#LoginModule' },
     { path: 'admin', loadChildren: './layout/layout.module#LayoutModule',canActivate:[AdminAuthGuard]},
     { path: 'users', loadChildren: './UserModule/user.module#UserModule',canActivate:[UsersAuthGuard]},
-    // { path: 'sign-up', loadChildren: './signup/signup.module#SignupModule' },
-    { path: '**', component: ErrorComponent }
+    { path: 'sign-up', loadChildren: './signup/signup.module#SignupModule' },
+  //  { path: '**', component: ErrorComponent }
 ]

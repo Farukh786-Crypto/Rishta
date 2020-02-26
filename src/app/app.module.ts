@@ -19,7 +19,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorComponent,
+    ErrorComponent
   
   ],
   imports: [

@@ -1,8 +1,9 @@
-<mat-toolbar color="accent">
+
+<mat-toolbar>
   <mat-toolbar-row>
     <div> <a><img src="assets/Images/rishtalogo.png"></a></div>
     <div class="right">
-      <button mat-button [matMenuTriggerFor]="menu1">Admin</button>
+      <button mat-button [matMenuTriggerFor]="menu1" style="color: black;background-color: rgb(92, 223, 247);">Admin</button>
       <mat-menu #menu1="matMenu">
         <button mat-menu-item (click)="SignOut()">SignOut</button>
       </mat-menu>
@@ -17,10 +18,10 @@
       </mat-menu>
       <a routerLink="./matches" style="color: white;"><button mat-button>Matches </button></a>
       <a routerLink="./packages" style="color: white;"><button mat-button > Packages </button> </a>
-      <a mat-button > Payment </a>
-      <a><button mat-button [matMenuTriggerFor]="menu2">User</button></a>
+      <a mat-button style="color: white;"> Payment </a>
+      <a style="color: white;"><button mat-button [matMenuTriggerFor]="menu2">User</button></a>
       <mat-menu #menu2="matMenu">
-        <a routerLink="../users/register"><button mat-menu-item>Add</button></a>
+        <a routerLink="../users/register"  style="color: white;"><button mat-menu-item>Add</button></a>
       </mat-menu>
     
     </div>

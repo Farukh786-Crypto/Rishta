@@ -4,18 +4,13 @@ table {
   } 
   .card
 {
-   font-size: 20px;  
-   width: 800px;
+   font-size: 15px;  
+   width: 700px;
    height: auto;
-   margin: 0 auto; /* Added */
-    float: none; /* Added */
-   margin-bottom: 10px; /* Added */
-   background-color: black;
-   
-   /* background-image: url('src\assets\images\indian-bride.jpg'); */
-   background-repeat: no-repeat;
-  
-   
+   margin: 0 auto; 
+    float: none;
+   margin-bottom: 10px; 
+   background-color: rgb(119, 18, 45);   
 }
 .cdk-overlay-pane.my-dialog {
    position: relative!important;
@@ -34,17 +29,28 @@ table {
 }
 .table
 {
-   color:aqua;
+   color:white;
 }
 .d1
 {
-   font-size: 30px;
+   font-size: 20px;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   color:aqua;
+   color: white;
+   
+   
 }
 .mat-dialog-title
 {
  font-family: Georgia, 'Times New Roman', Times, serif;
- font-size: 60px;
+ font-size: 40px;
+ color: rgb(66, 8, 23);
+
+}
+.center
+{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+   width: 40%; 
 }
  
