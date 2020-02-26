@@ -1,3 +1,4 @@
+<button class="close" mat-button color="accent" (click)="onNoClick()">X</button>
 <h1 mat-dialog-title> Details </h1>
 <div mat-dialog-content>
     <div class="card">
@@ -8,20 +9,20 @@
                     <tr>
                         Name: {{data.detail.name}}
                         <span class="barcode">
-                            age:
+                            age: {{data.detail.age}}
                         </span>
 
                         <br><br>
 
-                        Religion:
+                        Religion: {{data.detail.religion}}
                         <span class="barcode">
-                            Mother Tongue:
+                            Mother Tongue: {{data.detail.mothertongue}}
                         </span>
 
                         <br><br>
-                        City:
+                        City: {{data.detail.city}}
                         <span class="barcode">
-                            Marital Status:
+                            Marital Status: {{data.detail.maritalstatus}}
                         </span>
                         <br><br>
 
