@@ -49,15 +49,23 @@ careerDetails: FormGroup
                 () => console.log('complete')
             )
     }
-    onChangeCountry() {
+    chooseFile(event) {
+      const file = event.target.files[0]
+      // console.log(file.length)
+      alert(file.length);
+    }
+    onUpload(){
+       
+    }
+    onChangeCountry(country_id) {
         // console.log('In State')
-        this.stateInfo = this.countryInfo.filter(x => x.CountryName === this.country)[0].States;
-        this.cityInfo = this.stateInfo[0].Cities;
-        console.log(this.stateInfo);
+        // this.stateInfo = this.countryInfo.filter(x => x.CountryName === this.country)[0].stateObject;
+        // this.cityInfo = this.stateInfo[0].Cities;
+        // console.log(this.stateInfo);
     }
     onChangeState() {
         // console.log('In City')
-        this.cityInfo = this.stateInfo.filter(y => y.StateName === this.state)[0].Cities;
+        this.cityInfo = this.stateInfo.filter(y => y.StateName === this.state)[0].city_id;
         // this.cityInfo = this.stateInfo[stateValue].Cities;
         console.log(this.cityInfo);
     }

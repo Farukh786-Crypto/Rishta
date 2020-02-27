@@ -9,8 +9,8 @@ import { CareerProfile } from 'src/app/model';
 export class CareerService {
 
   constructor(private http: HttpClient) { }
-  url: string = "https://raw.githubusercontent.com/sagarshirbhate/Country-State-City-Database/master/Contries.json";
-
+  // url: string = "https://raw.githubusercontent.com/sagarshirbhate/Country-State-City-Database/master/Contries.json";
+  // 
   //   private url='http://192.168.0.127:8082/api/addcarrierdetails'
   //   addContent(content:CareerProfile):Observable<CareerProfile>{
 
@@ -18,10 +18,15 @@ export class CareerService {
   //     return this.http.post<CareerProfile>(this.url+'/create',content,httpOption);
 
   // }    
-
+  //url: string="http://192.168.0.122:8080/api/getdetails/Carrier"
+  url: string="http://192.168.0.122:8080/api/countries/countries"
+   
   allCountries(): Observable<any> {
     return this.http.get(this.url);
   }
+  // onUpload(){
+  //   // this.http.post();
+  // }
 
 
 
