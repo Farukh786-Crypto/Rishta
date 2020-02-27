@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 <!-- {{getCareerInfo|json}}
 <!<button type="submit" (click)="SaveCareerInfo()"> Get </button> -->
 <!-- <button type="submit" (click)="call_to_service()"> Get </button> -->
->>>>>>> acfb08b4ac5cd7f67c1dd16946a7aa067f6e4f5d
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title><b>
@@ -15,7 +12,7 @@
       <div class="example-container">
         <div class="form-group">
           <mat-form-field class="demo-full-width">
-            <mat-label> -- Select Country -- </mat-label>
+            <mat-label>   Country</mat-label>
             <mat-select formControlName="Country" [(ngModel)]="country" (ngModelChange)="onChangeCountry()" required>
               <mat-option *ngIf="countryInfo == ''" value="-1">-- Select--</mat-option>
               <mat-option *ngFor="let country of countryInfo; let i = index" [value]="country.CountryName">
@@ -31,7 +28,7 @@
         </div>
         <div class="form-group">
           <mat-form-field class="demo-full-width">
-            <mat-label> -- Select State -- </mat-label>
+            <mat-label> State </mat-label>
             <mat-select formControlName="State" [(ngModel)]="state" (ngModelChange)="onChangeState()" required>
               <mat-option *ngIf="stateInfo == ''" value="-1">-- Select--</mat-option>
               <mat-option *ngFor="let state of stateInfo; let j = index" [value]="state.StateName">
@@ -47,7 +44,7 @@
         </div>
         <div class="form-group">
           <mat-form-field class="demo-full-width">
-            <mat-label> -- Select City -- </mat-label>
+            <mat-label>  City </mat-label>
             <mat-select formControlName="City" required>
               <mat-option *ngIf="cityInfo == ''" value="-1">-- Select --</mat-option>
               <mat-option *ngFor="let city of cityInfo; let k = index" value="{{k}}">
@@ -80,7 +77,7 @@
             </mat-error>
           </mat-form-field>
         </div>
-      </div>
+      
       <div class="form-group">
         <mat-form-field class="demo-full-width">
 
@@ -88,9 +85,9 @@
           <mat-select formControlName="BachlorDegree" required>
             <mat-option>-- Select Any --</mat-option>
 
-            <!-- <mat-option *ngFor="let bachlorDegrees of  bachlorDegree" value={{bachlorDegrees.state_id}}>
+            <mat-option *ngFor="let bachlorDegrees of  bachlorDegree" value={{bachlorDegrees.state_id}}>
               {{bachlorDegrees.state_name|titlecase}}  </mat-option>
-              -->
+             
           </mat-select>
           <mat-error>
             <span
@@ -165,21 +162,8 @@
         <!-- <button mat-raised-button color="warn" (click)="SaveCareerInfo()"style="margin-left: 20px;">Save</button>  -->
         <button class="button" mat-raised-button color="warn" (click)="clear()">CLEAR</button>
       </div>
-      
+    </div>
+    
     </form>
   </mat-card-content>
-<<<<<<< HEAD
-
-
-
-
 </mat-card>
-
-
-
-
-
- 
-=======
-</mat-card>
->>>>>>> acfb08b4ac5cd7f67c1dd16946a7aa067f6e4f5d
