@@ -13,10 +13,10 @@
         <div class="form-group">
           <mat-form-field class="demo-full-width">
             <mat-label> -- Select Country -- </mat-label>
-            <mat-select formControlName="Country" [(ngModel)]="country" (ngModelChange)="onChangeCountry()" required>
+            <mat-select formControlName="Country" [(ngModel)]="country1" (ngModelChange)="onChangeCountry()" required>
               <mat-option *ngIf="countryInfo == ''" value="-1">-- Select--</mat-option>
-              <mat-option *ngFor="let country of countryInfo; let i = index" [value]="country.CountryName">
-                {{country.CountryName}}
+              <mat-option *ngFor="let country1 of countryInfo; let i = index" [value]="country1.country_name">
+              {{country.CountryName}}
               </mat-option>
             </mat-select>
             <mat-error *ngIf="careerDetails.controls['Country'].hasError('required') &&        
@@ -29,9 +29,9 @@
         <div class="form-group">
           <mat-form-field class="demo-full-width">
             <mat-label> -- Select State -- </mat-label>
-            <mat-select formControlName="State" [(ngModel)]="state" (ngModelChange)="onChangeState()" required>
+            <mat-select formControlName="State" [(ngModel)]="state1" (ngModelChange)="onChangeState()" required>
               <mat-option *ngIf="stateInfo == ''" value="-1">-- Select--</mat-option>
-              <mat-option *ngFor="let state of stateInfo; let j = index" [value]="state.StateName">
+              <mat-option *ngFor="let state1 of stateInfo; let j = index" [value]="state1.state_name">
                 {{state.StateName}}
               </mat-option>
             </mat-select>

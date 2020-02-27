@@ -56,7 +56,7 @@ export class EducationProfile{
     AEduacation:string;
 }
 export class LifestyleProfile{
-    house:  string;
+house:  string;
 car:  string;
 Languages: string;
 Food:  string;

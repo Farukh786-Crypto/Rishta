@@ -1,23 +1,20 @@
-
- 
-.example-card {
-  max-width: 450px;
-  margin: 0px auto;
-  height: auto;
-  margin-top:20px ;
-   
+.title{
+    padding-bottom: 10px;
+    text-align: center;
 }
-
-.mat-form-field-wrapper{
-  width: 600px !important;
-  
-   
+.tilefix{
+  position: absolute;
+  width: 60%;
+  height: 50%; 
+  text-align: center;
+  margin-left: 20%;
 }
- 
-.mat-card-header .mat-card-tiltle {
-font-size: 25px;
-font-family: "Arial Black", Gadget, sans-serif; 
-color: navy;
+ .mat-form-field-wrapper{
+    width: 600px !important;   
+     
+}
+.mat-form-field{
+    width:100%;
 }
 
 .example-container
@@ -28,11 +25,14 @@ color: navy;
 }
 .button
 {
+    margin-top: 8px;
     margin-left: 10px;
 }
 .form
 {
+    
     text-align: center;
+    height:80%;
 }
 
   
