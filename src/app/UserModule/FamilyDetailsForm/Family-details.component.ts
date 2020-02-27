@@ -14,7 +14,7 @@ export class FamilyDetailsComponent {
 
   FamilyDetailsModel: FormGroup
   isSubmitted: boolean;
-
+  title:string='Astro and Religion Component demo'
   constructor() {
   //  console.log('---------------------------------------');
     this.FamilyDetailsModel = new FormGroup({
