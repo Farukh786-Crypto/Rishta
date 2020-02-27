@@ -1,223 +1,266 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <!-- <img mat-card-avatar src="assets\Images\lifeicon.jpg" class="rounded"> -->
-    <mat-card-title>Lifestyle Details</mat-card-title>
-    <mat-card-subtitle> </mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <!-- {{LifestyleModel.value|json}} -->
-    <form [formGroup]="LifestyleModel" class="form">
-      <div class="example-container">
-        <div class="form-group">
-          <mat-form-field class="demo-full-width">
-          <mat-label>Own a house?</mat-label>
-          <mat-select>
-            <mat-option selected value disabled>-- Select --</mat-option>
+<div class="title">
+  <h1>{{title}}</h1>
+</div>
+<div class="Lifestyleform" class="container">
+<form [formGroup]="LifestyleModel" class="form">
+  <!-- <mat-grid-list cols="3" rowHeight="40px" gutterSize="35px"> -->
+  <mat-grid-list [cols]="breakpoint" rowHeight="40px"  gutterSize="35px" (window:resize)="onResize($event)">
+    <div class="tilefix">
+    <mat-grid-tile>
+      <mat-form-field appearance="fill" color="accent">
+        <mat-label >Own a house?</mat-label>
+        <mat-select required>
+          <mat-option selected value disabled>-- Select --</mat-option>
             <mat-option>Yes</mat-option>
             <mat-option>No</mat-option>
-          </mat-select>
-          </mat-form-field>
-        </div>
-        <div class="form-group">
-          <mat-form-field class="demo-full-width">
-          <mat-label>Own a car?</mat-label>
-          <mat-select>
-            <mat-option selected value disabled>-- Select --</mat-option>
-            <mat-option>Yes</mat-option>
-            <mat-option>No</mat-option>
-          </mat-select>
-          </mat-form-field>
-        </div>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
 
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-              <mat-label>Are you open to pets? </mat-label>
-              <mat-select>
-                <mat-option selected value disabled>-- Select --</mat-option>
-                <mat-option>Yes</mat-option>
-                <mat-option>No</mat-option>
-              </mat-select>
-              </mat-form-field>
-            </div>
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <mat-label> Languages I Speak </mat-label>
-                <mat-select multiple>
-                  <mat-option selected value disabled>-- Select --</mat-option>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn" >
+        <mat-label>Own a car?</mat-label>
+        <mat-select required>
+          <mat-option selected value disabled>-- Select --</mat-option>
+            <mat-option>Yes</mat-option>
+            <mat-option>No</mat-option>
+        </mat-select> 
+      </mat-form-field>   
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+     <mat-form-field appearance="fill" color="accent" >
+      <mat-label>Are you open to pets?</mat-label>
+      <mat-select required>
+        <mat-option selected value disabled>-- Select --</mat-option>
+          <mat-option>Yes</mat-option>
+          <mat-option>No</mat-option>
+      </mat-select>
+    </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Languages I Speak </mat-label>
+        <mat-select multiple>
+        <mat-option selected value disabled>-- Select --</mat-option>
                   <mat-option value="1">Hindi </mat-option>
                   <mat-option value="2">English </mat-option>
                   <mat-option value="3">Marathi </mat-option>
-                </mat-select>
-              </mat-form-field>
-              <mat-error>
-                <span
-                  *ngIf="LifestyleModel.controls['Languages'].hasError('required')&&
-                (LifestyleModel.controls.Languages.touched ||LifestyleModel.controls['Languages'].dirty|| isSubmitted)">
-                  Please select any one.</span>
-              </mat-error>
-            </div>
+        </mat-select>
+        <mat-error
+          
+            *ngIf="LifestyleModel.controls['Languages'].hasError('required')&&
+          (LifestyleModel.controls.Languages.touched ||LifestyleModel.controls['Languages'].dirty|| isSubmitted)">
+            Please select any one.
+        </mat-error>
+        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+          {{specialization.viewValue}}
+        </mat-option> -->
+      </mat-form-field> 
+    </mat-grid-tile>
 
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <input matInput placeholder=" Food I Cook " formControlName="Food">
-              </mat-form-field>
-              <mat-error>
-                <span *ngIf="LifestyleModel.controls['Food'].hasError('required')&&
-                  (LifestyleModel.controls.Food.touched ||LifestyleModel.controls['Food'].dirty|| isSubmitted)">
-                  Please select any one.</span>
-              </mat-error>
-            </div>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Languages I Speak </mat-label>
+        <mat-select multiple>
+        <mat-option selected value disabled>-- Select --</mat-option>
+                  <mat-option value="1">Hindi </mat-option>
+                  <mat-option value="2">English </mat-option>
+                  <mat-option value="3">Marathi </mat-option>
+        </mat-select>
+        <mat-error
+ *ngIf="LifestyleModel.controls['Languages'].hasError('required')&&
+          (LifestyleModel.controls.Languages.touched ||LifestyleModel.controls['Languages'].dirty|| isSubmitted)">
+            Please select any one.
+        </mat-error>
+        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+          {{specialization.viewValue}}
+        </mat-option> -->
+      </mat-form-field> 
+    </mat-grid-tile>
 
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Food I Cook </mat-label>
+        <input matInput  formControlName="Food">
+        <mat-error *ngIf="LifestyleModel.controls['Food'].hasError('required')&&
+        (LifestyleModel.controls.Food.touched ||LifestyleModel.controls['Food'].dirty|| isSubmitted)">
+        Please select any one.
+        </mat-error>
+        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+          {{specialization.viewValue}}
+        </mat-option> -->
+      </mat-form-field> 
+    </mat-grid-tile>
 
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <input matInput placeholder="Favourite Books " formControlName="Books">
-              </mat-form-field>
-              <mat-error>
-                <span *ngIf="LifestyleModel.controls['Books'].hasError('required')&&
-                  (LifestyleModel.controls.Books.touched ||LifestyleModel.controls['Books'].dirty|| isSubmitted)">
-                  Please select any one.</span>
-              </mat-error>
-            </div>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Favourite Books </mat-label>
+        <input matInput formControlName="Books">
+        <mat-error
+           *ngIf="LifestyleModel.controls['Books'].hasError('required')&&
+            (LifestyleModel.controls.Books.touched ||LifestyleModel.controls['Books'].dirty|| isSubmitted)">
+            Please select any one.
+        </mat-error>
+        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+          {{specialization.viewValue}}
+        </mat-option> -->
+      </mat-form-field> 
+    </mat-grid-tile>
 
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <input matInput placeholder="Favourite  food" formControlName="Favouritefood">
-              </mat-form-field>
-              <mat-error>
-                <span
-                  *ngIf="LifestyleModel.controls['Favouritefood'].hasError('required')&&
-                (LifestyleModel.controls.Favouritefood.touched ||LifestyleModel.controls['Favouritefood'].dirty|| isSubmitted)">
-                  Please select any one.</span>
-              </mat-error>
-            </div>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Favourite food </mat-label>
+        <input matInput formControlName="Favouritefood">
+        <mat-error
+           *ngIf="LifestyleModel.controls['Books'].hasError('required')&&
+            (LifestyleModel.controls.Books.touched ||LifestyleModel.controls['Books'].dirty|| isSubmitted)">
+            Please select any one.
+        </mat-error>
+        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+          {{specialization.viewValue}}
+        </mat-option> -->
+      </mat-form-field> 
+    </mat-grid-tile>
 
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <input matInput placeholder="Favourite   sports" formControlName="sports">
-                <mat-error>
-                  <span *ngIf="LifestyleModel.controls['sports'].hasError('required')&&
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Favourite sports</mat-label>
+        <input matInput formControlName="sports">
+        <mat-error
+        *ngIf="LifestyleModel.controls['sports'].hasError('required')&&
                 (LifestyleModel.controls.sports.touched ||LifestyleModel.controls['sports'].dirty|| isSubmitted)">
-                    Please select any one.</span>
-                </mat-error>
-              </mat-form-field>
-            </div>
+                    Please select any one.
+        </mat-error>
+        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+          {{specialization.viewValue}}
+        </mat-option> -->
+      </mat-form-field> 
+    </mat-grid-tile>
 
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <input matInput placeholder="Favourite Music" formControlName="Music">
-
-                <mat-error>
-                  <span *ngIf="LifestyleModel.controls['Music'].hasError('required')&&
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Favourite Music</mat-label>
+        <input matInput formControlName="Music">
+        <mat-error
+        *ngIf="LifestyleModel.controls['Music'].hasError('required')&&
                 (LifestyleModel.controls.Music.touched ||LifestyleModel.controls['Music'].dirty|| isSubmitted)">
-                    Please select any one.</span>
-                </mat-error>
-              </mat-form-field>
-            </div>
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <input matInput placeholder=" Interests" formControlName="Interests">
-                <mat-error>
-                  <span *ngIf="LifestyleModel.controls['Interests'].hasError('required')&&
+                    Please select any one.
+        </mat-error>
+        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+          {{specialization.viewValue}}
+        </mat-option> -->
+      </mat-form-field> 
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Interests</mat-label>
+        <input matInput formControlName="Interests">
+        <mat-error
+        *ngIf="LifestyleModel.controls['Interests'].hasError('required')&&
             (LifestyleModel.controls.Interests.touched ||LifestyleModel.controls['Interests'].dirty|| isSubmitted)">
-                    Please select any one.</span>
-                </mat-error>
-              </mat-form-field>
-            </div>
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <input matInput placeholder="Vacation Destination" formControlName="Destination">
-                <mat-error>
-                  <span
-                    *ngIf="LifestyleModel.controls['Destination'].hasError('required')&&
+                    Please select any one.
+        </mat-error>
+      </mat-form-field> 
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Vacation Destination</mat-label>
+        <input matInput formControlName="Destination">
+        <mat-error
+        *ngIf="LifestyleModel.controls['Destination'].hasError('required')&&
             (LifestyleModel.controls.Destination.touched ||LifestyleModel.controls['Destination'].dirty|| isSubmitted)">
-                    Please select any one.</span>
-                </mat-error>
-              </mat-form-field>
-            </div>
-
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <input matInput placeholder="Movies">
-                <mat-error>
-                  <span *ngIf="LifestyleModel.controls['Movies'].hasError('required')&&
-            (LifestyleModel.controls.Movies.touched ||LifestyleModel.controls['Movies'].dirty|| isSubmitted)">
-                    Please select any one.</span>
-                </mat-error>
-              </mat-form-field>
-            </div>
-
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <input matInput placeholder=" TV Shows">
-              </mat-form-field>
-            </div>
-
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <input matInput placeholder=" Serial">
-              </mat-form-field>
-            </div>
-
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <mat-label> Dress Style</mat-label>
-                <mat-select multiple>
-                  <mat-option selected value disabled>-- Select Any --</mat-option>
-                  <mat-option value="1">Classic India</mat-option>
-                  <mat-option value="2">Classic Western</mat-option>
-                  <mat-option value="3">Designer </mat-option>
-                  <mat-option value="4">Casual </mat-option>
-                  <mat-option value="5">Trendy </mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-
-            <!-- <div class="form-group">
-          <mat-form-field class="demo-full-width">
-            <mat-label>Habits </mat-label>
-          </mat-form-field>
-        </div> -->
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <mat-label>Do you drink?</mat-label>
-                <mat-select formControlName="drink">
-                  <mat-option selected value disabled>-- Select Any --</mat-option>
-                  <mat-option value="1"> Yes</mat-option>
-                  <mat-option value="2">No </mat-option>
-                  <mat-option value="3">Occasionally </mat-option>
-                </mat-select>
-                <mat-error>
-                  <span *ngIf="LifestyleModel.controls['drink'].hasError('required')&&
-              (LifestyleModel.controls.drink.touched ||LifestyleModel.controls['drink'].dirty|| isSubmitted)">
-                    Please select any one.</span>
-                </mat-error>
-              </mat-form-field>
-            </div>
-            <div class="form-group">
-              <mat-form-field class="demo-full-width">
-                <mat-label>Do you smoke?</mat-label>
-                <mat-select formControlName="smoke">
-                  <mat-option selected value disabled>-- Select Any --</mat-option>
-                  <mat-option value="1"> Yes</mat-option>
-                  <mat-option value="2">No </mat-option>
-                  <mat-option value="3">Occasionally </mat-option>
-                </mat-select>
-                <mat-error>
-                  <span *ngIf="LifestyleModel.controls['smoke'].hasError('required')&&
-                (LifestyleModel.controls.smoke.touched ||LifestyleModel.controls['smoke'].dirty|| isSubmitted)">
-                    Please select any one.</span>
-                </mat-error>
-              </mat-form-field>
-            </div>
-            <!-- <mat-card-actions> -->
-              <button mat-raised-button (click)="onSaveSuccess(LifestyleModel.value)" color="primary">Submit</button>
-              <button mat-raised-button class="button" color="warn"
-                (ngSubmit)="onFormSubmit(LifestyleModel.value)">Clear</button>
-            <!-- </mat-card-actions> -->
+                    Please select any one.
+        </mat-error>
+      </mat-form-field> 
+    </mat-grid-tile>
 
 
-          </div>
-            </form>
-  </mat-card-content>
-</mat-card>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Movies</mat-label>
+        <input matInput formControlName="Destination">
+        <mat-error
+        *ngIf="LifestyleModel.controls['Movies'].hasError('required')&&
+        (LifestyleModel.controls.Movies.touched ||LifestyleModel.controls['Movies'].dirty|| isSubmitted)">
+                Please select any one.
+        </mat-error>
+      </mat-form-field> 
+    </mat-grid-tile>
+
+
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <input matInput placeholder=" TV Shows">
+      </mat-form-field> 
+    </mat-grid-tile>
+
+
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <input matInput placeholder=" Serial">
+      </mat-form-field> 
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" color="warn">
+        <mat-label>Dress Style</mat-label>
+        <mat-select multiple>
+          <mat-option selected value disabled>-- Select Any --</mat-option>
+          <mat-option value="1">Classic India</mat-option>
+          <mat-option value="2">Classic Western</mat-option>
+          <mat-option value="3">Designer </mat-option>
+          <mat-option value="4">Casual </mat-option>
+          <mat-option value="5">Trendy </mat-option>
+        </mat-select>
+        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+          {{specialization.viewValue}}
+        </mat-option> -->
+      </mat-form-field> 
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field appearance="fill" color="accent" >
+       <mat-label>Do you drink?</mat-label>
+       <mat-select formControlName="drink" required>
+        <mat-option selected value disabled>-- Select Any --</mat-option>
+        <mat-option value="1"> Yes</mat-option>
+        <mat-option value="2">No </mat-option>
+        <mat-option value="3">Occasionally </mat-option>
+      </mat-select>
+      <mat-error
+         *ngIf="LifestyleModel.controls['drink'].hasError('required')&&
+    (LifestyleModel.controls.drink.touched ||LifestyleModel.controls['drink'].dirty|| isSubmitted)">
+          Please select any one.
+      </mat-error>
+     </mat-form-field>
+     </mat-grid-tile>
+
+     <mat-grid-tile>
+      <mat-form-field appearance="fill" color="accent" >
+       <mat-label>Do you smoke?</mat-label>
+       <mat-select formControlName="smoke" required>
+        <mat-option selected value disabled>-- Select Any --</mat-option>
+        <mat-option value="1"> Yes</mat-option>
+        <mat-option value="2">No </mat-option>
+        <mat-option value="3">Occasionally </mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="LifestyleModel.controls['smoke'].hasError('required')&&
+        (LifestyleModel.controls.smoke.touched ||LifestyleModel.controls['smoke'].dirty|| isSubmitted)">
+            Please select any one.
+      </mat-error>
+     </mat-form-field>
+     </mat-grid-tile>
+ 
+    </div>
+    </mat-grid-list>
+  
+    <button mat-raised-button (click)="onSaveSuccess(LifestyleModel.value)" color="primary">Submit</button>
+     <button mat-raised-button class="button" color="warn"
+       (ngSubmit)="onFormSubmit(LifestyleModel.value)">Clear</button>
+</form>
+</div>
