@@ -13,7 +13,7 @@ import { AstroandReligion } from 'src/app/model';
     providers: [AstroreligionService]
 })
 export class AstroreligionComponent{
-title:string='Astroreligion Demo Component '
+title:string='Astro and Religion  '
 AstroreligionDetails:FormGroup
 str:string
 disabled:boolean

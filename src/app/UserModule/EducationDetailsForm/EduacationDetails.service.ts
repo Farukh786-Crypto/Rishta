@@ -8,15 +8,11 @@ import { catchError } from 'rxjs/operators';
 @Injectable()
  
 export class EducationService{ 
-
   constructor(private http: HttpClient) { }
-
-
 gethighestDegree() {
     let url='http://192.168.0.127:8082/api/gethighestDegree'     
          return this.http.get(url);    
   }
-
   getgraduationDegree(country_id:number) {
     let url='http://192.168.0.127:8082/api/getgraduationDegree';
     return this.http.get(url);     
@@ -25,6 +21,5 @@ gethighestDegree() {
   addContent(content:EducationProfile):Observable<EducationProfile>{
     const httpOption = {headers:new HttpHeaders({'Content-Type':'application/json'})};
     return this.http.post<EducationProfile>(this.url+'/create',content,httpOption);
-
 }  
 }

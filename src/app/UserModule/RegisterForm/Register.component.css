@@ -28,8 +28,11 @@ color: navy;
   
 } 
 .buttonclass{
-  margin-left: 8px;
+  margin-left: 40px;
   
+}
+.buttonclass .button2class{
+  margin-left: 20px;
 }
 .mat-input-wrapper{
   width:600px !important;
