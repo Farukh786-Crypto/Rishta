@@ -15,7 +15,7 @@ export class LifestyleComponent{
   LifestyleModel: FormGroup
   isSubmited: boolean;
   breakpoint: number;
-title:string='Lifestyle Component demo'
+  title:string='Lifestyle Component demo'
 constructor(private toastr: ToastrService,  ){
   this.LifestyleModel = new FormGroup({
     
