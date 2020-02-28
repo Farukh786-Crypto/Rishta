@@ -28,6 +28,8 @@ allgetGotra:{};
 allgetHoroscope:{};
 allnakshtra:{};
 allgetManglik:{};
+breakpoint: number;
+
 constructor(private toastr: ToastrService,private astrotreligion:AstroreligionService){
 
     this.AstroreligionDetails=new FormGroup({
@@ -50,6 +52,8 @@ constructor(private toastr: ToastrService,private astrotreligion:AstroreligionSe
 
         /** spinner starts on init */
     // this.spinner.show();
+
+    this.breakpoint = (window.innerWidth <= 400) ? 1 : 2;
 
     this.astrotreligion.getMaritalStatus().subscribe(
         maritaldata=>this.allmaritalstatus=maritaldata
@@ -96,6 +100,10 @@ constructor(private toastr: ToastrService,private astrotreligion:AstroreligionSe
             
           );
             }
+
+            onResize(event) {
+                this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 2;
+              }
 
     // getAllAstroreligion() 
     // {

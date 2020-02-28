@@ -103,7 +103,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     ScrollingModule,
     MatCardModule,
     MatDatepickerModule,
-    MatInputModule
+    MatInputModule,
+    
 
   ]
   @NgModule({
@@ -114,9 +115,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     
   
   })
-      
-
-
 export class MaterialModule{ 
 
 

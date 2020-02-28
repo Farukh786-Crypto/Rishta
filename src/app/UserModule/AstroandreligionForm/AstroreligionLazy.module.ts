@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { AstroreligionComponent } from './Astroreligion.component';
 import { MaterialModule } from 'src/app/material/material.module';
+import { GridColsDirective } from './grid-cols.directive';
+
 
 
 const astroroute: Routes = [
@@ -16,7 +18,7 @@ const astroroute: Routes = [
 
 @NgModule({
 
-    declarations: [AstroreligionComponent],
+    declarations: [AstroreligionComponent, GridColsDirective],
     imports: [CommonModule,
         ReactiveFormsModule, RouterModule.forChild(astroroute),
         MaterialModule],

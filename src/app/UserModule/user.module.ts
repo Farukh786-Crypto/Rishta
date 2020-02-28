@@ -12,6 +12,7 @@ import {UsersAuthGuard} from '../Guard/users-auth.guard'
 import { from } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 const route: Routes = [
     {
         path: '', component: UserComponent, children: [
@@ -32,7 +33,7 @@ const route: Routes = [
 @NgModule({
 
     declarations: [UserComponent, HeaderFooterComponent],
-    imports: [CommonModule,
+    imports: [CommonModule,FlexLayoutModule,
         MatToolbarModule,
     MatSidenavModule,
     MatListModule,

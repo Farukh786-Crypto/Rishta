@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 
 export class UserComponent {
 
+    bgColor:any='primary';
+    color:any='accent';
     constructor(private router:Router) {
     }
 public SignOut()
