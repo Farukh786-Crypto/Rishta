@@ -20,5 +20,4 @@ public SignOut()
     sessionStorage.clear();
     this.router.navigate(['./login']);
 }
-
 }
