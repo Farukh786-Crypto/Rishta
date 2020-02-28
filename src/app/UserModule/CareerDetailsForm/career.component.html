@@ -1,13 +1,7 @@
-<!-- {{getCareerInfo|json}}
-<!<button type="submit" (click)="SaveCareerInfo()"> Get </button> -->
-<!-- <button type="submit" (click)="call_to_service()"> Get </button> -->
-
-  <mat-card class="sujata">
+ 
     <form [formGroup]="careerDetails">
       
-        <mat-card-title class="title"><h3>
-          Career Details
-        </h3> </mat-card-title>
+        
         <!-- <input type="file" multiple (change)="chooseFile($event)"> -->
 
         <!-- <input        style="display: none"
@@ -16,8 +10,11 @@
         <!-- <button (click)="fileInput.click()">Select File</button>
       <button (click)="onUpload()">Upload!</button> -->
       <div class="container">
+        <mat-card-title class="title"><h3>
+          Career Details
+        </h3> </mat-card-title>
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-md-6 pp">
             <div class="form-group">
               <mat-form-field class="demo-full-width" appearance="outline">
 
@@ -37,7 +34,7 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-md-6 pp">
             <div class="form-group">
               <mat-form-field class="demo-full-width" appearance="outline">
 
@@ -59,7 +56,7 @@
         </div>
 
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-md-6">
             <div class="form-group">
               <mat-form-field class="demo-full-width" appearance="outline">
                 <mat-label> City </mat-label>
@@ -76,7 +73,7 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-md-6">
             <div class="form-group">
               <mat-form-field class="demo-full-width" appearance="outline">
 
@@ -99,7 +96,7 @@
         </div>
 
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-md-6">
             <div class="form-group">
               <mat-form-field class="demo-full-width" appearance="outline">
 
@@ -120,7 +117,7 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class=" col-md-6">
             <div class="form-group">
               <mat-form-field class="demo-full-width" appearance="outline">
                 <mat-label> Employeed In </mat-label>
@@ -143,7 +140,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 ">
             <div class="form-group">
               <mat-form-field class="demo-full-width" appearance="outline">
                 <mat-label> Occupation</mat-label>
@@ -161,7 +158,8 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 ">
+            
             <div class="form-group">
               <mat-form-field class="demo-full-width" appearance="outline">
                 <input type="number" matInput placeholder="Annual Income " formControlName="Income">
@@ -201,13 +199,18 @@
             </div>
           </div>
         </div>
-        <div class="form-group">
-          <button mat-raised-button color="primary" (click)="CareerUser(careerDetails.value)">SUBMIT</button>
-          <!-- <button mat-raised-button color="warn" (click)="SaveCareerInfo()"style="margin-left: 20px;">Save</button>  -->
-          <button class="button" mat-raised-button color="warn" (click)="clear()">CLEAR</button>
+        <div class="row">
+          <div class="col-md">
+          <div class="form-group">
+            <button mat-raised-button color="primary" class="button" (click)="CareerUser(careerDetails.value)">Save & Next</button>
+            <!-- <button mat-raised-button color="warn" (click)="SaveCareerInfo()"style="margin-left: 20px;">Save</button>  -->
+            <button class="button"class="button" mat-raised-button color="warn" (click)="clear()">Clear</button>
+          </div>
+          </div>
         </div>
+        
       </div>
 
     </form>
    
-</mat-card>
+ 
