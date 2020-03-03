@@ -25,6 +25,7 @@ import { employeecomponent } from './UserModule/Employee/employees.component';
  
 import { EmployeesService } from './shared/employees.service';
 import { UserComponent } from './UserModule/user.component';
+import { filter } from 'rxjs/operators';
  
 
 
@@ -33,6 +34,8 @@ import { UserComponent } from './UserModule/user.component';
   declarations: [
     AppComponent,
     ErrorComponent,
+    
+
     
    
   ],

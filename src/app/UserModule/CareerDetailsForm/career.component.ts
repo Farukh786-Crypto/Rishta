@@ -35,8 +35,8 @@ careerDetails: FormGroup
             BachlorDegree: new FormControl('', [Validators.required]),
             Emplyeed: new FormControl('', [Validators.required]),
             Occupation: new FormControl('', [Validators.required]),
-            Income: new FormControl('', [Validators.required]),
-            Express: new FormControl('', [Validators.required])
+            Income: new FormControl('', [Validators.required,Validators.minLength(5)]),
+            Express: new FormControl('', [Validators.required,Validators.minLength(200)])
         });
     }
     getCountries() {

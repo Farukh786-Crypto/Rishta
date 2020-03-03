@@ -1,17 +1,12 @@
-<!-- <h1>{{title}}</h1> -->
-{{feedbackDetails.value|json}}
-<!-- <mat-form-field>
-                        
-        <input type="number" matInput placeholder="Enter user id" [(ngModel)]="userId"  required>
-       
-        <button mat-raised-button color="warn" (click)="SaveRegisterInfo()">Get Single
-        user</button>        
-    </mat-form-field> -->
+
+
+  {{feedbackDetails.value|json}}
+ 
 <mat-card class="example-card">
   <mat-card-header>
-    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    
     <mat-card-title>FeedBack Form</mat-card-title>
-    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+     
   </mat-card-header>
 
   <mat-card-content>
@@ -72,23 +67,7 @@
 
         </div>
 
-                    
-        <!-- <mat-form-field>
-          <mat-label>Category :</mat-label>
-          <mat-select formControlName="category">
-            <mat-option value="">SELECT</mat-option>
-            <mat-option value="self">Self</mat-option>
-            <mat-option value="parents">Parents</mat-option>
-          </mat-select>
-        </mat-form-field> -->
-        <!-- <mat-form-field class="demo-full-width">
-            <textarea matInput  formControlName="suggestion">Suggestion
-            </textarea>
-            <mat-error *ngIf="careerDetails.controls['suggestion'].hasError('required')&&
-                (careerDetails.controls.suggestion.touched ||careerDetails.controls['suggestion'].dirty|| isSubmitted)">
-                                                    Minimum 200 words needed. 
-            </mat-error>
-        </mat-form-field>  -->
+         
 
         <mat-form-field class="feedbackform-full-width">
             <mat-label placeholder="Express Yourself!">Leave a comment</mat-label>
@@ -103,5 +82,12 @@
         </div>
             </form>
   </mat-card-content>
-
+  
 </mat-card>
+ <!-- <p> {{data.message}}</p> -->
+ 
+
+
+
+
+ 
