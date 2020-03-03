@@ -1,66 +1,26 @@
-
-
-.mandatory:after {
-  content: '*';
-  color: #ED2D2C;
+.title{
+  padding-bottom: 10px;
+  text-align: center;
+}
+.tilefix{
+position: absolute;
+width: 60%;
+height: 50%; 
+text-align: center;
+margin-left: 20%;
 }
 
-/* .example-container {
-display: flex;
-flex-direction: column;
-}
-
-.example-container > * {
-width: 100%;
-} */
-
-.example-card {
-max-width: 500px;
-margin: 20px auto;
-/* height: 100%; */
-
-
-}
-
-.mat-hint{
-padding: 10px 0 10px 0;
-}
-
-.example-container {
-display: inline;
-flex-direction: column;
-
-}
-
-/* .example-container > * {
-width: 100%;
-} */
-/* .example-right-align {
-text-align: right;
-} */
-
-
-.example-right-align {
-text-align: right;
-}
-
-input.example-right-align::-webkit-outer-spin-button,
-input.example-right-align::-webkit-inner-spin-button {
-display: none;
-}
-
-
-
-input.example-right-align {
--moz-appearance: textfield;
-}
-
-
-
-/* .modal-content
+.button
 {
-  background-image: url('src\assets\Images\pexels-photo-414660.jpg');
-  background-repeat:repeat-y;
-  background-size: cover;
-  width: 600px;
-} */
+  margin-top: 8px;
+  margin-left: 10px;
+  
+}
+.buttonclass{
+    margin-left: 15px;
+}
+.form
+{   
+  text-align: center;
+  height:80%;
+}

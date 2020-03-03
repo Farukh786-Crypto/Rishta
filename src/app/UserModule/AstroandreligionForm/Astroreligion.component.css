@@ -1,38 +1,22 @@
-.example-card {
-  max-width: 500px;
-  margin: 20px auto;
-  height: auto;
-  
 
-}
+
 .tilefix{
   position: absolute;
   width: 60%;
   height: 50%; 
   text-align: center;
   margin-left: 20%;
+  padding-bottom: 20px;
 }
 .title{
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   text-align: center;
-}
-
-  .mat-form-field-wrapper{
-    width: 600px !important;
-}
-.mat-card-header .mat-card-title {
-  font-size: 25px;
-  font-family: "Arial Black", Gadget, sans-serif;
-  color: navy; 
-}
-  .example-container
-  {
-      max-width: 300px;
-      margin-left: 50px;
-  }
+} 
   .button
   {
+      margin-top: 25px;
       margin-left: 20px;
+      margin-bottom: 65px;
   }
   .form
   {
