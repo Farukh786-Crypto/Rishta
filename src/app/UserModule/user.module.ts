@@ -29,7 +29,6 @@ const route: Routes = [
             { path: 'personalDetails', loadChildren: './PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass',canActivate:[UsersAuthGuard]},
             { path: 'feedbackDetails', loadChildren: './Feedback/feedbackLazy.module#FeedbackLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'filters', loadChildren: './filters/filterslazy.module#FiltersLazyClass',canActivate:[UsersAuthGuard] },
-        
         ]
     },
 ]
