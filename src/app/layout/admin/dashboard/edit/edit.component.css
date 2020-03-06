@@ -1,0 +1,55 @@
+table {
+    border-spacing: 0 8px !important;
+}
+
+.card {
+    font-size: 15px;
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.cdk-overlay-pane.my-dialog {
+    position: relative!important;
+}
+
+.close.mat-button {
+    top: 0;
+    right: 0;
+    padding: 5px;
+    line-height: 14px;
+    min-width: auto;
+    background-color: red;
+    color: white;
+}
+
+.barcode {
+    margin-left: 100px;
+}
+
+.barcode1 {
+    margin-left: 60px;
+}
+
+.barcode2 {
+    margin-left: 20px;
+}
+
+.d1 {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mat-dialog-title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}

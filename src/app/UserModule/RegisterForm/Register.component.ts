@@ -43,22 +43,11 @@ export class RegisterFormComponent {
             gender: new FormControl('male', [Validators.required]),
             date:new FormControl(new Date())
         })
-    }   
-        // public postRegisterInfo:any;
-        // userId:number;
-        // public SaveRegisterInfo(){
-        //     this.register.getSingleRegisterUsers(this.userId).subscribe(res=>{
-                
-        //         this.postRegisterInfo=res;
-        //         console.log(res);
-        //         this.RegisterModel.patchValue(res[0]);
-        //         this.RegisterModel.patchValue(this.postRegisterInfo[0])
-            
- 
-        //     },
-        //             err=>{this.postRegisterInfo=err})
-        // }
-    
+
+
+
+    }
+
     public RegisterPost:any;
     
     public RegisterUser(content:Registerprofile){
@@ -72,32 +61,7 @@ export class RegisterFormComponent {
            }
         
 
-        //    loginUser(data: any) {
-
-        //         this.isSubmited = true;
-        //         if (this.RegisterModel.valid) {
-        //             this.toastr.success('Hello world!', 'Register form Succesfully sent !!');
-        //             alert(JSON.stringify(data))
-        //         }
-        
-        //     }
-    
+       
 }
 
 
-// console.log(customer);
-//     this.customerService.editCustomer(customer, this.custId).subscribe(result => {
-//       this.customerSaveResult = result;
-//       console.log(this.customerSaveResult);
-//       //this.router.navigate(['/customer/83']);
-//       this.router.navigateByUrl("/customer/"+this.custId);
-//     });
-
-
-//    editCustomer(customer: Object, custId: number): Observable<any>{
-        //     const httpOptions = {
-        //       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-        //     };
-        //     const URL = '/api/tc/customer/'+custId;
-        //     return this.httpClient.put(AppSettings.API_ENDPOINT+URL, customer, httpOptions);
-        //   }        

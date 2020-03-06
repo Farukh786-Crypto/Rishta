@@ -5,7 +5,7 @@ import { GroomsComponent } from './grooms.component';
 
 const routes: Routes = [
   {path:'',component:GroomsComponent,children:[
-    //{path:'view',loadChildren:'./admin/dashboard/view/view.module#ViewModule'}
+    //{path:'view',loadChildren:'./admin/dashboard/view/view.module#ViewComponent'}
   ]}
 ];
 
@@ -13,4 +13,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
+
 export class GroomsRoutingModule { }

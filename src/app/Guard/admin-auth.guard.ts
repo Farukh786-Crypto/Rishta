@@ -8,7 +8,7 @@ export class AdminAuthGuard implements CanActivate{
     constructor(private router:Router){}
     canActivate()
     {
-        if(localStorage.getItem('userRole')==='admin')
+        if(sessionStorage.getItem('userRole')==='admin')
         {
             return true;
         }

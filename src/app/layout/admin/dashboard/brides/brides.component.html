@@ -1,36 +1,49 @@
 
-<form class="example" action="/action_page.php" style="margin:auto;max-width:300px; margin-top: 20px;">
-  <input type="text" placeholder="Search by Name,Id,etc..." autocomplete="off" name="search" [(ngModel)]="search">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
+<div class="mat-elevation-z8" app-matches>
+  <table align="center" border="2px" mat-table class="full-width-table" matSort aria-label="Elements">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header><p class="header">Id</p></th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+  <!-- Photo Column -->
+  <ng-container matColumnDef="photo" style="padding: 10px;padding-bottom: 10px;">
+    <th mat-header-cell *matHeaderCellDef><p class="header">Photo</p></th>
+    <td mat-cell *matCellDef="let row"><img [src]="row.photo" style="height: 180px;width: 230px;"/></td>
+  </ng-container>
+  
+  <!-- Details Column -->
+    <ng-container matColumnDef="detail">
+      <th mat-header-cell *matHeaderCellDef class="Detail"><p class="header">Detail</p></th>
+      <td mat-cell *matCellDef="let row"><p class="label">Name:</p>{{row.detail.name}}<br>
+        <p class="label">Age:</p>{{row.detail.age}}<br>
+          <p class="label">Religion:</p>{{row.detail.religion}}<br>
+            <p class="label">Mother Tongue:</p>{{row.detail.mothertongue}}<br>
+              <p class="label">City:</p>{{row.detail.city}}<br>
+                <p class="label">Marrital Status:</p>{{row.detail.maritalstatus}}</td>
+       </ng-container>
 
-<div class="container" style="padding: 50px;">
-  <table class="table border border-dark"
-    style="padding: 20px;background-image: url('assets/Images/indian-bride.jpg');color: white;">
-    <thead class="thead-dark">
-      <tr style="padding: 20px;text-align: center;">
-        <th>ID</th>
-        <th>Photo</th>
-        <th>Details</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let info of myDetail?.profile|filter:search">
-        <td>{{info.id}}</td>
-        <td style="text-align: center;"><img src="{{info.avatar}}" style="height: 180px;width: 230px;"></td>
-        <td style="font-size: 20px;"><b> Name:</b>{{info.name}}<br>
-          <b>Age:</b>{{info.age}}<br>
-          <b> Religion:</b>{{info.religion}}<br>
-          <b> Mother Tongue:</b>{{info.mothertongue}}<br>
-          <b> City:</b>{{info.city}}<br>
-          <b> Marital status:</b>{{info.status}}</td>
-        <td style="text-align: center;"><button type="button" class="btn btn-primary"
-            style="margin-right: 10px;">View</button>
-          <button type="button" class="btn btn-primary" style="margin-right: 10px;">Edit</button>
-          <button type="button" class="btn btn-primary">Delete</button>
-        </td>
-      </tr>
-    </tbody>
+<!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef><p class="header">Action</p></th>
+      <td mat-cell *matCellDef="let row"><button mat-flat-button  (click)="openDialog()">View</button>
+       &nbsp;<button mat-flat-button color="accent">Edit</button>
+       &nbsp; <button mat-flat-button color="accent">Delete</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource?.data.length"
+      [pageIndex]="0"
+      [pageSize]="2"
+      [pageSizeOptions]="[3,6, 12, 100, 250]">
+  </mat-paginator>
 </div>
+
+    <!-- <button mat-raised-button (click)="openDialog()">view</button> -->
+  
+<router-outlet></router-outlet> 
