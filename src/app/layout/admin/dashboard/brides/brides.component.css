@@ -1,35 +1,89 @@
-* {
-    box-sizing: border-box;
+
+  .full-width-table {
+    width: auto;
+    color: white;
+    table-layout: auto;
+    border-color:  white; 
+    /* padding: 150px 150px 15px 15px; */
+    margin-top: 20px;
+    background-color:rgb(245, 142, 170);
+
   }
-  
-  form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
+  .mat-cell{
+    color: black;
+    font-size: medium;
+    padding: 15px 15px 15px 15px;
+    background-color: transparent;
     
   }
-  
-  form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: rgb(8, 8, 8);
+
+  /* .mat-paginator
+  {
+    margin-left: auto;
+    width : auto;
+    background-color:transparent;
+    color: rgb(66, 8, 23 );;
+    font-size: small;
+  } */
+  .mat-paginator
+  {
+    margin-left: auto;
+    width : auto;
+    background-color:transparent;
+    color: rgb(66, 8, 23 );;
+    font-size: small;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 0 8px;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+  }
+  .mat-flat-button
+  {
+    margin-left: 15px;
+    background-color:rgb(66, 8, 23 );
     color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    cursor: pointer;
+
+  }
+  .mat-header-cell
+  {
+    
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 200px;
+    font-size: 25px;
+     color: white;
+    text-align: center; 
+    background-color:rgb(66, 8, 23 );
+  } 
+ 
+  .label
+  {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color:black;
   }
   
-  form.example button:hover {
-    background: #0b7dda;
+  .Detail
+  {
+    margin-left: 20px;
   }
-  
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+
+  td.mat-cell {
+    padding: 15px 15px 15px 15px   ;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+   }
+   th.mat-header-cell
+   {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+   }
+   
+ 
+   
+
   

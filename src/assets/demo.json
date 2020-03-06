@@ -1,5 +1,5 @@
 {
-    "profile": [
+    "brides": [
         {
             "id": 1,
             "name": "Satura",
@@ -9,7 +9,15 @@
             "status": "unmarried",
             "mothertongue": "marathi",
             "email": "sastrura123@gmail.com",
-            "avatar": "assets/Images/1.jpg"
+            "avatar": "assets/Images/1.jpg",
+            "BloodGroup" : "A",
+            "Height":"150",
+            "Weight":"50kg",
+            "BodyType":"slim",
+            "lens":"",
+            "spectacles":"yes"
+            
+
         },
         {
             "id": 2,
@@ -81,7 +89,7 @@
         },
         {
             "id": 2,
-            "name": "Raj",
+            "name": "Rahul",
             "age": 24,
             "city": "pune",
             "religion": "hindu",

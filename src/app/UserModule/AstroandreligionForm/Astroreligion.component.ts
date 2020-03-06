@@ -3,6 +3,7 @@ import{FormControl, Validators,FormGroup}from'@angular/forms'
 import { ToastrService } from 'ngx-toastr';
 import { AstroreligionService } from './Astroreligion.service';
 import { AstroandReligion } from 'src/app/model';
+
 @Component({
     selector:'Astroreligion-comp',
     templateUrl:'./Astroreligion.component.html',

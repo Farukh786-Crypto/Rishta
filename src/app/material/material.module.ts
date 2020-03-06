@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatRadioModule, MatMenuModule} from '@angular/material';
+import {MatButtonModule,MatButtonToggleModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatSelect, MatSelectModule, MatAutocomplete, MatAutocompleteModule, MatCheckboxModule, MatMenuModule, MatRadioButton, MatRadioModule} from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge';
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
@@ -18,7 +18,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
-import {MatPaginatorModule} from '@angular/material/paginator';
+//import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -31,9 +31,26 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatDatepickerModule} from '@angular/material/datepicker';
- 
-  const MaterialComponents= [
-    MatButtonToggleModule,
+import { LayoutModule } from '@angular/cdk/layout';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
+//import { DialogOverviewExampleDialog } from '../layout/admin/dashboard/grooms/viewgrooms.component';
+//import {MatDialogModule} from '@angular/material/dialog';
+
+const MaterialComponents=[
+  MatPaginatorModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatIconModule,
+  MatBadgeModule,
+  MatToolbarModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatAutocompleteModule,
+  MatCheckboxModule,
+  MatCardModule,
+  MatButtonToggleModule,
     MatIconModule,
     MatBadgeModule,
     MatToolbarModule,
@@ -42,27 +59,25 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatSelectModule,
     MatAutocompleteModule,
     MatCheckboxModule,
-    MatRadioModule,
     MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
     MatFormFieldModule,
     MatListModule,
     MatDatepickerModule,
-    MatBadgeModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatAutocompleteModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatListModule,
-    MatDatepickerModule, 
-    A11yModule,
+    MatButtonModule, A11yModule,
     CdkStepperModule,
     CdkTableModule,
     CdkTreeModule,
+    MatSortModule,  
+    MatPaginatorModule,
     DragDropModule,
     MatAutocompleteModule,
     MatBadgeModule,
@@ -81,12 +96,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatIconModule,
     MatInputModule,
     MatListModule,
-    MatMenuModule,
     MatNativeDateModule,
     MatPaginatorModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
-    MatRadioModule,
     MatRippleModule,
     MatSelectModule,
     MatSidenavModule,
@@ -104,18 +117,25 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatCardModule,
     MatDatepickerModule,
     MatInputModule,
+
+    MatMenuModule,
+    MatRadioModule
+
     
 
   ]
   @NgModule({
   
-
-    imports: [MaterialComponents,],
-    exports: [MaterialComponents]  
-    
   
+  imports: [MaterialComponents],
+  exports: [MaterialComponents]  
+
   })
-export class MaterialModule{ 
+
+
+
+export class MaterialModule {
+
 
 
 }

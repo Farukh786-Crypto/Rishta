@@ -1,0 +1,82 @@
+.full-width-table {
+    width: auto;
+    color: white;
+    table-layout: auto;
+    border-color: white; 
+    /* padding: 150px 150px 15px 15px; */
+    margin-top: 20px;
+    background-image: url('src/assets/Images/indian-bride.jpg');
+    
+  }
+  .mat-cell{
+    color: white;
+    font-size: medium;
+    padding: 15px 15px 15px 15px;
+    
+  }
+  .mat-flat-button
+  {
+    margin-left: 15px;
+  }
+  .mat-header-cell
+  {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 200px;
+    font-size: 25px;
+    /* color:rgb(144, 248, 231); */
+    color: white;
+
+    /* margin-left: 20px; */
+  }
+  .mat-header-cell{
+    text-align: center;
+  }
+  .label
+  {
+    font-size: 15px;
+    /* margin-left: 5px; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    color:rgb(182, 248, 234);
+  }
+  /* .app-data-table{
+  
+    width:80%;
+    margin:20px auto;
+    color: white;
+  }
+  */
+  .Detail
+  {
+    margin-left: 20px;
+  }
+
+  td.mat-cell {
+    /* row padding */
+    padding: 15px 15px 15px 15px   ;
+    /* row border */
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+   }
+   th.mat-header-cell
+   {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+   }
+   
+   /* td.mat-cell:first-child {
+    
+     border-left: 1px solid white;
+   }
+   
+   td.mat-cell:last-child {
+    
+     border-right: 1px solid white;
+   } */
+   
+   table {
+     /* row spacing / margin */
+     border-spacing: 0 8px !important;
+   } 
+  
