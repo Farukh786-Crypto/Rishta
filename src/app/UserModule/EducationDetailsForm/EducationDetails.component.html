@@ -1,70 +1,3 @@
-<<<<<<< HEAD
-<mat-card class="example-card">
-    <mat-card-header>
-        <mat-card-title><b>
-                Education Details
-            </b> </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <form [formGroup]="EduacationDetails" class="form">
-            <div class="example-container">
-                <div class="form-group">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>About My Education</mat-label>
-                        <textarea matInput #message maxlength="256" rows="12" cols="100" class="form-control"
-                            formControlName="AEduacation"
-                            placeholder="Ex. Which institutions have you attended?What courses/specialisation have you studied?...">
-                        </textarea>
-                        <!-- <mat-hint  ><strong>Don't disclose personal info</strong> </mat-hint> -->
-                        <mat-hint>{{message.value.length}} / 256</mat-hint>
-                        <mat-error>
-                            <span
-                                *ngIf="EduacationDetails.controls['AEduacation'].hasError('required')&&
-                          (EduacationDetails.controls.AEduacation.touched ||EduacationDetails.controls['AEduacation'].dirty|| isSubmitted)">
-                                Field is required. </span>
-                        </mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="form-group">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Highest Education</mat-label>
-
-                        <mat-select formControlName="HighestDegree" required>
-                            <mat-option>-- Select --</mat-option>
-                            <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
-                                {{highestDegrees.state_name}} </mat-option>
-                        </mat-select>
-                        <mat-error>
-                            <span
-                                *ngIf=" EduacationDetails.controls['HighestDegree'].hasError('required')&&
-                                  (EduacationDetails.controls.HighestDegree.touched ||EduacationDetails.controls['HighestDegree'].dirty|| isSubmitted)">
-                                Highest Education is required. </span>
-                        </mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="form-group">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Graduation Degree</mat-label>
-
-                        <mat-select formControlName="GraduationDegree" required>
-                            <mat-option>-- Select --</mat-option>
-                            <mat-option *ngFor="let graduationDegrees of  graduationDegree"
-                                value={{highestDegrees.state_id}}>
-                                {{highestDegrees.state_name}} </mat-option>
-                        </mat-select>
-                        <mat-error>
-                            <span
-                                *ngIf=" EduacationDetails.controls['GraduationDegree'].hasError('required')&&
-                                      (EduacationDetails.controls.GraduationDegree.touched ||EduacationDetails.controls['GraduationDegree'].dirty|| isSubmitted)">
-                                Graduation Degree is required. </span>
-                        </mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="form-group">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Graduation Collage</mat-label>
-                        <input type="text" matInput placeholder="Not filled in" formControlName="GraduationCollage">
-=======
 <form [formGroup]="EduacationDetails">
    
     <div class="container">
@@ -111,7 +44,6 @@
         <div class="form-group">
             <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Graduation Degree</mat-label>
->>>>>>> 22dd352f9215b783e59a700d4905c2f8bd581248
 
                 <mat-select formControlName="GraduationDegree" required>
                     <mat-option>-- Select --</mat-option>
@@ -136,35 +68,6 @@
                     <span
                         *ngIf=" EduacationDetails.controls['GraduationCollage'].hasError('required')&&
                                       (EduacationDetails.controls.GraduationCollage.touched ||EduacationDetails.controls['GraduationCollage'].dirty|| isSubmitted)">
-<<<<<<< HEAD
-                                Graduation College is required. </span>
-                        </mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="form-group">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>School Name </mat-label>
-                        <input matInput placeholder="Not filled in" formControlName="SchoolName">
-                        <mat-error>
-                            <span
-                                *ngIf="EduacationDetails.controls['SchoolName'].hasError('required')&&
-                                          (EduacationDetails.controls.SchoolName.touched ||EduacationDetails.controls['SchoolName'].dirty|| isSubmitted)">
-                                School Name is required. </span>
-                        </mat-error>
-                    </mat-form-field>
-                </div>
-                <div class="form-group">
-                    <button mat-raised-button color="primary"
-                        (click)="onSubmit(EduacationDetails.value)">SUBMIT</button>
-                    <!-- <button mat-raised-button color="warn"   style="margin-left: 20px;">SAVE</button> -->
-                    <button mat-raised-button class="button" color="warn"
-                        (click)="EducationUser(EduacationDetails.value)">SAVE</button>
-                </div>
-            </div>
-        </form>
-    </mat-card-content>
-</mat-card>
-=======
                         Graduation College is required. </span>
                 </mat-error>
             </mat-form-field>
@@ -193,4 +96,3 @@
 
     </div>
 </form>
->>>>>>> 22dd352f9215b783e59a700d4905c2f8bd581248
