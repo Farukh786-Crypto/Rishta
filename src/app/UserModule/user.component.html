@@ -1,29 +1,55 @@
-<mat-toolbar color="warn">
+
+<div class="">
+  <mat-toolbar color="warn">
     <mat-toolbar-row>
-        <div>
-            <a><img src="assets/Images/rishtalogo.png"></a>
-        </div>
-        <div class="right">
-            <button mat-button [matMenuTriggerFor]="menu1">User</button>
-            <mat-menu #menu1="matMenu">
-                <button mat-menu-item (click)="SignOut()">SignOut</button>
-            </mat-menu>
-        </div>
+      <div> <a><img src="assets/Images/rishtalogo.png"></a></div>
+      <div class="right">
+        <button mat-button [matMenuTriggerFor]="menu1">User</button>
+        <mat-menu #menu1="matMenu">
+          <button mat-menu-item (click)="SignOut()">SignOut</button>
+        </mat-menu>
+      </div>
     </mat-toolbar-row>
     <mat-toolbar-row>
-        <div>
+      <mat-tab-group>
+        <mat-tab label="Register">
+          <div>
+            <button mat-button routerLink="./register">Register</button>
             <button mat-button routerLink="./profiledetails">Profile Details </button>
             <button mat-button routerLink="./CareerDetails">Career Details </button>
             <button mat-button routerLink="./familydetails">Family Details </button>
             <button mat-button routerLink="./personalDetails">Personal Details</button>
-            <button mat-button routerLink="./Educationdetails">Educational Details  </button>
+            <button mat-button routerLink="./Educationdetails">Educational Details </button>
             <button mat-button routerLink="./LifestyleDetails">LifestyleDetails </button>
             <button mat-button routerLink="./astroandreligion"> Astro and Religion</button>
-            <button mat-button routerLink="./feedbackDetails"> FeedBack</button>
-        </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Matches">
+          Matches
+        </mat-tab>
+        <mat-tab label="Packges">
+          Packges
+        </mat-tab>
+        <mat-tab label="Contact">
+          Contact
+        </mat-tab>
+        <mat-tab label="About Us">
+          About US
+        </mat-tab>
+        <mat-tab label="FeedBack">
+          <button mat-button routerLink="./feedbackDetails"> FeedBack</button>
+        </mat-tab>
+      </mat-tab-group>
+
     </mat-toolbar-row>
-</mat-toolbar>
+  </mat-toolbar>
+</div>
 <router-outlet></router-outlet>
+<footer class="md-padding sm-padding lg-padding">
+  <div id="btmFooter" flex>
+    <p>@2020 Copyright: Assimilate Technology.</p>
+  </div>
+</footer>
 <footer class="md-padding fixed-bottom">
     <div id="btmFooter" flex>
         <p>@2020 Copyright: Assimilate Technology.</p>

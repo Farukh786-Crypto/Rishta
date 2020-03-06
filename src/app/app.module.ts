@@ -21,7 +21,6 @@ import { SignUpComponent } from './sign-up/sign-up.component';
   declarations: [
     AppComponent,
     ErrorComponent
-  
   ],
   imports: [
     platformBrowser.BrowserModule,
@@ -32,11 +31,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     ReactiveFormsModule,
     NgxSpinnerModule,
     Ng2SearchPipeModule,
-    
-   MaterialModule,
+    MaterialModule,
     MatSelectModule,
-    MatDialogModule,
-    
+    MatDialogModule,    
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot(),
     MaterialModule
@@ -44,4 +41,6 @@ import { SignUpComponent } from './sign-up/sign-up.component';
   providers: [DataService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+

@@ -11,4 +11,4 @@ export const MyRoute: Routes = [
   { path: 'admin', loadChildren: './layout/layout.module#LayoutModule', canActivate: [AdminAuthGuard] },
   { path: 'users', loadChildren: './UserModule/user.module#UserModule', canActivate: [UsersAuthGuard] },
   { path: '**', component: ErrorComponent }
-]
+   ]
