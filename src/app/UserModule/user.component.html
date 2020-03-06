@@ -1,49 +1,31 @@
 
-<div class="">
-  <mat-toolbar color="warn">
-    <mat-toolbar-row>
-      <div> <a><img src="assets/Images/rishtalogo.png"></a></div>
-      <div class="right">
-        <button mat-button [matMenuTriggerFor]="menu1">User</button>
+<div class="navbar">
+   
+    <mat-toolbar-row  >
+       
+      <a><img src="assets/Images/rishtalogo.png"width="200px" height="40px"></a>
+        <button mat-button [matMenuTriggerFor]="menu">Register</button>
+        <mat-menu #menu="matMenu">
+            <a routerLink="./UserModule/profiledetails"><button class="mat-menu-item">Profile Details</button></a>
+            <a routerLink="./UserModule/CareerDetails"><button mat-menu-item>Career Details</button></a>
+            <a routerLink="./UserModule/familydetails"><button mat-menu-item>Family Details</button></a>
+            <a routerLink="./UserModule/personalDetails"><button mat-menu-item>Personal Details</button></a>
+            <a routerLink="./UserModule/Educationdetails"><button mat-menu-item>Educational Details</button></a>
+            <a routerLink="./UserModule/LifestyleDetails"><button mat-menu-item>Lifestyle Details</button></a>
+            <a routerLink="./UserModule/astroandreligion"><button mat-menu-item>Astro and Religion</button></a>      
+          </mat-menu>
+          <a><button mat-button>Matches </button></a>
+          <a><button mat-button>Packges </button></a>
+          <a><button mat-button>Contact </button></a>
+          <a><button mat-button>About Us </button></a>
+          <a><button mat-button>Feedback Details </button></a> 
+          <button mat-button [matMenuTriggerFor]="menu1">User</button>
         <mat-menu #menu1="matMenu">
           <button mat-menu-item (click)="SignOut()">SignOut</button>
-        </mat-menu>
-      </div>
-    </mat-toolbar-row>
-    <mat-toolbar-row>
-      <mat-tab-group>
-        <mat-tab label [matMenuTriggerFor]="Register">
-          
-          <div>
-            <button mat-button routerLink="./register">Register</button>
-            <button mat-button routerLink="./profiledetails">Profile Details </button>
-            <button mat-button routerLink="./CareerDetails">Career Details </button>
-            <button mat-button routerLink="./familydetails">Family Details </button>
-            <button mat-button routerLink="./personalDetails">Personal Details</button>
-            <button mat-button routerLink="./Educationdetails">Educational Details </button>
-            <button mat-button routerLink="./LifestyleDetails">LifestyleDetails </button>
-            <button mat-button routerLink="./astroandreligion"> Astro and Religion</button>
-          </div>
-        </mat-tab>
-        <mat-tab label="Matches">
-           
-        </mat-tab>
-        <mat-tab label="Packges">
-           
-        </mat-tab>
-        <mat-tab label="Contact">
-           
-        </mat-tab>
-        <mat-tab label="About Us">
+        </mat-menu>             
         
-        </mat-tab>
-        <mat-tab label="FeedBack">
-          <button mat-button routerLink="./feedbackDetails"></button>
-        </mat-tab>
-      </mat-tab-group>
-
     </mat-toolbar-row>
-  </mat-toolbar>
+  
 </div>
 <router-outlet></router-outlet>
 <footer class="md-padding sm-padding lg-padding">

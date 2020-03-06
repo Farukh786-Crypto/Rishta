@@ -7,12 +7,11 @@ import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
   selector: 'view-comp',
   templateUrl: './view.component.html',
   styleUrls: ['./view.component.css'],
-  providers: [ViewService]
+  // providers: [ViewService]
 })
 
 export class ViewComponent implements OnInit {
 
-  // dialogRef: any;
 
   constructor(public dialogRef: MatDialogRef<ViewComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
