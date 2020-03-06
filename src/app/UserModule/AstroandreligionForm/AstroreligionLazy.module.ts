@@ -6,6 +6,8 @@ import { AstroreligionComponent } from './Astroreligion.component';
 import { MaterialModule } from 'src/app/material/material.module';
 
 
+
+
 const astroroute: Routes = [
 
     // { path:'' , redirectTo:'register' , pathMatch:'full' } ,

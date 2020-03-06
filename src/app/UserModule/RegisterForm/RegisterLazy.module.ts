@@ -9,17 +9,11 @@ import { HttpClientModule } from '@angular/common/http';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/app/material/material.module';
-
-
 const route1: Routes = [
-
     //{ path:'' , redirectTo:'register' , pathMatch:'full' } ,
     { path: '', component: RegisterFormComponent }
-
 ]
-
 @NgModule({
-
     declarations: [RegisterFormComponent],
     imports: [CommonModule,
         FormsModule,        
@@ -32,9 +26,6 @@ const route1: Routes = [
     exports: [
         RegisterFormComponent
     ]
-
 })
-
 export class RegisterLazyClass {
-
 }

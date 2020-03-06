@@ -3,7 +3,7 @@
 .tilefix{
   position: absolute;
   width: 60%;
-  height: 50%; 
+  height: 60%; 
   text-align: center;
   margin-left: 20%;
   padding-bottom: 20px;
@@ -12,9 +12,12 @@
   padding-bottom: 30px;
   text-align: center;
 } 
+/* .mat-grid-tile {
+  background: lightcoral;
+} */
   .button
   {
-      margin-top: 25px;
+      margin-top: 10px;
       margin-left: 20px;
       margin-bottom: 65px;
   }

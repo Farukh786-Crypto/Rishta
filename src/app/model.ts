@@ -23,8 +23,7 @@ export class CareerProfile{
     Emplyeed: string; 
     Occupation: string; 
     Income: number;
-    Express:string; 
-    
+    Express:string;     
 }
 export class AstroandReligion{
 
