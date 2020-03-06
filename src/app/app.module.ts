@@ -13,31 +13,17 @@ import { DataService } from './Services/data.service';
 import { MaterialModule } from './material/material.module';
 import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './UserModule/Error.component';
-
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
- 
 import {MatDialogModule} from '@angular/material/dialog';
- 
-
 import { DashboardComponent } from './layout/admin/dashboard/dashboard.component';
 import { viewComponent } from './layout/admin/dashboard/view/view.component';
 import { employeecomponent } from './UserModule/Employee/employees.component';
- 
 import { EmployeesService } from './shared/employees.service';
 import { UserComponent } from './UserModule/user.component';
-import { filter } from 'rxjs/operators';
- 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorComponent,
-    
-
-    
-   
+    ErrorComponent,   
   ],
   imports: [
     platformBrowser.BrowserModule,
@@ -48,11 +34,9 @@ import { filter } from 'rxjs/operators';
     ReactiveFormsModule,
     NgxSpinnerModule,
     Ng2SearchPipeModule,
-    
-   MaterialModule,
+    MaterialModule,
     MatSelectModule,
-    MatDialogModule,
-    
+    MatDialogModule,    
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot(),
     MaterialModule
@@ -61,5 +45,4 @@ import { filter } from 'rxjs/operators';
   bootstrap: [AppComponent]
   //bootstrap:[DashboardComponent]
 })
-
-export class AppModule { }
+export class AppModule {  }

@@ -3,8 +3,6 @@ import{FormControl, Validators,FormGroup}from'@angular/forms'
 import { ToastrService } from 'ngx-toastr';
 import { AstroreligionService } from './Astroreligion.service';
 import { AstroandReligion } from 'src/app/model';
-
-
 @Component({
     selector:'Astroreligion-comp',
     templateUrl:'./Astroreligion.component.html',
@@ -28,10 +26,9 @@ allgetGotra:{};
 allgetHoroscope:{};
 allnakshtra:{};
 allgetManglik:{};
+breakpoint: number;
 constructor(private toastr: ToastrService,private astrotreligion:AstroreligionService){
-
     this.AstroreligionDetails=new FormGroup({
-
         maritalstatus:new FormControl('',Validators.required),
         mothertongue:new FormControl('',[Validators.required]),
         religion:new FormControl('',[Validators.required]),
@@ -51,9 +48,9 @@ constructor(private toastr: ToastrService,private astrotreligion:AstroreligionSe
         /** spinner starts on init */
     // this.spinner.show();
 
+    this.breakpoint = (window.innerWidth <= 400) ? 1 : 2;
     this.astrotreligion.getMaritalStatus().subscribe(
         maritaldata=>this.allmaritalstatus=maritaldata
-
     );
     this.astrotreligion.getMothertounge().subscribe(
       data=>this.allmothertounge=data
@@ -61,19 +58,15 @@ constructor(private toastr: ToastrService,private astrotreligion:AstroreligionSe
     this.astrotreligion.getReligion().subscribe(
         data=>this.allreligions=data
       );
-
       this.astrotreligion.getDevak().subscribe(
             devakdata=>this.allgetDevak=devakdata
       );
-
       this.astrotreligion.getGotra().subscribe(
           gotradata=>this.allgetGotra=gotradata
       );
-
       this.astrotreligion.getHoroscope().subscribe(
           horoscopedata=>this.allgetHoroscope=horoscopedata
       );
-
     this.astrotreligion.getnakshtra().subscribe(
         nakshtradata=>this.allnakshtra=nakshtradata
     );
@@ -97,6 +90,10 @@ constructor(private toastr: ToastrService,private astrotreligion:AstroreligionSe
           );
             }
 
+            onResize(event) {
+                this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 2;
+              }
+
     // getAllAstroreligion() 
     // {
     //     this.astrotreligion.getAllAstroreligion().subscribe(
@@ -110,7 +107,6 @@ constructor(private toastr: ToastrService,private astrotreligion:AstroreligionSe
     //         }
     //     )
     // }
-   
     onSubmit(data:any)
     {
         this.isSubmitted=true;
@@ -129,4 +125,3 @@ constructor(private toastr: ToastrService,private astrotreligion:AstroreligionSe
     }
 }
 }
- 
