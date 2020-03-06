@@ -2,15 +2,15 @@ import { RouterModule, Routes } from '@angular/router'
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FeedbackComponent } from './Feedback.component';
+import { FiltersComponent } from './filters.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { MatDialogRef } from '@angular/material';
 //import {MatDialogModule} from '@angular/material/dialog'; 
 
 
 
-const feedbackroute: Routes = [     
-    { path: '', component: FeedbackComponent }
+const filtersroute: Routes = [     
+    { path: '', component: FiltersComponent }
 ]
   
 
@@ -18,17 +18,17 @@ const feedbackroute: Routes = [
 
 @NgModule({
 
-    declarations: [FeedbackComponent],
+    declarations: [FiltersComponent],
     imports: [CommonModule,
         ReactiveFormsModule,
         MaterialModule, 
         
-        RouterModule.forChild(feedbackroute)],
+        RouterModule.forChild(filtersroute)],
     providers: [],
-    exports: [FeedbackComponent]
+    exports: [FiltersComponent]
 
 })
 
-export class FeedbackLazyClass{
+export class FiltersLazyClass{
 
 }

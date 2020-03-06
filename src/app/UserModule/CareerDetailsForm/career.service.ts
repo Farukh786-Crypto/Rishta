@@ -18,7 +18,9 @@ export class CareerService {
   //     return this.http.post<CareerProfile>(this.url+'/create',content,httpOption);
 
   // }    
-
+  //url: string="http://192.168.0.122:8080/api/getdetails/Carrier"
+  
+   
   allCountries(): Observable<any> {
     return this.http.get(this.url);
   }

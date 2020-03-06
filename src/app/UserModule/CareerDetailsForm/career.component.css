@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .example-card {
     max-width: 600px;
@@ -29,3 +30,15 @@
   {
       text-align: center;
   }
+=======
+.title{
+  padding-bottom: 10px;
+  text-align: center; 
+}
+.container{    
+  text-align: center; 
+}
+ 
+.button{margin-right: 10px;}
+ 
+>>>>>>> 22dd352f9215b783e59a700d4905c2f8bd581248

@@ -1,17 +1,16 @@
-<mat-card class="example-card">
-    <mat-card-header>
+ 
 
-        <mat-card-title>Personal Details</mat-card-title>
+       
 
-    </mat-card-header>
-    <mat-card-content>
+     
 
-        <form [formGroup]="PersonalDetails" class="form" class="form">
-            <div class="example-container">
-
-                <span> You are about to complete your Personal details.</span>
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+        <form [formGroup]="PersonalDetails"  >
+            <div class=" container">
+                <mat-card-title class="title">Personal Details</mat-card-title>
+                <div class="form-row">
+                     
+                <div class="form-group  col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
                         <mat-label>Blood_Group </mat-label>
                         <mat-select formControlName="blood_group">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -28,8 +27,8 @@
                     </mat-error>
                 </div>
 
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width" appearance="outline">
                         <mat-label>height </mat-label>
                         <mat-select formControlName="height">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -44,8 +43,10 @@
                             height is required.</span>
                     </mat-error>
                 </div>
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
                         <mat-label>weight </mat-label>
                         <mat-select formControlName="weight">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -64,8 +65,8 @@
 
 
 
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
                         <mat-label>Body Type </mat-label>
                         <mat-select formControlName="body_type">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -80,10 +81,10 @@
                             Body Type is required.</span>
                     </mat-error>
                 </div>
-
-
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
                         <mat-label>Lens </mat-label>
                         <mat-select formControlName="lens">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -98,8 +99,8 @@
                             Lens In required.</span>
                     </mat-error>
                 </div>
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
                         <mat-label>Spectacles </mat-label>
                         <mat-select formControlName="spectacles">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -114,10 +115,11 @@
                             Spectacles In required.</span>
                     </mat-error>
                 </div>
+            </div>
+            <div class="form-row">
 
-
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
                         <mat-label>Complexion </mat-label>
                         <mat-select formControlName="complexion">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -133,8 +135,8 @@
                     </mat-error>
                 </div>
 
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
                         <mat-label>NRI </mat-label>
                         <mat-select formControlName="NRI">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -149,9 +151,10 @@
                             NRI In required.</span>
                     </mat-error>
                 </div>
-
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
                         <mat-label>Smoking </mat-label>
                         <mat-select formControlName="smoking">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -168,8 +171,8 @@
                     </mat-error>
                 </div>
 
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
                         <mat-label>Drinking </mat-label>
                         <mat-select formControlName="drinking">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -186,9 +189,10 @@
                     </mat-error>
                 </div>
 
-
-                <div class="form-group">
-                    <mat-form-field class="demo-full-width">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <mat-form-field class="demo-full-width"appearance="outline">
                         <mat-label> Eating Habits </mat-label>
                         <mat-select formControlName="eating_habits">
                             <mat-option selected value disabled>-- Select --</mat-option>
@@ -204,13 +208,17 @@
                     </mat-error>
                 </div>
 
-
+                <div class="form-group col-md-6">
+                    <button mat-raised-button class="button"color="primary" (click)="onSubmit(PersonalDetails.value)">Save & Next</button>
+                <button mat-raised-button class="button" color="warn">Clear</button>
+             
+                </div>
 
             </div>
-            <mat-card-actions>
-                <button mat-raised-button color="primary" (click)="onSubmit(PersonalDetails.value)">Submit</button>
-                <button mat-raised-button class="button" color="warn">Close</button>
-            </mat-card-actions>
+            </div>
+            
+             
+                
         </form>
-    </mat-card-content>
-</mat-card>
+     
+ 
