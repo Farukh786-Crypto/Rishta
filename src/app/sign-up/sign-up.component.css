@@ -1,5 +1,6 @@
 .example-card {
-    max-width: 600px;
+    /* max-width: 800px; */
+    width:25% ;
     margin: 0px auto;
     height: 90%;
     /* background-color: lightcoral; */
@@ -8,13 +9,15 @@
 .mat-form-field-wrapper {
     width: 600px !important;
 }
+.mat-card-title{
+    padding-left: 40px;
 
+}
 .mat-card-header .mat-card-title {
     font-size: 25px;
     font-family: "Arial Black", Gadget, sans-serif;
-    color: navy;
+    /* color: navy; */
 }
-
 
 /* .radiobuttonclass{
       padding-bottom: 2px;
@@ -26,7 +29,7 @@
 }
 
 .buttonclass {
-    margin-left: 8px;
+    margin-left: 6px;
 }
 
 .mat-input-wrapper {
@@ -75,10 +78,9 @@ mat-card-content {
     justify-content: center;
     background-color: burlywood;
 }
-
 .example-container {
-    max-width: 300px;
-    margin-left: 50px;
+    max-width: 600px;
+    /* margin-left: 50px; */
 }
 
 .button {
