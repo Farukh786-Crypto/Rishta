@@ -9,19 +9,15 @@ import {UsersAuthGuard} from '../Guard/users-auth.guard'
 import { from } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../material/material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
+//import { FlexLayoutModule } from '@angular/flex-layout';
 const route: Routes = [
     {
         path: '', component: UserComponent, children: [
 
 
             { path: '', redirectTo: 'profiledetails', pathMatch: 'full' },
-
-            { path: '', redirectTo: 'register', pathMatch: 'full' },
-            { path: 'register', loadChildren: './RegisterForm/RegisterLazy.module#RegisterLazyClass',canActivate:[UsersAuthGuard] },
-
-            { path: 'astroandreligion', loadChildren: './AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'profiledetails', loadChildren: './ProfileDetailsForm/ProfileDetailsLazy.module#ProfileDetailsLazyClass',canActivate:[UsersAuthGuard] },
+            { path: 'astroandreligion', loadChildren: './AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'CareerDetails', loadChildren: './CareerDetailsForm/careerLazy.module#CareerLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'familydetails', loadChildren: './FamilyDetailsForm/Family-detailsLazy.modules#FamilyLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'Educationdetails', loadChildren: './EducationDetailsForm/EducationDetailsLazy.module#EducationLazyClass' ,canActivate:[UsersAuthGuard]},
@@ -35,7 +31,7 @@ const route: Routes = [
 ]
 @NgModule({
     declarations: [UserComponent, HeaderFooterComponent],
-    imports: [CommonModule,FlexLayoutModule,
+    imports: [CommonModule, 
         MatToolbarModule,
     MatSidenavModule,
     MatListModule,

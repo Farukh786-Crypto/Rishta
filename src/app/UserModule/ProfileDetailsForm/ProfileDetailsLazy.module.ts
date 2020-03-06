@@ -9,8 +9,8 @@ import { MaterialModule } from 'src/app/material/material.module';
 
 const profileroute: Routes = [
 
-    // { path:'' , redirectTo:'register' , pathMatch:'full' } ,
-    { path: '', component: ProfileDetailsComponent}
+    { path:'' , redirectTo:'ProfileDetails' , pathMatch:'full' } ,
+    //{ path: '', component: ProfileDetailsComponent}
 
 ]
 

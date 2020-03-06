@@ -16,7 +16,7 @@ import { ErrorComponent } from './UserModule/Error.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import {MatDialogModule} from '@angular/material/dialog';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+ 
 import {FlexLayoutModule } from '@angular/flex-layout'
 
 
@@ -40,7 +40,7 @@ import {FlexLayoutModule } from '@angular/flex-layout'
     MatDialogModule,    
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot(),
-    MDBBootstrapModule.forRoot(),
+     
     MaterialModule
   ],
   providers: [DataService],
