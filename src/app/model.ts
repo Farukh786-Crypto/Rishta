@@ -1,4 +1,3 @@
-
 export class Registerprofile{
     username:string;
     email:string;
@@ -68,3 +67,5 @@ Movies: string;
 drink:  string;
 smoke:  string;     
 }
+
+

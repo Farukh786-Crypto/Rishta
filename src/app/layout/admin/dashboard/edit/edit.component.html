@@ -1,0 +1,577 @@
+<button class="close" mat-button color="accent" (click)="onNoClick()">X</button>
+<h1 mat-dialog-title> Details </h1>
+<form [formGroup]="EditModel">
+    <div mat-dialog-content>
+        <div class="card">
+            <div class="card-body"><i class="d1">Basic Details</i>
+                <hr>
+                <table class="table">
+                    <tbody>
+                        <tr>Name:
+                            <mat-form-field appearance="outline">
+                                
+                                <input formControlName="username" matInput placeholder="Enter User Name" [(ngModel)]="data.detail.name" required>
+                                <mat-error *ngIf="isSubmited &&  EditModel.controls['UserName'].hasError('required')">
+                                    ** UserName is Required **
+                                </mat-error>
+                            </mat-form-field>
+
+
+                            <span class="barcode">
+                                Religion:
+                                <mat-form-field>
+                                    
+                                     <mat-select formControlName="religion" [(ngModel)]="data.detail.religion"  (change)="onChangeCountry($event.target.value)">
+                                      <mat-option *ngFor="let religion of allreligions"  [value]="religion.religion_id">
+                                        {{religion.religion_name}}
+                                      </mat-option>
+                        
+                                    </mat-select>
+                                </mat-form-field>
+                             
+                            </span>
+
+                            <br><br> Mother Tongue:
+                            <mat-form-field>
+                                <mat-label>Mother tongue:</mat-label>
+                                <mat-select formControlName="Mothertng">
+                                    <mat-option value="">SELECT</mat-option>
+                                    <mat-option *ngFor="let Mothertng of mothertounge" [value]="Mothertng.mothertongue_id">
+                                        {{Mothertng.mothertongue_name}}</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+
+                            <span class="barcode">
+                            City: <mat-form-field>
+                                        <mat-label>City:</mat-label>
+                                             <mat-select formControlName="livingcity">
+                                                <mat-option value="">SELECT</mat-option>
+                                                 <mat-option value="Pune">Ahmednagar</mat-option>
+                                                <mat-option value="Pune">Pune</mat-option>
+                                                <mat-option value="Banglore">Banglore</mat-option>
+                                                <mat-option value="Mumbai">Mumbai</mat-option>
+                                                <mat-option value="Hydrabad">Hydrabad</mat-option>
+                                                <mat-option value="Nashik">Nashik</mat-option>
+                                            </mat-select>
+                                    </mat-form-field>
+                            </span>
+
+                            <br><br> Marital Status:
+                            <mat-form-field>
+                                <mat-label>Marital status</mat-label>
+                                <mat-select formControlName="Marrital">
+                                    <mat-option value="">SELECT</mat-option>
+                                    <mat-option value="NeverMarried">Never Married</mat-option>
+                                    <mat-option value="AwaitingDivorce">Awaiting Divorce</mat-option>
+                                    <mat-option value="AwaitingDivorce">Divorced</mat-option>
+                                    <mat-option value="AwaitingDivorce">Widowed</mat-option>
+                                    <mat-option value="AwaitingDivorce">Annulled</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <br><br>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-body"><i class="d1">Personal Details</i>
+                <hr>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            BloodGroup:
+                            <mat-form-field class="demo-full-width">
+                                <mat-label>Blood_Group </mat-label>
+                                <mat-select formControlName="blood_group">
+                                    <mat-option selected value disabled>-- Select --</mat-option>
+                                    <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                        {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                            <span class="barcode">
+                            Height:<mat-form-field class="demo-full-width">
+                                <mat-label>height </mat-label>
+                                <mat-select formControlName="height">
+                                    <mat-option selected value disabled>-- Select --</mat-option>
+                                    <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                        {{highestDegrees.state_name|titlecase}} </mat-option>
+        
+                                </mat-select>
+                            </mat-form-field>
+                        </span>
+
+                            <br><br> Weight:
+                            <mat-form-field class="demo-full-width">
+                                <mat-label>weight </mat-label>
+                                <mat-select formControlName="weight">
+                                    <mat-option selected value disabled>-- Select --</mat-option>
+                                    <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                        {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                            <span class="barcode">
+                            Body Type: <mat-form-field class="demo-full-width">
+                                <mat-label>Body Type </mat-label>
+                                <mat-select formControlName="body_type">
+                                    <mat-option selected value disabled>-- Select --</mat-option>
+                                    <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                        {{highestDegrees.state_name|titlecase}} </mat-option>
+        
+                                </mat-select>
+                            </mat-form-field>
+                        </span>
+
+                            <br><br> Lens:
+                            <mat-form-field class="demo-full-width">
+                                <mat-label>Lens </mat-label>
+                                <mat-select formControlName="lens">
+                                    <mat-option selected value disabled>-- Select --</mat-option>
+                                    <mat-option>Yes</mat-option>
+                                    <mat-option>No</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                            <span class="barcode">
+                            Spectacles:<mat-form-field class="demo-full-width">
+                                <mat-label>Spectacles </mat-label>
+                                <mat-select formControlName="spectacles">
+                                    <mat-option selected value disabled>-- Select --</mat-option>
+                                    <mat-option>Yes</mat-option>
+                                    <mat-option>No</mat-option>
+        
+                                </mat-select>
+                            </mat-form-field>
+                        </span>
+
+                            <br><br> Complexion:
+                            <mat-form-field class="demo-full-width">
+                                <mat-label>Complexion </mat-label>
+                                <mat-select formControlName="complexion">
+                                    <mat-option selected value disabled>-- Select --</mat-option>
+                                    <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                        {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                            <span class="barcode">
+                            NRI: <mat-form-field class="demo-full-width">
+                                    <mat-label>NRI </mat-label>
+                                        <mat-select formControlName="NRI">
+                                            <mat-option selected value disabled>-- Select --</mat-option>
+                                            <mat-option>Yes</mat-option>
+                                            <mat-option>No</mat-option>
+        
+                                        </mat-select>
+                                </mat-form-field>
+                            </span>
+                            <br><br> Smoking:
+                            <mat-form-field class="demo-full-width">
+                                <mat-label>Smoking </mat-label>
+                                <mat-select formControlName="smoking">
+                                    <mat-option selected value disabled>-- Select --</mat-option>
+                                    <mat-option>Yes</mat-option>
+                                    <mat-option>No</mat-option>
+                                    <mat-option>Occasionally</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                            <span class="barcode">
+                            Drinking:<mat-form-field class="demo-full-width">
+                                        <mat-label>Drinking </mat-label>
+                                            <mat-select formControlName="drinking">
+                                                <mat-option selected value disabled>-- Select --</mat-option>
+                                                <mat-option>Yes</mat-option>
+                                                <mat-option>No</mat-option>
+                                                <mat-option>Occasionally</mat-option>
+        
+                                            </mat-select>
+                                    </mat-form-field>
+                            </span>
+
+                            <br><br> Eating Habbits:
+                            <mat-form-field class="demo-full-width">
+                                <mat-label> Eating Habits </mat-label>
+                                <mat-select formControlName="eating_habits">
+                                    <mat-option selected value disabled>-- Select --</mat-option>
+                                    <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                        {{highestDegrees.state_name|titlecase}} </mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                            <br><br>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-body"><i class="d1">Career Details</i>
+                <hr>
+                <table class="table">
+                    <tbody>
+
+                        Country:
+                        <mat-form-field class="demo-full-width">
+                            <mat-label> Country </mat-label>
+                            <mat-select formControlName="Country" (change)="onChangeCountry()" required>
+                                <mat-option>-- Select--</mat-option>
+                                <mat-option *ngFor="let Countrys of country  " value={{Countrys.country_id}}>
+                                    {{Countrys.country_name | titlecase}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <span class="barcode">
+                            State: <mat-form-field class="demo-full-width">
+                                <mat-label> State </mat-label>
+                                <mat-select formControlName="State" (change)="onChangeState($event.target.value);" required>
+                                  <mat-option>-- Select--</mat-option>
+                                  <mat-option *ngFor="let States of  state" value={{States.state_id}}>
+                                    {{States.state_name|titlecase}} </mat-option>
+                      
+                                </mat-select>
+                                <mat-error>
+                                  <span *ngIf="EditModel.controls['State'].hasError('required')&&
+                                            (EditModel.controls.State.touched ||EditModel.controls['State'].dirty|| isSubmitted)">
+                      
+                                    State is required </span>
+                        </mat-error>
+                        </mat-form-field>
+                        </span>
+                        <br><br> City Living:
+                        <mat-form-field class="demo-full-width">
+                            <mat-label> City </mat-label>
+                            <mat-select formControlName="City" required>
+                                <mat-option>-- Select --</mat-option>
+
+                                <!-- <mat-option *ngFor="let cities of  city" value={{cities.city_id}}>
+                                      {{cities.city_name|titlecase}}    </mat-option> -->
+
+                            </mat-select>
+                            <mat-error>
+                                <span *ngIf="EditModel.controls['City'].hasError('required')&&                    
+                                              (EditModel.controls.City.touched ||EditModel.controls['City'].dirty|| isSubmitted)">
+                      
+                                    City is required </span>
+                            </mat-error>
+                        </mat-form-field>
+                        <span class="barcode">
+                            Highest Degree:<mat-form-field class="demo-full-width">
+
+                                <mat-label> Highest Degree </mat-label>
+                                <mat-select formControlName="HighestDegree" required>
+                                  <mat-option>-- Select --</mat-option>
+                                  <!-- <mat-option *ngFor="let highestDegrees of  highestDegree" value={{highestDegrees.state_id}}>
+                                      {{highestDegrees.state_name|titlecase}}  </mat-option>               -->
+                                </mat-select>
+                                <mat-error>
+                                  <span
+                                    *ngIf="EditModel.controls['HighestDegree'].hasError('required')&&
+                                                  (EditModel.controls.HighestDegree.touched ||EditModel.controls['HighestDegree'].dirty|| isSubmitted)">
+                                    Highest Degree is required. </span>
+                        </mat-error>
+                        </mat-form-field>
+                        </span>
+                        <br><br> Employeed:
+                        <mat-form-field class="demo-full-width">
+                            <mat-label> Employeed In </mat-label>
+                            <mat-select formControlName="Emplyeed" required>
+                                <mat-option>-- Select --</mat-option>
+
+                                <!-- <mat-option *ngFor="let employeeds of  employeed" value={{employeeds.state_id}}>
+                                      {{employeeds.state_name|titlecase}}  </mat-option>                -->
+                            </mat-select>
+
+                            <mat-error>
+                                <span *ngIf="EditModel.controls['Emplyeed'].hasError('required')&&
+                                                    (EditModel.controls.Emplyeed.touched ||EditModel.controls['Emplyeed'].dirty|| isSubmitted)">
+                                    Employeed In required. </span>
+                            </mat-error>
+                        </mat-form-field>
+                        <span class="barcode">
+                            Occupation:<mat-form-field class="demo-full-width">
+
+                                <mat-label> Occupation</mat-label>
+                                <mat-select formControlName="Occupation" required>
+                                  <mat-option>-- Select --</mat-option>
+                      
+                                  <!-- <mat-option  *ngFor="let occupations of  occupation" value={{occupations.state_id}}>
+                                      {{occupations.state_name|titlecase}}  </mat-option>
+                                      -->
+                                </mat-select>
+                                <mat-error>
+                                  <span
+                                    *ngIf="EditModel.controls['Occupation'].hasError('required')&&
+                                                      (EditModel.controls.Occupation.touched ||EditModel.controls['Occupation'].dirty|| isSubmitted)">
+                                    Occupation is required. </span>
+                        </mat-error>
+                        </mat-form-field>
+                        </span>
+
+                        <br><br> Annual Income:
+                        <mat-form-field class="demo-full-width">
+                            <input type="number" matInput placeholder="Annual Income " formControlName="Income">
+                            <mat-error>
+                                <span *ngIf="EditModel.controls['Income'].hasError('required')&&
+                                                        (EditModel.controls.Income.touched ||EditModel.controls['Income'].dirty|| isSubmitted)">
+                                    Annual income is required.</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <span class="barcode">
+                            
+                            <mat-form-field class="demo-full-width">
+                                Express yourself:
+                                <textarea matInput formControlName="Express">
+                                 </textarea>
+                                <mat-error>
+                                  <span
+                                    *ngIf="EditModel.controls['Express'].hasError('required')&&
+                                                          (EditModel.controls.Express.touched ||EditModel.controls['Express'].dirty|| isSubmitted)">
+                                    Minimum 200 words needed. </span>
+                        </mat-error>
+                        </mat-form-field>
+                        </span>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-body"><i class="d1">Astro and Religion</i>
+                <hr>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <br><br> Cast:
+
+                            <mat-form-field>
+                                <mat-label>Caste</mat-label>
+                                <mat-select formControlName="caste">
+                                    <mat-option>SELECT</mat-option>
+
+                                </mat-select>
+
+
+                                <mat-error *ngIf=" EditModel.controls['caste'].hasError('required')&&
+                            (EditModel.controls.caste.touched ||EditModel.controls['caste'].dirty|| isSubmitted)">
+                                    Caste is required.
+                                </mat-error>
+
+                            </mat-form-field>
+
+                            <span class="barcode">
+                                    Sub Cast:
+                                <mat-form-field>
+                                    <mat-label>Sub_Caste</mat-label>
+                                    <mat-select formControlName="subcaste">
+                                        <mat-option>SELECT</mat-option>
+                                      
+                                    </mat-select>
+                               
+                                
+                                    <mat-error *ngIf=" EditModel.controls['subcaste'].hasError('required')&&
+                                         (EditModel.controls.subcaste.touched ||EditModel.controls['subcaste'].dirty|| isSubmitted)">
+                                        SubCaste In required.
+                                    </mat-error>
+                                </mat-form-field>
+            
+                            
+                        </span>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-body"><i class="d1">LifeStyle Detail</i>
+                <hr>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            Known Languages:
+                            <mat-form-field class="demo-full-width">
+                                <mat-select multiple>
+                                    <mat-option selected value disabled>-- Select --</mat-option>
+                                    <mat-option value="1">Hindi </mat-option>
+                                    <mat-option value="2">English </mat-option>
+                                    <mat-option value="3">Marathi </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <span class="barcode">
+                                Food:<mat-form-field class="demo-full-width">
+                                    <input matInput formControlName="Food">
+                                  </mat-form-field>
+                            </span>
+                            <br><br> Interested In:
+                            <mat-form-field class="demo-full-width">
+                                <input matInput placeholder=" Interests" formControlName="Interests">
+                                <mat-error>
+                                    <span *ngIf="EditModel.controls['Interests'].hasError('required')&&
+                            (EditModel.controls.Interests.touched ||EditModel.controls['Interests'].dirty|| isSubmitted)">
+                                    Please select any one.</span>
+                                </mat-error>
+                            </mat-form-field>
+                            <span class="barcode">
+                                Music:<mat-form-field class="demo-full-width">
+                                    <input matInput placeholder="Favourite Music" formControlName="Music">
+                    
+                                    <mat-error>
+                                      <span *ngIf="EditModel.controls['Music'].hasError('required')&&
+                                    (EditModel.controls.Music.touched ||EditModel.controls['Music'].dirty|| isSubmitted)">
+                                        Please select any one.</span>
+                            </mat-error>
+                            </mat-form-field>
+                            </span>
+
+                            <br><br> Books:
+                            <mat-form-field class="demo-full-width">
+                                <input matInput placeholder="Favourite Books " formControlName="Books">
+                            </mat-form-field>
+                            <span class="barcode">
+                                Movies:
+                                <mat-form-field class="demo-full-width">
+                                    <input matInput>
+                            </mat-form-field>
+                            </span>
+                            <br><br>
+                            <mat-form-field class="demo-full-width">
+                                Sports:
+                                <input matInput formControlName="sports">
+                                <mat-error>
+                                    <span *ngIf="EditModel.controls['sports'].hasError('required')&&
+                                (EditModel.controls.sports.touched ||EditModel.controls['sports'].dirty|| isSubmitted)">
+                                    Please select any one.</span>
+                                </mat-error>
+                            </mat-form-field>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-body"><i class="d1">Family Details</i>
+                <hr>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            Family Type:
+                            <mat-form-field>
+                                <mat-select formControlName="familytype">
+                                    <mat-option value="">Select</mat-option>
+                                    <mat-option value="JointFamily">Joint Family</mat-option>
+                                    <mat-option value="NuclearFamily">Nuclear Family</mat-option>
+                                    <mat-option value="Others">Others</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <span class="barcode1">
+                            Family Living in: <mat-form-field>
+                                <mat-select formControlName="livingcity">
+                                    <mat-option value="">Select</mat-option>
+                                    <mat-option value="Pune">Pune</mat-option>
+                                    <mat-option value="Banglore">Banglore</mat-option>
+                                    <mat-option value="Mumbai">Mumbai</mat-option>
+                                    <mat-option value="Hydrabad">Hydrabad</mat-option>
+                                    <mat-option value="Nashik">Nashik</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                        </span>
+                            <br><br>Father's Occupation:
+                            <mat-form-field>
+                                <mat-select formControlName="fatherocc">
+                                    <mat-option value="">Select</mat-option>
+                                    <mat-option value="business">Business</mat-option>
+                                    <mat-option value="service">Service-Govt</mat-option>
+                                    <mat-option value="notemp">Not Employed</mat-option>
+                                    <mat-option value="Expired">Expired</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <span class="barcode2">
+                                Mother's Occupation: <mat-form-field>
+                                    <mat-select formControlName="motherocc">
+                                    <mat-option value="">Select</mat-option>
+                                    <mat-option value="HouseWife">HouseWife</mat-option>
+                                    <mat-option value="Business">Business</mat-option>
+                                    <mat-option value="ServiceGovt">Service-Govt</mat-option>
+                                    <mat-option value="Retired">Retired</mat-option>
+                                    <mat-option value="notemp">Not Employed</mat-option>
+                                     <mat-option value="Expired">Expired</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </span>
+                            <br><br> No of Brothers:
+                            <mat-form-field>
+                                <mat-select formControlName="brother">
+                                    <mat-option value="">Select</mat-option>
+                                    <mat-option value="HouseWife">0</mat-option>
+                                    <mat-option value="HouseWife">1</mat-option>
+                                    <mat-option value="Business">2</mat-option>
+                                    <mat-option value="ServiceGovt">3</mat-option>
+                                    <mat-option value="Retired">4</mat-option>
+                                    <mat-option value="notemp">5</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <span class="barcode1">
+                            MarriedBrothers: <mat-form-field>
+                                <mat-select formControlName="brother">
+                                    <mat-option value="">Select</mat-option>
+                                    <mat-option value="0">0</mat-option>
+                                    <mat-option value="1">1</mat-option>
+                                    <mat-option value="2">2</mat-option>
+                                    <mat-option value="3">3</mat-option>
+                                    <mat-option value="4">4</mat-option>
+                                    <mat-option value="5">5</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </span>
+                            <br><br> No of Sisters:
+                            <mat-form-field>
+                                <mat-select formControlName="sister">
+                                    <mat-option value="">Select</mat-option>
+                                    <mat-option value="0">0</mat-option>
+                                    <mat-option value="1">1</mat-option>
+                                    <mat-option value="2">2</mat-option>
+                                    <mat-option value="3">3</mat-option>
+                                    <mat-option value="4">4</mat-option>
+                                    <mat-option value="5">5</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <span class="barcode1">
+                            Married Sisters:<mat-form-field>
+                                <mat-label>How Many Married Sister's:</mat-label>
+                                <mat-select formControlName="sister">
+                                    <mat-option value="">Select</mat-option>
+                                    <mat-option value="0">0</mat-option>
+                                    <mat-option value="1">1</mat-option>
+                                    <mat-option value="2">2</mat-option>
+                                    <mat-option value="3">3</mat-option>
+                                    <mat-option value="4">4</mat-option>
+                                    <mat-option value="5">5</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </span>
+                            <br><br> About Family:
+                            <mat-form-field appearance="outline">
+                                <mat-label>About My Family:</mat-label>
+                                <textarea formControlName="aboutfamily" matInput required>
+                                   </textarea>
+                                <mat-error *ngIf="EditModel.get('aboutfamily').hasError('required') &&
+                                            (EditModel.get('aboutfamily').touched || EditModel.get('aboutfamily').dirty|| isSubmitted)" class="text-danger" padding>
+                                    About Family Required </mat-error>
+                            </mat-form-field>
+                            <br><br>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>

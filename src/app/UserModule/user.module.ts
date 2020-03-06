@@ -13,8 +13,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 const route: Routes = [
     {
         path: '', component: UserComponent, children: [
+
+
+            { path: '', redirectTo: 'profiledetails', pathMatch: 'full' },
+
             { path: '', redirectTo: 'register', pathMatch: 'full' },
             { path: 'register', loadChildren: './RegisterForm/RegisterLazy.module#RegisterLazyClass',canActivate:[UsersAuthGuard] },
+
             { path: 'astroandreligion', loadChildren: './AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'profiledetails', loadChildren: './ProfileDetailsForm/ProfileDetailsLazy.module#ProfileDetailsLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'CareerDetails', loadChildren: './CareerDetailsForm/careerLazy.module#CareerLazyClass',canActivate:[UsersAuthGuard] },

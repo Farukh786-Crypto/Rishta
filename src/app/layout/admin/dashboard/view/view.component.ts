@@ -1,22 +1,30 @@
-import { Component } from '@angular/core'
-import { ViewService } from '../../allservices/view.service';
+import { Component, OnInit, Inject } from '@angular/core'
+import { ViewService } from './view.service'
+import { MatDialogRef } from '@angular/material';
 
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
-    selector : 'view-comp',
-    templateUrl : './view.component.html',
-    styleUrls : ['./view.component.css'],
-    providers : [ViewService]
+  selector: 'view-comp',
+  templateUrl: './view.component.html',
+  styleUrls: ['./view.component.css'],
+  providers: [ViewService]
 })
 
-export class viewComponent
-{
-    view:any
-   constructor(private vc:ViewService)
-   {
+export class ViewComponent implements OnInit {
 
-   }
-   public getAll()
-   {
-       this.vc.viewAll().subscribe(res=>{this.view=res},err=>{this.view=err})
-   }
+  // dialogRef: any;
+
+  constructor(public dialogRef: MatDialogRef<ViewComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {
+    console.log(data);
+  }
+
+  ngOnInit() {
+
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }

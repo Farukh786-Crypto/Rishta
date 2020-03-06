@@ -1,0 +1,53 @@
+<h3 style="color: aqua;">Packages</h3>
+<mat-tab-group animationDuration="1000ms">
+    <mat-tab label="Platinum" style="color: aqua;">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+
+            </mat-card-header>
+            <hr>
+            <mat-card-content>
+                <span class="pack"> 3 Months<br><br></span>
+                    <span class="pack1"> {{silverPack | currency:'INR'}}
+                </span>
+            
+
+            </mat-card-content>
+        </mat-card>
+    </mat-tab>
+    <mat-tab label="Gold">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+               
+
+            </mat-card-header>
+            <hr>
+            <mat-card-content>
+
+                <span class="pack"> 6 Months<br><br></span>
+                <span class="pack1"> {{goldPack | currency:'INR'}}
+            </span>
+
+            </mat-card-content>
+        </mat-card>
+    </mat-tab>
+    <mat-tab label="Diamond">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                
+
+            </mat-card-header>
+            <hr>
+            <mat-card-content>
+
+                <span class="pack"> 12 Months<br><br></span>
+                    <span class="pack1"> {{diamondPack | currency:'INR'}}
+                </span>
+
+            </mat-card-content>
+        </mat-card>
+    </mat-tab>
+</mat-tab-group>

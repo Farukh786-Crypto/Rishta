@@ -1,38 +1,40 @@
-<mat-toolbar color="warn">
-  <mat-toolbar-row>
-    <div> <a><img src="assets/Images/rishtalogo.png"></a></div>
-    <div class="right">
-      <button mat-button [matMenuTriggerFor]="menu1">Admin</button>
-      <mat-menu #menu1="matMenu">
-        <button mat-menu-item (click)="SignOut()">SignOut</button>
-      </mat-menu>
-    </div>
-  </mat-toolbar-row>
-  <mat-toolbar-row>
-    <div>
-      <button mat-button [matMenuTriggerFor]="menu">Dashboard</button>
-      <mat-menu #menu="matMenu">
-        <a routerLink="./grooms"><button mat-menu-item>Grooms</button></a>
-        <a routerLink="./brides"><button mat-menu-item>Brides</button></a>
-      </mat-menu>
-      <a mat-button > Matching </a>
-      <a mat-button > Packages </a>
-      <a mat-button > Payment </a>
-      <a mat-button > User </a>   
-    </div>
-  </mat-toolbar-row>
+
+<mat-toolbar>
+    <mat-toolbar-row>
+        <div>
+            <a><img src="assets/Images/rishtalogo.png"></a>
+        </div>
+        <div class="right">
+            <button mat-button [matMenuTriggerFor]="menu1" style="color: black;background-color: rgb(92, 223, 247);">Admin</button>
+            <mat-menu #menu1="matMenu">
+                <button mat-menu-item (click)="SignOut()">SignOut</button>
+            </mat-menu>
+        </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <div>
+            <a routerLink="./dashboard" style="color: white;"><button mat-button [matMenuTriggerFor]="menu">Dashboard</button></a>
+            <mat-menu #menu="matMenu">
+                <a routerLink="./grooms"><button class="mat-menu-item">Grooms</button></a>
+                <a routerLink="./brides"><button mat-menu-item>Brides</button></a>
+            </mat-menu>
+            <a routerLink="./matches" style="color: white;"><button mat-button>Matches </button></a>
+            <a routerLink="./packages" style="color: white;"><button mat-button > Packages </button> </a>
+            <a mat-button style="color: white;"> Payment </a>
+            <a style="color: white;"><button mat-button [matMenuTriggerFor]="menu2">User</button></a>
+            <mat-menu #menu2="matMenu">
+                <a routerLink="../sign-up" style="color: white;"><button mat-menu-item>Add</button></a>
+            </mat-menu>
+
+        </div>
+    </mat-toolbar-row>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
 
 
-<<<<<<< HEAD
-
-<!-- <footer class="md-padding" >
-=======
-<footer class="md-padding fixed-bottom" >
->>>>>>> 675511861986e9c62c5319decca1c91f168f950e
-  <div id="btmFooter" flex>
-    <p>@2020 Copyright: Assimilate Technology.</p>
-  </div>
-</footer> -->
+<footer class="md-padding">
+    <div id="btmFooter">
+        <p>@2020 Copyright: Assimilate Technology.</p>
+    </div>
+</footer>
