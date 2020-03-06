@@ -16,6 +16,9 @@ import { ErrorComponent } from './UserModule/Error.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import {MatDialogModule} from '@angular/material/dialog';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {FlexLayoutModule } from '@angular/flex-layout'
+
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     HttpClientModule,
     CommonModule,
     FormsModule,
+    FlexLayoutModule,
     BrowserAnimationsModule, // required animations module
     ReactiveFormsModule,
     NgxSpinnerModule,
@@ -36,6 +40,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     MatDialogModule,    
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot(),
+    MDBBootstrapModule.forRoot(),
     MaterialModule
   ],
   providers: [DataService],

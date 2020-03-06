@@ -36,7 +36,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 
 //import { DialogOverviewExampleDialog } from '../layout/admin/dashboard/grooms/viewgrooms.component';
 //import {MatDialogModule} from '@angular/material/dialog';
-
+ 
 const MaterialComponents=[
   MatPaginatorModule,
   MatButtonModule,
@@ -102,6 +102,7 @@ const MaterialComponents=[
     MatProgressSpinnerModule,
     MatRippleModule,
     MatSelectModule,
+  
     MatSidenavModule,
     MatSliderModule,
     MatSlideToggleModule,

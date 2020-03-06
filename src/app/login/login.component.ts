@@ -10,7 +10,6 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   ngOnInit() {
- 
   }
   constructor(private router: Router) { }
 
@@ -37,9 +36,4 @@ export class LoginComponent implements OnInit {
       console.log("Login Failed");
     }
   }
-
-
-  
-
 }
-
