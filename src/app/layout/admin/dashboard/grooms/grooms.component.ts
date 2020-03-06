@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 import { MatTable } from '@angular/material/table';
 import { ViewComponent } from '../view/view.component';
+import { EditComponent } from '../edit/edit.component';
 
 @Component({
   selector: 'app-grooms',
@@ -72,7 +73,19 @@ export class GroomsComponent implements AfterViewInit, OnInit {
   openDialog(params): void {
     console.log(params);
     const dialogRef = this.dialog.open(ViewComponent, {
-      width: '900px', height: '600px',
+      width: '800px', height: '600px',
+      data: params
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  openDialog2(params): void {
+    console.log(params);
+    const dialogRef = this.dialog.open(EditComponent, {
+      width: '800px', height: '500px',
       data: params
     });
 

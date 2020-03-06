@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './UserModule/Error.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import {MatDialogModule} from '@angular/material/dialog';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [

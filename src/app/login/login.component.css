@@ -1,47 +1,33 @@
-/* .container{
-    top: 15%;
+.form-group {
+    margin-top: 15px;
 }
-
-.login{
-    margin-top: 10em ;
-    padding-right: initial; 
-}
-.login .card{
-    border-color: deepskyblue;
-}
-.login .row{
-    padding-right: initial; 
-}
-.login h5{
-    font-style: bold;
-    color: deepskyblue;
-} */
 
 :host {
     display: flex;
     justify-content: center;
     margin: 100px 0px;
-  }
+}
 
-  .mat-form-field {
+.mat-form-field {
     width: 100%;
     min-width: 300px;
-  }
+}
 
-  mat-card-title,
-  mat-card-content {
+mat-card-title,
+mat-card-content {
     display: flex;
     justify-content: center;
-  }
+}
 
-  .error {
+.error {
     padding: 16px;
     width: 300px;
     color: white;
     background-color: red;
-  }
+}
 
-  .button {
+.button {
     display: flex;
-    justify-content: flex-end;
-  }
+    justify-content: center;
+    background-color: burlywood;
+}

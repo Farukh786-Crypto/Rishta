@@ -8,10 +8,12 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter'
 import { MaterialModule } from 'src/app/material/material.module';
 import { ViewComponent } from '../view/view.component';
 import { ViewModule } from '../view/view.module';
+import { EditComponent } from '../edit/edit.component';
+import { EditModule } from '../edit/edit.module';
  
 @NgModule({
   declarations: [GroomsComponent],
-  entryComponents: [ViewComponent],
+  entryComponents: [ViewComponent,EditComponent],
  
   imports: [
     
@@ -21,7 +23,8 @@ import { ViewModule } from '../view/view.module';
     FormsModule,
     Ng2SearchPipeModule,
     MaterialModule,
-    ViewModule
+    ViewModule,
+    EditModule
 ],
   providers : [DataService],
   exports : [ViewModule]

@@ -11,7 +11,7 @@ templateUrl:'./Error.component.html'
 
 export class ErrorComponent {
 
-    title: string = 'Error Component is Occured';
+    title: string = '404  Resource Not Found!';
 
 }
 

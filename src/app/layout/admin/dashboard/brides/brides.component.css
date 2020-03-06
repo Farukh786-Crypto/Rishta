@@ -17,6 +17,14 @@
     
   }
 
+  /* .mat-paginator
+  {
+    margin-left: auto;
+    width : auto;
+    background-color:transparent;
+    color: rgb(66, 8, 23 );;
+    font-size: small;
+  } */
   .mat-paginator
   {
     margin-left: auto;
@@ -24,6 +32,14 @@
     background-color:transparent;
     color: rgb(66, 8, 23 );;
     font-size: small;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 0 8px;
+    flex-wrap: wrap-reverse;
+    width: 100%;
   }
   .mat-flat-button
   {
