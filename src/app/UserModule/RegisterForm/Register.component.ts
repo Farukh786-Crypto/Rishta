@@ -4,48 +4,35 @@ import { ToastrService } from 'ngx-toastr';
 import { RegService } from './Register.service';
 import {Router} from '@angular/router';
 import { Registerprofile } from 'src/app/model';
-
 export interface profCreated {
     value: string;
     viewValue: string;
 }
-
 @Component({
-
     selector: 'register-comp',
     templateUrl: './Register.component.html',
     styleUrls: ['./Register.component.css',
                   '../user.component.css'],
     providers: [RegService]
-
 })
-
 export class RegisterFormComponent {
-
     states: string[] = [
         'Self', 'Parents'
     ];
-
     createdby=[
         {id:1,value:'Self'},
         {id:2,value:'Parents'}
     ];
-
     disabledAgreement: boolean = true
     RegisterModel: FormGroup
     isSubmited: boolean;
     required: Boolean;
     title:'Farukh';
     hide = true;
-    
     disableRipple: Boolean;
     pCreated: profCreated[] = [{ value: 'self', viewValue: 'Self' }, { value: 'parent', viewValue: 'Parent' }]
-
     constructor(private toastr: ToastrService,private register: RegService, private _router: Router) {
-
-
         this.RegisterModel = new FormGroup({
-
             username: new FormControl('', [Validators.required]),
             email: new FormControl('', [Validators.required, Validators.pattern(/^(\d{10}|\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4}))$/)]),
             password: new FormControl('', [Validators.required,  Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]),
@@ -55,16 +42,8 @@ export class RegisterFormComponent {
             // create_profile_by: new FormControl('', [Validators.required]),
             gender: new FormControl('male', [Validators.required]),
             date:new FormControl(new Date())
-
         })
-
-
-    }
-
-
-
-
-    
+    }   
         // public postRegisterInfo:any;
         // userId:number;
         // public SaveRegisterInfo(){
