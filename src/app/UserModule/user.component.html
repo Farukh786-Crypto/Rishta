@@ -11,7 +11,8 @@
     </mat-toolbar-row>
     <mat-toolbar-row>
       <mat-tab-group>
-        <mat-tab label="Register">
+        <mat-tab label [matMenuTriggerFor]="Register">
+          
           <div>
             <button mat-button routerLink="./register">Register</button>
             <button mat-button routerLink="./profiledetails">Profile Details </button>
@@ -33,10 +34,10 @@
            
         </mat-tab>
         <mat-tab label="About Us">
-      
+        
         </mat-tab>
         <mat-tab label="FeedBack">
-          <button mat-button routerLink="./feedbackDetails"> FeedBack</button>
+          <button mat-button routerLink="./feedbackDetails"></button>
         </mat-tab>
       </mat-tab-group>
 
