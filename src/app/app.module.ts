@@ -16,6 +16,10 @@ import { ErrorComponent } from './UserModule/Error.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import {MatDialogModule} from '@angular/material/dialog';
 import { SignUpComponent } from './sign-up/sign-up.component';
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> ce793e2ff78afc80390d0c428b491b509b7bf14c
 import {FlexLayoutModule } from '@angular/flex-layout'
 
 

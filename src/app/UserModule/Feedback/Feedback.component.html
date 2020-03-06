@@ -1,89 +1,99 @@
 
+  
+ 
+
+
+
+
 
   {{feedbackDetails.value|json}}
  
-<mat-card class="example-card">
-  <mat-card-header>
-    
-    <mat-card-title>FeedBack Form</mat-card-title>
-     
-  </mat-card-header>
-
-  <mat-card-content>
-    <p>
-        Thank you for choosing to give us your feedback. We assure you that your suggestions will be
-        taken into careful consideration, and your queries answered promptly.<br>
-        We would also highly appreciate your feedback & comments in case you have found success through Rishta.Com. <br>              
-        Please submit your comments/suggestions/queries in the following format:        
-    </p>
-  </mat-card-content>
-
-
-
-
-  <mat-card-content>
-    <form [formGroup]="feedbackDetails" novalidate>
-      <div class="example-container">
-
-        <!-- {{postRegisterInfo|json}}
- -->
-
-
-        <div>
-            <mat-form-field class="feedbackform-full-width" appearance="outline">
-                <mat-label>Name :</mat-label>
-                <input formControlName="name" matInput placeholder="Enter Name" required>
-                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                <mat-error *ngIf=" feedbackDetails.controls['name'].hasError('required')&&
-                 (feedbackDetails.controls.name.touched ||feedbackDetails.controls['name'].dirty|| isSubmitted)">
-                     Name is required.
-                 </mat-error>
-                 </mat-form-field>
+  <mat-card class="example-card">
+    <mat-card-header>
+      
+      <mat-card-title>FeedBack Form</mat-card-title>
        
-        </div>
-
-        <div>
-            <mat-form-field  class="feedbackform-full-width"  appearance="outline">
-                <mat-label>Address :</mat-label>
-                <input formControlName="address" matInput placeholder="Enter Address" required>
-                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                <mat-error *ngIf=" feedbackDetails.controls['address'].hasError('required')&&
-                 (feedbackDetails.controls.address.touched ||feedbackDetails.controls['address'].dirty|| isSubmitted)">
-                     Address is required.
-                 </mat-error>
-               </mat-form-field>
-        </div>
-         
-        <div>
-            <mat-form-field class="feedbackform-full-width"  appearance="outline">
-                <mat-label>Email :</mat-label>
-                <input formControlName="email" matInput placeholder="Enter Email" required>
-                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-                <mat-error *ngIf=" feedbackDetails.controls['email'].hasError('required')&&
-                (feedbackDetails.controls.email.touched ||feedbackDetails.controls['email'].dirty|| isSubmitted)">
-                      Email is required.
-                </mat-error>
-            </mat-form-field>
-
-        </div>
-
-         
-
-        <mat-form-field class="feedbackform-full-width">
-            <mat-label placeholder="Express Yourself!">Leave a comment</mat-label>
-            <textarea matInput placeholder="Express Yourself!" formControlName="suggestion" required></textarea>
-          </mat-form-field>
-        </div>
-        <div class="buttonprimary">
-
-
-          <button mat-raised-button class="button_primary" color="primary" (click)="FeedbackUser(feedbackDetails.value)">Submit</button>
-    
-        </div>
-            </form>
-  </mat-card-content>
+    </mat-card-header>
   
-</mat-card>
+    <mat-card-content>
+      <p>
+          Thank you for choosing to give us your feedback. We assure you that your suggestions will be
+          taken into careful consideration, and your queries answered promptly.<br>
+          We would also highly appreciate your feedback & comments in case you have found success through Rishta.Com. <br>              
+          Please submit your comments/suggestions/queries in the following format:        
+      </p>
+    </mat-card-content>
+  
+  
+  
+  
+    <mat-card-content>
+      <form [formGroup]="feedbackDetails" novalidate>
+        <div class="example-container">
+  
+          <!-- {{postRegisterInfo|json}}
+   -->
+  
+  
+          <div>
+              <mat-form-field class="feedbackform-full-width" appearance="outline">
+                  <mat-label>Name :</mat-label>
+                  <input formControlName="name" matInput placeholder="Enter Name" required>
+                  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                  <mat-error *ngIf=" feedbackDetails.controls['name'].hasError('required')&&
+                   (feedbackDetails.controls.name.touched ||feedbackDetails.controls['name'].dirty|| isSubmitted)">
+                       Name is required.
+                   </mat-error>
+                   </mat-form-field>
+         
+          </div>
+  
+          <div>
+              <mat-form-field  class="feedbackform-full-width"  appearance="outline">
+                  <mat-label>Address :</mat-label>
+                  <input formControlName="address" matInput placeholder="Enter Address" required>
+                  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                  <mat-error *ngIf=" feedbackDetails.controls['address'].hasError('required')&&
+                   (feedbackDetails.controls.address.touched ||feedbackDetails.controls['address'].dirty|| isSubmitted)">
+                       Address is required.
+                   </mat-error>
+                 </mat-form-field>
+          </div>
+           
+          <div>
+              <mat-form-field class="feedbackform-full-width"  appearance="outline">
+                  <mat-label>Email :</mat-label>
+                  <input formControlName="email" matInput placeholder="Enter Email" required>
+                  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                  <mat-error *ngIf=" feedbackDetails.controls['email'].hasError('required')&&
+                  (feedbackDetails.controls.email.touched ||feedbackDetails.controls['email'].dirty|| isSubmitted)">
+                        Email is required.
+                  </mat-error>
+              </mat-form-field>
+  
+          </div>
+  
+           
+  
+          <mat-form-field class="feedbackform-full-width">
+              <mat-label placeholder="Express Yourself!">Leave a comment</mat-label>
+              <textarea matInput placeholder="Express Yourself!" formControlName="suggestion" required></textarea>
+            </mat-form-field>
+          </div>
+          <div class="buttonprimary">
+  
+  
+            <button mat-raised-button class="button_primary" color="primary" (click)="FeedbackUser(feedbackDetails.value)">Submit</button>
+      
+          </div>
+              </form>
+    </mat-card-content>
+    
+  </mat-card> 
+
+
+
+
  <!-- <p> {{data.message}}</p> -->
  
 
