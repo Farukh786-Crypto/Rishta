@@ -1,4 +1,43 @@
+<div class="navbar">
+   
+  <mat-toolbar-row  >
+     
+    <a><img src="assets/Images/rishtalogo.png"width="200px" height="40px"></a>
+      <button mat-button [matMenuTriggerFor]="menu">Register</button>
+      <mat-menu #menu="matMenu">
+          <a routerLink="./profiledetails"><button class="mat-menu-item">Profile Details</button></a>
+          <a routerLink="./CareerDetails"><button mat-menu-item>Career Details</button></a>
+          <a routerLink="./familydetails"><button mat-menu-item>Family Details</button></a>
+          <a routerLink="./personalDetails"><button mat-menu-item>Personal Details</button></a>
+          <a routerLink="./Educationdetails"><button mat-menu-item>Educational Details</button></a>
+          <a routerLink="./LifestyleDetails"><button mat-menu-item>Lifestyle Details</button></a>
+          <a routerLink="./astroandreligion"><button mat-menu-item>Astro and Religion</button></a>      
+        </mat-menu>
+        <a><button mat-button>Matches </button></a>
+        <a><button mat-button>Packges </button></a>
+        <a><button mat-button>Contact </button></a>
+        <a><button mat-button>About Us </button></a>
+        <a><button mat-button>Feedback Details </button></a> 
+        <button mat-button [matMenuTriggerFor]="menu1">User</button>
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item (click)="SignOut()">SignOut</button>
+      </mat-menu>             
+      
+  </mat-toolbar-row>
 
+</div>
+<router-outlet></router-outlet>
+<footer class="md-padding sm-padding lg-padding">
+<div id="btmFooter" flex>
+  <p>@2020 Copyright: Assimilate Technology.</p>
+</div>
+</footer>
+<!-- <footer class="md-padding fixed-bottom">
+  <div id="btmFooter" flex>
+      <p>@2020 Copyright: Assimilate Technology.</p>
+  </div>
+</footer> -->
+<!-- 
 <mat-toolbar>
   <mat-toolbar-row>
     <div>
@@ -50,4 +89,4 @@
   <div id="btmFooter" flex>
     <p>@2020 Copyright: Assimilate Technology.</p>
   </div>
-</footer>
+</footer> -->
