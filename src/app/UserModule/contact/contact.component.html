@@ -1,1 +1,56 @@
-<p>contact works!</p>
+<div class="row">
+    <div class="col-md-4">
+        <a href="#" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+        <p>Office No. 102 , New Sanghavi 411027</p>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-earphone"></span> </a>
+        <p> 070205 95590</p>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-envelope"></span> </a>
+        <p><a href="#">supportat_rishta@gmail.com</a></p>
+    </div>
+</div>
+
+
+<div class="row">
+    <!-- <div class="col-md-3">
+        <p>State:</p>
+         <p *ngFor="let states of state">
+             {{ states }} 
+        </p>
+    </div> -->
+    <div class="col-md-9" *ngFor="let detail of details  ">
+        <div class="row">
+            <div class="col-md-3">contact person</div>
+            <div class="col-md-9">
+                      {{ detail.name }} 
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">contact no</div>
+            <div class="col-md-9"> 
+                    {{ detail.contact }} 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Address</div>
+            <div class="col-md-9">
+                     {{ detail.address }} 
+            </div>
+        </div>
+    
+    <div class="row">
+        <div class="col-md-3">State</div>
+        <div class="col-md-9">
+                 {{ detail.state }} 
+        </div>
+    </div> 
+</div>
+</div>
