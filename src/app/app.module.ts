@@ -15,8 +15,7 @@ import { MatSelectModule } from '@angular/material'
 import { ErrorComponent } from './UserModule/Error.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import {MatDialogModule} from '@angular/material/dialog';
-import {FlexLayoutModule } from '@angular/flex-layout'
-import {NgxChartsModule} from '@swimlane/ngx-charts';
+
 
 
 @NgModule({
@@ -29,15 +28,13 @@ import {NgxChartsModule} from '@swimlane/ngx-charts';
     HttpClientModule,
     CommonModule,
     FormsModule,
-    FlexLayoutModule,
     BrowserAnimationsModule, // required animations module
     ReactiveFormsModule,
     NgxSpinnerModule,
     Ng2SearchPipeModule,
     MaterialModule,
     MatSelectModule,
-    MatDialogModule, 
-    NgxChartsModule,   
+    MatDialogModule,   
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot(),
      
