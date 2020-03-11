@@ -7,6 +7,8 @@ import { map } from 'rxjs/operators';
  import { Observable, of as observableOf, merge } from 'rxjs';
 import { MatTable  } from '@angular/material/table';
 import { ViewComponent } from '../view/view.component';
+import { EditComponent } from '../edit/edit.component';
+import { PhotoviewComponent } from '../photoview/photoview.component';
 
 @Component({
   selector: 'app-brides',
@@ -15,31 +17,28 @@ import { ViewComponent } from '../view/view.component';
   providers:[]
 })
 export class BridesComponent implements OnInit,AfterViewInit {
-
-  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatTable, {static: false}) table: MatTable<DataTableItem>;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @ViewChild(MatTable, { static: false }) table: MatTable<DataTableItem>;
   dataSource: BridesComponent;
 
-  displayedColumns = ['id','photo', 'detail','action'];
+  displayedColumns = [ 'date','photo', 'name','age','religion','city', 'package','action'];
 
-  constructor( private route: Router,public dialog: MatDialog) { }
-  animal: string;
- 
+  constructor(private route: Router, public dialog: MatDialog) { }
 
   ngOnInit() {
- 
- this.dataSource = new BridesComponent(this.route,this.dialog);
-   }
-   ngAfterViewInit() {
+
+    this.dataSource = new BridesComponent(this.route, this.dialog);
+  }
+  ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
   }
-  
+
   data: DataTableItem[] = EXAMPLE_DATA;
   connect(): Observable<DataTableItem[]> {
-   const dataMutations = [
+    const dataMutations = [
       observableOf(this.data),
       this.paginator.page,
       this.sort.sortChange
@@ -49,7 +48,9 @@ export class BridesComponent implements OnInit,AfterViewInit {
       return this.getPagedData(this.getSortedData([...this.data]));
     }));
   }
-  disconnect() {}
+
+  disconnect() { }
+
   private getPagedData(data: DataTableItem[]) {
     const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
     return data.splice(startIndex, this.paginator.pageSize);
@@ -62,57 +63,82 @@ export class BridesComponent implements OnInit,AfterViewInit {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-      //   case 'name': return compare(a.name, b.name, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
+          case 'name': return compare(a.name, b.name, isAsc);
+        case 'age': return compare(+a.age, +b.age, isAsc);
         default: return 0;
       }
     });
   }
-  
-  openDialog(): void {
-     const dialogRef = this.dialog.open(ViewComponent, {
-      width: '800px',height:'600px'
-      
+
+  openDialog(params): void {
+    console.log(params);
+    const dialogRef = this.dialog.open(ViewComponent, {
+      width: '800px', height: '520px',
+      data: params
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
     });
   }
-   detail: any
 
+  openDialog2(params): void {
+    console.log(params);
+    const dialogRef = this.dialog.open(EditComponent, {
+      width: '800px', height: '500px',
+      data: params
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+  openDialog3(params): void {
+    console.log(params);
+    const dialogRef = this.dialog.open(PhotoviewComponent, {
+      width: '400px', height: '480px',
+      data: params
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }
 export interface DataTableItem {
-  detail : {
-    name:string,
-    age:number;
-    religion:string;
-    mothertongue:string;
-    city:string;
-    maritalstatus:string;
-  };
-  id: number;
-  photo:any;
+    date:string;
+    name: string,
+    age: number;
+    religion: string;
+    city: string;
+     id: number;
+     package:string;
+     photo:{
+       photo1:any;
+       photo2:any;
+       photo3:any;
+     }
 
-  
+
 }
- const EXAMPLE_DATA: DataTableItem[] = [ 
-    {id: 1,photo:'./assets/Images/1.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-    {id: 2,photo:'./assets/Images/2.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},      {id: 3,photo:'./assets/Images/h1.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-     {id: 4,photo:'./assets/Images/4.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-     {id: 5, photo:'./assets/Images/h2.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-     {id: 6, photo:'./assets/Images/5.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-     {id: 7, photo:'./assets/Images/h3.jpg', detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-     {id: 8,photo:'./assets/Images/6.jpg',  detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-     {id: 9,photo:'./assets/Images/h5.jpg',  detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi',city:'pune',maritalstatus:'married'}},
-     {id: 10,photo:'./assets/Images/h6.jpg',  detail:{name:'Sastura',age:26,religion:'hindu',mothertongue:'marathi ',city:'pune',maritalstatus:'married'}},
-     
-    
-  ];
+const EXAMPLE_DATA: DataTableItem[] = [
+  { id: 1, date:'23/04/2020',photo:{photo1:'./assets/Images/1.jpg',photo2:'./assets/Images/1.jpg',photo3:'./assets/Images/1.jpg'}, name: 'Amruta', age: 26, religion: 'hindu', city: 'pune' ,package:'golden'},
+  { id: 2, date:'23/04/2020',photo:{ photo1:'./assets/Images/2.jpg',photo2:'./assets/Images/2.jpg',photo3:'./assets/Images/2.jpg'}, name: 'Kirti', age: 25, religion: 'hindu', city: 'pune' ,package:'golden'},
+  { id: 3, date:'23/04/2020',photo:{ photo1:'./assets/Images/3.jpg',photo2:'./assets/Images/3.jpg',photo3:'./assets/Images/3.jpg'}, name: 'Pooja', age: 27, religion: 'hindu', city: 'pune',package:'golden' },
+  { id: 4,date:'23/04/2020', photo:{photo1:'./assets/Images/4.jpg',photo2:'./assets/Images/4.jpg',photo3:'./assets/Images/4.jpg'},  name: 'Samntha', age: 23, religion: 'hindu',  city: 'pune',package:'golden' },
+  { id: 5,date:'23/04/2020', photo:{photo1:'./assets/Images/5.jpg',photo2:'./assets/Images/5.jpg',photo3:'./assets/Images/5.jpg'}, name: 'Anushka', age: 24, religion: 'hindu',  city: 'pune',package:'golden' },
+  { id: 6,date:'23/04/2020',photo:{ photo1:'./assets/Images/6.jpg',photo2:'./assets/Images/6.jpg',photo3:'./assets/Images/6.jpg'},  name: 'Madhuri', age: 25, religion: 'hindu',  city: 'pune',package:'golden' },
+  { id: 7,date:'23/04/2020', photo:{photo1:'./assets/Images/7.jpg',photo2:'./assets/Images/7.jpg',photo3:'./assets/Images/7.jpg'}, name: 'Madhuri', age: 27, religion: 'hindu', city: 'pune',package:'golden'},
+  { id: 8, date:'23/04/2020',photo:{photo1:'./assets/Images/5.jpg',photo2:'./assets/Images/5.jpg',photo3:'./assets/Images/5.jpg'},  name: 'Anushka', age: 23, religion: 'hindu',city: 'pune',package:'golden'},
+  { id: 9,date:'23/04/2020', photo:{photo1:'./assets/Images/6.jpg',photo2:'./assets/Images/6.jpg',photo3:'./assets/Images/6.jpg'}, name: 'Madhuri', age: 26, religion: 'hindu',  city: 'pune',package:'golden' },
+  { id: 10, date:'23/04/2020',photo:{photo1:'./assets/Images/7.jpg',photo2:'./assets/Images/7.jpg',photo3:'./assets/Images/7.jpg'}, name: 'Madhuri', age: 25, religion: 'hindu', city: 'pune',package:'golden'},
+
+
+];
 
 function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
+
 
 
