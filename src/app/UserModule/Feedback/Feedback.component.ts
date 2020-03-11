@@ -1,8 +1,10 @@
-import { Component } from '@angular/core'
+import { Component, Inject } from '@angular/core'
 import { FormControl, Validators, FormGroup } from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
 import { FeedbackService } from './feedback.service';
 import { feedbackprofile } from 'src/app/model';
+import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from '@angular/material';
+
 
 @Component({
     selector: 'Feedback-comp',
@@ -29,6 +31,7 @@ export class FeedbackComponent {
         })
 
     }
+      
 
     public feedbackPost:any;
     

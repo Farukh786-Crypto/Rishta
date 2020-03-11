@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FeedbackComponent } from './Feedback.component';
 import { MaterialModule } from 'src/app/material/material.module';
- 
-
+import { MatDialogRef } from '@angular/material';
+//import {MatDialogModule} from '@angular/material/dialog'; 
+//import {MatMenuModule} from '@angular/material/menu';
 
 
 const feedbackroute: Routes = [     
@@ -20,7 +21,7 @@ const feedbackroute: Routes = [
     declarations: [FeedbackComponent],
     imports: [CommonModule,
         ReactiveFormsModule,
-        MaterialModule,
+        MaterialModule,  
         
         RouterModule.forChild(feedbackroute)],
     providers: [],

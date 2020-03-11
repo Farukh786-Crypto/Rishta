@@ -1,214 +1,227 @@
-<div class="card">
-    <div class="card-body">
 
-        <mat-card>
-            <mat-card-header>
-                <mat-card-title> Family Details </mat-card-title>
-            </mat-card-header>
+<div class="title">
+    <h1>{{title}}</h1>
+</div>
+<div class="Astroandreligionform" class="container">
+    <form [formGroup]="FamilyDetailsModel" class="form">
+        <mat-grid-list cols="2" rowHeight="40px" gutterSize="35px">
+            <!-- <mat-grid-list [cols]="breakpoint" rowHeight="40px" gutterSize="35px" (window:resize)="onResize($event)"> -->
+            <div class="tilefix">
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" color="accent">
+                        <mat-label>Family Type:</mat-label>
+                        <mat-select formControlName="familytype" required>
+                            <mat-option value="">SELECT</mat-option>
+                            <mat-option value="JointFamily">Joint Family</mat-option>
+                            <mat-option value="NuclearFamily">Nuclear Family</mat-option>
+                            <mat-option value="Others">Others</mat-option>
+                        </mat-select>>
+                    </mat-form-field>
+                    <mat-error
+                        *ngIf="FamilyDetailsModel.get('familytype').hasError('required') &&
+                            (FamilyDetailsModel.get('familytype').touched || FamilyDetailsModel.get('familytype').dirty|| isSubmitted)"
+                        class="text-danger" padding>
+                        Family Type Required.</mat-error>
+                </mat-grid-tile>
 
-            <div class="row">
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Father's Occupations:</mat-label>
+                        <mat-select formControlName="fatherocc">
+                            <mat-option value="">SELECT</mat-option>
+                            <mat-option value="business">Business</mat-option>
+                            <mat-option value="service">Service-Govt</mat-option>
+                            <mat-option value="notemp">Not Employed</mat-option>
+                            <mat-option value="Expired">Expired</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error
+                        *ngIf="FamilyDetailsModel.get('fatherocc').hasError('required') &&
+                    (FamilyDetailsModel.get('fatherocc').touched || FamilyDetailsModel.get('fatherocc').dirty|| isSubmitted)"
+                        class="text-danger" padding>
+                        Father Occupations Required.
+                    </mat-error>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" color="accent">
+                        <mat-label>Mother's Occupations:</mat-label>
+                        <mat-select formControlName="motherocc">
+                            <mat-option value="">SELECT</mat-option>
+                            <mat-option value="HouseWife">HouseWife</mat-option>
+                            <mat-option value="Business">Business</mat-option>
+                            <mat-option value="ServiceGovt">Service-Govt</mat-option>
+                            <mat-option value="Retired">Retired</mat-option>
+                            <mat-option value="notemp">Not Employed</mat-option>
+                            <mat-option value="Expired">Expired</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error
+                        *ngIf="FamilyDetailsModel.get('motherocc').hasError('required') &&
+                    (FamilyDetailsModel.get('motherocc').touched || FamilyDetailsModel.get('motherocc').dirty|| isSubmitted)"
+                        class="text-danger" padding>
+                        Mother Occupations Required.
+                    </mat-error>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>How Many Brother's:</mat-label>
+                        <mat-select formControlName="brother">
+                            <mat-option value="">SELECT</mat-option>
+                            <mat-option value="HouseWife">0</mat-option>
+                            <mat-option value="HouseWife">1</mat-option>
+                            <mat-option value="Business">2</mat-option>
+                            <mat-option value="ServiceGovt">3</mat-option>
+                            <mat-option value="Retired">4</mat-option>
+                            <mat-option value="notemp">5</mat-option>
+                        </mat-select>
+                        <mat-error
+                            *ngIf="FamilyDetailsModel.get('brother').hasError('required') &&
+                        (FamilyDetailsModel.get('brother').touched || FamilyDetailsModel.get('brother').dirty|| isSubmitted)"
+                            class="text-danger" padding>
+                            How Many Brothers Required.
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>How Many Married Brother's:</mat-label>
+                        <mat-select formControlName="brother">
+                            <mat-option value="">SELECT</mat-option>
+                            <mat-option value="0">0</mat-option>
+                            <mat-option value="1">1</mat-option>
+                            <mat-option value="2">2</mat-option>
+                            <mat-option value="3">3</mat-option>
+                            <mat-option value="4">4</mat-option>
+                            <mat-option value="5">5</mat-option>
+                        </mat-select>
+                        <mat-error
+                            *ngIf="FamilyDetailsModel.get('brother').hasError('required') &&
+                        (FamilyDetailsModel.get('brother').touched || FamilyDetailsModel.get('brother').dirty|| isSubmitted)"
+                            class="text-danger" padding>
+                            How Many Brothers Required.
+                        </mat-error>
+
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>How Many Sister's:</mat-label>
+                        <mat-select formControlName="sister">
+                            <mat-option value="">SELECT</mat-option>
+                            <mat-option value="0">0</mat-option>
+                            <mat-option value="1">1</mat-option>
+                            <mat-option value="2">2</mat-option>
+                            <mat-option value="3">3</mat-option>
+                            <mat-option value="4">4</mat-option>
+                            <mat-option value="5">5</mat-option>
+                        </mat-select>
+                        <mat-error
+                            *ngIf="FamilyDetailsModel.get('sister').hasError('required') &&
+                        (FamilyDetailsModel.get('sister').touched || FamilyDetailsModel.get('sister').dirty|| isSubmitted)"
+                            class="text-danger" padding>
+                            How Many Sisters Required.
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>How Many Married Sister's:</mat-label>
+                        <mat-select formControlName="sister">
+                            <mat-option value="">SELECT</mat-option>
+                            <mat-option value="0">0</mat-option>
+                            <mat-option value="1">1</mat-option>
+                            <mat-option value="2">2</mat-option>
+                            <mat-option value="3">3</mat-option>
+                            <mat-option value="4">4</mat-option>
+                            <mat-option value="5">5</mat-option>
+                        </mat-select>
+                        <mat-error
+                            *ngIf="FamilyDetailsModel.get('sister').hasError('required') &&
+                        (FamilyDetailsModel.get('sister').touched || FamilyDetailsModel.get('sister').dirty|| isSubmitted)"
+                            class="text-danger" padding>
+                            How Many Married Sisters Required.
+                        </mat-error>
+                        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+            {{specialization.viewValue}}
+          </mat-option> -->
+                    </mat-form-field>
+                </mat-grid-tile>
 
 
-                <mat-card-content>
-                    <form [formGroup]="FamilyDetailsModel" class="form">
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Family living In States:</mat-label>
+                        <mat-select formControlName="livingstate">
+                            <mat-option value="">SELECT</mat-option>
+                            <mat-option value="Maharashtra">Maharashtra</mat-option>
+                            <mat-option value="Goa">Goa</mat-option>
+                            <mat-option value="Karanataka">Karanataka</mat-option>
+                            <mat-option value="Gujrat">Gujrat</mat-option>
+                            <mat-option value="TamilNadu">TamilNadu</mat-option>
+                        </mat-select>
+                        <mat-error
+                            *ngIf="FamilyDetailsModel.get('livingstate').hasError('required') &&
+                    (FamilyDetailsModel.get('livingstate').touched || FamilyDetailsModel.get('livingstate').dirty|| isSubmitted)"
+                            class="text-danger" padding>
+                            Family Living State Required.</mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
 
-                        <div class="row">
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Family living In City:</mat-label>
+                        <mat-select formControlName="livingcity">
+                            <mat-option value="">SELECT</mat-option>
+                            <mat-option value="Pune">Pune</mat-option>
+                            <mat-option value="Banglore">Banglore</mat-option>
+                            <mat-option value="Mumbai">Mumbai</mat-option>
+                            <mat-option value="Hydrabad">Hydrabad</mat-option>
+                            <mat-option value="Nashik">Nashik</mat-option>
+                        </mat-select>
 
-                            <div class="col-sm-4">
-                                <mat-form-field>
-                                    <mat-label>Family Type:</mat-label>
-                                    <mat-select formControlName="familytype">
-                                        <mat-option value="">Select</mat-option>
-                                        <mat-option value="JointFamily">Joint Family</mat-option>
-                                        <mat-option value="NuclearFamily">Nuclear Family</mat-option>
-                                        <mat-option value="Others">Others</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-                                <mat-error *ngIf="FamilyDetailsModel.get('familytype').hasError('required') &&
-                            (FamilyDetailsModel.get('familytype').touched || FamilyDetailsModel.get('familytype').dirty|| isSubmitted)" class="text-danger" padding>
-                                    Family Type Required.</mat-error>
-                            </div>
+                        <mat-error
+                            *ngIf="FamilyDetailsModel.get('livingcity').hasError('required') &&
+                        (FamilyDetailsModel.get('livingcity').touched || FamilyDetailsModel.get('livingcity').dirty|| isSubmitted)"
+                            class="text-danger" padding>
+                            Family Living Required.
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
 
-                            <div class="col-sm-4">
-                                <mat-form-field>
-                                    <mat-label>Father's Occupations:</mat-label>
-                                    <mat-select formControlName="fatherocc">
-                                        <mat-option value="">Select</mat-option>
-                                        <mat-option value="business">Business</mat-option>
-                                        <mat-option value="service">Service-Govt</mat-option>
-                                        <mat-option value="notemp">Not Employed</mat-option>
-                                        <mat-option value="Expired">Expired</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-                                <span *ngIf="FamilyDetailsModel.get('fatherocc').hasError('required') &&
-                        (FamilyDetailsModel.get('fatherocc').touched || FamilyDetailsModel.get('fatherocc').dirty|| isSubmitted)" class="text-danger" padding>
-                        Father Occupations Required.</span>
-                            </div>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Contact Address:</mat-label>
+                        <input formControlName="address" matInput placeholder="Enter the Address" required>
+                        <mat-error
+                            *ngIf="FamilyDetailsModel.get('address').hasError('required') &&
+                        (FamilyDetailsModel.get('address').touched || FamilyDetailsModel.get('address').dirty|| isSubmitted)"
+                            class="text-danger" padding>
+                            Address Required.
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
 
-                            <div class="col-sm-4">
-                                <mat-form-field>
-                                    <mat-label>Mother's Occupations:</mat-label>
-                                    <mat-select formControlName="motherocc">
-                                        <mat-option value="">Select</mat-option>
-                                        <mat-option value="HouseWife">HouseWife</mat-option>
-                                        <mat-option value="Business">Business</mat-option>
-                                        <mat-option value="ServiceGovt">Service-Govt</mat-option>
-                                        <mat-option value="Retired">Retired</mat-option>
-                                        <mat-option value="notemp">Not Employed</mat-option>
-                                        <mat-option value="Expired">Expired</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-
-                                <mat-error *ngIf="FamilyDetailsModel.get('motherocc').hasError('required') &&
-                        (FamilyDetailsModel.get('motherocc').touched || FamilyDetailsModel.get('motherocc').dirty|| isSubmitted)" class="text-danger" padding>
-                                    Mother Occupations Required.</mat-error>
-                            </div>
-
-                            <div>
-                                <mat-form-field>
-                                    <mat-label>How Many Brother's:</mat-label>
-                                    <mat-select formControlName="brother">
-                                        <mat-option value="">Select</mat-option>
-                                        <mat-option value="HouseWife">0</mat-option>
-                                        <mat-option value="HouseWife">1</mat-option>
-                                        <mat-option value="Business">2</mat-option>
-                                        <mat-option value="ServiceGovt">3</mat-option>
-                                        <mat-option value="Retired">4</mat-option>
-                                        <mat-option value="notemp">5</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-
-                                <mat-error *ngIf="FamilyDetailsModel.get('brother').hasError('required') &&
-                        (FamilyDetailsModel.get('brother').touched || FamilyDetailsModel.get('brother').dirty|| isSubmitted)" class="text-danger" padding>
-                                    How Many Brothers Required.</mat-error>
-                            </div>
-
-
-                            <div>
-                                <mat-form-field>
-                                    <mat-label>How Many Married Brother's:</mat-label>
-                                    <mat-select formControlName="brother">
-                                        <mat-option value="">Select</mat-option>
-                                        <mat-option value="0">0</mat-option>
-                                        <mat-option value="1">1</mat-option>
-                                        <mat-option value="2">2</mat-option>
-                                        <mat-option value="3">3</mat-option>
-                                        <mat-option value="4">4</mat-option>
-                                        <mat-option value="5">5</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-
-                                <mat-error *ngIf="FamilyDetailsModel.get('brother').hasError('required') &&
-                        (FamilyDetailsModel.get('brother').touched || FamilyDetailsModel.get('brother').dirty|| isSubmitted)" class="text-danger" padding>
-                                    How Many Brothers Required.</mat-error>
-                            </div>
-
-                            <div>
-                                <mat-form-field>
-                                    <mat-label>How Many Sister's:</mat-label>
-                                    <mat-select formControlName="sister">
-                                        <mat-option value="">Select</mat-option>
-                                        <mat-option value="0">0</mat-option>
-                                        <mat-option value="1">1</mat-option>
-                                        <mat-option value="2">2</mat-option>
-                                        <mat-option value="3">3</mat-option>
-                                        <mat-option value="4">4</mat-option>
-                                        <mat-option value="5">5</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-
-                                <mat-error *ngIf="FamilyDetailsModel.get('sister').hasError('required') &&
-                        (FamilyDetailsModel.get('sister').touched || FamilyDetailsModel.get('sister').dirty|| isSubmitted)" class="text-danger" padding>
-                                    How Many Sisters Required.</mat-error>
-
-                            </div>
-
-                            <div>
-                                <mat-form-field>
-                                    <mat-label>How Many Married Sister's:</mat-label>
-                                    <mat-select formControlName="sister">
-                                        <mat-option value="">Select</mat-option>
-                                        <mat-option value="0">0</mat-option>
-                                        <mat-option value="1">1</mat-option>
-                                        <mat-option value="2">2</mat-option>
-                                        <mat-option value="3">3</mat-option>
-                                        <mat-option value="4">4</mat-option>
-                                        <mat-option value="5">5</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-
-                                <mat-error *ngIf="FamilyDetailsModel.get('sister').hasError('required') &&
-                        (FamilyDetailsModel.get('sister').touched || FamilyDetailsModel.get('sister').dirty|| isSubmitted)" class="text-danger" padding>
-                                    How Many Married Sisters Required.</mat-error>
-                            </div>
-
-                            <div>
-                                <mat-form-field>
-                                    <mat-label>Family living In States:</mat-label>
-                                    <mat-select formControlName="livingstate">
-                                        <mat-option value="">Select</mat-option>
-                                        <mat-option value="Maharashtra">Maharashtra</mat-option>
-                                        <mat-option value="Goa">Goa</mat-option>
-                                        <mat-option value="Karanataka">Karanataka</mat-option>
-                                        <mat-option value="Gujrat">Gujrat</mat-option>
-                                        <mat-option value="TamilNadu">TamilNadu</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-
-                                <mat-error *ngIf="FamilyDetailsModel.get('livingstate').hasError('required') &&
-                        (FamilyDetailsModel.get('livingstate').touched || FamilyDetailsModel.get('livingstate').dirty|| isSubmitted)" class="text-danger" padding>
-                                    Family Living State Required.</mat-error>
-                            </div>
-
-                            <div>
-                                <mat-form-field>
-                                    <mat-label>Family living In City:</mat-label>
-                                    <mat-select formControlName="livingcity">
-                                        <mat-option value="">Select</mat-option>
-                                        <mat-option value="Pune">Pune</mat-option>
-                                        <mat-option value="Banglore">Banglore</mat-option>
-                                        <mat-option value="Mumbai">Mumbai</mat-option>
-                                        <mat-option value="Hydrabad">Hydrabad</mat-option>
-                                        <mat-option value="Nashik">Nashik</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-
-                                <mat-error *ngIf="FamilyDetailsModel.get('livingcity').hasError('required') &&
-                        (FamilyDetailsModel.get('livingcity').touched || FamilyDetailsModel.get('livingcity').dirty|| isSubmitted)" class="text-danger" padding>
-                                    Family Living Required.</mat-error>
-                            </div>
-
-                            <div>
-                                <mat-form-field appearance="outline">
-                                    <mat-label>Contact Address:</mat-label>
-                                    <input formControlName="address" matInput placeholder="Enter the Address" required>
-                                    <mat-error *ngIf="FamilyDetailsModel.get('address').hasError('required') &&
-                    (FamilyDetailsModel.get('address').touched || FamilyDetailsModel.get('address').dirty|| isSubmitted)" class="text-danger" padding>
-                                        Address Required.</mat-error>
-                                </mat-form-field>
-                            </div>
-                            <div>
-                                <mat-form-field appearance="outline">
-                                    <mat-label>About My Family:</mat-label>
-                                    <textarea formControlName="aboutfamily" matInput placeholder="Write about your parents and brothers or sisters.where do they live? what are they doing?" required>
-
-                                       </textarea>
-                                    <mat-error *ngIf="FamilyDetailsModel.get('aboutfamily').hasError('required') &&
-                                                (FamilyDetailsModel.get('aboutfamily').touched || FamilyDetailsModel.get('aboutfamily').dirty|| isSubmitted)" class="text-danger" padding>
-                                        About Family Required </mat-error>
-                                </mat-form-field>
-
-                            </div>
-                        </div>
-                        <mat-card-actions>
-                            <button mat-raised-button color="primary" (click)="onSubmit(FamilyDetailsModel.value)">Submit</button>
-                            <button mat-raised-button color="warn">Cancel</button>
-                        </mat-card-actions>
-                    </form>
-
-                </mat-card-content>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>About My Family:</mat-label>
+                        <input formControlName="address" matInput placeholder="Enter the Address" required>
+                        <mat-error
+                            *ngIf="FamilyDetailsModel.get('aboutfamily').hasError('required') &&
+                        (FamilyDetailsModel.get('aboutfamily').touched || FamilyDetailsModel.get('aboutfamily').dirty|| isSubmitted)"
+                            class="text-danger" padding>
+                            About Family Required
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>    
             </div>
-        </mat-card>
+        </mat-grid-list>
+        <button mat-raised-button color="primary" (click)="onSubmit(FamilyDetailsModel.value)">Submit</button>
+                <button mat-raised-button  class="buttonclass" color="warn">Cancel</button>
+    </form>
 
-    </div>
 </div>

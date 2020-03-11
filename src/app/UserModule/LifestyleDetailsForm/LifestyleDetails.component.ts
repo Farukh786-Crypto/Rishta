@@ -7,14 +7,13 @@ import { LifestyleService } from './LifestyleDetails.service';
 selector:'Lifestyle-Comp',
 templateUrl:'./LifestyleDetails.component.html',
 styleUrls:['../user.component.css','./LifestyleDetails.component.css'],
-providers: [LifestyleService]
-
- 
+providers: [LifestyleService] 
 })
 export class LifestyleComponent{
   LifestyleModel: FormGroup
   isSubmited: boolean;
-title:string='Lifestyle Component demo'
+  breakpoint: number;
+  title:string='Lifestyle Component demo'
 constructor(private toastr: ToastrService,  ){
   this.LifestyleModel = new FormGroup({
     
@@ -25,7 +24,6 @@ Food: new FormControl('', [Validators.required]),
 Books: new FormControl('', [Validators.required]),
 Favouritefood: new FormControl('', [Validators.required]),
 sports: new FormControl('', [Validators.required]),
-
 Music: new FormControl('', [Validators.required]),
 Interests: new FormControl('', [Validators.required]),
 Destination: new FormControl('', [Validators.required]),
@@ -34,24 +32,23 @@ drink: new FormControl('', [Validators.required]),
 smoke: new FormControl('', [Validators.required]),
   });
 }
+ngOnInit() {
+  this.breakpoint = (window.innerWidth <= 400) ? 1 : 3;
+}
+onResize(event) {
+  this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 3;
+}
+onSaveSuccess(data: any) {
+  this.isSubmited = true;
+  if (this.LifestyleModel.valid) {
+      this.toastr.success(' Succesfully Saved !!');
+      alert(JSON.stringify(data))
+  }
+}
 onFormSubmit(form:NgForm)  
   {  
     console.log(form);  
   }  
-
-
-  onSaveSuccess(data: any) {
-
-    this.isSubmited = true;
-    if (this.LifestyleModel.valid) {
-        this.toastr.success(' Succesfully Saved !!');
-        alert(JSON.stringify(data))
-    }
-   
-  }
-
-
-
 }
 
 

@@ -10,10 +10,13 @@ import { ViewComponent } from '../view/view.component';
 import { ViewModule } from '../view/view.module';
 import { EditComponent } from '../edit/edit.component';
 import { EditModule } from '../edit/edit.module';
+import { PhotoviewComponent } from '../photoview/photoview.component';
+import { PhotoviewModule } from '../photoview/photoview.module';
+
  
 @NgModule({
   declarations: [GroomsComponent],
-  entryComponents: [ViewComponent,EditComponent],
+  entryComponents: [ViewComponent,EditComponent,PhotoviewComponent],
  
   imports: [
     
@@ -24,7 +27,8 @@ import { EditModule } from '../edit/edit.module';
     Ng2SearchPipeModule,
     MaterialModule,
     ViewModule,
-    EditModule
+    EditModule,
+    PhotoviewModule
 ],
   providers : [DataService],
   exports : [ViewModule]

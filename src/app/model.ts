@@ -22,8 +22,7 @@ export class CareerProfile{
     Emplyeed: string; 
     Occupation: string; 
     Income: number;
-    Express:string; 
-    
+    Express:string;     
 }
 export class AstroandReligion{
 
@@ -55,7 +54,7 @@ export class EducationProfile{
     AEduacation:string;
 }
 export class LifestyleProfile{
-    house:  string;
+house:  string;
 car:  string;
 Languages: string;
 Food:  string;
@@ -68,6 +67,5 @@ Movies: string;
 drink:  string;
 smoke:  string;     
 }
-
 
 

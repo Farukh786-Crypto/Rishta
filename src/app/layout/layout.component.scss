@@ -37,15 +37,6 @@ background-color: black;
     padding: 10px;
     color: beige;
   }
-.mat-menu-item
-{
-  color:white;
-  background-color: black;
-}
-.mat-menu-item:hover
-{
-  background-color:black;
-}
   .example-card {
     max-width: 300px;
     max-height: 200px;
@@ -59,6 +50,9 @@ background-color: black;
     background-image: url('src/assets/Images/rishtalogo.png');
     background-size: cover;
   }
+.top-nav{
+  margin-right: 330px;
+}
 
   .example{
     background-color: aquamarine;
@@ -89,5 +83,5 @@ background-color: black;
 }
 .mat-toolbar
 {
-  background-color: rgb(66, 8, 23);
+  background-color: #49c5b6;
 }

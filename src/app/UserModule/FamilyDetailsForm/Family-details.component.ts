@@ -14,7 +14,7 @@ export class FamilyDetailsComponent {
 
   FamilyDetailsModel: FormGroup
   isSubmitted: boolean;
-
+  title:string='Family Details'
   constructor() {
   //  console.log('---------------------------------------');
     this.FamilyDetailsModel = new FormGroup({
@@ -56,4 +56,3 @@ export class FamilyDetailsComponent {
   }
 
 }
-

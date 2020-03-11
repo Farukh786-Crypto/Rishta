@@ -1,193 +1,185 @@
-<!-- <h1>{{title}}</h1> -->
-<!-- {{AstroreligionDetails.value|json}} -->
-<mat-card class="example-card">
-    <mat-card-header>
-        <!-- <div mat-card-avatar class="example-header-image"></div> -->
-        <mat-card-title>Astro And Religion Form</mat-card-title>
-        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
-    </mat-card-header>
-    <mat-card-content>
-        <form [formGroup]="AstroreligionDetails" novalidate class="form">
-            <div class="example-container">
-                <div>
-                    <mat-form-field>
+<div class="title">
+    <h1>{{title}}</h1>
+</div>
+<div class="Astroandreligionform" class="container">
+    <form [formGroup]="AstroreligionDetails" class="form">
+        <mat-grid-list cols="2" rowHeight="50px" gutterSize="35px">
+        <!-- <mat-grid-list [cols]="breakpoint" rowHeight="40px" gutterSize="35px" (window:resize)="onResize($event)"> -->
+            <div class="tilefix">
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" color="accent">
                         <mat-label>Marital Status</mat-label>
                         <mat-select formControlName="maritalstatus">
                             <mat-option>SELECT</mat-option>
-                            <mat-option *ngFor="let maritalstatus of allmaritalstatus" [value]="maritalstatus.marital_status_id">{{maritalstatus.name}}</mat-option>
-                           
+                            <mat-option *ngFor="let maritalstatus of allmaritalstatus"
+                                [value]="maritalstatus.marital_status_id">
+                                {{maritalstatus.name}}
+                            </mat-option>
                         </mat-select>
                     </mat-form-field>
-                    <div>
-                        <mat-error
-                            *ngIf="AstroreligionDetails.controls['maritalstatus'].hasError('required')&&
-                (AstroreligionDetails.controls.maritalstatus.touched ||AstroreligionDetails.controls['maritalstatus'].dirty|| isSubmitted)">
-                            Marital Status is required.
-                        </mat-error>
-                    </div>
-                </div>
-                <div>
-                    <mat-form-field>
-                        <mat-label>Mother tongue</mat-label>
-                        <mat-select formControlName="mothertongue">
-                            <mat-option>SELECT</mat-option>
-                            <mat-option *ngFor="let mothertongue of allmothertounge" [value]="mothertongue.mothertongue_id">{{mothertongue.mothertongue_name}}</mat-option>
-                            
-                        </mat-select>
-                    </mat-form-field>
-                    <div>
-                        <mat-error
-                            *ngIf=" AstroreligionDetails.controls['mothertongue'].hasError('required')&&
-                (AstroreligionDetails.controls.mothertongue.touched ||AstroreligionDetails.controls['mothertongue'].dirty || isSubmitted)">
-                            mothertongue is required.
-                        </mat-error>
-                    </div>
+                    <mat-error
+                        *ngIf="AstroreligionDetails.controls['maritalstatus'].hasError('required')&&
+            (AstroreligionDetails.controls.maritalstatus.touched ||AstroreligionDetails.controls['maritalstatus'].dirty|| isSubmitted)">
+                        Marital Status is required.
+                    </mat-error>
+                </mat-grid-tile>
 
-                </div>
-                <div>
-                    <mat-form-field>
-                        <mat-label>Religion</mat-label>
-                        <mat-select formControlName="religion">
-                            <mat-option>SELECT</mat-option>
-                            
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Mother tongue</mat-label>
+                        <mat-select formControlName="mothertongue" required>
+                            <mat-option *ngFor="let mothertongue of allmothertounge"
+                                [value]="mothertongue.mothertongue_id">
+                                {{mothertongue.mothertongue_name}}</mat-option>
                         </mat-select>
                     </mat-form-field>
-                    <div>
-                        <mat-error
-                            *ngIf=" AstroreligionDetails.controls['religion'].hasError('required')&&
+                    <mat-error
+                        *ngIf=" AstroreligionDetails.controls['mothertongue'].hasError('required')&&
+                (AstroreligionDetails.controls.mothertongue.touched ||AstroreligionDetails.controls['mothertongue'].dirty || isSubmitted)">
+                        mothertongue is required.
+                    </mat-error>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill" color="accent">
+                        <mat-label>Religion</mat-label>
+                        <mat-select formControlName="religion" required>
+                            <mat-option>SELECT</mat-option>
+
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-error
+                        *ngIf=" AstroreligionDetails.controls['religion'].hasError('required')&&
                 (AstroreligionDetails.controls.religion.touched ||AstroreligionDetails.controls['religion'].dirty|| isSubmitted)">
-                            Religion is required.
-                        </mat-error>
-                    </div>
-                </div>
-                <div>
-                    <mat-form-field>
+                        Religion is required.
+                    </mat-error>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
                         <mat-label>Caste</mat-label>
                         <mat-select formControlName="caste">
                             <mat-option>SELECT</mat-option>
-                            
                         </mat-select>
-                    </mat-form-field>
-                    <div>
                         <mat-error
                             *ngIf=" AstroreligionDetails.controls['caste'].hasError('required')&&
                 (AstroreligionDetails.controls.caste.touched ||AstroreligionDetails.controls['caste'].dirty|| isSubmitted)">
                             Caste is required.
                         </mat-error>
-                    </div>
-
-                </div>
-                <div>
-                    <mat-form-field>
-                        <mat-label>Sub_Caste</mat-label>
-                        <mat-select formControlName="subcaste">
-                            <mat-option>SELECT</mat-option>
-                          
-                        </mat-select>
+                        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+            {{specialization.viewValue}}
+          </mat-option> -->
                     </mat-form-field>
-                    <div>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Sub_Caste </mat-label>
+                        <mat-select formControlName="subcaste" required>
+                            <mat-option>SELECT</mat-option>
+
+                        </mat-select>
                         <mat-error *ngIf=" AstroreligionDetails.controls['subcaste'].hasError('required')&&
     (AstroreligionDetails.controls.subcaste.touched ||AstroreligionDetails.controls['subcaste'].dirty|| isSubmitted)">
                             SubCaste In required.
                         </mat-error>
-                    </div>
 
-                </div>
-                <div>
-                    <mat-form-field>
-                        <mat-label>Devak</mat-label>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Devak </mat-label>
                         <mat-select formControlName="devak">
                             <mat-option>SELECT</mat-option>
-                            <mat-option *ngFor="let devak of allgetDevak" [value]="devak.devak_id">{{devak.name}}</mat-option>
-                            
+                            <mat-option *ngFor="let devak of allgetDevak" [value]="devak.devak_id">{{devak.name}}
+                            </mat-option>
+
                         </mat-select>
-                    </mat-form-field>
-                    <div>
                         <mat-error
                             *ngIf=" AstroreligionDetails.controls['devak'].hasError('required')&&
              (AstroreligionDetails.controls.devak.touched ||AstroreligionDetails.controls['devak'].dirty|| isSubmitted)">
                             Devak is required.
                         </mat-error>
-                    </div>
 
-                </div>
-                <div>
-                    <mat-form-field>
-                        <mat-label>Gotra</mat-label>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Gotra </mat-label>
                         <mat-select formControlName="gotra">
                             <mat-option>SELECT</mat-option>
-                            <mat-option *ngFor="let gotra of allgetDevak" [value]="gotra.gotra_id">{{gotra.name}}</mat-option>
-                            
+                            <mat-option *ngFor="let gotra of allgetDevak" [value]="gotra.gotra_id">{{gotra.name}}
+                            </mat-option>
+
                         </mat-select>
-                    </mat-form-field>
-                    <div>
                         <mat-error
                             *ngIf=" AstroreligionDetails.controls['gotra'].hasError('required')&&
              (AstroreligionDetails.controls.gotra.touched ||AstroreligionDetails.controls['gotra'].dirty|| isSubmitted)">
                             Gotra is required.
                         </mat-error>
-                    </div>
-                </div>
-                <div>
-                    <mat-form-field>
+                        <!-- <mat-option *ngFor="let specialization of special" [value]="specialization.value">
+            {{specialization.viewValue}}
+          </mat-option> -->
+                    </mat-form-field>
+                </mat-grid-tile>  
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
                         <mat-label>Horoscope</mat-label>
                         <mat-select formControlName="horoscope">
                             <mat-option>SELECT</mat-option>
-                            <mat-option *ngFor="let horoscope of allgetHoroscope" [value]="horoscope.horoscope_id">{{horoscope.name}}</mat-option>
-                            
+                            <mat-option *ngFor="let horoscope of allgetHoroscope" [value]="horoscope.horoscope_id">
+                                {{horoscope.name}}</mat-option>
+
                         </mat-select>
-                    </mat-form-field>
-                    <div>
                         <mat-error
                             *ngIf=" AstroreligionDetails.controls['horoscope'].hasError('required')&&
              (AstroreligionDetails.controls.horoscope.touched ||AstroreligionDetails.controls['horoscope'].dirty|| isSubmitted)">
                             Horoscope is required.
                         </mat-error>
-                    </div>
 
-                </div>
-                <div>
-                    <mat-form-field>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
                         <mat-label>Nakshtra</mat-label>
                         <mat-select formControlName="nakshtra">
                             <mat-option>SELECT</mat-option>
-                            <mat-option *ngFor="let nakshtra of allnakshtra" [value]="nakshtra.nakshtra_id">{{nakshtra.name}}</mat-option>
-                            
+                            <mat-option *ngFor="let nakshtra of allnakshtra" [value]="nakshtra.nakshtra_id">
+                                {{nakshtra.name}}</mat-option>
+
                         </mat-select>
-                    </mat-form-field>
-                    <div>
+
                         <mat-error
                             *ngIf=" AstroreligionDetails.controls['nakshtra'].hasError('required')&&
              (AstroreligionDetails.controls.nakshtra.touched ||AstroreligionDetails.controls['nakshtra'].dirty|| isSubmitted)">
                             Nakshtra is required.
                         </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
 
-                    </div>
-                </div>
-                <div>
-                    <mat-form-field>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline" color="warn">
                         <mat-label>Manglik</mat-label>
                         <mat-select formControlName="manglik">
-                            <mat-option *ngFor="let manglik of allgetManglik" [value]="manglik.manglik_id">{{manglik.name}}</mat-option>
+                            <mat-option *ngFor="let manglik of allgetManglik" [value]="manglik.manglik_id">
+                                {{manglik.name}}</mat-option>
                             <mat-option>SELECT</mat-option>
-             
+
                         </mat-select>
-                    </mat-form-field>
-                    <div>
+
                         <mat-error
                             *ngIf=" AstroreligionDetails.controls['manglik'].hasError('required')&&
              (AstroreligionDetails.controls.manglik.touched ||AstroreligionDetails.controls['manglik'].dirty|| isSubmitted)">
                             Gotra is required.
                         </mat-error>
-                    </div>
-
-                </div>
-                <div>
-                    <button mat-raised-button color="primary"
-                        (click)="onSubmit(AstroreligionDetails.value)">SUBMIT</button>
-                    <button class="button" mat-raised-button color="warn">Cancel</button>
-                </div>
+                    </mat-form-field>
+                </mat-grid-tile>
             </div>
-        </form>
-    </mat-card-content>
-</mat-card>
+        </mat-grid-list>
+        <button mat-raised-button color="primary" (click)="onSubmit(AstroreligionDetails.value)">SUBMIT</button>
+        <button class="button" mat-raised-button color="warn">Cancel</button>
+    </form>
+</div>

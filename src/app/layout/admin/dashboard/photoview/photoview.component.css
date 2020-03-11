@@ -1,0 +1,17 @@
+.carousel .item {
+    height: 400px;
+    width: 330px;
+  }
+  
+  .item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 400px;
+      width: 330px; 
+  }
+  .carousel
+  {
+    height: 400px;
+    width: 330px; 
+  }

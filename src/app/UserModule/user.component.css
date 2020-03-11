@@ -1,47 +1,93 @@
-.menu-spacer {
-    flex: 1 1 auto;
-  }
-  .right
+ 
+img{
+    height: 60px;
+}
+.right
 {
 margin-left: 1050px;
 background-color: black;
 
 }
-.toolclass
+.tool
 {
-  background-color: n;
+  background-color: aquamarine;
 }
+ .mat-toolbar
+ {
+    width: 100%;
+  height:auto;
+  margin:0;
+  left:0;
+  right:0;
+  top:0;
+  overflow: hidden;
+  display: block;
+  position: sticky;
+  z-index: 1;
+ }
 
 #btmFooter {
     align-self: flex-end;
   }
-  .mat-form-field {
-    width: 100%;
-  }
+
   footer {
-    background-color: #f44336;
-    /* border: 2px solid rgb(46, 5, 5); */
+    background-color: #d81667;
+    border: 2px solid rgb(46, 5, 5);
     text-align: center;
     padding: 10px;
     color: beige;
   }
-  .mat-button:hover{
-    background-color: rgb(13, 14, 13);
+.mat-menu-item
+{
+  color:white;
+  background-color: black;
+}
+.mat-menu-item:hover
+{
+  background-color:black;
+}
+  .example-card {
+    max-width: 300px;
+    max-height: 200px;
+     margin-left: 1000px;
+     margin-top: 400px;
+    background-image: url('src/assets/Images/indian-bride.jpg');
+    color: white;
   }
-  .mat-button:active{
-    background-color: rgb(13, 14, 13);
+  
+  .example-header-image {
+    background-image: url('src/assets/Images/rishtalogo.png');
+    background-size: cover;
   }
 
-  img{
-    height: 60px;
-}
-.example-card
-{
-  background-color:#59cfd5;
-  margin-top: 30px;
+  .example{
+    background-color: aquamarine;
+  }
+  .example-card1 {
+    max-width: 300px;
+    max-height: 200px;
+    margin-left: 20px;
+    margin-top: 230px;
+    background-image: url('src/assets/Images/indian-bride.jpg');
+    color: white;
+  }
+  .example-card2 {
+    max-width: 300px;
+    max-height: 200px;
+    margin-left: 20px;
+    margin-top: 230px;
+    margin-right: 350px;
+    background-image: url('src/assets/Images/indian-bride.jpg');
+    color: white;
+  }
 
+.mat-button:hover{
+  background-color: rgb(13, 14, 13);
 }
-.title
+.mat-button:active{
+  background-color: rgb(13, 14, 13);
+}
+.mat-toolbar
 {
-  font-weight: 200px;
+  background-color: rgb(66, 8, 23);
 }

@@ -1,31 +1,35 @@
+
 <mat-toolbar>
     <mat-toolbar-row>
         <div>
             <a><img src="assets/Images/rishtalogo.png"></a>
-        </div>
-        <div class="right">
-            <button mat-button [matMenuTriggerFor]="menu1" style="color: black;background-color: rgb(92, 223, 247);">Admin</button>
-            <mat-menu #menu1="matMenu">
-                <button mat-menu-item (click)="SignOut()">SignOut</button>
-            </mat-menu>
-        </div>
-    </mat-toolbar-row>
-    <mat-toolbar-row>
-        <div>
-            <a routerLink="./dashboard" style="color: white;"><button mat-button [matMenuTriggerFor]="menu">Dashboard</button></a>
+            <a routerLink="./dashboard" style="color: white;"><button mat-button [matMenuTriggerFor]="menu"><mat-icon>dashboard</mat-icon>Dashboard</button></a>
             <mat-menu #menu="matMenu">
-                <a routerLink="./grooms"><button class="mat-menu-item">Grooms</button></a>
-                <a routerLink="./brides"><button mat-menu-item>Brides</button></a>
+            <a routerLink="./grooms"><button class="mat-menu-item"><mat-icon>view_list</mat-icon>Grooms</button></a>
+            <a routerLink="./brides"><button mat-menu-item><mat-icon>view_list</mat-icon>Brides</button></a>
             </mat-menu>
-            <a routerLink="./matches" style="color: white;"><button mat-button>Matches </button></a>
+            <a routerLink="./matches" style="color: white;"><button mat-button><mat-icon>favorite</mat-icon>Matches </button></a>
             <a routerLink="./packages" style="color: white;"><button mat-button > Packages </button> </a>
             <a mat-button style="color: white;"> Payment </a>
-            <a style="color: white;"><button mat-button [matMenuTriggerFor]="menu2">User</button></a>
+            <a style="color: white;"><button mat-button [matMenuTriggerFor]="menu2"><mat-icon> sentiment_satisfied_alt</mat-icon>User</button></a>
             <mat-menu #menu2="matMenu">
-                <a routerLink="../sign-up" style="color: white;"><button mat-menu-item>Add</button></a>
+            <a routerLink="../sign-up" style="color: white;"><button mat-menu-item><mat-icon>add_circle_outline</mat-icon>Add</button></a>
             </mat-menu>
-
-        </div>
+            <span class="top-nav">  
+                </span>         
+            <button mat-mini-feb type="button" matTooltip="sign-out" (click)="SignOut()" [matTooltipPosition]="'above'"  class="btn btn-primary btn-link btn-sm btn-just-icon" style="color: white" style="color: white;"><mat-icon>power_settings_new</mat-icon></button>
+            <!-- <mat-menu #menu1="matMenu">
+            <button mat-menu-item (click)="SignOut()">SignOut</button>
+            </mat-menu> -->
+                     <button mat-mini-feb type="button" matTooltip="notification" [matTooltipPosition]="'above'"  class="btn btn-primary btn-link btn-sm btn-just-icon" (click)="openDialog2(row)" style="color: white">
+            <mat-icon>notification_important</mat-icon>
+            <sup>4</sup>
+            </button>
+            <button mat-mini-feb type="button" matTooltip="settings" [matTooltipPosition]="'above'"  class="btn btn-primary btn-link btn-sm btn-just-icon" (click)="openDialog2(row)" style="color: white">
+                <mat-icon>settings</mat-icon>
+                </button>
+        
+          </div>
     </mat-toolbar-row>
 </mat-toolbar>
 

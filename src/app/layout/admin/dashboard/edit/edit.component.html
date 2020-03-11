@@ -10,7 +10,7 @@
                         <tr>Name:
                             <mat-form-field appearance="outline">
                                 
-                                <input formControlName="username" matInput placeholder="Enter User Name" [(ngModel)]="data.detail.name" required>
+                                <input formControlName="username" matInput placeholder="Enter User Name" [(ngModel)]="data.name" required>
                                 <mat-error *ngIf="isSubmited &&  EditModel.controls['UserName'].hasError('required')">
                                     ** UserName is Required **
                                 </mat-error>
@@ -69,9 +69,9 @@
                                     <mat-option value="AwaitingDivorce">Annulled</mat-option>
                                 </mat-select>
                             </mat-form-field>
-
+                            <button mat-fab style="float: right;background-color:rgb(41, 41, 99)">save</button>
                             <br><br>
-
+                           
                     </tbody>
                 </table>
             </div>
@@ -204,6 +204,7 @@
 
                                 </mat-select>
                             </mat-form-field>
+                            <button mat-fab style="float: right;background-color:rgb(41, 41, 99)">save</button>
                             <br><br>
                         </tr>
                     </tbody>
@@ -336,6 +337,8 @@
                                     Minimum 200 words needed. </span>
                         </mat-error>
                         </mat-form-field>
+                        <br>
+                        <button mat-fab style="float: right;background-color:rgb(41, 41, 99)">save</button>
                         </span>
                     </tbody>
                 </table>
@@ -380,7 +383,8 @@
                                         SubCaste In required.
                                     </mat-error>
                                 </mat-form-field>
-            
+                                <br>
+                                <button mat-fab style="float: right;background-color:rgb(41, 41, 99)">save</button>
                             
                         </span>
                         </tr>
@@ -450,6 +454,7 @@
                                     Please select any one.</span>
                                 </mat-error>
                             </mat-form-field>
+                            <button mat-fab style="float: right;background-color:rgb(41, 41, 99)">save</button>
                         </tr>
                     </tbody>
                 </table>
@@ -567,6 +572,7 @@
                                             (EditModel.get('aboutfamily').touched || EditModel.get('aboutfamily').dirty|| isSubmitted)" class="text-danger" padding>
                                     About Family Required </mat-error>
                             </mat-form-field>
+                            <button mat-fab style="float: right;background-color:rgb(41, 41, 99)">save</button>
                             <br><br>
                         </tr>
                     </tbody>
