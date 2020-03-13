@@ -19,8 +19,6 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
 
   }
-
-
   states: string[] = [
     'Self', 'Parents'
   ];
@@ -69,5 +67,4 @@ export class SignUpComponent implements OnInit {
   //   },
   //     err => { this.RegisterPost = err })
   // }
-
 }

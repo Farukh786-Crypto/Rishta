@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FeedbackComponent } from './Feedback.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { MatDialogRef } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 //import {MatDialogModule} from '@angular/material/dialog'; 
 //import {MatMenuModule} from '@angular/material/menu';
 
@@ -12,17 +13,13 @@ import { MatDialogRef } from '@angular/material';
 const feedbackroute: Routes = [     
     { path: '', component: FeedbackComponent }
 ]
-  
-
-
-
 @NgModule({
 
     declarations: [FeedbackComponent],
     imports: [CommonModule,
         ReactiveFormsModule,
         MaterialModule,  
-        
+        FlexLayoutModule,
         RouterModule.forChild(feedbackroute)],
     providers: [],
     exports: [FeedbackComponent]

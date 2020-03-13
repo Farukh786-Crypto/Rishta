@@ -13,7 +13,6 @@ const careerroute: Routes = [
     { path: '', component: CareerComponent }
 ]
 @NgModule({
-
     declarations: [CareerComponent],
     imports: [
     CommonModule,        
@@ -26,7 +25,5 @@ const careerroute: Routes = [
     providers: [],
     exports: [CareerComponent]
 })
-
 export class CareerLazyClass{
-
 }

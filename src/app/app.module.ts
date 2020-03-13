@@ -16,17 +16,20 @@ import { ErrorComponent } from './UserModule/Error.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import {MatDialogModule} from '@angular/material/dialog';
 import { SignUpComponent } from './sign-up/sign-up.component';
-<<<<<<< HEAD
-=======
- 
->>>>>>> ce793e2ff78afc80390d0c428b491b509b7bf14c
-import {FlexLayoutModule } from '@angular/flex-layout'
-
+import {FlexLayoutModule } from '@angular/flex-layout';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent
+    
+ 
   ],
   imports: [
     platformBrowser.BrowserModule,
@@ -43,7 +46,13 @@ import {FlexLayoutModule } from '@angular/flex-layout'
     MatDialogModule,    
     RouterModule.forRoot(MyRoute),
     ToastrModule.forRoot(),
-    MaterialModule
+    MaterialModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

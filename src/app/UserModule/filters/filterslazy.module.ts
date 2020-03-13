@@ -13,9 +13,6 @@ const filtersroute: Routes = [
     { path: '', component: FiltersComponent }
 ]
   
-
-
-
 @NgModule({
 
     declarations: [FiltersComponent],

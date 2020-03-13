@@ -5,10 +5,12 @@ import { UserComponent } from './user.component';
 import { HeaderFooterComponent } from './MasterPage/header-footer.component';
 import { MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from "@angular/material";
 //import { FlexLayoutModule } from "@angular/flex-layout";
-import {UsersAuthGuard} from '../Guard/users-auth.guard'
+import { UsersAuthGuard } from '../Guard/users-auth.guard'
 import { from } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../material/material.module';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 //import { FlexLayoutModule } from '@angular/flex-layout';
 const route: Routes = [
     {
@@ -16,33 +18,35 @@ const route: Routes = [
 
 
             { path: '', redirectTo: 'profiledetails', pathMatch: 'full' },
-            { path: 'profiledetails', loadChildren: './ProfileDetailsForm/ProfileDetailsLazy.module#ProfileDetailsLazyClass',canActivate:[UsersAuthGuard] },
-            { path: 'astroandreligion', loadChildren: './AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass',canActivate:[UsersAuthGuard] },
-            { path: 'CareerDetails', loadChildren: './CareerDetailsForm/careerLazy.module#CareerLazyClass',canActivate:[UsersAuthGuard] },
-            { path: 'familydetails', loadChildren: './FamilyDetailsForm/Family-detailsLazy.modules#FamilyLazyClass',canActivate:[UsersAuthGuard] },
-            { path: 'Educationdetails', loadChildren: './EducationDetailsForm/EducationDetailsLazy.module#EducationLazyClass' ,canActivate:[UsersAuthGuard]},
-            { path: 'LifestyleDetails', loadChildren: './LifestyleDetailsForm/LifestyleDetailsLazy.module#LifestyleLazyClass',canActivate:[UsersAuthGuard] },
-            { path: 'personalDetails', loadChildren: './PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass',canActivate:[UsersAuthGuard]},
-            { path: 'feedbackDetails', loadChildren: './Feedback/feedbackLazy.module#FeedbackLazyClass',canActivate:[UsersAuthGuard] },
-            { path: 'filters', loadChildren: './filters/filterslazy.module#FiltersLazyClass',canActivate:[UsersAuthGuard] },
+            { path: 'profiledetails', loadChildren: './ProfileDetailsForm/ProfileDetailsLazy.module#ProfileDetailsLazyClass', canActivate: [UsersAuthGuard] },
+            { path: 'astroandreligion', loadChildren: './AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass', canActivate: [UsersAuthGuard] },
+            { path: 'CareerDetails', loadChildren: './CareerDetailsForm/careerLazy.module#CareerLazyClass', canActivate: [UsersAuthGuard] },
+            { path: 'familydetails', loadChildren: './FamilyDetailsForm/Family-detailsLazy.modules#FamilyLazyClass', canActivate: [UsersAuthGuard] },
+            { path: 'Educationdetails', loadChildren: './EducationDetailsForm/EducationDetailsLazy.module#EducationLazyClass', canActivate: [UsersAuthGuard] },
+            { path: 'LifestyleDetails', loadChildren: './LifestyleDetailsForm/LifestyleDetailsLazy.module#LifestyleLazyClass', canActivate: [UsersAuthGuard] },
+            { path: 'personalDetails', loadChildren: './PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass', canActivate: [UsersAuthGuard] },
+            { path: 'feedbackDetails', loadChildren: './Feedback/feedbackLazy.module#FeedbackLazyClass', canActivate: [UsersAuthGuard] },
+            { path: 'filters', loadChildren: './filters/filterslazy.module#FiltersLazyClass', canActivate: [UsersAuthGuard] },
+        
         ]
     },
 ]
 @NgModule({
-    declarations: [UserComponent, HeaderFooterComponent],
-    imports: [CommonModule, 
+    declarations: [UserComponent, HeaderFooterComponent,MainNavComponent],
+    imports: [CommonModule,
         MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatIconModule,
-    MatButtonModule,
-    MaterialModule,
-   // FlexLayoutModule,
-   HttpClientModule,
-    RouterModule.forChild(route)
+        MatSidenavModule,
+        MatListModule,
+        MatIconModule,
+        MatButtonModule,
+        MaterialModule,
+        // FlexLayoutModule,
+        HttpClientModule,
+        RouterModule.forChild(route),
+        LayoutModule  
     ],
     providers: [],
-    exports: []
+    exports: [MainNavComponent]
 })
-export class UserModule{
+export class UserModule {
 }

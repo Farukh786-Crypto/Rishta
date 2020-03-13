@@ -50,14 +50,7 @@ onFormSubmit(form:NgForm)
     console.log(form);  
   }  
 }
-
-
-
- 
-   
-
 //constructor(private toastr: ToastrService,private _bottomSheet: MatBottomSheet) {}
 // openBottomSheet(): void {
 //   this._bottomSheet.open(LifestyleComponent);
 // }
- 

@@ -1,20 +1,10 @@
-
-  
- 
-
-
-
-
-
+<div fxLayout="row wrap"  fxLayout="row" fxLayout.xs="column">
   {{feedbackDetails.value|json}}
  
-  <mat-card class="example-card">
+  <mat-card  fxFlex="40%;" fxFlex.xs="80%"  class="example-card">
     <mat-card-header>
-      
       <mat-card-title>FeedBack Form</mat-card-title>
-       
     </mat-card-header>
-  
     <mat-card-content>
       <p>
           Thank you for choosing to give us your feedback. We assure you that your suggestions will be
@@ -23,10 +13,7 @@
           Please submit your comments/suggestions/queries in the following format:        
       </p>
     </mat-card-content>
-  
-  
-  
-  
+
     <mat-card-content>
       <form [formGroup]="feedbackDetails" novalidate>
         <div class="example-container">
@@ -70,34 +57,17 @@
                         Email is required.
                   </mat-error>
               </mat-form-field>
-  
           </div>
-  
-           
-  
           <mat-form-field class="feedbackform-full-width">
               <mat-label placeholder="Express Yourself!">Leave a comment</mat-label>
               <textarea matInput placeholder="Express Yourself!" formControlName="suggestion" required></textarea>
             </mat-form-field>
           </div>
-          <div class="buttonprimary">
-  
-  
-            <button mat-raised-button class="button_primary" color="primary" (click)="FeedbackUser(feedbackDetails.value)">Submit</button>
-      
+          <div class="buttonprimary">  
+            <button mat-raised-button class="button_primary" color="primary" (click)="FeedbackUser(feedbackDetails.value)">Submit</button>      
           </div>
               </form>
     </mat-card-content>
-    
   </mat-card> 
-
-
-
-
  <!-- <p> {{data.message}}</p> -->
- 
-
-
-
-
- 
+</div>
