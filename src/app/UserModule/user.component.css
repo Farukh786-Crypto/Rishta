@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*  
 img{
     height: 60px;
@@ -28,24 +29,13 @@ background-color: black;
 #btmFooter {
     align-self: flex-end;
   }
+=======
+ 
+ 
+>>>>>>> 5594ae3ce9033269a27114bbb128138b90b92aca
 
-  footer {
-    background-color: #d81667;
-    border: 2px solid rgb(46, 5, 5);
-    text-align: center;
-    padding: 10px;
-    color: beige;
-  }
-.mat-menu-item
-{
-  color:white;
-  background-color: black;
-}
-.mat-menu-item:hover
-{
-  background-color:black;
-}
   .example-card {
+<<<<<<< HEAD
     max-width: 300px;
     max-height: 200px;
      
@@ -90,3 +80,14 @@ background-color: black;
 {
   background-color: rgb(66, 8, 23);
 } */
+=======
+    margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+     text-align: center;
+     
+  }
+  
+   
+>>>>>>> 5594ae3ce9033269a27114bbb128138b90b92aca

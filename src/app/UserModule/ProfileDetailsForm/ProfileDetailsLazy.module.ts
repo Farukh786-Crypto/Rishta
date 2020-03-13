@@ -9,7 +9,11 @@ import { MaterialModule } from 'src/app/material/material.module';
 
 const profileroute: Routes = [
 
+<<<<<<< HEAD
    // { path:'' , redirectTo:'ProfileDetails' , pathMatch:'full' } ,
+=======
+    //{ path:'' , redirectTo:'ProfileDetails' , pathMatch:'full' } ,
+>>>>>>> 5594ae3ce9033269a27114bbb128138b90b92aca
     { path: '', component: ProfileDetailsComponent}
 
 ]
