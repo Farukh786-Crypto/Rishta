@@ -17,13 +17,16 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import {MatDialogModule} from '@angular/material/dialog';
 import { SignUpComponent } from './sign-up/sign-up.component';
  
-import {FlexLayoutModule } from '@angular/flex-layout'
+import {FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent
+
+     
   ],
   imports: [
     platformBrowser.BrowserModule,

@@ -9,6 +9,11 @@ import {UsersAuthGuard} from '../Guard/users-auth.guard'
 import { from } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../material/material.module';
+import { ContactComponent } from './contact/contact.component';
+import { PackagesComponent } from '../layout/admin/packages/packages.component';
+import { MatchesComponent } from './matches/matches.component';
+import { AboutComponent } from './about/about.component';
+ 
 //import { FlexLayoutModule } from '@angular/flex-layout';
 const route: Routes = [
     {
@@ -24,13 +29,17 @@ const route: Routes = [
             { path: 'LifestyleDetails', loadChildren: './LifestyleDetailsForm/LifestyleDetailsLazy.module#LifestyleLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'personalDetails', loadChildren: './PersonalDetailsForm/personaldetailsLazy.module#PersonaldetailsLazyClass',canActivate:[UsersAuthGuard]},
             { path: 'feedbackDetails', loadChildren: './Feedback/feedbackLazy.module#FeedbackLazyClass',canActivate:[UsersAuthGuard] },
-            { path: 'filters', loadChildren: './filters/filterslazy.module#FiltersLazyClass',canActivate:[UsersAuthGuard] },
-        
+              { path: 'contact' , component:ContactComponent},
+              { path: 'matches' , component:MatchesComponent},
+              { path: 'packages' , component:PackagesComponent},
+              { path: 'about' , component:AboutComponent}
+
+
         ]
     },
 ]
 @NgModule({
-    declarations: [UserComponent, HeaderFooterComponent],
+    declarations: [UserComponent, HeaderFooterComponent,ContactComponent,MatchesComponent,AboutComponent,PackagesComponent],
     imports: [CommonModule, 
         MatToolbarModule,
     MatSidenavModule,

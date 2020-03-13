@@ -1,21 +1,4 @@
-.title{
-  padding-bottom: 10px;
- 
-}.container{
-  text-align: center;
+.example-card {
+  width: 30%;
 }
- /* .containers{
-   align-self: center;
-   display: flex;
-   justify-content: center;
-   width: 100%;
- } */
-/* form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-    
-  } */
- 
 .button{margin-right: 10px;}
