@@ -4,8 +4,8 @@
      
     <a><img src="assets/Images/rishtalogo.png"width="200px" height="40px"></a>
       <button mat-button [matMenuTriggerFor]="menu">Register</button>
-      <mat-menu #menu="matMenu">
-          <a routerLink="./profiledetails"><button class="mat-menu-item">Profile Details</button></a>
+      <mat-menu  class="sidenav" #menu="matMenu">
+          <a routerLink="./profiledetails"><button mat-menu-item>Profile Details</button></a>
           <a routerLink="./CareerDetails"><button mat-menu-item>Career Details</button></a>
           <a routerLink="./familydetails"><button mat-menu-item>Family Details</button></a>
           <a routerLink="./personalDetails"><button mat-menu-item>Personal Details</button></a>
@@ -13,11 +13,11 @@
           <a routerLink="./LifestyleDetails"><button mat-menu-item>Lifestyle Details</button></a>
           <a routerLink="./astroandreligion"><button mat-menu-item>Astro and Religion</button></a>      
         </mat-menu>
-        <a><button mat-button>Matches </button></a>
-        <a><button mat-button>Packges </button></a>
-        <a><button mat-button>Contact </button></a>
-        <a><button mat-button>About Us </button></a>
-        <a><button mat-button>Feedback Details </button></a> 
+        <a routerLink="./contact"><button mat-button>Contact </button></a>
+        <a routerLink="./matches"><button mat-button>Matches </button></a>
+        <a routerLink="./packages"><button mat-button>Packges </button></a>        
+        <a routerLink="./about"><button mat-button>About Us </button></a>
+        <a routerLink="./feedbackDetails"><button mat-button>Feedback Details </button></a> 
         <button mat-button [matMenuTriggerFor]="menu1">User</button>
       <mat-menu #menu1="matMenu">
         <button mat-menu-item (click)="SignOut()">SignOut</button>

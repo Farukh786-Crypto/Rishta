@@ -1,15 +1,12 @@
-.title{
-  padding-bottom: 10px;
-  text-align: center;
-}
-.container{
-  width: 60%;
-  margin: 8px 0;
-  align-items: center;
-  margin-left: 400px;
-  text-align: center;
-margin-left: 20%;
-}
+ 
+
 .button{margin-left: 8px;}
  
- 
+.example-card {
+  margin: auto;
+width: 60%;
+border: 3px solid #73AD21;
+padding: 10px;
+   text-align: center;
+   
+}
