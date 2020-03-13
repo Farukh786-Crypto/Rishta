@@ -8,6 +8,7 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 import { MatTable } from '@angular/material/table';
 import { ViewComponent } from '../view/view.component';
 import { EditComponent } from '../edit/edit.component';
+import { PhotoviewComponent } from '../photoview/photoview.component';
 
 @Component({
   selector: 'app-grooms',
@@ -22,7 +23,7 @@ export class GroomsComponent implements AfterViewInit, OnInit {
   @ViewChild(MatTable, { static: false }) table: MatTable<DataTableItem>;
   dataSource: GroomsComponent;
 
-  displayedColumns = ['id', 'photo', 'detail', 'action'];
+  displayedColumns = [ 'date','photo', 'name','age','religion','city', 'package','action'];
 
   constructor(private route: Router, public dialog: MatDialog) { }
 
@@ -63,8 +64,8 @@ export class GroomsComponent implements AfterViewInit, OnInit {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        //   case 'name': return compare(a.name, b.name, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
+          case 'name': return compare(a.name, b.name, isAsc);
+        case 'age': return compare(+a.age, +b.age, isAsc);
         default: return 0;
       }
     });
@@ -73,7 +74,7 @@ export class GroomsComponent implements AfterViewInit, OnInit {
   openDialog(params): void {
     console.log(params);
     const dialogRef = this.dialog.open(ViewComponent, {
-      width: '800px', height: '600px',
+      width: '800px', height: '520px',
       data: params
     });
 
@@ -93,33 +94,45 @@ export class GroomsComponent implements AfterViewInit, OnInit {
       console.log('The dialog was closed');
     });
   }
-  detail: any
+  openDialog3(params): void {
+    console.log(params);
+    const dialogRef = this.dialog.open(PhotoviewComponent, {
+      width: '400px', height: '480px',
+      data: params
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }
 export interface DataTableItem {
-  detail: {
+    date:string;
     name: string,
     age: number;
     religion: string;
-    mothertongue: string;
     city: string;
-    maritalstatus: string;
-  };
-  id: number;
-  photo: any;
+     id: number;
+     package:string;
+     photo:{
+             photo1:any;
+             photo2:any;
+             photo3:any;
+     }
 
 
 }
 const EXAMPLE_DATA: DataTableItem[] = [
-  { id: 1, photo: './assets/Images/1.jpg', detail: { name: 'Sastura', age: 26, religion: 'hindu', mothertongue: 'marathi', city: 'pune', maritalstatus: 'married' } },
-  { id: 2, photo: './assets/Images/2.jpg', detail: { name: 'Sastura', age: 26, religion: 'hindu', mothertongue: 'marathi', city: 'pune', maritalstatus: 'married' } },
-  { id: 3, photo: './assets/Images/h1.jpg', detail: { name: 'Sastura', age: 26, religion: 'hindu', mothertongue: 'marathi', city: 'pune', maritalstatus: 'married' } },
-  { id: 4, photo: './assets/Images/4.jpg', detail: { name: 'Sastura', age: 26, religion: 'hindu', mothertongue: 'marathi', city: 'pune', maritalstatus: 'married' } },
-  { id: 5, photo: './assets/Images/h2.jpg', detail: { name: 'Sastura', age: 26, religion: 'hindu', mothertongue: 'marathi', city: 'pune', maritalstatus: 'married' } },
-  { id: 6, photo: './assets/Images/5.jpg', detail: { name: 'Sastura', age: 26, religion: 'hindu', mothertongue: 'marathi', city: 'pune', maritalstatus: 'married' } },
-  { id: 7, photo: './assets/Images/h3.jpg', detail: { name: 'Sastura', age: 26, religion: 'hindu', mothertongue: 'marathi', city: 'pune', maritalstatus: 'married' } },
-  { id: 8, photo: './assets/Images/6.jpg', detail: { name: 'Sastura', age: 26, religion: 'hindu', mothertongue: 'marathi', city: 'pune', maritalstatus: 'married' } },
-  { id: 9, photo: './assets/Images/h5.jpg', detail: { name: 'Sastura', age: 26, religion: 'hindu', mothertongue: 'marathi', city: 'pune', maritalstatus: 'married' } },
-  { id: 10, photo: './assets/Images/h6.jpg', detail: { name: 'Sastura', age: 26, religion: 'hindu', mothertongue: 'marathi ', city: 'pune', maritalstatus: 'married' } },
+  { id: 1, date:'23/04/2020',photo: {photo1:'./assets/Images/h1.jpg',photo2:'./assets/Images/h8.jpg',photo3:'./assets/Images/h9.jpg'}, name: 'Sushant', age: 26, religion: 'hindu', city: 'pune' ,package:'golden'},
+  { id: 2, date:'23/04/2020', photo: {photo1:'./assets/Images/h2.jpg',photo2:'./assets/Images/h10.jpg',photo3:'./assets/Images/h11.jpg'}, name: 'Rajkumar', age: 25, religion: 'hindu', city: 'pune' ,package:'golden'},
+  { id: 3, date:'23/04/2020',photo: {photo1:'./assets/Images/h3.jpg',photo2:'./assets/Images/h14.jpg',photo3:'./assets/Images/h15.jpg'}, name: 'Ram', age: 27, religion: 'hindu', city: 'pune',package:'golden' },
+  { id: 4,date:'23/04/2020', photo: {photo1:'./assets/Images/h1.jpg',photo2:'./assets/Images/h8.jpg',photo3:'./assets/Images/h9.jpg'},  name: 'Sushant', age: 23, religion: 'hindu',  city: 'pune',package:'golden' },
+  { id: 5,date:'23/04/2020', photo: {photo1:'./assets/Images/h6.jpg',photo2:'./assets/Images/h18.jpg',photo3:'./assets/Images/h20.jpg'}, name: 'Prabhas', age: 24, religion: 'hindu',  city: 'pune',package:'golden' },
+  { id: 6,date:'23/04/2020', photo: {photo1:'./assets/Images/h2.jpg',photo2:'./assets/Images/h10.jpg',photo3:'./assets/Images/h11.jpg'},  name: 'Rajkumar', age: 25, religion: 'hindu',  city: 'pune',package:'golden' },
+  { id: 7,date:'23/04/2020',photo: {photo1:'./assets/Images/h3.jpg',photo2:'./assets/Images/h14.jpg',photo3:'./assets/Images/h15.jpg'}, name: 'Ram', age: 27, religion: 'hindu', city: 'pune',package:'golden'},
+  { id: 8, date:'23/04/2020',photo: {photo1:'./assets/Images/h1.jpg',photo2:'./assets/Images/h8.jpg',photo3:'./assets/Images/h9.jpg'},  name: 'Ram', age: 23, religion: 'hindu',city: 'pune',package:'golden'},
+  { id: 9,date:'23/04/2020',photo: {photo1:'./assets/Images/h6.jpg',photo2:'./assets/Images/h18.jpg',photo3:'./assets/Images/h20.jpg'}, name: 'Prabhas', age: 26, religion: 'hindu',  city: 'pune',package:'golden' },
+  { id: 10, date:'23/04/2020',photo: {photo1:'./assets/Images/h1.jpg',photo2:'./assets/Images/h8.jpg',photo3:'./assets/Images/h9.jpg'}, name: 'sushant', age: 25, religion: 'hindu', city: 'pune',package:'golden'},
 
 
 ];

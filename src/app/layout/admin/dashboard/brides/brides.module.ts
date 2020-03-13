@@ -9,10 +9,14 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import { ViewComponent } from '../view/view.component';
 import { ViewModule } from '../view/view.module';
 import { MaterialModule } from '../../../../material/material.module'
+import { EditComponent } from '../edit/edit.component';
+import { PhotoviewComponent } from '../photoview/photoview.component';
+import { EditModule } from '../edit/edit.module';
+import { PhotoviewModule } from '../photoview/photoview.module';
 
 @NgModule({
   declarations: [BridesComponent],
-  entryComponents: [ViewComponent],
+  entryComponents: [ViewComponent,EditComponent,PhotoviewComponent],
   imports: [
     CommonModule,
     BridesRoutingModule,
@@ -20,6 +24,8 @@ import { MaterialModule } from '../../../../material/material.module'
     FormsModule,
     Ng2SearchPipeModule,
     ViewModule,
+    EditModule,
+    PhotoviewModule,
     MaterialModule,
   ],  
   exports:[ViewModule],
