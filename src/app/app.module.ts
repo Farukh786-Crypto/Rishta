@@ -16,7 +16,6 @@ import { ErrorComponent } from './UserModule/Error.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import {MatDialogModule} from '@angular/material/dialog';
 import { SignUpComponent } from './sign-up/sign-up.component';
-<<<<<<< HEAD
 import {FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -24,24 +23,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-=======
  
-import {FlexLayoutModule } from '@angular/flex-layout';
 
 
->>>>>>> 5594ae3ce9033269a27114bbb128138b90b92aca
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent
-<<<<<<< HEAD
-    
- 
-=======
 
      
->>>>>>> 5594ae3ce9033269a27114bbb128138b90b92aca
   ],
   imports: [
     platformBrowser.BrowserModule,

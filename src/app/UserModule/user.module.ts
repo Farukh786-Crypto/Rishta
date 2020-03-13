@@ -9,16 +9,12 @@ import { UsersAuthGuard } from '../Guard/users-auth.guard'
 import { from } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../material/material.module';
-<<<<<<< HEAD
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-=======
 import { ContactComponent } from './contact/contact.component';
 import { PackagesComponent } from '../layout/admin/packages/packages.component';
 import { MatchesComponent } from './matches/matches.component';
 import { AboutComponent } from './about/about.component';
  
->>>>>>> 5594ae3ce9033269a27114bbb128138b90b92aca
 //import { FlexLayoutModule } from '@angular/flex-layout';
 const route: Routes = [
     {
@@ -26,7 +22,6 @@ const route: Routes = [
 
 
             { path: '', redirectTo: 'profiledetails', pathMatch: 'full' },
-<<<<<<< HEAD
             { path: 'profiledetails', loadChildren: './ProfileDetailsForm/ProfileDetailsLazy.module#ProfileDetailsLazyClass', canActivate: [UsersAuthGuard] },
             { path: 'astroandreligion', loadChildren: './AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass', canActivate: [UsersAuthGuard] },
             { path: 'CareerDetails', loadChildren: './CareerDetailsForm/careerLazy.module#CareerLazyClass', canActivate: [UsersAuthGuard] },
@@ -37,7 +32,6 @@ const route: Routes = [
             { path: 'feedbackDetails', loadChildren: './Feedback/feedbackLazy.module#FeedbackLazyClass', canActivate: [UsersAuthGuard] },
             { path: 'filters', loadChildren: './filters/filterslazy.module#FiltersLazyClass', canActivate: [UsersAuthGuard] },
         
-=======
             { path: 'profiledetails', loadChildren: './ProfileDetailsForm/ProfileDetailsLazy.module#ProfileDetailsLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'astroandreligion', loadChildren: './AstroandreligionForm/AstroreligionLazy.module#AstroreligionLazyClass',canActivate:[UsersAuthGuard] },
             { path: 'CareerDetails', loadChildren: './CareerDetailsForm/careerLazy.module#CareerLazyClass',canActivate:[UsersAuthGuard] },
@@ -52,18 +46,12 @@ const route: Routes = [
               { path: 'about' , component:AboutComponent}
 
 
->>>>>>> 5594ae3ce9033269a27114bbb128138b90b92aca
         ]
     },
 ]
 @NgModule({
-<<<<<<< HEAD
-    declarations: [UserComponent, HeaderFooterComponent,MainNavComponent],
-    imports: [CommonModule,
-=======
     declarations: [UserComponent, HeaderFooterComponent,ContactComponent,MatchesComponent,AboutComponent,PackagesComponent],
     imports: [CommonModule, 
->>>>>>> 5594ae3ce9033269a27114bbb128138b90b92aca
         MatToolbarModule,
         MatSidenavModule,
         MatListModule,
@@ -76,7 +64,6 @@ const route: Routes = [
         LayoutModule  
     ],
     providers: [],
-    exports: [MainNavComponent]
 })
 export class UserModule {
 }
