@@ -3,12 +3,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 // import { ToastrService } from 'ngx-toastr';
 @Component({
-
   selector: 'app-family-details',
   templateUrl: './Family-details.component.html',
   styleUrls:['./Family-details.component.css',
                '../user.component.css']
-
 })
 export class FamilyDetailsComponent {
 

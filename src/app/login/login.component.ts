@@ -18,13 +18,13 @@ export class LoginComponent implements OnInit {
     password: new FormControl(''),
   });
   login() {
-    if (this.username === 'admin' && this.password === 'admin@143') {
+    if (this.username === 'admin' && this.password === 'admin@123') {
       console.log("Login succesfully");
       sessionStorage.setItem('isLoginUser','true');
       sessionStorage.setItem('userRole','admin');
       setTimeout(()=>{this.router.navigate(['./admin']);},250);
     }
-    else if (this.username === 'user' && this.password === 'user@143') {
+    else if (this.username === 'user' && this.password === 'user@123') {
       console.log("Login Succesfully");
       sessionStorage.setItem('isLoginUser','true');
       sessionStorage.setItem('userRole','user');
